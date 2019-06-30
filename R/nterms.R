@@ -13,7 +13,6 @@ nterms <- function(x, ...) {
   UseMethod("nterms")
 }
 
-#' @describeIn nterms Number of terms for an object
 #' @export
 nterms.default <- function(x, ...) {
   length(as.term(x))

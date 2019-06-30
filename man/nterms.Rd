@@ -2,12 +2,9 @@
 % Please edit documentation in R/nterms.R
 \name{nterms}
 \alias{nterms}
-\alias{nterms.default}
 \title{Number of Terms}
 \usage{
 nterms(x, ...)
-
-\method{nterms}{default}(x, ...)
 }
 \arguments{
 \item{x}{The object.}
@@ -20,11 +17,6 @@ A count of the number of terms.
 \description{
 Gets the number of terms for an object.
 }
-\section{Methods (by class)}{
-\itemize{
-\item \code{default}: Number of terms for an object
-}}
-
 \examples{
 nterms(as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
 "beta[1,2]", "beta[2,2]", "sigma")))
