@@ -9,37 +9,37 @@
 #' for each term.
 #' @param ... Unused.
 #' @param value A character vector of the new parameter names.
-#' @param parameters A character vector of the new parameter names.
+#' @param pars A character vector of the new parameter names.
 #' @return A character vector of the parameter names.
 #' @export
 #' @examples
 #' term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
 #' "beta[1,2]", "beta[2,2]", "sigma"))
-#' parameters(term)
-#' parameters(term, scalar_only = TRUE)
-#' parameters(term, terms = TRUE)
-parameters <- function(x, ...) UseMethod("parameters")
+#' pars(term)
+#' pars(term, scalar_only = TRUE)
+#' pars(term, terms = TRUE)
+pars <- function(x, ...) UseMethod("pars")
 
-#' @rdname parameters
+#' @rdname pars
 #' @export
-`parameters<-` <- function(x, value) UseMethod("parameters<-", x)
+`pars<-` <- function(x, value) UseMethod("pars<-", x)
 
-#' @rdname parameters
+#' @rdname pars
 #' @export
-set_parameters <- function(x, parameters) {
-  parameters(x) <- parameters
+set_pars <- function(x, pars) {
+  pars(x) <- pars
   x
 }
 
 #' @export
-parameters.default <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
+pars.default <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
   check_unused(...)
-  parameters(as.term(x), scalar_only = scalar_only, terms = terms)
+  pars(as.term(x), scalar_only = scalar_only, terms = terms)
 }
 
-#' @describeIn parameters Parameter names for a term vector
+#' @describeIn pars Parameter names for a term vector
 #' @export
-parameters.term <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
+pars.term <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
   check_flag(scalar_only)
   check_flag(terms)
   check_unused(...)
@@ -52,22 +52,22 @@ parameters.term <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
 }
 
 #' @export
-`parameters<-.character` <- function(x, value) {
+`pars<-.character` <- function(x, value) {
   x <- as.term(x)
-  parameters(x) <- value
+  pars(x) <- value
   as.character(x)
 }
 
 #' @export
-`parameters<-.term` <- function(x, value) {
+`pars<-.term` <- function(x, value) {
   check_vector(value, "", length = npars(x), unique = TRUE)
 
-  parameters <- parameters(x)
+  pars <- pars(x)
   terms <- x
 
   for(i in seq_along(value)) {
-    which <- which(grepl(parameters[i], terms, fixed = TRUE))
-    x[which] <- sub(parameters[i], value[i], x[which], fixed = TRUE)
+    which <- which(grepl(pars[i], terms, fixed = TRUE))
+    x[which] <- sub(pars[i], value[i], x[which], fixed = TRUE)
   }
   x
 }

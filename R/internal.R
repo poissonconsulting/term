@@ -2,8 +2,8 @@
 greater_than_term <- function(e1, e2) {
   e1 <- as.term(e1)
   e2 <- as.term(e2)
-  e1_parm <- parameters(e1)
-  e2_parm <- parameters(e2)
+  e1_parm <- pars(e1)
+  e2_parm <- pars(e2)
   if (e1_parm != e2_parm) return(e1_parm > e2_parm)
   
   e1 <- tindex(e1)[[1]]

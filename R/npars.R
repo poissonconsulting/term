@@ -12,4 +12,4 @@
 npars <- function(x, ...) UseMethod("npars")
 
 #' @export
-npars.default <- function(x, ...) length(parameters(x))
+npars.default <- function(x, ...) length(pars(x))

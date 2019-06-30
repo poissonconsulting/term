@@ -42,7 +42,7 @@ test_that("as", {
   x3 <- as.character(x2)
   expect_identical(x, x3)
   
-  expect_identical(parameters(x2, terms = TRUE), c(rep("parm3", 2), rep("parm", 5), "parm3"))
+  expect_identical(pars(x2, terms = TRUE), c(rep("parm3", 2), rep("parm", 5), "parm3"))
   expect_identical(tindex(x2), 
                    list(`parm3[10]` = 10L, `parm3[2]` = 2L, 
                         `parm[2,2]` = c(2L, 2L), `parm[1,1]` = c(1L, 1L), 
