@@ -10,8 +10,8 @@ greater_than_term <- function(e1, e2) {
   e2_parm <- parameters(e2)
   if (e1_parm != e2_parm) return(e1_parm > e2_parm)
 
-  e1 <- tdims(e1)[[1]]
-  e2 <- tdims(e2)[[1]]
+  e1 <- tindex(e1)[[1]]
+  e2 <- tindex(e2)[[1]]
 
   if (length(e1) != length(e2)) return(length(e1) > length(e2))
 

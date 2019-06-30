@@ -64,7 +64,7 @@ pdims(term)
 #> [1] 1
 
 # and the index of each term
-tdims(term)
+tindex(term)
 #> $`alpha[1]`
 #> [1] 1
 #> 

@@ -57,7 +57,7 @@ parameters(term)
 pdims(term)
 
 # and the index of each term
-tdims(term)
+tindex(term)
 ```
 
 ## Contribution
