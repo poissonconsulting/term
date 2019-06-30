@@ -10,10 +10,10 @@
 #' "beta[1,2]", "beta[2,2]", "sigma")))
 pdims <- function(x, ...) UseMethod("pdims")
 
-#' @describeIn pdims Parameter dimensions for a term vector
 #' @export
 pdims.term <- function(x, ...) {
   x <- sort(x)
+  names <- parameters(x)
   x <- split(x, parameters(x, terms = TRUE))
   x <- lapply(x, function(x) x[length(x)])
   x <- unlist(x)
@@ -21,5 +21,7 @@ pdims.term <- function(x, ...) {
   x <- sub("^$", "1", x)
   x <- gsub("\\[|\\]", "", x)
   x <- strsplit(x, ",")
-  lapply(x, as.integer)
+  x <- lapply(x, as.integer)
+  names(x) <- names
+  x
 }

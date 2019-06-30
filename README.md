@@ -52,7 +52,11 @@ print(term)
 parameters(term)
 #> [1] "alpha" "beta"  "sigma"
 
-# as well as the dimensions of each parameter
+# as well as the dimensions of the term object
+dims(term)
+#> NULL
+
+# the dimensions of each parameter
 pdims(term)
 #> [[1]]
 #> [1] 2

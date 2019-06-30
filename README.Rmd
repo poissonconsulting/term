@@ -53,7 +53,10 @@ print(term)
 # and the parameters extracted
 parameters(term)
 
-# as well as the dimensions of each parameter
+# as well as the dimensions of the term object
+dims(term)
+
+# the dimensions of each parameter
 pdims(term)
 
 # and the index of each term

@@ -2,12 +2,9 @@
 % Please edit documentation in R/pdims.R
 \name{pdims}
 \alias{pdims}
-\alias{pdims.term}
 \title{Parameter Dimensions}
 \usage{
 pdims(x, ...)
-
-\method{pdims}{term}(x, ...)
 }
 \arguments{
 \item{x}{The object}
@@ -17,11 +14,6 @@ pdims(x, ...)
 \description{
 Gets the parameter dimensions of an object.
 }
-\section{Methods (by class)}{
-\itemize{
-\item \code{term}: Parameter dimensions for a term vector
-}}
-
 \examples{
 pdims(as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
 "beta[1,2]", "beta[2,2]", "sigma")))
