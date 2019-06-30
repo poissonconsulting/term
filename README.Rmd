@@ -20,21 +20,51 @@ knitr::opts_chunk$set(
 [![Codecov test coverage](https://codecov.io/gh/poissonconsulting/term/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/term?branch=master)
 <!-- badges: end -->
 
-The goal of term is to ...
+term is an R package to create and manipulate and query vectors of parameter terms.
 
 ## Installation
 
-You can install the released version of term from [CRAN](https://CRAN.R-project.com) with:
+To install the latest development version from [GitHub](https://github.com/poissonconsulting/term)
+```
+remotes::install_github("poissonconsulting/term")
+```
 
-``` r
+To install the latest development version from the Poisson drat [repository](https://github.com/poissonconsulting/drat)
+```
+drat::addRepo("poissonconsulting")
 install.packages("term")
 ```
 
-And the development version from [GitHub](https://github.com/) with:
+## Demonstration
 
-``` r
-remotes::install_github("poissonconsulting/term")
+```{r}
+library(term)
+
+# a term vector can be created from a character vector
+term <- as.term(c("sigma", "beta[2,2]", "alpha[1]", "alpha[2]", "beta[1,1]", 
+                  "beta[2,1]", "beta[1,2]"))
+
+print(term)
+
+# term vectors can be sorted
+term <- sort(term)
+print(term)
+
+# and the parameters extracted
+parameters(term)
+
+# as well as the dimensions of each parameter
+pdims(term)
+
+# and the index of each term
+tdims(term)
 ```
+
+## Contribution
+
+Please report any [issues](https://github.com/poissonconsulting/term/issues).
+
+[Pull requests](https://github.com/poissonconsulting/term/pulls) are always welcome.
 
 Please note that the 'term' project is released with a
 [Contributor Code of Conduct](CODE_OF_CONDUCT.md).

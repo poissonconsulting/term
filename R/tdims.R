@@ -1,6 +1,6 @@
 #' Term Dimensions
 #'
-#' Gets the term dimensions of an object.
+#' Gets a list of the term dimensions of an object.
 #'
 #' @param x The object
 #' @param ... Unused.
@@ -17,6 +17,7 @@ tdims.default <- function(x, ...) tdims(as.term(x))
 #' @describeIn tdims Term dimensions for a term vector
 #' @export
 tdims.term <- function(x, ...) {
+  names <- x
   x <- sub("^(\\w+)(.*)", "\\2", x)
   x <- sub("^(\\[)(.*)(\\])$", "\\2", x)
   x <- strsplit(x, "\\s*[,]\\s*")
@@ -24,5 +25,6 @@ tdims.term <- function(x, ...) {
   x <- lapply(x, function(x) gsub("\\s+", "", x))
   x <- lapply(x, as.integer)
   x[is.na(x)] <- 1L
+  names(x) <- names
   x
 }

@@ -18,7 +18,7 @@ tdims(x, ...)
 \item{...}{Unused.}
 }
 \description{
-Gets the term dimensions of an object.
+Gets a list of the term dimensions of an object.
 }
 \section{Methods (by class)}{
 \itemize{
