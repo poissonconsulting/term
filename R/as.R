@@ -14,13 +14,19 @@ as.term <- function(x, ...) {
   UseMethod("as.term")
 }
 
-#' @describeIn as.term Coerces term vector to a character vector
-#' @export
-as.character.term <- function(x, ...) set_class(x, "character")
-
 #' @describeIn as.term Coerces character vector to a term vector
 #' @export
 as.term.character <- function(x, ...) set_class(x, c("term", "character"))
 
 #' @export
+as.term.default <- function(x, name = "parameter", ...) {
+  check_unused(...)
+  as.term(term_dims(x, name))
+}
+
+#' @export
 as.term.term <- function(x, ...) x
+
+#' @describeIn as.term Coerces term vector to a character vector
+#' @export
+as.character.term <- function(x, ...) set_class(x, "character")

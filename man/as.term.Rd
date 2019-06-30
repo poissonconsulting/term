@@ -2,15 +2,15 @@
 % Please edit documentation in R/as.R
 \name{as.term}
 \alias{as.term}
-\alias{as.character.term}
 \alias{as.term.character}
+\alias{as.character.term}
 \title{Coerce to a term Vector}
 \usage{
 as.term(x, ...)
 
-\method{as.character}{term}(x, ...)
-
 \method{as.term}{character}(x, ...)
+
+\method{as.character}{term}(x, ...)
 }
 \arguments{
 \item{x}{The object to coerce}
@@ -25,9 +25,9 @@ A term vector is a sortable vector of parameter terms.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{term}: Coerces term vector to a character vector
-
 \item \code{character}: Coerces character vector to a term vector
+
+\item \code{term}: Coerces term vector to a character vector
 }}
 
 \examples{
