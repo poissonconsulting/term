@@ -12,4 +12,8 @@
 term <- function(x, ...) UseMethod("term")
 
 #' @export
-term.default <- function(x, ...) as.term(x)
+term.default <- function(x, ...) {
+  check_unused(...)
+  if(missing(x)) return(as.term(character(0)))
+  as.term(x)
+}

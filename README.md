@@ -11,9 +11,11 @@ status](https://travis-ci.com/poissonconsulting/term.svg?branch=master)](https:/
 status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/term?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/term)
 [![Codecov test
 coverage](https://codecov.io/gh/poissonconsulting/term/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/term?branch=master)
+[![License:
+MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
 
-term is an R package to create and manipulate and query vectors of
+term is an R package to create, manipulate and query vectors of
 parameter terms.
 
 ## Installation
@@ -58,13 +60,13 @@ dims(term)
 
 # the dimensions of each parameter
 pdims(term)
-#> [[1]]
+#> $alpha
 #> [1] 2
 #> 
-#> [[2]]
+#> $beta
 #> [1] 2 2
 #> 
-#> [[3]]
+#> $sigma
 #> [1] 1
 
 # and the index of each term

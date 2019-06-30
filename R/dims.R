@@ -20,4 +20,7 @@ dims.default <- function(x, ...) {
 }
 
 #' @export
+dims.term <- function(x, ...) length(x)
+
+#' @export
 dims.data.frame <- function(x, ...) return(c(nrow(x), ncol(x)))

@@ -7,3 +7,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.covrignore$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^build\.R$
