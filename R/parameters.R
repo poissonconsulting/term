@@ -34,7 +34,7 @@ set_parameters <- function(x, parameters) {
 #' @export
 parameters.default <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
   check_unused(...)
-  parameters(as.term(x, scalar_only = scalar_only, terms = terms))
+  parameters(as.term(x), scalar_only = scalar_only, terms = terms)
 }
 
 #' @describeIn parameters Parameter names for a term vector

@@ -1,5 +1,17 @@
 context("parameters")
 
+test_that("parameters.default", {
+  expect_identical(parameters(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", 
+                     "beta[1,2]", "beta[2,2]", "sigma")),
+                   c("alpha", "beta", "sigma"))
+  expect_identical(parameters(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", 
+                     "beta[1,2]", "beta[2,2]", "sigma"), scalar_only = TRUE),
+                   "sigma")
+    expect_identical(parameters(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", 
+                     "beta[1,2]", "beta[2,2]", "sigma"), terms = TRUE),
+                   c("alpha", "alpha", "beta",  "beta",  "beta",  "beta",  "sigma"))
+})
+
 test_that("parameters.term", {
   terms <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", 
                      "beta[1,2]", "beta[2,2]", "sigma"))
