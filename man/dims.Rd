@@ -20,3 +20,7 @@ Unlike base::dim(), dims returns a scalar corresponding to the length of
 a vector and two values corresponding to the number of rows and columns 
 of a data frame.
 }
+\examples{
+dims(as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
+"beta[1,2]", "beta[2,2]", "sigma")))
+}

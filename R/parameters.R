@@ -3,15 +3,21 @@
 #' Gets or sets the parameter names for an object.
 #'
 #' @param x An R object.
-#' @param scalar_only A flag indicating whether to only get the names of
+#' @param scalar_only A flag specifying whether to only get the names of
 #' parameters with one term.
-#' @param terms A flag indicating whether to return the parameter name
+#' @param terms A flag specifying whether to return the parameter name
 #' for each term.
-#' @param ... Not used.
+#' @param ... Unused.
 #' @param value A character vector of the new parameter names.
 #' @param parameters A character vector of the new parameter names.
 #' @return A character vector of the parameter names.
 #' @export
+#' @examples
+#' term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
+#' "beta[1,2]", "beta[2,2]", "sigma"))
+#' parameters(term)
+#' parameters(term, scalar_only = TRUE)
+#' parameters(term, terms = TRUE)
 parameters <- function(x, ...) UseMethod("parameters")
 
 #' @rdname parameters

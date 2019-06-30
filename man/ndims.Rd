@@ -17,3 +17,7 @@ A vector or list of the number of dimensions.
 \description{
 Retrieves the number of dimensions of an object as defined by dims.
 }
+\examples{
+ndims(as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
+"beta[1,2]", "beta[2,2]", "sigma")))
+}

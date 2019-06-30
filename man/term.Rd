@@ -17,3 +17,7 @@ A term vector.
 \description{
 Gets term vector for an R object.
 }
+\examples{
+term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
+"beta[1,2]", "beta[2,2]", "sigma"))
+}

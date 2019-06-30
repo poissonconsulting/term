@@ -18,16 +18,16 @@ set_parameters(x, parameters)
 \arguments{
 \item{x}{An R object.}
 
-\item{...}{Not used.}
+\item{...}{Unused.}
 
 \item{value}{A character vector of the new parameter names.}
 
 \item{parameters}{A character vector of the new parameter names.}
 
-\item{scalar_only}{A flag indicating whether to only get the names of
+\item{scalar_only}{A flag specifying whether to only get the names of
 parameters with one term.}
 
-\item{terms}{A flag indicating whether to return the parameter name
+\item{terms}{A flag specifying whether to return the parameter name
 for each term.}
 }
 \value{
@@ -41,3 +41,10 @@ Gets or sets the parameter names for an object.
 \item \code{term}: Parameter names for a term vector
 }}
 
+\examples{
+term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
+"beta[1,2]", "beta[2,2]", "sigma"))
+parameters(term)
+parameters(term, scalar_only = TRUE)
+parameters(term, terms = TRUE)
+}

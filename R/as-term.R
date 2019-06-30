@@ -10,9 +10,7 @@
 #' @examples
 #' as.term(c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]", 
 #' "parm[2,1]", "parm[1,2]", "parm[10]", "parm3"))
-as.term <- function(x, ...) {
-  UseMethod("as.term")
-}
+as.term <- function(x, ...) UseMethod("as.term")
 
 #' @describeIn as.term Coerces character vector to a term vector
 #' @export

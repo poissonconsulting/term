@@ -6,9 +6,10 @@
 #' @param ... Unused.
 #' @return A term vector.
 #' @export
-term <- function(x, ...) {
-  UseMethod("term")
-}
+#' @examples 
+#' term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
+#' "beta[1,2]", "beta[2,2]", "sigma"))
+term <- function(x, ...) UseMethod("term")
 
 #' @export
 term.default <- function(x, ...) as.term(x)
