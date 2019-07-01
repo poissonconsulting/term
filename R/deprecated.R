@@ -5,13 +5,6 @@ tdims <- function(x) {
   tindex(x)
 }
 
-#' @rdname npars
-#' @export
-npdims <- function(x) {
-  .Deprecated("npars")
-  npars(x)
-}
-
 #' @rdname pars
 #' @export
 parameters <- function(x, ...) {
