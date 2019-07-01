@@ -8,7 +8,7 @@ tdims <- function(x) {
 #' @rdname npars
 #' @export
 npdims <- function(x) {
-  .Deprecated("npdims")
+  .Deprecated("npars")
   npars(x)
 }
 
