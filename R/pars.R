@@ -31,6 +31,18 @@ set_pars <- function(x, pars) {
   x
 }
 
+#' @rdname pars
+#' @export
+parameters <- pars
+
+#' @rdname pars
+#' @export
+`parameters<-` <- `pars<-`
+
+#' @rdname pars
+#' @export
+set_parameters <- set_pars
+
 #' @export
 pars.default <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
   check_unused(...)
