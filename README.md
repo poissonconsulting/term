@@ -13,23 +13,29 @@ status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/ter
 coverage](https://codecov.io/gh/poissonconsulting/term/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/term?branch=master)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Tinyverse
+status](https://tinyverse.netlify.com/badge/term)](https://CRAN.R-project.org/package=term)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/term)](https://cran.r-project.org/package=term)
+![CRAN downloads](http://cranlogs.r-pkg.org/badges/term)
 <!-- badges: end -->
 
-term is an R package to create, manipulate and query vectors of
-parameter terms.
+`term` is an R package to create, manipulate and query vectors of
+parameter terms. A parameter term is the name of a parameter value, ie,
+“alpha”, “beta\[3\]”, “sigma2\[1,4\]”.
 
 ## Installation
+
+To install the latest release version from
+[CRAN](https://cran.r-project.org)
+
+    install.packages("term")
 
 To install the latest development version from
 [GitHub](https://github.com/poissonconsulting/term)
 
+    # install.packages("remotes")
     remotes::install_github("poissonconsulting/term")
-
-To install the latest development version from the Poisson drat
-[repository](https://github.com/poissonconsulting/drat)
-
-    drat::addRepo("poissonconsulting")
-    install.packages("term")
 
 ## Demonstration
 
@@ -54,11 +60,7 @@ print(term)
 parameters(term)
 #> [1] "alpha" "beta"  "sigma"
 
-# as well as the dimensions of the term object
-dims(term)
-#> NULL
-
-# the dimensions of each parameter
+# as well as the dimensions of each parameter
 pdims(term)
 #> $alpha
 #> [1] 2
@@ -102,5 +104,6 @@ Please report any
 always welcome.
 
 Please note that the ‘term’ project is released with a [Contributor Code
-of Conduct](CODE_OF_CONDUCT.md). By contributing to this project, you
-agree to abide by its terms.
+of
+Conduct](https://poissonconsulting.github.io/term/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.

@@ -19,21 +19,25 @@ knitr::opts_chunk$set(
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/term?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/term)
 [![Codecov test coverage](https://codecov.io/gh/poissonconsulting/term/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/term?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Tinyverse status](https://tinyverse.netlify.com/badge/term)](https://CRAN.R-project.org/package=term)
+[![CRAN status](https://www.r-pkg.org/badges/version/term)](https://cran.r-project.org/package=term)
+![CRAN downloads](http://cranlogs.r-pkg.org/badges/term)
 <!-- badges: end -->
 
-term is an R package to create, manipulate and query vectors of parameter terms.
+`term` is an R package to create, manipulate and query vectors of parameter terms.
+A parameter term is the name of a parameter value, ie, "alpha", "beta[3]", "sigma2[1,4]".
 
-## Installation
+## Installation 
+
+To install the latest release version from [CRAN](https://cran.r-project.org)
+```
+install.packages("term")
+```
 
 To install the latest development version from [GitHub](https://github.com/poissonconsulting/term)
 ```
+# install.packages("remotes")
 remotes::install_github("poissonconsulting/term")
-```
-
-To install the latest development version from the Poisson drat [repository](https://github.com/poissonconsulting/drat)
-```
-drat::addRepo("poissonconsulting")
-install.packages("term")
 ```
 
 ## Demonstration
@@ -54,10 +58,7 @@ print(term)
 # and the parameters extracted
 parameters(term)
 
-# as well as the dimensions of the term object
-dims(term)
-
-# the dimensions of each parameter
+# as well as the dimensions of each parameter
 pdims(term)
 
 # and the index of each term
@@ -70,6 +71,5 @@ Please report any [issues](https://github.com/poissonconsulting/term/issues).
 
 [Pull requests](https://github.com/poissonconsulting/term/pulls) are always welcome.
 
-Please note that the 'term' project is released with a
-[Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+Please note that the 'term' project is released with a [Contributor Code of Conduct](https://poissonconsulting.github.io/term/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.
