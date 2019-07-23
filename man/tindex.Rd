@@ -15,12 +15,11 @@ tindex(x, ...)
 \item{...}{Unused.}
 }
 \description{
-Gets a list of the index for each term of an object.
+Gets the index for each term of an object.
 }
 \details{
 \code{tdims()} is deprecated.
 }
 \examples{
-tindex(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", 
-"beta[1,2]", "beta[2,2]", "sigma"))
+tindex(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
 }

@@ -6,5 +6,6 @@
 #' @return A flag indicating whether the test was positive.
 #' @export
 #' @examples
+#' is.term(c("parameter[2]", "parameter[10]"))
 #' is.term(as.term(c("parameter[2]", "parameter[10]")))
 is.term <- function(x) inherits(x, "term")

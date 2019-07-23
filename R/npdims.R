@@ -1,14 +1,13 @@
 #' Number of Parameter Dimensions
 #'
-#' Gets the number parameter dimensions of an object.
+#' Gets the number of parameter dimensions of an object.
 #'
 #' @param x The object
 #' @param ... Unused.
 #' @export
 #' @examples
-#' npdims(as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
-#' "beta[1,2]", "beta[2,2]", "sigma")))
+#' npdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")))
 npdims <- function(x, ...) UseMethod("npdims")
 
 #' @export
-npdims.default <- function(x, ...) length(pdims(x))
+npdims.default <- function(x, ...) vapply(pdims(x), length, 1L)

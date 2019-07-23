@@ -15,9 +15,11 @@ ndims(x, ...)
 A vector or list of the number of dimensions.
 }
 \description{
-Retrieves the number of dimensions of an object as defined by dims.
+Gets the number of dimensions of an object as defined by \code{\link{dims}()}.
 }
 \examples{
-ndims(as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
-"beta[1,2]", "beta[2,2]", "sigma")))
+ndims(character(0))
+ndims(1:3)
+ndims(data.frame())
+ndims(data.frame(x = 1:3))
 }

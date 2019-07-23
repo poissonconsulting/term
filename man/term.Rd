@@ -15,9 +15,11 @@ term(x, ...)
 A term vector.
 }
 \description{
-Gets term vector for an R object.
+Gets the term vector for an R object.
+A term vector is a S3 vector of parameter terms.
 }
 \examples{
-term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
-"beta[1,2]", "beta[2,2]", "sigma"))
+term <- term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
+term
+str(term)
 }

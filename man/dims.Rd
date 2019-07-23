@@ -15,12 +15,16 @@ dims(x, ...)
 A vector or list of the dimensions.
 }
 \description{
-Retrieves the dimensions of an object.
+Gets the dimensions of an object.
+}
+\details{
 Unlike base::dim(), dims returns a scalar corresponding to the length of
 a vector and two values corresponding to the number of rows and columns 
 of a data frame.
 }
 \examples{
-dims(as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
-"beta[1,2]", "beta[2,2]", "sigma")))
+dims(character(0))
+dims(1:3)
+dims(data.frame())
+dims(data.frame(x = 1:3))
 }

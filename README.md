@@ -20,9 +20,8 @@ status](https://www.r-pkg.org/badges/version/term)](https://cran.r-project.org/p
 ![CRAN downloads](http://cranlogs.r-pkg.org/badges/term)
 <!-- badges: end -->
 
-`term` is an R package to create, manipulate and query vectors of
-parameter terms. A parameter term is the name of a parameter value, ie,
-“alpha”, “beta\[3\]”, “sigma2\[1,4\]”.
+`term` is an R package to create, manipulate and query S3 vectors of
+parameter terms such as ‘alpha’, ‘beta\[3\]’ and ‘sigma2\[1,4\]’.
 
 ## Installation
 

@@ -2,12 +2,9 @@
 % Please edit documentation in R/as-term.R
 \name{as.term}
 \alias{as.term}
-\alias{as.term.character}
 \title{Coerce to a term Vector}
 \usage{
 as.term(x, ...)
-
-\method{as.term}{character}(x, ...)
 }
 \arguments{
 \item{x}{The object to coerce}
@@ -18,14 +15,11 @@ as.term(x, ...)
 Coerces an R object to a term vector.
 }
 \details{
-A term vector is a sortable vector of parameter terms.
+A term vector is a S3 vector of parameter terms.
 }
-\section{Methods (by class)}{
-\itemize{
-\item \code{character}: Coerces character vector to a term vector
-}}
-
 \examples{
-as.term(c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]", 
-"parm[2,1]", "parm[1,2]", "parm[10]", "parm3"))
+term <- as.term(c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]")) 
+term
+sort(term)
+str(term)
 }

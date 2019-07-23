@@ -12,9 +12,8 @@ npdims(x, ...)
 \item{...}{Unused.}
 }
 \description{
-Gets the number parameter dimensions of an object.
+Gets the number of parameter dimensions of an object.
 }
 \examples{
-npdims(as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
-"beta[1,2]", "beta[2,2]", "sigma")))
+npdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")))
 }

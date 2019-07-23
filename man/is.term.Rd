@@ -16,5 +16,6 @@ A flag indicating whether the test was positive.
 Test whether an R object inherits from class term.
 }
 \examples{
+is.term(c("parameter[2]", "parameter[10]"))
 is.term(as.term(c("parameter[2]", "parameter[10]")))
 }
