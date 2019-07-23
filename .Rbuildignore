@@ -11,3 +11,4 @@
 ^docs$
 ^pkgdown$
 ^build\.R$
+^cran-comments\.md$

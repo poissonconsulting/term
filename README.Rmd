@@ -15,6 +15,7 @@ knitr::opts_chunk$set(
 # term
 
 <!-- badges: start -->
+[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Travis build status](https://travis-ci.com/poissonconsulting/term.svg?branch=master)](https://travis-ci.com/poissonconsulting/term)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/term?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/term)
 [![Codecov test coverage](https://codecov.io/gh/poissonconsulting/term/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/term?branch=master)
@@ -51,7 +52,7 @@ term <- as.term(c("sigma", "beta[2,2]", "alpha[1]", "alpha[2]", "beta[1,1]",
 
 print(term)
 
-# term vectors can be sorted
+# term vectors can be sorted (by the term parameter names and indices)
 term <- sort(term)
 print(term)
 

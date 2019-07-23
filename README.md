@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Lifecycle:
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Travis build
 status](https://travis-ci.com/poissonconsulting/term.svg?branch=master)](https://travis-ci.com/poissonconsulting/term)
 [![AppVeyor build
@@ -49,7 +51,7 @@ print(term)
 #> [1] "sigma"     "beta[2,2]" "alpha[1]"  "alpha[2]"  "beta[1,1]" "beta[2,1]"
 #> [7] "beta[1,2]"
 
-# term vectors can be sorted
+# term vectors can be sorted (by the term parameter names and indices)
 term <- sort(term)
 print(term)
 #> [1] "alpha[1]"  "alpha[2]"  "beta[1,1]" "beta[2,1]" "beta[1,2]" "beta[2,2]"

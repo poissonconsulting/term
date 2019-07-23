@@ -6,7 +6,7 @@ Authors@R: c(
     person("Poisson Consulting", role = c("cph", "fnd"))
     )
 Description: Creates, manipulates and queries S3 vectors of parameter terms
-    such as 'alpha', 'beta[3]' and 'sigma2[1,4]'.
+    such as 'alpha', 'beta[3]' and 'sigma2[1,4]'. 
 License: MIT + file LICENSE
 Imports:
     checkr
