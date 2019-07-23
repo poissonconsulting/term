@@ -9,7 +9,6 @@ Description: Creates, manipulates and queries S3 vectors of parameter terms
     such as 'alpha', 'beta[3]' and 'sigma2[1,4]'.
 License: MIT + file LICENSE
 Imports:
-    err,
     checkr
 Suggests: 
     covr,

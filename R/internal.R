@@ -26,12 +26,12 @@ term_dims <- function(x, name) {
   if(all(x == 0L)) return(as.term(character(0)))
   if(identical(x, 1L)) return(as.term(name))
   if(identical(length(x), 1L)) 
-    return(as.term(p0(name, "[", seq_len(x), "]")))
+    return(as.term(paste0(name, "[", seq_len(x), "]")))
   x <- lapply(x, seq_len)
   x <- expand.grid(x)
   x <- as.matrix(x)
-  x <- apply(x, 1, function(x) p(x, collapse = ","))
-  p0(name, "[", x, "]")
+  x <- apply(x, 1, function(x) paste(x, collapse = ","))
+  paste0(name, "[", x, "]")
 }
 
 set_class <- function(x, class) {
