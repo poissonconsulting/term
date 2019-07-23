@@ -9,7 +9,7 @@ nterms(x, ...)
 \arguments{
 \item{x}{The object.}
 
-\item{...}{Not used.}
+\item{...}{Unused.}
 }
 \value{
 A count of the number of terms.

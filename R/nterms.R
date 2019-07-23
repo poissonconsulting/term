@@ -3,7 +3,7 @@
 #' Gets the number of terms of an object.
 #'
 #' @param x The object.
-#' @param ... Not used.
+#' @param ... Unused.
 #' @return A count of the number of terms.
 #' @export
 #' @examples
