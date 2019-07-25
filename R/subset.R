@@ -16,9 +16,6 @@ subset.term <- function(x, select = NULL, ...) {
   check_vector(select, pars(x), unique = TRUE, only = TRUE)
   check_unused(...)
   
-  select <- paste0("(^", select, ("($|\\[))"))
-  select <- paste0(select, collapse = ")|(")
-  select <- paste0("(", select, ")", collapse = "")
-  x <- x[grepl(select, x)]
+  x <- x[pars(x, terms = TRUE) %in% select]
   x
 }
