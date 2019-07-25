@@ -8,9 +8,12 @@ test_that("subset.term",{
                     "beta[1,2]", "beta[2,2]", "sigma"))
   expect_identical(subset(term), term)
   expect_identical(subset(term, "sigma"), as.term("sigma"))
-  expect_identical(subset(term, c("sigma", "beta")), 
+  expect_identical(subset(term, c("beta", "sigma")), 
                    as.term(c("beta[1,1]", "beta[2,1]", 
                              "beta[1,2]", "beta[2,2]", "sigma")))
+  expect_identical(subset(term, c("sigma", "beta")), 
+                   as.term(c("sigma", "beta[1,1]", "beta[2,1]", 
+                             "beta[1,2]", "beta[2,2]")))
   expect_error(subset(term, "tt"), 
                "select can only include values 'alpha', 'beta' or 'sigma'")
 })
