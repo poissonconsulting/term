@@ -4,12 +4,12 @@
 \alias{subset.term}
 \title{Subset term vector}
 \usage{
-\method{subset}{term}(x, pars = NULL, ...)
+\method{subset}{term}(x, select = NULL, ...)
 }
 \arguments{
 \item{x}{A term vector to be subsetted.}
 
-\item{pars}{A character vector of the parameters to include in the subsetted vector.}
+\item{select}{A character vector of the parameters to include in the subsetted object.}
 
 \item{...}{Unused.}
 }

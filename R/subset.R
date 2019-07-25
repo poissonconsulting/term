@@ -1,7 +1,7 @@
 #' Subset term vector
 #' 
 #' @param x A term vector to be subsetted.
-#' @param pars A character vector of the parameters to include in the subsetted vector.
+#' @param select A character vector of the parameters to include in the subsetted object.
 #' @param ... Unused.
 #' @return The modified term vector.
 #'
@@ -11,15 +11,14 @@
 #' "beta[1,2]", "beta[2,2]", "sigma"))
 #' subset(term, "beta")
 #' subset(term, c("alpha", "sigma"))
-subset.term <- function(x, pars = NULL, ...) {
-  checkor(check_null(pars), check_vector(pars, pars(x), unique = TRUE, only = TRUE))
+subset.term <- function(x, select = NULL, ...) {
+  if(is.null(select)) return(x)
+  check_vector(select, pars(x), unique = TRUE, only = TRUE)
   check_unused(...)
-
-  if(!is.null(pars)) {
-    pars <- paste0("(^", pars, ("($|\\[))"))
-    pars <- paste0(pars, collapse = ")|(")
-    pars <- paste0("(", pars, ")", collapse = "")
-    x <- x[grepl(pars, x)]
-  }
+  
+  select <- paste0("(^", select, ("($|\\[))"))
+  select <- paste0(select, collapse = ")|(")
+  select <- paste0("(", select, ")", collapse = "")
+  x <- x[grepl(select, x)]
   x
 }
