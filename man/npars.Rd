@@ -20,3 +20,6 @@ Gets the number of parameters of an object.
 \examples{
 npars(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
 }
+\seealso{
+\code{\link{pars}()}
+}

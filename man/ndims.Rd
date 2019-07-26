@@ -2,9 +2,18 @@
 % Please edit documentation in R/ndims.R
 \name{ndims}
 \alias{ndims}
+\alias{ndims.default}
+\alias{ndims.matrix}
+\alias{ndims.data.frame}
 \title{Number of Dimensions of an Object}
 \usage{
 ndims(x, ...)
+
+\method{ndims}{default}(x, ...)
+
+\method{ndims}{matrix}(x, ...)
+
+\method{ndims}{data.frame}(x, ...)
 }
 \arguments{
 \item{x}{An R object.}
@@ -17,9 +26,25 @@ A vector or list of the number of dimensions.
 \description{
 Gets the number of dimensions of an object as defined by \code{\link{dims}()}.
 }
+\section{Methods (by class)}{
+\itemize{
+\item \code{default}: Number of dimensions of a default object
+
+\item \code{matrix}: Number of dimensions of a matrix
+
+Always 2L.
+
+\item \code{data.frame}: Number of dimensions of a data.frame
+
+Always 2L.
+}}
+
 \examples{
 ndims(character(0))
 ndims(1:3)
 ndims(data.frame())
 ndims(data.frame(x = 1:3))
+}
+\seealso{
+\code{\link{dims}()}
 }

@@ -19,3 +19,6 @@ Test whether an R object inherits from class term.
 is.term(c("parameter[2]", "parameter[10]"))
 is.term(as.term(c("parameter[2]", "parameter[10]")))
 }
+\seealso{
+\code{\link{as.term}()}
+}

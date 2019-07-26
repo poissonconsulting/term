@@ -3,23 +3,43 @@
 \name{tdims}
 \alias{tdims}
 \alias{tindex}
+\alias{tindex.default}
+\alias{tindex.term}
 \title{Term Index}
 \usage{
 tdims(x)
 
 tindex(x, ...)
+
+\method{tindex}{default}(x, ...)
+
+\method{tindex}{term}(x, ...)
 }
 \arguments{
 \item{x}{The object}
 
 \item{...}{Unused.}
 }
+\value{
+A named list of the index for each term.
+}
 \description{
 Gets the index for each term of an object.
 }
 \details{
 \code{tdims()} is deprecated.
+
+For example the index of \code{beta[2,1]} is \code{c(2L, 1L)}
+while the index for \code{sigma} is \code{1L}.
+It is useful for extracting the values of individual terms.
 }
+\section{Methods (by class)}{
+\itemize{
+\item \code{default}: Term indices for default object
+
+\item \code{term}: Term indices for term vector
+}}
+
 \examples{
 tindex(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
 }

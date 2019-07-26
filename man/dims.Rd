@@ -2,9 +2,15 @@
 % Please edit documentation in R/dims.R
 \name{dims}
 \alias{dims}
+\alias{dims.default}
+\alias{dims.data.frame}
 \title{Dimensions of an Object}
 \usage{
 dims(x, ...)
+
+\method{dims}{default}(x, ...)
+
+\method{dims}{data.frame}(x, ...)
 }
 \arguments{
 \item{x}{An R object.}
@@ -18,13 +24,21 @@ A vector or list of the dimensions.
 Gets the dimensions of an object.
 }
 \details{
-Unlike base::dim(), dims returns a scalar corresponding to the length of
-a vector and two values corresponding to the number of rows and columns 
-of a data frame.
+Unlike \code{base::dim()}, dims works as expected for vectors and data.frames.
 }
+\section{Methods (by class)}{
+\itemize{
+\item \code{default}: Dimensions of a default object
+
+\item \code{data.frame}: Dimensions of a data frame
+}}
+
 \examples{
 dims(character(0))
 dims(1:3)
 dims(data.frame())
 dims(data.frame(x = 1:3))
+}
+\seealso{
+\code{\link[base]{dim}()}
 }

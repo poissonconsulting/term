@@ -6,6 +6,7 @@
 #' @param ... Unused.
 #' @return A count of the number of terms.
 #' @export
+#' 
 #' @examples
 #' nterms(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
 nterms <- function(x, ...) {

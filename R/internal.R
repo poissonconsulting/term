@@ -1,4 +1,3 @@
-
 greater_than_term <- function(e1, e2) {
   e1 <- as.term(e1)
   e2 <- as.term(e2)

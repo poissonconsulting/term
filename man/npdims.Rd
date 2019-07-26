@@ -11,9 +11,15 @@ npdims(x, ...)
 
 \item{...}{Unused.}
 }
+\value{
+A named list of the number of dimensions of each parameter.
+}
 \description{
 Gets the number of parameter dimensions of an object.
 }
 \examples{
 npdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")))
+}
+\seealso{
+\code{\link{pdims}()}
 }

@@ -23,3 +23,6 @@ term <- term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
 term
 str(term)
 }
+\seealso{
+\code{\link{as.term}()}
+}

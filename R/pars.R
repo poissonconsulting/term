@@ -12,6 +12,7 @@
 #' @param pars A character vector of the new parameter names.
 #' @return A character vector of the parameter names.
 #' @export
+#' 
 #' @examples
 #' term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
 #' "beta[1,2]", "beta[2,2]", "sigma"))
@@ -43,6 +44,7 @@ parameters <- pars
 #' @export
 set_parameters <- set_pars
 
+#' @describeIn pars Parameter names for a default object
 #' @export
 pars.default <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
   check_unused(...)

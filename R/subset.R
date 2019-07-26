@@ -4,8 +4,8 @@
 #' @param select A character vector of the parameters to include in the subsetted object.
 #' @param ... Unused.
 #' @return The modified term vector.
-#'
 #' @export
+#' 
 #' @examples 
 #' term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
 #' "beta[1,2]", "beta[2,2]", "sigma"))

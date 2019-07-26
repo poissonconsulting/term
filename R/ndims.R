@@ -5,7 +5,9 @@
 #' @param x An R object.
 #' @param ... Unused
 #' @return A vector or list of the number of dimensions.
+#' @seealso \code{\link{dims}()}
 #' @export
+#' 
 #' @examples
 #' ndims(character(0))
 #' ndims(1:3)
@@ -13,11 +15,18 @@
 #' ndims(data.frame(x = 1:3))
 ndims <- function(x, ...) UseMethod("ndims")
 
+#' @describeIn ndims Number of dimensions of a default object
 #' @export
 ndims.default <- function(x, ...) length(dims(x))
 
+#' @describeIn ndims Number of dimensions of a matrix
+#' 
+#' Always 2L.
 #' @export
 ndims.matrix <- function(x, ...) 2L
 
+#' @describeIn ndims Number of dimensions of a data.frame
+#' 
+#' Always 2L.
 #' @export
 ndims.data.frame <- function(x, ...) 2L

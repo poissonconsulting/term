@@ -6,7 +6,9 @@
 #' @param x An R object.
 #' @param ... Unused.
 #' @return A term vector.
+#' @seealso \code{\link{as.term}()}
 #' @export
+#' 
 #' @examples 
 #' term <- term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
 #' term
