@@ -21,9 +21,13 @@ test_that("npars.term", {
 
 })
 
-test_that("npars scalars", {
+test_that("npars.term scalars", {
   expect_identical(npars(as.term(c("a[2]"))), 1L)
   expect_identical(npars(as.term(c("a[2]")), scalar_only = TRUE), 0L)
   expect_identical(npars(as.term(c("a[1]")), scalar_only = TRUE), 1L)
 })
 
+test_that("npars.term invalid elements", {
+  expect_identical(npars(as.term(c("a[2]", "b c"))), NA_integer_)
+  expect_identical(npars(as.term(c("a[2]", "b c")), na.rm = TRUE), 1L)
+})
