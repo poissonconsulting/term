@@ -2,27 +2,27 @@
 % Please edit documentation in R/term.R
 \name{term}
 \alias{term}
-\title{Object Terms}
+\title{Term Vectors}
 \usage{
-term(x, ...)
+term(dims = 0L, name = "par")
 }
 \arguments{
-\item{x}{An R object.}
+\item{dims}{An integer vector of the parameter dimensions.}
 
-\item{...}{Unused.}
+\item{name}{A string specifying the name of the parameter 
+for vectors of positive length.}
 }
 \value{
 A term vector.
 }
 \description{
-Gets the term vector for an R object.
-A term vector is a S3 vector of parameter terms.
+Creates a term vector.
 }
 \examples{
-term <- term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
-term
-str(term)
+term(0L)
+term(1L)
+term(2L)
 }
 \seealso{
-\code{\link{as.term}()}
+\code{\link{term-vector}} and \code{\link{dims}()}
 }

@@ -34,9 +34,9 @@ The vector is repaired before being completed.
 }}
 
 \examples{
-complete_terms(term("b[1]"))
-complete_terms(term("b[3]"), as.term(c("b[3]", "b[1]", "b[2]")))
-complete_terms(term(c("z[2,2]", "z[1,1]")))
+complete_terms(as.term("b[1]"))
+complete_terms(as.term(c("b[3]", "b[1]", "b[2]")))
+complete_terms(as.term(c("z[2,2]", "z[1,1]")))
 }
 \seealso{
 \code{\link{term-vector}}, \code{\link{repair_terms}()} and \code{\link{is.incomplete_terms}()}.

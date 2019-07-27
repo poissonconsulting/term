@@ -1,23 +1,33 @@
-#' Object Terms
+#' Term Vectors
 #'
-#' Gets the term vector for an R object.
-#' A term vector is a S3 vector of parameter terms.
+#' Creates a term vector.
 #'
-#' @param x An R object.
-#' @param ... Unused.
+#' @param dims An integer vector of the parameter dimensions.
+#' @param name A string specifying the name of the parameter 
+#' for vectors of positive length.
 #' @return A term vector.
-#' @seealso \code{\link{as.term}()}
+#' @seealso \code{\link{term-vector}} and \code{\link{dims}()}
 #' @export
 #' 
 #' @examples 
-#' term <- term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
-#' term
-#' str(term)
-term <- function(x, ...) UseMethod("term")
+#' term(0L)
+#' term(1L)
+#' term(2L)
+term <- function(dims = 0L, name = "par") {
+  dims <- as.integer(dims)
+  checkor(check_count(dims), 
+          check_vector(dims, c(1L, chk_max_int())))
+  check_string(name)
+  
+  if(!length(dims) || identical(dims, 0L)) return(as.term(character(0)))
+  if(identical(dims, 1L)) return(as.term(name))
+  if(identical(length(dims), 1L)) 
+    return(as.term(paste0(name, "[", 1:dims, "]")))
 
-#' @export
-term.default <- function(x, ...) {
-  check_unused(...)
-  if(missing(x)) return(as.term(character(0)))
-  as.term(x)
+  dims <- lapply(dims, function(x) 1:x)
+  dims <- do.call("expand.grid", dims)
+  dims <- as.matrix(dims)
+  dims <- apply(dims, 1L, function(x) paste(x, collapse = ","))
+  dims <- paste0(name, "[", dims, "]")
+  as.term(dims)
 }
