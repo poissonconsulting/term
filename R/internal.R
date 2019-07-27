@@ -38,12 +38,4 @@ set_class <- function(x, class) {
   x
 }
 
-pdims2term <- function(pdims) {
-  if(!length(pdims)) return(term(0))
-  term <- mapply(term, pdims, names(pdims))
-  term <- unlist(term)
-  term <- as.vector(term)
-  as.term(term)
-}
-
 err <- function (...) stop(..., call. = FALSE, domain = NA)

@@ -2,27 +2,38 @@
 % Please edit documentation in R/term.R
 \name{term}
 \alias{term}
-\title{Term Vectors}
+\alias{term.integer}
+\title{Term Vector}
 \usage{
-term(dims = 0L, name = "par")
+term(x, ...)
+
+\method{term}{integer}(x, name = "par", ...)
 }
 \arguments{
-\item{dims}{An integer vector of the parameter dimensions.}
+\item{x}{An integer vector of the object dimensions
+or a named list of the parameter's dimensions.}
 
-\item{name}{A string specifying the name of the parameter 
-for vectors of positive length.}
+\item{...}{Unused.}
+
+\item{name}{A string specifying the name of the parameter.}
 }
 \value{
 A term vector.
 }
 \description{
-Creates a term vector.
+Creates a term vector from object dimensions.
 }
+\section{Methods (by class)}{
+\itemize{
+\item \code{integer}: Term vector from an integer vector of the object's dimensions
+}}
+
 \examples{
 term(0L)
 term(1L)
 term(2L)
 }
 \seealso{
-\code{\link{term-vector}} and \code{\link{dims}()}
+\code{\link{term-vector}}, \code{\link{dims}()} and 
+\code{\link{pdims}()}
 }

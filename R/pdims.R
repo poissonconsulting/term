@@ -1,11 +1,14 @@
 #' Parameter Dimensions
 #'
 #' Gets the parameter dimensions of an object.
+#' 
+#' A named list of the dimensions of each parameter can be converted
+#' into the equivalent \code{\link{term-vector}} using \code{\link{term}()}.
 #'
 #' @param x The object
 #' @param ... Unused.
 #' @return A named list of the dimensions of each parameter.
-#' @seealso \code{\link{dims}()}
+#' @seealso \code{\link{dims}()} and \code{\link{term}()}
 #' @export
 #' 
 #' @examples

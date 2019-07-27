@@ -7,6 +7,7 @@
 #'
 #' @examples
 #' as.term(c("a[1]", "a[2]"))
-#' term(matrix(1:4, 2))
-#' str(as.term("a"))
+#' as.term(matrix(1:4, 2))
+#' term(2L)
+#' term(c(2L,2L), "alpha")
 NULL

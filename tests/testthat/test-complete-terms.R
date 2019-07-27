@@ -2,7 +2,7 @@ context("complete-terms")
 
 test_that("complete_terms", {
   expect_identical(complete_terms(NA_term_), NA_term_)
-  expect_identical(complete_terms(term(0)), term(0))
+  expect_identical(complete_terms(term(0L)), term(0L))
   expect_identical(complete_terms(c(NA_term_, "b[2]")), c(NA_term_, "b[2]", "b[1]"))
   expect_identical(complete_terms("b"), as.term("b"))
   expect_identical(complete_terms(as.term("b")), as.term("b"))

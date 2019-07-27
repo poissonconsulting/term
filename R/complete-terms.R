@@ -27,5 +27,5 @@ complete_terms.default <- function(x, ...) {
 complete_terms.term <- function(x, ...) {
   if(!length(x)) return(x)
   x <- repair_terms(x)
-  as.term(c(x, setdiff(pdims2term(pdims(x)), x)))
+  as.term(c(x, setdiff(term(pdims(x)), x)))
 }

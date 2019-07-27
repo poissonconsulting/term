@@ -25,6 +25,8 @@ Gets the dimensions of an object.
 }
 \details{
 Unlike \code{base::dim()}, dims works as intuitively expected for vectors and data.frames.
+A integer vector of the dimensions of a parameter can be converted
+into the equivalent \code{\link{term-vector}} using \code{\link{term}()}.
 }
 \section{Methods (by class)}{
 \itemize{
@@ -40,5 +42,6 @@ dims(data.frame())
 dims(data.frame(x = 1:3))
 }
 \seealso{
-\code{\link[base]{dim}()}
+\code{\link[base]{dim}()}, \code{\link{term-vector}} 
+and \code{\link{term}()}
 }

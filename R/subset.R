@@ -19,7 +19,7 @@ subset.term <- function(x, select = NULL, ...) {
   check_vector(select, pars(x), unique = TRUE, only = TRUE)
   check_unused(...)
   
-  if(!length(select)) return(term(0))
+  if(!length(select)) return(term(0L))
   
   x <- x[pars(x, terms = TRUE) %in% select]
   x[order(as.integer(factor(pars(x, terms = TRUE), levels = select)))]

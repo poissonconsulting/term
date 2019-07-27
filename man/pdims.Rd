@@ -17,9 +17,13 @@ A named list of the dimensions of each parameter.
 \description{
 Gets the parameter dimensions of an object.
 }
+\details{
+A named list of the dimensions of each parameter can be converted
+into the equivalent \code{\link{term-vector}} using \code{\link{term}()}.
+}
 \examples{
 pdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")))
 }
 \seealso{
-\code{\link{dims}()}
+\code{\link{dims}()} and \code{\link{term}()}
 }
