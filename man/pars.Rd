@@ -47,6 +47,7 @@ A character vector of the parameter names.
 }
 \description{
 Gets or sets the parameter names for an object.
+It assumes that the terms do not require repairing.
 }
 \details{
 \code{parameters()} is deprecated.
@@ -68,4 +69,7 @@ term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
 pars(term)
 pars(term, scalar_only = TRUE)
 pars(term, terms = TRUE)
+}
+\seealso{
+\code{\link{repair_terms}()}
 }

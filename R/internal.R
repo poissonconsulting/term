@@ -20,6 +20,15 @@ greater_than_term <- function(e1, e2) {
   e1[which] > e2[which]
 }
 
+# assumes that pars do not require repairing
+.pars <- function(x, scalar_only = FALSE, terms = FALSE) {
+  x <- as.character(x)
+  if(scalar_only) x <- x[!grepl("\\[", x)]
+  x <- sub("^(\\s*)(\\w+)(.*)", "\\2", x)
+  if(!terms) x <- unique(x)
+  x
+}
+
 set_class <- function(x, class) {
   class(x) <- class
   x

@@ -1,6 +1,7 @@
 #' Parameter Names
 #'
 #' Gets or sets the parameter names for an object.
+#' It assumes that the terms do not require repairing.
 #'
 #' @param x An R object.
 #' @param scalar_only A flag specifying whether to only get the names of
@@ -11,6 +12,7 @@
 #' @param value A character vector of the new parameter names.
 #' @param pars A character vector of the new parameter names.
 #' @return A character vector of the parameter names.
+#' @seealso \code{\link{repair_terms}()}
 #' @export
 #' 
 #' @examples
@@ -45,19 +47,15 @@ pars.term <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
   check_flag(scalar_only)
   check_flag(terms)
   check_unused(...)
-
-  x <- as.character(x)
-  if(scalar_only) x <- x[!grepl("\\[", x)]
-  x <- sub("^(\\w+)(.*)", "\\1", x)
-  if(!terms) x <- unique(x)
-  x
+  
+  .pars(x, scalar_only = scalar_only, terms = terms)
 }
 
 #' @export
 `pars<-.term` <- function(x, value) {
   check_vector(value, "", length = npars(x), unique = TRUE)
 
-  pars <- pars(x)
+  pars <- .pars(x)
   terms <- x
 
   for(i in seq_along(value)) {
