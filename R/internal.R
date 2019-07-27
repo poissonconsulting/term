@@ -1,12 +1,10 @@
 greater_than_term <- function(e1, e2) {
-  e1 <- as.term(e1)
-  e2 <- as.term(e2)
-  e1_parm <- pars(e1)
-  e2_parm <- pars(e2)
+  e1_parm <- .pars(e1)
+  e2_parm <- .pars(e2)
   if (e1_parm != e2_parm) return(e1_parm > e2_parm)
   
-  e1 <- tindex(e1)[[1]]
-  e2 <- tindex(e2)[[1]]
+  e1 <- .tindex(e1)[[1]]
+  e2 <- .tindex(e2)[[1]]
   
   if (length(e1) != length(e2)) return(length(e1) > length(e2))
   
@@ -40,6 +38,20 @@ greater_than_term <- function(e1, e2) {
   x <- gsub("\\[|\\]", "", x)
   x <- strsplit(x, ",")
   x <- lapply(x, as.integer)
+  names(x) <- names
+  x
+}
+
+.tindex <- function(x) {
+  names <- x
+  x <- sub(paste0("^", .par_name_pattern), "", x)
+  x <- sub("^(\\[)(.*)(\\])$", "\\2", x)
+  x <- strsplit(x, "\\s*[,]\\s*")
+  x[vapply(x, function(x) identical(x, character(0)), TRUE)] <- ""
+  x <- lapply(x, function(x) gsub("\\s+", "", x))
+  x <- lapply(x, as.integer)
+  x[is.na(x)] <- 1L
+  x[is.na(names)] <- NA_integer_
   names(x) <- names
   x
 }

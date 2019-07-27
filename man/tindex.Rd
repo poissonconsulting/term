@@ -4,6 +4,7 @@
 \alias{tdims}
 \alias{tindex}
 \alias{tindex.default}
+\alias{tindex.character}
 \alias{tindex.term}
 \title{Term Index}
 \usage{
@@ -12,6 +13,8 @@ tdims(x)
 tindex(x, ...)
 
 \method{tindex}{default}(x, ...)
+
+\method{tindex}{character}(x, ...)
 
 \method{tindex}{term}(x, ...)
 }
@@ -32,14 +35,21 @@ Gets the index for each term of an object.
 For example the index of \code{beta[2,1]} is \code{c(2L, 1L)}
 while the index for \code{sigma} is \code{1L}.
 It is useful for extracting the values of individual terms.
+
+The term vector is repaired prior to calculating the indices.
 }
 \section{Methods (by class)}{
 \itemize{
 \item \code{default}: Term indices for default object
 
+\item \code{character}: Term indices for character vector
+
 \item \code{term}: Term indices for term vector
 }}
 
 \examples{
-tindex(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
+tindex(c("alpha", "alpha[2]", "beta[1,1]", "beta[2 ,1  ]", NA))
+}
+\seealso{
+\code{\link{term-vector}} and \code{\link{repair_terms}()}
 }
