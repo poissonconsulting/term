@@ -30,6 +30,7 @@ tindex.term <- function(x, ...) {
   x <- lapply(x, function(x) gsub("\\s+", "", x))
   x <- lapply(x, as.integer)
   x[is.na(x)] <- 1L
+  x[is.na(names)] <- NA_integer_
   names(x) <- names
   x
 }
