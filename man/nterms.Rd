@@ -2,14 +2,19 @@
 % Please edit documentation in R/nterms.R
 \name{nterms}
 \alias{nterms}
+\alias{nterms.default}
 \title{Number of Terms}
 \usage{
 nterms(x, ...)
+
+\method{nterms}{default}(x, na.rm = FALSE, ...)
 }
 \arguments{
 \item{x}{The object.}
 
 \item{...}{Unused.}
+
+\item{na.rm}{A flag specifying whether to remove missing values.}
 }
 \value{
 A count of the number of terms.
@@ -17,6 +22,14 @@ A count of the number of terms.
 \description{
 Gets the number of unique valid term elements of an object.
 }
+\details{
+By default if the vector includes missing values then it returns NA_integer_.
+}
+\section{Methods (by class)}{
+\itemize{
+\item \code{default}: Number of terms of default object
+}}
+
 \examples{
 nterms(3:4)
 nterms(matrix(1:9, 3))

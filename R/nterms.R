@@ -1,8 +1,11 @@
 #' Number of Terms
 #'
 #' Gets the number of unique valid term elements of an object.
+#' 
+#' By default if the vector includes missing values then it returns NA_integer_.
 #'
 #' @param x The object.
+#' @param na.rm A flag specifying whether to remove missing values.
 #' @param ... Unused.
 #' @return A count of the number of terms.
 #' @seealso \code{\link{term-vector}}, \code{\link{repair_terms}()} 
@@ -17,10 +20,15 @@ nterms <- function(x, ...) {
   UseMethod("nterms")
 }
 
+#' @describeIn nterms Number of terms of default object
 #' @export
-nterms.default <- function(x, ...) {
+nterms.default <- function(x, na.rm = FALSE, ...) {
+  check_flag(na.rm)
+  check_unused(...)
   x <- as.term(x)
-  if(!length(x)) return(0L)
-  if(anyNA(x)) return(NA_integer_)
+  if(anyNA(x)) {
+    if(isFALSE(na.rm)) return(NA_integer_)
+    x <- x[!is.na(x)]
+  }
   length(unique(repair_terms(x)))
 }

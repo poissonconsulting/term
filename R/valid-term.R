@@ -14,7 +14,10 @@
 #' valid_term(c("a b", "a[1]b", "a[0]", "b[1,]", "c[]", "d[1][2]"))
 valid_term <- function(x) {
   if(!length(x)) return(TRUE)
-  valid <- grepl("^\\s*\\w+\\s*(\\[\\s*[123456789][0123456789]*(\\s*,\\s*[123456789][0123456789]*)*\\s*\\]){0,1}\\s*$", x)
+  index <- "[123456789][0123456789]*"
+  pattern <- paste0("^\\s*\\w+\\s*(\\[\\s*", index, "(\\s*,\\s*", index, 
+                    ")*\\s*\\]){0,1}\\s*$", sep = "")
+  valid <- grepl(pattern, x)
   is.na(valid[is.na(x)]) <- TRUE
   valid
 }

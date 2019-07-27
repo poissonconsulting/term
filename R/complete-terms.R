@@ -3,6 +3,7 @@
 #' Adds any absent elements to a terms vector.
 #' 
 #' The vector is repaired before being completed.
+#' Missing values are ignored.
 #'
 #' @param x An R object.
 #' @param ... Unused
@@ -11,7 +12,7 @@
 #' @export
 #' 
 #' @examples
-#' complete_terms(as.term("b[1]"))
+#' complete_terms(as.term(c("b[1]", NA)))
 #' complete_terms(as.term(c("b[3]", "b[1]", "b[2]")))
 #' complete_terms(as.term(c("z[2,2]", "z[1,1]")))
 complete_terms <- function(x, ...) UseMethod("complete_terms")

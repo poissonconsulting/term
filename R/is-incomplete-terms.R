@@ -3,9 +3,10 @@
 #' Tests whether a term vector has absent elements.
 #' 
 #' The test is performed after the object's terms have been repaired.
-#' If the term has any missing values then NA is return.
+#' By default if the term has any missing values then NA is return.
 #'
 #' @param x An object.
+#' @param na.rm A flag specifying whether to ignore missing values.
 #' @param ... Unused
 #' @return A logical scalar indicating whether the object's terms are incomplete.
 #' @seealso \code{\link{term-vector}()}, \code{\link{repair_terms}()} 
@@ -20,10 +21,12 @@ is.incomplete_terms <- function(x, ...) UseMethod("is.incomplete_terms")
 
 #' @describeIn is.incomplete_terms Test whether a term vector is incomplete
 #' @export
-is.incomplete_terms.term <- function(x, ...) {
+is.incomplete_terms.term <- function(x, na.rm = FALSE, ...) {
+  if(anyNA(x)) {
+    if(isFALSE(na.rm)) return(NA)
+    x <- x[!is.na(x)]
+  }
   if(!length(x)) return(FALSE)
-  if(anyNA(x)) return(NA)
-  x <- x[!is.na(x)]
   x <- repair_terms(x)
   x <- unique(x)
   length(x) < sum(vapply(pdims(x), prod, 1))
