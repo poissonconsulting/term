@@ -26,9 +26,11 @@ set_pars(x, pars)
 
 \method{pars}{default}(x, scalar_only = FALSE, terms = FALSE, ...)
 
-\method{pars}{character}(x, scalar_only = FALSE, terms = FALSE, ...)
+\method{pars}{character}(x, scalar_only = FALSE, terms = FALSE,
+  repair = TRUE, ...)
 
-\method{pars}{term}(x, scalar_only = FALSE, terms = FALSE, ...)
+\method{pars}{term}(x, scalar_only = FALSE, terms = FALSE,
+  repair = TRUE, ...)
 }
 \arguments{
 \item{x}{An R object.}
@@ -44,13 +46,15 @@ parameters with one term.}
 
 \item{terms}{A flag specifying whether to return the parameter name
 for each term element.}
+
+\item{repair}{A flag specifying whether to repair term elements.}
 }
 \value{
 A character vector of the parameter names.
 }
 \description{
 Gets or sets the parameter names for an object.
-It assumes that the terms do not require repairing.
+By default term elements are repaired prior to getting the parameter names.
 }
 \details{
 \code{parameters()} is deprecated.
@@ -58,6 +62,8 @@ It assumes that the terms do not require repairing.
 \code{parameters<-} is deprecated.
 
 \code{set_parameters()} is deprecated.
+
+Term elements are always repaired prior to setting.
 }
 \section{Methods (by class)}{
 \itemize{
