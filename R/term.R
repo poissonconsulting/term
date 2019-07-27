@@ -26,12 +26,12 @@ term.NULL <- function(x, name = "par", ...) {
 #' @describeIn term Term vector from an integer vector of the object's dimensions
 #' @export
 term.integer <- function(x, name = "par", ...) {
-  checkor(check_count(x), 
-          check_vector(x, c(1L, chk_max_int())))
+  check_vector(x, c(0L, chk_max_int()))
   check_string(name)
   check_unused(...)
  
-  if(!length(x) || identical(x, 0L)) return(as.term(character(0)))
+  if(!length(x)) return(as.term(character(0)))
+  if(any(x == 0L)) return(as.term(character(0)))
   if(identical(x, 1L)) return(as.term(name))
   if(identical(length(x), 1L)) 
     return(as.term(paste0(name, "[", 1:x, "]")))

@@ -25,7 +25,7 @@ as.term.character <- function(x, ...) {
 as.term.default <- function(x, name = "par", ...) {
   check_string(name)
   check_unused(...)
-  as.term(term_dims(x, name))
+  term(dims(x), name = name)
 }
 
 #' @export
