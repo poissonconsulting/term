@@ -4,12 +4,14 @@
 \alias{subset.term}
 \title{Subset Term Vector}
 \usage{
-\method{subset}{term}(x, select = NULL, ...)
+\method{subset}{term}(x, select = NULL, na.rm = FALSE, ...)
 }
 \arguments{
 \item{x}{A term vector to be subsetted.}
 
 \item{select}{A character vector of the names of the parameters to include in the subsetted object.}
+
+\item{na.rm}{A flag specifying whether to remove missing or invalid terms.}
 
 \item{...}{Unused.}
 }
@@ -19,6 +21,9 @@ The modified term vector.
 \description{
 Subsets a term vector.
 }
+\details{
+The term vector is repaired prior to subsetting.
+}
 \examples{
 term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
 "beta[1,2]", "beta[2,2]", "sigma"))
@@ -26,5 +31,5 @@ subset(term, "beta")
 subset(term, c("alpha", "sigma"))
 }
 \seealso{
-\code{\link{term-vector}}
+\code{\link{term-vector}} and \code{\link{repair_terms}()}
 }
