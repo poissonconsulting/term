@@ -13,9 +13,11 @@ repair_terms(x)
 The repaired term vector.
 }
 \description{
-Repairs a terms vector. Invalid elements are dropped and spaces removed.
+Repairs a terms vector. I
 }
 \details{
+Invalid elements are replaced by missing values and spaces removed.
+
 If a parameter such as \code{b} is a scalar then \code{b[1]} is replaced by \code{b}
 but if higher indices are included such as \code{b[2]} then \code{b}
 is replaced by \code{b[1]}.

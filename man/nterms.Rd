@@ -3,11 +3,17 @@
 \name{nterms}
 \alias{nterms}
 \alias{nterms.default}
+\alias{nterms.character}
+\alias{nterms.term}
 \title{Number of Terms}
 \usage{
 nterms(x, ...)
 
-\method{nterms}{default}(x, na.rm = FALSE, ...)
+\method{nterms}{default}(x, ...)
+
+\method{nterms}{character}(x, na.rm = FALSE, ...)
+
+\method{nterms}{term}(x, na.rm = FALSE, ...)
 }
 \arguments{
 \item{x}{The object.}
@@ -23,11 +29,22 @@ A count of the number of terms.
 Gets the number of unique valid term elements of an object.
 }
 \details{
-By default if the vector includes missing values then it returns NA_integer_.
+By default if the vector includes invalid term elements of 
+missing values then it returns NA_integer_.
+
+If \code{na.rm = TRUE} then any invalid term elements and missing values
+are removed before the number of terms is counted.
+
+If you are certain all the terms are unique and valid then just use
+\code{length(x)}.
 }
 \section{Methods (by class)}{
 \itemize{
 \item \code{default}: Number of terms of default object
+
+\item \code{character}: Number of terms of character vector
+
+\item \code{term}: Number of elements of term vector
 }}
 
 \examples{
@@ -36,6 +53,5 @@ nterms(matrix(1:9, 3))
 nterms(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
 }
 \seealso{
-\code{\link{term-vector}}, \code{\link{repair_terms}()} 
-and \code{\link{valid_term}()}
+\code{\link{term-vector}} and \code{\link{valid_term}()}
 }

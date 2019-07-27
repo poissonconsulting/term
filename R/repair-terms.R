@@ -1,6 +1,8 @@
 #' Repair Terms
 #'
-#' Repairs a terms vector. Invalid elements are dropped and spaces removed.
+#' Repairs a terms vector. I
+#' 
+#' Invalid elements are replaced by missing values and spaces removed.
 #' 
 #' If a parameter such as \code{b} is a scalar then \code{b[1]} is replaced by \code{b}
 #' but if higher indices are included such as \code{b[2]} then \code{b}
@@ -18,8 +20,7 @@
 #' repair_terms(as.term(c("a", NA)))
 repair_terms <- function(x) {
   if(!length(x)) return(x)
-  x <- x[valid_term(x)]
-  if(!length(x)) return(x)
+  is.na(x[!valid_term(x)]) <- TRUE
   x <- as.character(x)
   x <- gsub("\\s+", "", x)
   x <- sub("\\[1\\]$", "", x)

@@ -2,14 +2,20 @@
 #'
 #' Gets the number of unique valid term elements of an object.
 #' 
-#' By default if the vector includes missing values then it returns NA_integer_.
+#' By default if the vector includes invalid term elements of 
+#' missing values then it returns NA_integer_.
+#' 
+#' If \code{na.rm = TRUE} then any invalid term elements and missing values
+#' are removed before the number of terms is counted.
+#' 
+#' If you are certain all the terms are unique and valid then just use
+#' \code{length(x)}.
 #'
 #' @param x The object.
 #' @param na.rm A flag specifying whether to remove missing values.
 #' @param ... Unused.
 #' @return A count of the number of terms.
-#' @seealso \code{\link{term-vector}}, \code{\link{repair_terms}()} 
-#' and \code{\link{valid_term}()} 
+#' @seealso \code{\link{term-vector}} and \code{\link{valid_term}()} 
 #' @export
 #' 
 #' @examples
@@ -22,13 +28,28 @@ nterms <- function(x, ...) {
 
 #' @describeIn nterms Number of terms of default object
 #' @export
-nterms.default <- function(x, na.rm = FALSE, ...) {
+nterms.default <- function(x, ...) {
+  length(unique(as.term(x)))
+}
+
+#' @describeIn nterms Number of terms of character vector
+#' @export
+nterms.character <- function(x, na.rm = FALSE, ...) {
+  check_unused(...)
+  nterms(as.term(x), na.rm = na.rm)
+}
+
+#' @describeIn nterms Number of elements of term vector
+#' @export
+nterms.term <- function(x, na.rm = FALSE, ...) {
   check_flag(na.rm)
   check_unused(...)
-  x <- as.term(x)
+  
+  x <- repair_terms(x)
+  
   if(anyNA(x)) {
     if(isFALSE(na.rm)) return(NA_integer_)
     x <- x[!is.na(x)]
   }
-  length(unique(repair_terms(x)))
+  length(unique(x))
 }
