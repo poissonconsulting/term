@@ -31,3 +31,8 @@ test_that("npars.term invalid elements", {
   expect_identical(npars(as.term(c("a[2]", "b c"))), NA_integer_)
   expect_identical(npars(as.term(c("a[2]", "b c")), na.rm = TRUE), 1L)
 })
+
+test_that("npars.term missing values", {
+  expect_identical(npars(as.term(c("a[2]", NA))), NA_integer_)
+  expect_identical(npars(as.term(c("a[2]", NA)), na.rm = TRUE), 1L)
+})
