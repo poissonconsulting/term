@@ -29,3 +29,11 @@ test_that("repair_terms", {
   
   expect_identical(repair_terms(as.term(c("a[2,1]", "a"))), as.term(c("a[2,1]", "a[1]")))
 })
+
+test_that("repair_terms missing values", {
+  expect_identical(repair_terms(NA_character_), NA_term_)
+  expect_identical(repair_terms(c(NA_character_, "a")), as.term(c(NA_term_, "a")))
+  expect_identical(repair_terms(c("a", NA_character_, "a")), as.term(c("a", NA_term_, "a")))
+  expect_identical(repair_terms(c(NA_character_, "a", NA_character_, "a")), 
+                   as.term(c(NA_term_, "a", NA_term_, "a")))
+})

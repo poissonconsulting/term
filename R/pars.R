@@ -1,10 +1,10 @@
 #' Parameter Names
 #'
 #' Gets or sets the parameter names for an object.
-#' By default term elements are repaired prior to getting the parameter names.
 #' 
+#' By default term elements are repaired prior to getting the parameter names.
 #' Term elements are always repaired prior to setting.
-#'
+#' 
 #' @param x An R object.
 #' @param scalar_only A flag specifying whether to only get the names of
 #' parameters with one term.
@@ -20,7 +20,7 @@
 #' 
 #' @examples
 #' term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
-#' "beta[1,2]", "beta[2,2]", "sigma"))
+#' "beta[1,2]", "beta[2,2]", "sigma", NA))
 #' pars(term)
 #' pars(term, scalar_only = TRUE)
 #' pars(term, terms = TRUE)

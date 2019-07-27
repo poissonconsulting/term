@@ -2,13 +2,13 @@ context("pars")
 
 test_that("pars.default", {
   expect_identical(pars(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", 
-                     "beta[1,2]", "beta[2,2]", "sigma")),
+                          "beta[1,2]", "beta[2,2]", "sigma")),
                    c("alpha", "beta", "sigma"))
   expect_identical(pars(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", 
-                     "beta[1,2]", "beta[2,2]", "sigma"), scalar_only = TRUE),
+                          "beta[1,2]", "beta[2,2]", "sigma"), scalar_only = TRUE),
                    "sigma")
-    expect_identical(pars(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", 
-                     "beta[1,2]", "beta[2,2]", "sigma"), terms = TRUE),
+  expect_identical(pars(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", 
+                          "beta[1,2]", "beta[2,2]", "sigma"), terms = TRUE),
                    c("alpha", "alpha", "beta",  "beta",  "beta",  "beta",  "sigma"))
 })
 
@@ -41,15 +41,31 @@ test_that("pars.term", {
 })
 
 test_that("pars.term missing values", {
-  expect_identical(pars(as.term("b"), scalar_only = TRUE), "b")
-  expect_identical(pars(as.term("b[1]")), "b")
-  expect_identical(pars(as.term("b[1]"), scalar_only = TRUE), "b")
-  expect_identical(pars(as.term("b[1]"), scalar_only = TRUE, repair = FALSE), character(0))
-  expect_identical(pars(as.term(c("b", "b[1]"))), "b")
-  expect_identical(pars(as.term(c("b", "b[1]")), scalar_only = TRUE), "b")
-  expect_identical(pars(as.term(c("b", "b[1]", "b[2]"))), "b")
-  expect_identical(pars(as.term(c("b", "b[1]", "b[2]")), scalar_only = TRUE), character(0))
-  expect_identical(pars(as.term(c("b", "b[1]", "b[2]")), scalar_only = TRUE, repair = FALSE), "b")
-  expect_identical(pars(as.term(c("b[1]", "b[2]"))), "b")
-  expect_identical(pars(as.term(c("b[1]", "b[2]")), scalar_only = TRUE), character(0))
+  expect_identical(pars(as.term(NA_character_)), NA_character_)
+  expect_identical(pars(as.term(c(NA_character_, "a"))), c(NA_character_, "a"))
+  expect_identical(pars(as.term(c("a", NA_character_, "a"))), c("a", NA_character_))
+  expect_identical(pars(as.term(c(NA_character_, "a", NA_character_, "a"))), 
+                   c(NA_character_, "a"))
+  
+  expect_identical(pars(as.term(NA_character_), term = TRUE), NA_character_)
+  expect_identical(pars(as.term(c(NA_character_, "a")), term = TRUE), 
+                   c(NA_character_, "a"))
+  expect_identical(pars(as.term(c("a", NA_character_, "a")), term = TRUE), 
+                   c("a", NA_character_, "a"))
+  expect_identical(pars(as.term(c(NA_character_, "a", NA_character_, "a")), term = TRUE), 
+                   c(NA_character_, "a", NA_character_, "a"))
+  
+  expect_identical(pars(as.term(NA_character_), scalar_only = TRUE), NA_character_)
+  expect_identical(pars(as.term(c(NA_character_, "a")), scalar_only = TRUE), 
+                   c(NA_character_, "a"))
+  expect_identical(pars(as.term(c("a", NA_character_, "a")), scalar_only = TRUE), 
+                   c("a", NA_character_))
+  expect_identical(pars(as.term(c(NA_character_, "a", NA_character_, "a")), scalar_only = TRUE), 
+                   c(NA_character_, "a"))
+  expect_identical(pars(as.term(c("a[1]", NA_character_, "a")), scalar_only = TRUE), 
+                   c("a", NA_character_))
+  expect_identical(pars(as.term(c("a[2]", NA_character_, "a")), scalar_only = TRUE), 
+                   NA_character_)
+  expect_identical(pars(as.term(c("b[2]", NA_character_, "a")), scalar_only = TRUE), 
+                   c(NA_character_, "a"))
 })

@@ -23,7 +23,7 @@
 repair_terms <- function(x, scalars = TRUE) {
   check_flag(scalars)
   if(!length(x)) return(x)
-  is.na(x[!valid_term(x)]) <- TRUE
+  is.na(x[is.na(x) | !valid_term(x)]) <- TRUE
   x <- as.character(x)
   x <- gsub("\\s+", "", x)
   

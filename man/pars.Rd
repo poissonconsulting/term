@@ -54,7 +54,6 @@ A character vector of the parameter names.
 }
 \description{
 Gets or sets the parameter names for an object.
-By default term elements are repaired prior to getting the parameter names.
 }
 \details{
 \code{parameters()} is deprecated.
@@ -63,6 +62,7 @@ By default term elements are repaired prior to getting the parameter names.
 
 \code{set_parameters()} is deprecated.
 
+By default term elements are repaired prior to getting the parameter names.
 Term elements are always repaired prior to setting.
 }
 \section{Methods (by class)}{
@@ -76,7 +76,7 @@ Term elements are always repaired prior to setting.
 
 \examples{
 term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
-"beta[1,2]", "beta[2,2]", "sigma"))
+"beta[1,2]", "beta[2,2]", "sigma", NA))
 pars(term)
 pars(term, scalar_only = TRUE)
 pars(term, terms = TRUE)

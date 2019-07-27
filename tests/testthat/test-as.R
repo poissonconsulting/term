@@ -34,7 +34,8 @@ test_that("as.term.array", {
 "t[2,3,2]"), class = c("term", "character")))
 })
 
-test_that("as", {
+test_that("as.term.character", {
+  expect_error(as.term("a", "b"), "... must be unused")
   x <- c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]", "parm[2,1]", "parm[1,2]", "parm[10]", "parm3")
   x2 <- as.term(x)
   expect_is(x2, "term")
