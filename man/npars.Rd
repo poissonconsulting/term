@@ -2,14 +2,19 @@
 % Please edit documentation in R/npars.R
 \name{npars}
 \alias{npars}
+\alias{npars.default}
 \title{Number of Parameters}
 \usage{
 npars(x, ...)
+
+\method{npars}{default}(x, scalar_only = FALSE, ...)
 }
 \arguments{
 \item{x}{The object.}
 
 \item{...}{Unused.}
+
+\item{scalar_only}{A flag specifying whether to only count parameters with one term.}
 }
 \value{
 A count of the number of parameters.
@@ -17,8 +22,14 @@ A count of the number of parameters.
 \description{
 Gets the number of parameters of an object.
 }
+\section{Methods (by class)}{
+\itemize{
+\item \code{default}: Number of parameters of term vector
+}}
+
 \examples{
-npars(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
+npars(c("sigma", "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
+npars(c("sigma", "alpha[1]", "alpha[2]"), scalar_only = TRUE)
 }
 \seealso{
 \code{\link{pars}()}
