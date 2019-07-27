@@ -2,6 +2,7 @@ context("subset")
 
 test_that("subset.term",{
   term <- as.term(c("alpha[1]", "alpha[2]", "sigma"))
+  expect_identical(subset(term, character(0)), term())
   expect_error(subset(term, "beta"), 
                    "select can only include values 'alpha' or 'sigma'")
   term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", 

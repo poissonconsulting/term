@@ -1,6 +1,7 @@
 context("unique")
 
 test_that("unique", {
+  expect_error(unique(NA_term_, TRUE), "incomparables is ignored")
   expect_identical(unique(NA_term_), NA_term_)
   expect_identical(unique(c(NA_term_, NA_term_)), NA_term_)
   expect_identical(unique(term()), term())
