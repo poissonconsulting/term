@@ -4,7 +4,7 @@
 #'
 #' @param x An R object.
 #' @param ... Unused
-#' @return A vector or list of the number of dimensions.
+#' @return A count of the number of dimensions.
 #' @seealso \code{\link{dims}()}
 #' @export
 #' 

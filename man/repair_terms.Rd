@@ -13,17 +13,19 @@ repair_terms(x)
 The repaired term vector.
 }
 \description{
-Repairs values in an terms vector.
+Repairs a terms vector. Invalid elements are dropped and spaces removed.
 }
 \details{
-Initially removes spaces.
-Empty strings (\code{""}) are dropped.
 If a parameter such as \code{b} is a scalar then \code{b[1]} is replaced by \code{b}
 but if higher indices are included such as \code{b[2]} then \code{b}
 is replaced by \code{b[1]}.
 }
 \examples{
-complete_terms(term("b[1]"))
-complete_terms(term("b[3]"), as.term(c("b[3]", "b[1]", "b[2]")))
-complete_terms(term(c("z[2,2]", "z[1,1]")))
+repair_terms(as.term(c("b[3]", "b")))
+repair_terms(as.term(c("a[3]", "b[1]")))
+repair_terms(as.term(c("a [3]", " b [ 1  ] ")))
+repair_terms(as.term(c("a", NA)))
+}
+\seealso{
+\code{\link{term-vector}} and \code{\link{valid_term}}
 }

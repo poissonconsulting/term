@@ -1,6 +1,11 @@
 context("nterms")
 
 test_that("nterms.term", {
-  expect_identical(nterms(as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
-  "beta[1,2]", "beta[2,2]", "sigma"))), 7L)
+  expect_identical(nterms(character(0)), 0L)
+  expect_identical(nterms(NA_character_), NA_integer_)
+  expect_identical(nterms("a"), 1L)
+  expect_identical(nterms(c("a", "a")), 1L)
+  expect_identical(nterms(c("a", "a b")), 1L)
+  expect_identical(nterms(c("a", "b")), 2L)
+  expect_identical(nterms(c("a", "a[1]")), 1L)
 })

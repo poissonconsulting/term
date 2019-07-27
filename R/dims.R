@@ -2,11 +2,11 @@
 #'
 #' Gets the dimensions of an object.
 #' 
-#' Unlike \code{base::dim()}, dims works as expected for vectors and data.frames.
+#' Unlike \code{base::dim()}, dims works as intuitively expected for vectors and data.frames.
 #'
 #' @param x An R object.
 #' @param ... Unused
-#' @return A vector or list of the dimensions.
+#' @return An integer vector of the dimensions.
 #' @seealso \code{\link[base]{dim}()}
 #' @export
 #' 

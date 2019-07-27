@@ -2,6 +2,7 @@ context("repair-terms")
 
 test_that("repair_terms", {
   expect_identical(repair_terms(term()), term())
+  expect_identical(repair_terms(NA_character_), NA_term_)
   expect_identical(repair_terms(as.term("")), term())
   expect_identical(repair_terms(as.term("[1]")), term())
   expect_identical(repair_terms(as.term("b[]")), term())

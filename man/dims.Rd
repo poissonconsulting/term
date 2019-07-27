@@ -18,13 +18,13 @@ dims(x, ...)
 \item{...}{Unused}
 }
 \value{
-A vector or list of the dimensions.
+An integer vector of the dimensions.
 }
 \description{
 Gets the dimensions of an object.
 }
 \details{
-Unlike \code{base::dim()}, dims works as expected for vectors and data.frames.
+Unlike \code{base::dim()}, dims works as intuitively expected for vectors and data.frames.
 }
 \section{Methods (by class)}{
 \itemize{

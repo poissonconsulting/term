@@ -6,7 +6,7 @@
 #' @param scalar_only A flag specifying whether to only get the names of
 #' parameters with one term.
 #' @param terms A flag specifying whether to return the parameter name
-#' for each term.
+#' for each term element.
 #' @param ... Unused.
 #' @param value A character vector of the new parameter names.
 #' @param pars A character vector of the new parameter names.
@@ -51,13 +51,6 @@ pars.term <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
   x <- sub("^(\\w+)(.*)", "\\1", x)
   if(!terms) x <- unique(x)
   x
-}
-
-#' @export
-`pars<-.character` <- function(x, value) {
-  x <- as.term(x)
-  pars(x) <- value
-  as.character(x)
 }
 
 #' @export

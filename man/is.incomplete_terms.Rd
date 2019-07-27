@@ -15,23 +15,26 @@ is.incomplete_terms(x, ...)
 \item{...}{Unused}
 }
 \value{
-A flag indicating whether the object's terms are incomplete.
+A logical scalar indicating whether the object's terms are incomplete.
 }
 \description{
-Tests whether an objects has missing terms.
+Tests whether a term vector has absent elements.
 }
 \details{
 The test is performed after the object's terms have been repaired.
+If the term has any missing values then NA is return.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{term}: Test whether a term vectors terms are incomplete
+\item \code{term}: Test whether a term vector is incomplete
 }}
 
 \examples{
 is.incomplete_terms(as.term("b[2]"))
 is.incomplete_terms(as.term(c("b[2]", "b[1]")))
+is.incomplete_terms(as.term(c("b[2]", "b[1]", NA)))
 }
 \seealso{
-\code{\link{repair_terms}()} and \code{\link{complete_terms}()}
+\code{\link{term-vector}()}, \code{\link{repair_terms}()} 
+and \code{\link{complete_terms}()}
 }

@@ -1,6 +1,6 @@
 #' Number of Parameter Dimensions
 #'
-#' Gets the number of parameter dimensions of an object.
+#' Gets the number of parameter dimensions of an object as returned by \code{\link{pdims}()}.
 #'
 #' @param x The object
 #' @param ... Unused.

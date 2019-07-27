@@ -15,10 +15,14 @@ nterms(x, ...)
 A count of the number of terms.
 }
 \description{
-Gets the number of terms of an object.
+Gets the number of unique valid term elements of an object.
 }
 \examples{
 nterms(3:4)
 nterms(matrix(1:9, 3))
 nterms(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
+}
+\seealso{
+\code{\link{term-vector}}, \code{\link{repair_terms}()} 
+and \code{\link{valid_term}()}
 }

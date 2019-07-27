@@ -21,7 +21,7 @@ complete_terms(x, ...)
 The repaired and complete term vector.
 }
 \description{
-Completes any missing values to a terms vector.
+Adds any absent elements to a terms vector.
 }
 \details{
 The vector is repaired before being completed.
@@ -39,5 +39,5 @@ complete_terms(term("b[3]"), as.term(c("b[3]", "b[1]", "b[2]")))
 complete_terms(term(c("z[2,2]", "z[1,1]")))
 }
 \seealso{
-\code{\link{repair_terms}()} and \code{\link{is.incomplete_terms}()}.
+\code{\link{term-vector}}, \code{\link{repair_terms}()} and \code{\link{is.incomplete_terms}()}.
 }

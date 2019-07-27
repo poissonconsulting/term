@@ -40,7 +40,7 @@ set_pars(x, pars)
 parameters with one term.}
 
 \item{terms}{A flag specifying whether to return the parameter name
-for each term.}
+for each term element.}
 }
 \value{
 A character vector of the parameter names.

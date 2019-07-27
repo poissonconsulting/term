@@ -10,7 +10,7 @@ npars(x, ...)
 \method{npars}{default}(x, scalar_only = FALSE, ...)
 }
 \arguments{
-\item{x}{The object.}
+\item{x}{An R object.}
 
 \item{...}{Unused.}
 
@@ -20,11 +20,11 @@ npars(x, ...)
 A count of the number of parameters.
 }
 \description{
-Gets the number of parameters of an object.
+Gets the number of parameters of an object as returned by \code{\link{pars}()}.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{default}: Number of parameters of term vector
+\item \code{default}: Number of parameters
 }}
 
 \examples{

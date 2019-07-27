@@ -1,23 +1,20 @@
 #' Extract Unique Terms
 #' 
-#' Extracts unique values from a term vector. 
-#' By default the vector is repaired before extracting the unique values.
+#' Extracts unique elements from a term vector.
+#' 
+#' If necessary the user should repair the terms prior to extracting unique elements.
 #' 
 #' @param x A term vector.
 #' @param incomparables Ignored.
-#' @param repair_terms A flag specifying whether the vector should be repaired
-#' before extracting the unique values.
 #' @param ... Unused.
 #' @return A vector of unique terms.
-#' @seealso \code{\link{repair_terms}()}
+#' @seealso \code{\link{term-vector}} and \code{\link{repair_terms}()}
 #' @export
 #' 
 #' @examples 
-#' unique(term(c("a", "a[2 ]", "a [1]")))
-#' unique(term(c("a", "b[2 ]", "a [1]")))
-unique.term <- function(x, incomparables = FALSE, repair_terms = TRUE, ...) {
-  check_flag(repair_terms)
+#' unique(as.term(c("b", "a", "a[1]", "a", NA, "aa", NA)))
+unique.term <- function(x, incomparables = FALSE, ...) {
   check_unused(...)
-  if(repair_terms) x <- repair_terms(x) 
+  if(!isFALSE(incomparables)) err("incomparables is ignored")
   as.term(unique(as.character(x)))
 }

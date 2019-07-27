@@ -1,9 +1,12 @@
-#' Subset term vector
+#' Subset Term Vector
+#' 
+#' Subsets a term vector.
 #' 
 #' @param x A term vector to be subsetted.
-#' @param select A character vector of the parameters to include in the subsetted object.
+#' @param select A character vector of the names of the parameters to include in the subsetted object.
 #' @param ... Unused.
 #' @return The modified term vector.
+#' @seealso \code{\link{term-vector}}
 #' @export
 #' 
 #' @examples 

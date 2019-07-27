@@ -1,13 +1,13 @@
 #' Complete Terms
 #'
-#' Completes any missing values to a terms vector.
+#' Adds any absent elements to a terms vector.
 #' 
 #' The vector is repaired before being completed.
 #'
 #' @param x An R object.
 #' @param ... Unused
 #' @return The repaired and complete term vector.
-#' @seealso \code{\link{repair_terms}()} and \code{\link{is.incomplete_terms}()}.
+#' @seealso \code{\link{term-vector}}, \code{\link{repair_terms}()} and \code{\link{is.incomplete_terms}()}.
 #' @export
 #' 
 #' @examples

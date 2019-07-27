@@ -4,16 +4,12 @@
 \alias{unique.term}
 \title{Extract Unique Terms}
 \usage{
-\method{unique}{term}(x, incomparables = FALSE, repair_terms = TRUE,
-  ...)
+\method{unique}{term}(x, incomparables = FALSE, ...)
 }
 \arguments{
 \item{x}{A term vector.}
 
 \item{incomparables}{Ignored.}
-
-\item{repair_terms}{A flag specifying whether the vector should be repaired
-before extracting the unique values.}
 
 \item{...}{Unused.}
 }
@@ -21,13 +17,14 @@ before extracting the unique values.}
 A vector of unique terms.
 }
 \description{
-Extracts unique values from a term vector. 
-By default the vector is repaired before extracting the unique values.
+Extracts unique elements from a term vector.
+}
+\details{
+If necessary the user should repair the terms prior to extracting unique elements.
 }
 \examples{
-unique(term(c("a", "a[2 ]", "a [1]")))
-unique(term(c("a", "b[2 ]", "a [1]")))
+unique(as.term(c("b", "a", "a[1]", "a", NA, "aa", NA)))
 }
 \seealso{
-\code{\link{repair_terms}()}
+\code{\link{term-vector}} and \code{\link{repair_terms}()}
 }

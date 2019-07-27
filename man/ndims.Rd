@@ -21,7 +21,7 @@ ndims(x, ...)
 \item{...}{Unused}
 }
 \value{
-A vector or list of the number of dimensions.
+A count of the number of dimensions.
 }
 \description{
 Gets the number of dimensions of an object as defined by \code{\link{dims}()}.

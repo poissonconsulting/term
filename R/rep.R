@@ -1,6 +1,2 @@
 #' @export
-rep.term <- function(x, times, ...) {
-  x <- as.character(x)
-  x <- rep(x, times)
-  as.term(x)
-}
+rep.term <- function(x, times, ...) as.term(rep(as.character(x), times))

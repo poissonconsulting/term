@@ -1,12 +1,11 @@
-#' Coerce to a term Vector
+#' Coerce to a Term Vector
 #'
-#' Coerces an R object to a term vector.
+#' Coerces an R object to a \code{\link{term-vector}}.
 #' 
-#' A term vector is a S3 vector of parameter terms.
-#'
 #' @param x The object to coerce.
 #' @param name A string of the name for the parameter.
 #' @param ... Unused.
+#' @seealso \code{\link{term-vector}}
 #' @export
 #' 
 #' @examples
@@ -23,7 +22,7 @@ as.term.character <- function(x, ...) {
 
 #' @describeIn as.term Coerce default object to term vector
 #' @export
-as.term.default <- function(x, name = "parameter", ...) {
+as.term.default <- function(x, name = "par", ...) {
   check_string(name)
   check_unused(...)
   as.term(term_dims(x, name))

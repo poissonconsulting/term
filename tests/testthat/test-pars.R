@@ -23,11 +23,6 @@ test_that("pars.term", {
   
   expect_identical(set_pars(terms, pars = c("gamma", "theta", "rho")),
                    as.term(c("gamma[1]", "gamma[2]", "theta[1,1]", "theta[2,1]", "theta[1,2]", "theta[2,2]", "rho")))
-  
-  expect_identical(set_pars(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", 
-                                    "beta[1,2]", "beta[2,2]", "sigma"), 
-                                  pars = c("gamma", "theta", "rho")),
-                   c("gamma[1]", "gamma[2]", "theta[1,1]", "theta[2,1]", "theta[1,2]", "theta[2,2]", "rho"))
 })
 
 test_that("pars.term", {

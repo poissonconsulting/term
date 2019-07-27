@@ -59,3 +59,5 @@ pdims2term <- function(pdims) {
   term <- as.vector(term)
   as.term(term)
 }
+
+err <- function (...) stop(..., call. = FALSE, domain = NA)

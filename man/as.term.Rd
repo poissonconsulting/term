@@ -5,7 +5,7 @@
 \alias{as.term}
 \alias{as.term.character}
 \alias{as.term.default}
-\title{Coerce to a term Vector}
+\title{Coerce to a Term Vector}
 \usage{
 \method{as.character}{term}(x, ...)
 
@@ -13,7 +13,7 @@ as.term(x, ...)
 
 \method{as.term}{character}(x, ...)
 
-\method{as.term}{default}(x, name = "parameter", ...)
+\method{as.term}{default}(x, name = "par", ...)
 }
 \arguments{
 \item{x}{The object to coerce.}
@@ -23,10 +23,7 @@ as.term(x, ...)
 \item{name}{A string of the name for the parameter.}
 }
 \description{
-Coerces an R object to a term vector.
-}
-\details{
-A term vector is a S3 vector of parameter terms.
+Coerces an R object to a \code{\link{term-vector}}.
 }
 \section{Methods (by class)}{
 \itemize{
@@ -40,4 +37,7 @@ A term vector is a S3 vector of parameter terms.
 \examples{
 as.term(matrix(1:4, 2))
 as.term(c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]")) 
+}
+\seealso{
+\code{\link{term-vector}}
 }
