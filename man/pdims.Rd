@@ -15,9 +15,12 @@ pdims(x, ...)
 A named list of the dimensions of each parameter.
 }
 \description{
-Gets the parameter dimensions of an object.
+Gets the parameter dimensions of an object as a named list of the dimensions
+of each parameter.
 }
 \details{
+Missing and invalid term elements are ignored.
+
 A named list of the dimensions of each parameter can be converted
 into the equivalent \code{\link{term-vector}} using \code{\link{term}()}.
 }

@@ -29,6 +29,21 @@ greater_than_term <- function(e1, e2) {
   x
 }
 
+.pdims <- function(x) {
+  x <- sort(x)
+  names <- .pars(x)
+  x <- split(x, .pars(x, terms = TRUE))
+  x <- lapply(x, function(x) x[length(x)])
+  x <- unlist(x)
+  x <- sub(paste0("^", .par_name_pattern), "", as.character(x))
+  x <- sub("^$", "1", x)
+  x <- gsub("\\[|\\]", "", x)
+  x <- strsplit(x, ",")
+  x <- lapply(x, as.integer)
+  names(x) <- names
+  x
+}
+
 set_class <- function(x, class) {
   class(x) <- class
   x

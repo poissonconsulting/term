@@ -1,6 +1,9 @@
 #' Parameter Dimensions
 #'
-#' Gets the parameter dimensions of an object.
+#' Gets the parameter dimensions of an object as a named list of the dimensions
+#' of each parameter.
+#' 
+#' Missing and invalid term elements are ignored.
 #' 
 #' A named list of the dimensions of each parameter can be converted
 #' into the equivalent \code{\link{term-vector}} using \code{\link{term}()}.
@@ -17,16 +20,7 @@ pdims <- function(x, ...) UseMethod("pdims")
 
 #' @export
 pdims.term <- function(x, ...) {
-  x <- sort(x)
-  names <- pars(x)
-  x <- split(x, pars(x, terms = TRUE))
-  x <- lapply(x, function(x) x[length(x)])
-  x <- unlist(x)
-  x <- sub(paste0("^", .par_name_pattern), "", as.character(x))
-  x <- sub("^$", "1", x)
-  x <- gsub("\\[|\\]", "", x)
-  x <- strsplit(x, ",")
-  x <- lapply(x, as.integer)
-  names(x) <- names
-  x
+  x <- repair_terms(x)
+  x <- x[!is.na(x)]
+  .pdims(x)
 }
