@@ -73,8 +73,6 @@ test_that("set_pars", {
                "value must have 1 element")
   expect_error(set_pars(as.term(c("a", "a")), c("b", "a", "c")), 
                "value must have 1 or 2 elements")
-  expect_error(set_pars(as.term(c("a [ 1]", "b")), c("b", NA)), 
-                   "value must not include missing values")
   expect_error(set_pars(as.term("a"), ""), 
                    "value must match regular expression")
   expect_error(set_pars(as.term("a"), "1"), 
@@ -88,3 +86,12 @@ test_that("set_pars", {
                  "value must have 1 or 7 elements")
 })
 
+test_that("set_pars missing values", {
+  expect_error(set_pars(as.term(c("a [ 1]", "b")), c("b", NA)), 
+                   "value must not include missing values")
+  expect_identical(set_pars(NA_term_, "a"), NA_term_)
+  expect_identical(set_pars(c(NA_term_, "b"), "a"), as.term(c(NA, "a")))
+  expect_error(set_pars(c(NA_term_, "b"), rep("a", 3L)), 
+               "value must have 1 or 2 elements")
+  expect_identical(set_pars(as.term(c("c c", "b")), "a"), as.term(c(NA, "a")))
+})

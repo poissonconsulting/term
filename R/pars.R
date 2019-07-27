@@ -71,6 +71,8 @@ pars.term <- function(x, scalar_only = FALSE, terms = FALSE, repair = TRUE, ...)
   x <- repair_terms(x, scalars = FALSE)
 
   x <- sub(paste0("^", .par_name_pattern), "", x)
+  is.na <- is.na(x)
   x <- paste(value, x, sep = "")
+  is.na(x[is.na]) <- TRUE
   as.term(x)
 }
