@@ -95,3 +95,11 @@ test_that("set_pars missing values", {
                "value must have 1 or 2 elements")
   expect_identical(set_pars(as.term(c("c c", "b")), "a"), as.term(c(NA, "a")))
 })
+
+test_that("set_pars<-", {
+  
+  term <- as.term(c("a [ 1]", "b", NA))
+  expect_error(pars(term) <- "1", "value must match regular expression")
+  pars(term) <- "a1"
+  expect_identical(term, as.term(c("a1[1]", "a1", NA)))
+})
