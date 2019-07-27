@@ -65,16 +65,12 @@ pars.term <- function(x, scalar_only = FALSE, terms = FALSE, repair = TRUE, ...)
 
 #' @export
 `pars<-.term` <- function(x, value) {
-  x <- repair_terms(x)
-  pars <- .pars(x)
+  check_vector(value, "", length = c(1L, 1L, length(x)))
+  check_grepl(value, paste0("^", .par_name_pattern ,"$"))
   
-  check_vector(value, "", length = length(pars), unique = TRUE)
+  x <- repair_terms(x, scalars = FALSE)
 
-  terms <- x
-
-  for(i in seq_along(value)) {
-    which <- which(grepl(pars[i], terms, fixed = TRUE))
-    x[which] <- sub(pars[i], value[i], x[which], fixed = TRUE)
-  }
-  x
+  x <- sub(paste0("^", .par_name_pattern), "", x)
+  x <- paste(value, x, sep = "")
+  as.term(x)
 }

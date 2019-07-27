@@ -24,7 +24,7 @@ greater_than_term <- function(e1, e2) {
 .pars <- function(x, scalar_only = FALSE, terms = FALSE) {
   x <- as.character(x)
   if(scalar_only) x <- x[!grepl("\\[", x)]
-  x <- sub("^(\\s*)(\\w+)(.*)", "\\2", x)
+  x <- sub(paste0("^(\\s*)(", .par_name_pattern, ")(.*)"), "\\2", x)
   if(!terms) x <- unique(x)
   x
 }

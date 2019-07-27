@@ -22,7 +22,7 @@ pdims.term <- function(x, ...) {
   x <- split(x, pars(x, terms = TRUE))
   x <- lapply(x, function(x) x[length(x)])
   x <- unlist(x)
-  x <- sub("(^\\w+)(.*)", "\\2", as.character(x))
+  x <- sub(paste0("^", .par_name_pattern), "", as.character(x))
   x <- sub("^$", "1", x)
   x <- gsub("\\[|\\]", "", x)
   x <- strsplit(x, ",")

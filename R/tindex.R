@@ -23,7 +23,7 @@ tindex.default <- function(x, ...) tindex(as.term(x))
 #' @export
 tindex.term <- function(x, ...) {
   names <- x
-  x <- sub("^(\\w+)(.*)", "\\2", x)
+  x <- sub(paste0("^", .par_name_pattern), "", x)
   x <- sub("^(\\[)(.*)(\\])$", "\\2", x)
   x <- strsplit(x, "\\s*[,]\\s*")
   x[vapply(x, function(x) identical(x, character(0)), TRUE)] <- ""
