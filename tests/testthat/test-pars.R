@@ -28,5 +28,17 @@ test_that("pars.term", {
                                     "beta[1,2]", "beta[2,2]", "sigma"), 
                                   pars = c("gamma", "theta", "rho")),
                    c("gamma[1]", "gamma[2]", "theta[1,1]", "theta[2,1]", "theta[1,2]", "theta[2,2]", "rho"))
-  
+})
+
+test_that("pars.term", {
+  expect_identical(pars(as.term("b")), "b")
+  expect_identical(pars(as.term("b"), scalar_only = TRUE), "b")
+  expect_identical(pars(as.term("b[1]")), "b")
+  expect_identical(pars(as.term("b[1]"), scalar_only = TRUE), character(0))
+  expect_identical(pars(as.term(c("b", "b[1]"))), "b")
+  expect_identical(pars(as.term(c("b", "b[1]")), scalar_only = TRUE), "b")
+  expect_identical(pars(as.term(c("b", "b[1]", "b[2]"))), "b")
+  expect_identical(pars(as.term(c("b", "b[1]", "b[2]")), scalar_only = TRUE), "b")
+  expect_identical(pars(as.term(c("b[1]", "b[2]"))), "b")
+  expect_identical(pars(as.term(c("b[1]", "b[2]")), scalar_only = TRUE), character(0))
 })

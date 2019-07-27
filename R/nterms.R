@@ -8,6 +8,8 @@
 #' @export
 #' 
 #' @examples
+#' nterms(3:4)
+#' nterms(matrix(1:9, 3))
 #' nterms(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
 nterms <- function(x, ...) {
   UseMethod("nterms")

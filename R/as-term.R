@@ -16,7 +16,10 @@ as.term <- function(x, ...) UseMethod("as.term")
 
 #' @describeIn as.term Coerce character vector to term vector
 #' @export
-as.term.character <- function(x, ...) set_class(x, c("term", "character"))
+as.term.character <- function(x, ...) {
+  check_unused(...)
+  set_class(x, c("term", "character"))
+}
 
 #' @describeIn as.term Coerce default object to term vector
 #' @export
@@ -27,4 +30,7 @@ as.term.default <- function(x, name = "parameter", ...) {
 }
 
 #' @export
-as.term.term <- function(x, ...) x
+as.term.term <- function(x, ...) {
+  check_unused(...)
+  x
+}

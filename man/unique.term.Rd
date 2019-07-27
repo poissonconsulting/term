@@ -2,23 +2,32 @@
 % Please edit documentation in R/unique.R
 \name{unique.term}
 \alias{unique.term}
-\title{Extract Unique Elements}
+\title{Extract Unique Terms}
 \usage{
-\method{unique}{term}(x, incomparables = FALSE, ...)
+\method{unique}{term}(x, incomparables = FALSE, repair_terms = TRUE,
+  ...)
 }
 \arguments{
 \item{x}{A term vector.}
 
 \item{incomparables}{Ignored.}
 
+\item{repair_terms}{A flag specifying whether the vector should be repaired
+before extracting the unique values.}
+
 \item{...}{Unused.}
 }
 \value{
-A term vector.
+A vector of unique terms.
 }
 \description{
-Extract Unique Elements
+Extracts unique values from a term vector. 
+By default the vector is repaired before extracting the unique values.
 }
 \examples{
-unique(term(c("a[2]", "a[1]", "a[1]")))
+unique(term(c("a", "a[2 ]", "a [1]")))
+unique(term(c("a", "b[2 ]", "a [1]")))
+}
+\seealso{
+\code{\link{repair_terms}()}
 }
