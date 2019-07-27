@@ -13,7 +13,7 @@ is.term(x)
 A flag indicating whether the test was positive.
 }
 \description{
-Test whether an R object inherits from class term.
+Tests whether an R object inherits from class term.
 }
 \examples{
 is.term(c("parameter[2]", "parameter[10]"))

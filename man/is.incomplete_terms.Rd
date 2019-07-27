@@ -21,7 +21,7 @@ A flag indicating whether the object's terms are incomplete.
 Tests whether an objects has missing terms.
 }
 \details{
-The test is performed after the objects terms have been repaired.
+The test is performed after the object's terms have been repaired.
 }
 \section{Methods (by class)}{
 \itemize{

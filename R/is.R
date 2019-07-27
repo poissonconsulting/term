@@ -1,6 +1,6 @@
 #' Is Term
 #'
-#' Test whether an R object inherits from class term.
+#' Tests whether an R object inherits from class term.
 #'
 #' @param x The object to test.
 #' @return A flag indicating whether the test was positive.

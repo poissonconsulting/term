@@ -2,7 +2,7 @@
 #'
 #' Tests whether an objects has missing terms.
 #' 
-#' The test is performed after the objects terms have been repaired.
+#' The test is performed after the object's terms have been repaired.
 #'
 #' @param x An object.
 #' @param ... Unused
