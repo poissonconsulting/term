@@ -14,9 +14,23 @@
 #' npars(c("sigma", "alpha[1]", "alpha[2]"), scalar_only = TRUE)
 npars <- function(x, ...) UseMethod("npars")
 
-#' @describeIn npars Number of parameters
+#' @describeIn npars Number of parameters of default object
 #' @export
 npars.default <- function(x, scalar_only = FALSE, ...) {
+  check_unused(...)
+  length(.pars(x, scalar_only = scalar_only))
+}
+
+#' @describeIn npars Number of parameters of character vector
+#' @export
+npars.character <- function(x, scalar_only = FALSE, ...) {
+  check_unused(...)
+  npars(as.term(x), scalar_only = scalar_only)
+}
+
+#' @describeIn npars Number of parameters of term vector
+#' @export
+npars.term <- function(x, scalar_only = FALSE, ...) {
   check_unused(...)
   length(pars(x, scalar_only = scalar_only))
 }

@@ -3,11 +3,17 @@
 \name{npars}
 \alias{npars}
 \alias{npars.default}
+\alias{npars.character}
+\alias{npars.term}
 \title{Number of Parameters}
 \usage{
 npars(x, ...)
 
 \method{npars}{default}(x, scalar_only = FALSE, ...)
+
+\method{npars}{character}(x, scalar_only = FALSE, ...)
+
+\method{npars}{term}(x, scalar_only = FALSE, ...)
 }
 \arguments{
 \item{x}{An R object.}
@@ -24,7 +30,11 @@ Gets the number of parameters of an object as returned by \code{\link{pars}()}.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{default}: Number of parameters
+\item \code{default}: Number of parameters of default object
+
+\item \code{character}: Number of parameters of character vector
+
+\item \code{term}: Number of parameters of term vector
 }}
 
 \examples{
