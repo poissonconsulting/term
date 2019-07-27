@@ -38,6 +38,13 @@ set_pars <- function(x, pars) {
 #' @export
 pars.default <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
   check_unused(...)
+  .pars(as.term(x), scalar_only = scalar_only, terms = terms)
+}
+
+#' @describeIn pars Parameter names for a character vector
+#' @export
+pars.character <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
+  check_unused(...)
   pars(as.term(x), scalar_only = scalar_only, terms = terms)
 }
 
