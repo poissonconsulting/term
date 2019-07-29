@@ -22,7 +22,7 @@ status](https://www.r-pkg.org/badges/version/term)](https://cran.r-project.org/p
 ![CRAN downloads](http://cranlogs.r-pkg.org/badges/term)
 <!-- badges: end -->
 
-`term` is an R package to create, manipulate and query S3 vectors of
+`term` is an R package to create, manipulate and query vectors of
 parameter terms. Parameter terms are the labels used to reference values
 in vectors, matrices and arrays. They are most commonly used in
 coefficient tables.
@@ -43,62 +43,49 @@ To install the latest development version from
 ## Demonstration
 
 ``` r
+library(tibble) # for prettier printing of df
 library(term)
 
-# a term vector can be created from a character vector
-term <- as.term(c("sigma", "beta[2,2]", "alpha[1]", "alpha[2]", "beta[1,1]", 
-                  "beta[2,1]", "beta[1,2]"))
+# creates a data frame with a term vector 
+df <- term_df(matrix(1:4, 2))
 
-print(term)
-#> [1] "sigma"     "beta[2,2]" "alpha[1]"  "alpha[2]"  "beta[1,1]" "beta[2,1]"
-#> [7] "beta[1,2]"
+df
+#> # A tibble: 4 x 2
+#>   term        n1
+#>   <term>   <int>
+#> 1 par[1,1]     1
+#> 2 par[2,1]     2
+#> 3 par[1,2]     3
+#> 4 par[2,2]     4
 
-# term vectors can be sorted (by the term parameter names and indices)
-term <- sort(term)
-print(term)
-#> [1] "alpha[1]"  "alpha[2]"  "beta[1,1]" "beta[2,1]" "beta[1,2]" "beta[2,2]"
-#> [7] "sigma"
+# extract the term vector
+term <- df$term
 
-# and the parameters extracted
-parameters(term)
-#> Warning: 'parameters' is deprecated.
-#> Use 'pars' instead.
-#> See help("Deprecated")
-#> [1] "alpha" "beta"  "sigma"
+str(term)
+#>  'term' chr [1:4] "par[1,1]" "par[2,1]" "par[1,2]" "par[2,2]"
 
-# as well as the dimensions of each parameter
+# then extract the parameter names
+pars(term)
+#> [1] "par"
+
+# the dimensions of each parameter
 pdims(term)
-#> $alpha
-#> [1] 2
-#> 
-#> $beta
+#> $par
 #> [1] 2 2
-#> 
-#> $sigma
-#> [1] 1
 
 # and the index of each term
 tindex(term)
-#> $`alpha[1]`
-#> [1] 1
-#> 
-#> $`alpha[2]`
-#> [1] 2
-#> 
-#> $`beta[1,1]`
+#> $`par[1,1]`
 #> [1] 1 1
 #> 
-#> $`beta[2,1]`
+#> $`par[2,1]`
 #> [1] 2 1
 #> 
-#> $`beta[1,2]`
+#> $`par[1,2]`
 #> [1] 1 2
 #> 
-#> $`beta[2,2]`
+#> $`par[2,2]`
 #> [1] 2 2
-#> 
-#> $sigma
-#> [1] 1
 ```
 
 ## Contribution
