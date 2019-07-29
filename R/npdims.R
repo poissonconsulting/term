@@ -2,15 +2,34 @@
 #'
 #' Gets the number of parameter dimensions of an object as returned by \code{\link{pdims}()}.
 #'
-#' @param x The object
+#' @param x The object.
+#' @param terms A flag specifying whether to get the number of dimensions for each
+#' term element.
 #' @param ... Unused.
-#' @return A named list of the number of dimensions of each parameter.
-#' @seealso \code{\link{pdims}()}
+#' @return A named integer vector of the number of dimensions of each parameter.
+#' @seealso \code{\link{pdims}()} and \code{\link{term-vector}}
 #' @export
 #' 
 #' @examples
 #' npdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")))
+#' npdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")), terms = TRUE)
 npdims <- function(x, ...) UseMethod("npdims")
 
+#' @describeIn npdims Number of parameter dimensions of term vector
 #' @export
-npdims.default <- function(x, ...) vapply(pdims(x), length, 1L)
+npdims.term <- function(x, terms = FALSE, ...) {
+  check_flag(terms)
+  check_unused(...)
+  x <- repair_terms(x)
+
+  if(!terms) {
+    x <- x[!is.na(x)]
+    return(vapply(.pdims(x), length, 1L))
+  }
+  x <- tindex(x)
+  names(x) <- .pars(as.term(names(x)), terms = TRUE)
+  is.na <- vapply(x, identical, TRUE, y = NA_integer_)
+  x <- vapply(x, length, 1L)
+  is.na(x[is.na]) <- TRUE
+  x
+}

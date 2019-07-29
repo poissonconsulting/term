@@ -27,7 +27,7 @@ greater_than_term <- function(e1, e2) {
   x
 }
 
-# assumes that pars do not require repairing
+# assumes that pars do not require repairing and are complete
 .pdims <- function(x) {
   x <- sort(x)
   names <- .pars(x)
@@ -47,10 +47,9 @@ greater_than_term <- function(e1, e2) {
 .tindex <- function(x) {
   names <- x
   x <- sub(paste0("^", .par_name_pattern), "", x)
-  x <- sub("^(\\[)(.*)(\\])$", "\\2", x)
-  x <- strsplit(x, "\\s*[,]\\s*")
-  x[vapply(x, function(x) identical(x, character(0)), TRUE)] <- ""
-  x <- lapply(x, function(x) gsub("\\s+", "", x))
+  x <- sub("^$", "1", x)
+  x <- gsub("\\[|\\]", "", x)
+  x <- strsplit(x, ",")
   x <- lapply(x, as.integer)
   x[is.na(x)] <- 1L
   x[is.na(names)] <- NA_integer_
