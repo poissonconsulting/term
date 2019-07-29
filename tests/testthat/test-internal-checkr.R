@@ -7,6 +7,13 @@ test_that("check_vector", {
   expect_error(check_vector(matrix()), "matrix[(][)] must be a vector")
 })
 
+test_that("check_atomic", {
+  expect_true(check_atomic(integer(0)))
+  expect_true(check_atomic(1))
+  expect_true(check_atomic(matrix()))
+  expect_error(check_atomic(list()), "list[(][)] must be atomic")
+})
+
 test_that("check_atomic_vector", {
   expect_true(check_atomic_vector(integer(0)))
   expect_true(check_atomic_vector(1))
