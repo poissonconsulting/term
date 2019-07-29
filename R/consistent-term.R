@@ -8,10 +8,16 @@
 #' @export
 #' 
 #' @examples 
-#' consistent_terms(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")))
-consistent_terms <- function(x) {
+#' consistent_term(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")))
+#' consistent_term(as.term(c("alpha[1]", NA_term_, "beta[1,1]", "beta[2]")))
+consistent_term <- function(x) {
   if(!is.term(x)) err("x must be a term vector")
   x <- npdims(x, terms = TRUE)
-  # need to take npdims and looks for odd ones...
-  x
+  y <- x[!is.na(x)]
+  for(par in unique(names(y))) {
+    bol <- names(y) == par
+    y[bol] <- length(unique(y[bol])) == 1L
+  }
+  x[!is.na(x)] <- y
+  as.logical(x)
 }
