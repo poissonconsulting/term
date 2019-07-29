@@ -27,13 +27,17 @@ greater_than_term <- function(e1, e2) {
   x
 }
 
-# assumes that pars do not require repairing
+max_index <- function(x) {
+  x[length(x)]
+}
+
+# assumes that pars do not require repairing and are consistent
 .pdims <- function(x) {
   x <- x[!is.na(x)]
   x <- sort(x)
   names <- .pars(x)
   x <- split(x, .pars(x, terms = TRUE))
-  x <- lapply(x, function(x) x[length(x)])
+  x <- lapply(x, max_index)
   x <- unlist(x)
   x <- sub(paste0("^", .par_name_pattern), "", as.character(x))
   x <- sub("^$", "1", x)
