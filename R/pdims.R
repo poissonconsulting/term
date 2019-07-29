@@ -4,8 +4,7 @@
 #' of each parameter.
 #' 
 #' Missing and invalid term elements are ignored.
-#' If the dimensions are inconsistent ie \code{a[3]} and \code{a[1,1]}
-#' then the highest number of dimensions is chosen ie \code{a[1,1]}.
+#' Errors if the parameter dimensions are inconsistent.
 #' 
 #' A named list of the dimensions of each parameter can be converted
 #' into the equivalent \code{\link{term-vector}} using \code{\link{term}()}.
@@ -23,5 +22,7 @@ pdims <- function(x, ...) UseMethod("pdims")
 #' @export
 pdims.term <- function(x, ...) {
   x <- repair_terms(x)
+  if(any(!consistent_term(x[!is.na(x)])))
+    err("parameter dimensions are inconsistent")
   .pdims(x)
 }

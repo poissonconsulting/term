@@ -22,5 +22,5 @@ complete_terms <- function(x, ...) UseMethod("complete_terms")
 complete_terms.term <- function(x, ...) {
   if(!length(x)) return(x)
   x <- repair_terms(x)
-  as.term(c(x, setdiff(term(.pdims(x)), x)))
+  as.term(c(x, setdiff(term(pdims(x)), x)))
 }

@@ -27,8 +27,6 @@ test_that("pdims missing value", {
 })
 
 test_that("pdims inconsistent", {
-  expect_identical(pdims(as.term(c("alpha[1]", "alpha[1,1]"))),
-                   list(alpha = c(1L, 1L)))
-  expect_identical(pdims(as.term(c("alpha[2]", "alpha[1,1]"))),
-                   list(alpha = c(1L, 1L)))
+  expect_error(pdims(as.term(c("alpha[1]", "alpha[1,1]"))),
+                   "parameter dimensions are inconsistent")
 })
