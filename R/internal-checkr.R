@@ -4,12 +4,6 @@ check_vector <- function(x) {
   err(x, " must be a vector")
 }
 
-check_scalar <- function(x) {
-  if(is.vector(x) && identical(length(x), 1L)) return(TRUE)
-  x <- deparse(substitute(x))
-  err(x, " must be a vector of length 1")
-}
-
 check_atomic <- function(x) {
   if(is.atomic(x)) return(TRUE)
   x <- deparse(substitute(x))
@@ -40,20 +34,17 @@ check_flag <- function(x, x_name = deparse(x)) {
   err(x, " must be TRUE or FALSE")
 }
 
-check_flag_na <- function(x, x_name = deparse(x)) {
-  if(isTRUE(x) || isFALSE(x)) 
-    return(TRUE)
-  if((identical(length(x), 1L) && is.na(x) && is.logical(x)))
-    return(TRUE)
-  x <- deparse(substitute(x))
-  err(x, " must be TRUE, FALSE or NA")
-}
-
 check_string <- function(x, x_name = deparse(x)) {
   if((identical(length(x), 1L) && !is.na(x) && is.character(x)))
     return(TRUE)
   x <- deparse(substitute(x))
   err(x, " must be a character vector of length 1")
+}
+
+check_no_na <- function(x) {
+  if(!anyNA(x)) return(TRUE)
+  x <- deparse(substitute(x))
+  err(x, " must not include any missing values")
 }
 
 chk_max_int <- function() .Machine$integer.max
@@ -85,12 +76,6 @@ check_length <- function (x, length = c(1L, chk_max_int())) {
   if(length(x) %in% length) return(TRUE)
   x <- deparse(substitute(x))
   err(x, " must be of length ", cc(length, " or "))
-}
-
-check_no_na <- function(x) {
-  if(!anyNA(x)) return(TRUE)
-  x <- deparse(substitute(x))
-  err(x, " must not include any missing values")
 }
 
 check_named <- function (x) {

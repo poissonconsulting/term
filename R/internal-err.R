@@ -14,7 +14,3 @@ cc <- function(x, con = ", ", bracket = "") {
   n <- length(x)
   p(c(p0(x[1:(n-1)], collapse = ", "), x[n]), collapse = con)
 }
-
-cc_and <- function(x) cc(x, con = " and ", bracket = "'")
-
-cc_or <- function(x) cc(x, con = " or ", bracket = "'")
