@@ -57,3 +57,10 @@ greater_than_term <- function(e1, e2) {
   names(x) <- names
   x
 }
+
+tibble <- function(...) {
+  data <- data.frame(..., stringsAsFactors = FALSE)
+  class(data) <- c("tbl_df", "tbl", "data.frame")
+  data
+}
+

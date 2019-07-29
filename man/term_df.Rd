@@ -20,16 +20,16 @@ term_df(x, ...)
 A term data frame.
 }
 \description{
-Creates a term data frame from object.
+Creates a \code{term-data-frame}.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{numeric}: Term data frame for a numeric vector
+\item \code{numeric}: Term data frame for a numeric object.
 }}
 
 \examples{
 term_df(matrix(1:4, 2))
 }
 \seealso{
-\code{\link{term-vector}}
+\code{\link{term-data-frame}}
 }
