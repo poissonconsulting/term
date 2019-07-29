@@ -34,7 +34,8 @@
 
 <meta property="og:title" content="Parameter Dimensions — pdims" />
 
-<meta property="og:description" content="Gets the parameter dimensions of an object." />
+<meta property="og:description" content="Gets the parameter dimensions of an object as a named list of the dimensions
+of each parameter." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -113,7 +114,8 @@
 
     <div class="ref-description">
     
-    <p>Gets the parameter dimensions of an object.</p>
+    <p>Gets the parameter dimensions of an object as a named list of the dimensions
+of each parameter.</p>
     
     </div>
 
@@ -136,9 +138,17 @@
 
     <p>A named list of the dimensions of each parameter.</p>
     
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>Missing and invalid term elements are ignored.
+If the dimensions are inconsistent ie <code>a[3]</code> and <code>a[1,1]</code>
+then the highest number of dimensions is chosen ie <code>a[1,1]</code>.</p>
+<p>A named list of the dimensions of each parameter can be converted
+into the equivalent <code><a href='term-object.html'>term-vector</a></code> using <code><a href='term.html'>term</a>()</code>.</p>
+    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='dims.html'>dims</a>()</code></p></div>
+    <div class='dont-index'><p><code><a href='dims.html'>dims</a>()</code> and <code><a href='term.html'>term</a>()</code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -155,6 +165,8 @@
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
+
+      <li><a href="#details">Details</a></li>
 
       <li><a href="#see-also">See also</a></li>
       

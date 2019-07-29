@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Subset Term Vector — subset.term • term</title>
+<title>Valid Terms — valid_term • term</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -32,9 +32,9 @@
 
 
 
-<meta property="og:title" content="Subset Term Vector — subset.term" />
+<meta property="og:title" content="Valid Terms — valid_term" />
 
-<meta property="og:description" content="Subsets a term vector." />
+<meta property="og:description" content="Test whether each element in a term vector is valid." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -106,58 +106,41 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Subset Term Vector</h1>
-    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/term/blob/master/R/subset.R'><code>R/subset.R</code></a></small>
-    <div class="hidden name"><code>subset.term.Rd</code></div>
+    <h1>Valid Terms</h1>
+    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/term/blob/master/R/valid-term.R'><code>R/valid-term.R</code></a></small>
+    <div class="hidden name"><code>valid_term.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Subsets a term vector.</p>
+    <p>Test whether each element in a term vector is valid.</p>
     
     </div>
 
-    <pre class="usage"><span class='co'># S3 method for term</span>
-<span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>x</span>, <span class='kw'>select</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>valid_term</span>(<span class='no'>x</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>A term vector to be subsetted.</p></td>
-    </tr>
-    <tr>
-      <th>select</th>
-      <td><p>A character vector of the names of the parameters to include in the subsetted object.</p></td>
-    </tr>
-    <tr>
-      <th>na.rm</th>
-      <td><p>A flag specifying whether to remove missing or invalid terms.</p></td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td><p>Unused.</p></td>
+      <td><p>A term vector.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>The modified term vector.</p>
-    
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>The term vector is repaired prior to subsetting.</p>
+    <p>A logical vector indicating whether each term is valid.</p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='term-object.html'>term-vector</a></code> and <code><a href='repair_terms.html'>repair_terms</a>()</code></p></div>
+    <div class='dont-index'><p><code><a href='term-object.html'>term-vector</a></code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>term</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='as.term.html'>as.term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[2]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span>,
-<span class='st'>"beta[1,2]"</span>, <span class='st'>"beta[2,2]"</span>, <span class='st'>"sigma"</span>))
-<span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>term</span>, <span class='st'>"beta"</span>)</div><div class='output co'>#&gt; [1] "beta[1,1]" "beta[2,1]" "beta[1,2]" "beta[2,2]"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>term</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"alpha"</span>, <span class='st'>"sigma"</span>))</div><div class='output co'>#&gt; [1] "alpha[1]" "alpha[2]" "sigma"   </div></pre>
+    <pre class="examples"><div class='input'><span class='co'># valid term elements</span>
+<span class='fu'>valid_term</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"a"</span>, <span class='st'>"a [3]"</span>, <span class='st'>" b [ 1  ] "</span>, <span class='st'>"c[1,300,10]"</span>))</div><div class='output co'>#&gt; [1] TRUE TRUE TRUE TRUE</div><div class='input'><span class='co'># invalid term elements</span>
+<span class='fu'>valid_term</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"a b"</span>, <span class='st'>"a[1]b"</span>, <span class='st'>"a[0]"</span>, <span class='st'>"b[1,]"</span>, <span class='st'>"c[]"</span>, <span class='st'>"d[1][2]"</span>))</div><div class='output co'>#&gt; [1] FALSE FALSE FALSE FALSE FALSE FALSE</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -165,8 +148,6 @@
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
-
-      <li><a href="#details">Details</a></li>
 
       <li><a href="#see-also">See also</a></li>
       

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Object Terms — term • term</title>
+<title>Term Vector — term • term</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -32,10 +32,9 @@
 
 
 
-<meta property="og:title" content="Object Terms — term" />
+<meta property="og:title" content="Term Vector — term" />
 
-<meta property="og:description" content="Gets the term vector for an R object.
-A term vector is a S3 vector of parameter terms." />
+<meta property="og:description" content="Creates a term vector from object dimensions." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -107,30 +106,37 @@ A term vector is a S3 vector of parameter terms." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Object Terms</h1>
+    <h1>Term Vector</h1>
     <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/term/blob/master/R/term.R'><code>R/term.R</code></a></small>
     <div class="hidden name"><code>term.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Gets the term vector for an R object.
-A term vector is a S3 vector of parameter terms.</p>
+    <p>Creates a term vector from object dimensions.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>term</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>term</span>(<span class='no'>x</span>, <span class='no'>...</span>)
+
+<span class='co'># S3 method for integer</span>
+<span class='fu'>term</span>(<span class='no'>x</span>, <span class='kw'>name</span> <span class='kw'>=</span> <span class='st'>"par"</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>An R object.</p></td>
+      <td><p>An integer vector of the object dimensions
+or a named list of the parameter's dimensions.</p></td>
     </tr>
     <tr>
       <th>...</th>
       <td><p>Unused.</p></td>
+    </tr>
+    <tr>
+      <th>name</th>
+      <td><p>A string specifying the name of the parameter.</p></td>
     </tr>
     </table>
     
@@ -138,14 +144,20 @@ A term vector is a S3 vector of parameter terms.</p>
 
     <p>A term vector.</p>
     
+    <h2 class="hasAnchor" id="methods-by-class-"><a class="anchor" href="#methods-by-class-"></a>Methods (by class)</h2>
+
+    <ul>
+<li><p><code>integer</code>: Term vector from an integer vector of the object's dimensions</p></li>
+</ul>
+    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='as.term.html'>as.term</a>()</code></p></div>
+    <div class='dont-index'><p><code><a href='term-object.html'>term-vector</a></code>, <code><a href='dims.html'>dims</a>()</code> and 
+<code><a href='pdims.html'>pdims</a>()</code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>term</span> <span class='kw'>&lt;-</span> <span class='fu'>term</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[2]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span>))
-<span class='no'>term</span></div><div class='output co'>#&gt; [1] "alpha[1]"  "alpha[2]"  "beta[1,1]" "beta[2,1]"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='no'>term</span>)</div><div class='output co'>#&gt;  'term' chr [1:4] "alpha[1]" "alpha[2]" "beta[1,1]" "beta[2,1]"</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>term</span>(<span class='fl'>0L</span>)</div><div class='output co'>#&gt; term(0)</div><div class='input'><span class='fu'>term</span>(<span class='fl'>1L</span>)</div><div class='output co'>#&gt; [1] "par"</div><div class='input'><span class='fu'>term</span>(<span class='fl'>2L</span>)</div><div class='output co'>#&gt; [1] "par[1]" "par[2]"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -153,6 +165,8 @@ A term vector is a S3 vector of parameter terms.</p>
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
+
+      <li><a href="#methods-by-class-">Methods (by class)</a></li>
 
       <li><a href="#see-also">See also</a></li>
       

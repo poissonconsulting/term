@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Parameter Names — pars • term</title>
+<title>Parameter Names — parameters • term</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -32,7 +32,7 @@
 
 
 
-<meta property="og:title" content="Parameter Names — pars" />
+<meta property="og:title" content="Parameter Names — parameters" />
 
 <meta property="og:description" content="Gets or sets the parameter names for an object." />
 <meta name="twitter:card" content="summary" />
@@ -107,7 +107,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Parameter Names</h1>
-    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/term/blob/master/R/pars.R'><code>R/pars.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/term/blob/master/R/deprecated.R'><code>R/deprecated.R</code></a>, <a href='https://github.com/poissonconsulting/term/blob/master/R/pars.R'><code>R/pars.R</code></a></small>
     <div class="hidden name"><code>pars.Rd</code></div>
     </div>
 
@@ -117,23 +117,28 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>pars</span>(<span class='no'>x</span>, <span class='no'>...</span>)
+    <pre class="usage"><span class='fu'>parameters</span>(<span class='no'>x</span>, <span class='no'>...</span>)
+
+<span class='fu'>pararameters</span>(<span class='no'>x</span>) <span class='kw'>&lt;-</span> <span class='no'>value</span>
+
+<span class='fu'>set_parameters</span>(<span class='no'>x</span>, <span class='no'>pars</span>)
+
+<span class='fu'>pars</span>(<span class='no'>x</span>, <span class='no'>...</span>)
 
 <span class='fu'>pars</span>(<span class='no'>x</span>) <span class='kw'>&lt;-</span> <span class='no'>value</span>
 
 <span class='fu'>set_pars</span>(<span class='no'>x</span>, <span class='no'>pars</span>)
 
-<span class='fu'>parameters</span>(<span class='no'>x</span>, <span class='no'>...</span>)
-
-<span class='fu'>parameters</span>(<span class='no'>x</span>) <span class='kw'>&lt;-</span> <span class='no'>value</span>
-
-<span class='fu'>set_parameters</span>(<span class='no'>x</span>, <span class='no'>pars</span>)
-
 <span class='co'># S3 method for default</span>
 <span class='fu'>pars</span>(<span class='no'>x</span>, <span class='kw'>scalar_only</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>terms</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)
 
+<span class='co'># S3 method for character</span>
+<span class='fu'>pars</span>(<span class='no'>x</span>, <span class='kw'>scalar_only</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>terms</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>repair</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='no'>...</span>)
+
 <span class='co'># S3 method for term</span>
-<span class='fu'>pars</span>(<span class='no'>x</span>, <span class='kw'>scalar_only</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>terms</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
+<span class='fu'>pars</span>(<span class='no'>x</span>, <span class='kw'>scalar_only</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>terms</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>repair</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -162,7 +167,11 @@ parameters with one term.</p></td>
     <tr>
       <th>terms</th>
       <td><p>A flag specifying whether to return the parameter name
-for each term.</p></td>
+for each term element.</p></td>
+    </tr>
+    <tr>
+      <th>repair</th>
+      <td><p>A flag specifying whether to repair term elements.</p></td>
     </tr>
     </table>
     
@@ -170,18 +179,31 @@ for each term.</p></td>
 
     <p>A character vector of the parameter names.</p>
     
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p><code>parameters()</code> is deprecated.</p>
+<p><code>parameters&lt;-</code> is deprecated.</p>
+<p><code>set_parameters()</code> is deprecated.</p>
+<p>By default term elements are repaired prior to getting the parameter names.
+Term elements are always repaired prior to setting.</p>
+    
     <h2 class="hasAnchor" id="methods-by-class-"><a class="anchor" href="#methods-by-class-"></a>Methods (by class)</h2>
 
     <ul>
 <li><p><code>default</code>: Parameter names for a default object</p></li>
+<li><p><code>character</code>: Parameter names for a character vector</p></li>
 <li><p><code>term</code>: Parameter names for a term vector</p></li>
 </ul>
+    
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='repair_terms.html'>repair_terms</a>()</code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='no'>term</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='as.term.html'>as.term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[2]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span>,
-<span class='st'>"beta[1,2]"</span>, <span class='st'>"beta[2,2]"</span>, <span class='st'>"sigma"</span>))
-<span class='fu'>pars</span>(<span class='no'>term</span>)</div><div class='output co'>#&gt; [1] "alpha" "beta"  "sigma"</div><div class='input'><span class='fu'>pars</span>(<span class='no'>term</span>, <span class='kw'>scalar_only</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; [1] "sigma"</div><div class='input'><span class='fu'>pars</span>(<span class='no'>term</span>, <span class='kw'>terms</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; [1] "alpha" "alpha" "beta"  "beta"  "beta"  "beta"  "sigma"</div></pre>
+<span class='st'>"beta[1,2]"</span>, <span class='st'>"beta[2,2]"</span>, <span class='st'>"sigma"</span>, <span class='fl'>NA</span>))
+<span class='fu'>pars</span>(<span class='no'>term</span>)</div><div class='output co'>#&gt; [1] "alpha" "beta"  "sigma" NA     </div><div class='input'><span class='fu'>pars</span>(<span class='no'>term</span>, <span class='kw'>scalar_only</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; [1] "sigma" NA     </div><div class='input'><span class='fu'>pars</span>(<span class='no'>term</span>, <span class='kw'>terms</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; [1] "alpha" "alpha" "beta"  "beta"  "beta"  "beta"  "sigma" NA     </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -190,7 +212,11 @@ for each term.</p></td>
       
       <li><a href="#value">Value</a></li>
 
+      <li><a href="#details">Details</a></li>
+
       <li><a href="#methods-by-class-">Methods (by class)</a></li>
+
+      <li><a href="#see-also">See also</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>
