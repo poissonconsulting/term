@@ -21,6 +21,7 @@
 #' repair_terms(as.term(c("a [3]", " b [ 1  ] ")))
 #' repair_terms(as.term(c("a", NA)))
 repair_terms <- function(x, scalars = TRUE) {
+  if(!is.term(x)) err("x must be a term vector")
   check_flag(scalars)
   if(!length(x)) return(x)
   is.na(x[is.na(x) | !valid_term(x)]) <- TRUE

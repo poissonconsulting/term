@@ -1,4 +1,4 @@
-context("as")
+context("as-term")
 
 test_that("as.term.integer", {
   expect_identical(as.term(1L, name = "par"), as.term("par"))

@@ -9,10 +9,11 @@
 #' 
 #' @examples
 #' # valid term elements
-#' valid_term(c("a", "a [3]", " b [ 1  ] ", "c[1,300,10]"))
+#' valid_term(as.term(c("a", "a [3]", " b [ 1  ] ", "c[1,300,10]")))
 #' # invalid term elements
-#' valid_term(c("a b", "a[1]b", "a[0]", "b[1,]", "c[]", "d[1][2]"))
+#' valid_term(as.term(c("a b", "a[1]b", "a[0]", "b[1,]", "c[]", "d[1][2]")))
 valid_term <- function(x) {
+  if(!is.term(x)) err("x must be a term vector")
   if(!length(x)) return(TRUE)
   pattern <- paste0("^\\s*", .par_name_pattern, "\\s*(\\[\\s*", 
                     .index_pattern, "(\\s*,\\s*", .index_pattern, 
