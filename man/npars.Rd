@@ -2,16 +2,10 @@
 % Please edit documentation in R/npars.R
 \name{npars}
 \alias{npars}
-\alias{npars.default}
-\alias{npars.character}
 \alias{npars.term}
 \title{Number of Parameters}
 \usage{
 npars(x, ...)
-
-\method{npars}{default}(x, scalar_only = FALSE, ...)
-
-\method{npars}{character}(x, scalar_only = FALSE, na.rm = FALSE, ...)
 
 \method{npars}{term}(x, scalar_only = FALSE, na.rm = FALSE, ...)
 }
@@ -37,16 +31,12 @@ if the term vector includes invalid or missing term elements.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{default}: Number of parameters of default object
-
-\item \code{character}: Number of parameters of character vector
-
 \item \code{term}: Number of parameters of term vector
 }}
 
 \examples{
-npars(c("sigma", "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
-npars(c("sigma", "alpha[1]", "alpha[2]"), scalar_only = TRUE)
+npars(as.term(c("sigma", "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]")))
+npars(as.term(c("sigma", "alpha[1]", "alpha[2]")), scalar_only = TRUE)
 }
 \seealso{
 \code{\link{pars}()}, \code{\link{term-vector}} 

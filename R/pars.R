@@ -37,13 +37,6 @@ set_pars <- function(x, pars) {
   x
 }
 
-#' @describeIn pars Parameter names for a default object
-#' @export
-pars.default <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
-  check_unused(...)
-  .pars(as.term(x), scalar_only = scalar_only, terms = terms)
-}
-
 #' @describeIn pars Parameter names for a term vector
 #' @export
 pars.term <- function(x, scalar_only = FALSE, terms = FALSE, repair = TRUE, ...) {

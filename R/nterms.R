@@ -19,24 +19,10 @@
 #' @export
 #' 
 #' @examples
-#' nterms(3:4)
-#' nterms(matrix(1:9, 3))
-#' nterms(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
+#' nterms(as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]")))
+#' nterms(as.term(c("alpha[1]", "alpha[1]", "beta[1,1]", "beta[1,1]")))
 nterms <- function(x, ...) {
   UseMethod("nterms")
-}
-
-#' @describeIn nterms Number of terms of default object
-#' @export
-nterms.default <- function(x, ...) {
-  length(unique(as.term(x)))
-}
-
-#' @describeIn nterms Number of terms of character vector
-#' @export
-nterms.character <- function(x, na.rm = FALSE, ...) {
-  check_unused(...)
-  nterms(as.term(x), na.rm = na.rm)
 }
 
 #' @describeIn nterms Number of elements of term vector

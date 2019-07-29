@@ -2,16 +2,10 @@
 % Please edit documentation in R/nterms.R
 \name{nterms}
 \alias{nterms}
-\alias{nterms.default}
-\alias{nterms.character}
 \alias{nterms.term}
 \title{Number of Terms}
 \usage{
 nterms(x, ...)
-
-\method{nterms}{default}(x, ...)
-
-\method{nterms}{character}(x, na.rm = FALSE, ...)
 
 \method{nterms}{term}(x, na.rm = FALSE, ...)
 }
@@ -40,17 +34,12 @@ If you are certain all the terms are unique and valid then just use
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{default}: Number of terms of default object
-
-\item \code{character}: Number of terms of character vector
-
 \item \code{term}: Number of elements of term vector
 }}
 
 \examples{
-nterms(3:4)
-nterms(matrix(1:9, 3))
-nterms(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
+nterms(as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]")))
+nterms(as.term(c("alpha[1]", "alpha[1]", "beta[1,1]", "beta[1,1]")))
 }
 \seealso{
 \code{\link{term-vector}} and \code{\link{valid_term}()}

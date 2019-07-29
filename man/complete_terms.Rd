@@ -2,13 +2,10 @@
 % Please edit documentation in R/complete-terms.R
 \name{complete_terms}
 \alias{complete_terms}
-\alias{complete_terms.default}
 \alias{complete_terms.term}
 \title{Complete Terms}
 \usage{
 complete_terms(x, ...)
-
-\method{complete_terms}{default}(x, ...)
 
 \method{complete_terms}{term}(x, ...)
 }
@@ -29,8 +26,6 @@ Missing values are ignored.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{default}: Complete terms of a default object
-
 \item \code{term}: Complete terms of a terms vector
 }}
 

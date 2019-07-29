@@ -15,16 +15,8 @@
 #' @export
 #' 
 #' @examples
-#' tindex(c("alpha", "alpha[2]", "beta[1,1]", "beta[2 ,1  ]", NA))
+#' tindex(as.term(c("alpha", "alpha[2]", "beta[1,1]", "beta[2 ,1  ]", NA)))
 tindex <- function(x, ...) UseMethod("tindex")
-
-#' @describeIn tindex Term indices for default object
-#' @export
-tindex.default <- function(x, ...) .tindex(as.term(x))
-
-#' @describeIn tindex Term indices for character vector
-#' @export
-tindex.character <- function(x, ...) tindex(as.term(x))
 
 #' @describeIn tindex Term indices for term vector
 #' @export

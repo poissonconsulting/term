@@ -17,12 +17,6 @@
 #' complete_terms(as.term(c("z[2,2]", "z[1,1]")))
 complete_terms <- function(x, ...) UseMethod("complete_terms")
 
-#' @describeIn complete_terms Complete terms of a default object
-#' @export
-complete_terms.default <- function(x, ...) {
-  complete_terms(as.term(x))
-}
-
 #' @describeIn complete_terms Complete terms of a terms vector
 #' @export
 complete_terms.term <- function(x, ...) {

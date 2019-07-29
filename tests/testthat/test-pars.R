@@ -1,17 +1,5 @@
 context("pars")
 
-test_that("pars.default", {
-  expect_identical(pars(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", 
-                          "beta[1,2]", "beta[2,2]", "sigma")),
-                   c("alpha", "beta", "sigma"))
-  expect_identical(pars(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", 
-                          "beta[1,2]", "beta[2,2]", "sigma"), scalar_only = TRUE),
-                   "sigma")
-  expect_identical(pars(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", 
-                          "beta[1,2]", "beta[2,2]", "sigma"), terms = TRUE),
-                   c("alpha", "alpha", "beta",  "beta",  "beta",  "beta",  "sigma"))
-})
-
 test_that("pars", {
   expect_identical(pars(as.term(character(0))), character(0))
   expect_identical(pars(as.term("a")), "a")
