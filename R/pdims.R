@@ -23,6 +23,5 @@ pdims <- function(x, ...) UseMethod("pdims")
 #' @export
 pdims.term <- function(x, ...) {
   x <- repair_terms(x)
-  x <- x[!is.na(x)]
   .pdims(x)
 }

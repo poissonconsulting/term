@@ -23,7 +23,6 @@ npdims.term <- function(x, terms = FALSE, ...) {
   x <- repair_terms(x)
 
   if(!terms) {
-    x <- x[!is.na(x)]
     return(vapply(.pdims(x), length, 1L))
   }
   x <- tindex(x)

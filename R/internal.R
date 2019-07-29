@@ -27,8 +27,9 @@ greater_than_term <- function(e1, e2) {
   x
 }
 
-# assumes that pars do not require repairing and are complete
+# assumes that pars do not require repairing
 .pdims <- function(x) {
+  x <- x[!is.na(x)]
   x <- sort(x)
   names <- .pars(x)
   x <- split(x, .pars(x, terms = TRUE))
