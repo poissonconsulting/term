@@ -1,10 +1,12 @@
 #' Valid Terms
 #'
 #' Test whether each element in a term vector is valid.
+#' 
+#' Repairing a term vector replaces invalid terms with a missing value.
 #'
 #' @param x A term vector.
 #' @return A logical vector indicating whether each term is valid.
-#' @seealso \code{\link{term-vector}}
+#' @seealso \code{\link{term-vector}} and \code{\link{repair_terms}()}
 #' @export
 #' 
 #' @examples

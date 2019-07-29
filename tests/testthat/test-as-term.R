@@ -37,6 +37,14 @@ test_that("as.term.array", {
 test_that("as.term.character", {
   expect_error(as.term("a", "b"), "... must be unused")
   x <- c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]", "parm[2,1]", "parm[1,2]", "parm[10]", "parm3")
+  
+  expect_identical(as.term(c("a", "a[", NA, "a[1]")),
+                           structure(c("a", "a[", NA, "a[1]"), class = c("term", "character"
+)))
+  expect_identical(as.term(c("a", "a[", NA, "a[1]"), repair = TRUE),
+                           structure(c("a", NA, NA, "a"), class = c("term", "character"
+)))
+  
   x2 <- as.term(x)
   expect_is(x2, "term")
   expect_true(is.term(x2))
@@ -55,6 +63,7 @@ test_that("as.term.character", {
                                        "parm[2,2]", "parm3", "parm3[2]", "parm3[10]")))
   
   expect_identical(as.term(x2), x2)
+  
 })
 
 test_that("as.term others", {

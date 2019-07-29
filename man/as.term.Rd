@@ -11,7 +11,7 @@
 
 as.term(x, ...)
 
-\method{as.term}{character}(x, ...)
+\method{as.term}{character}(x, ..., repair = FALSE)
 
 \method{as.term}{numeric}(x, name = "par", ...)
 }
@@ -19,6 +19,8 @@ as.term(x, ...)
 \item{x}{The object to coerce.}
 
 \item{...}{Unused.}
+
+\item{repair}{A flag specifying whether to repair the terms.}
 
 \item{name}{A string of the name for the parameter.}
 }
@@ -39,5 +41,5 @@ as.term(matrix(1:4, 2))
 as.term(c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]")) 
 }
 \seealso{
-\code{\link{term-vector}}
+\code{\link{term-vector}} and \code{\link{repair_terms}()}
 }

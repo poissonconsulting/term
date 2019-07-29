@@ -15,6 +15,9 @@ A logical vector indicating whether each term is valid.
 \description{
 Test whether each element in a term vector is valid.
 }
+\details{
+Repairing a term vector replaces invalid terms with a missing value.
+}
 \examples{
 # valid term elements
 valid_term(as.term(c("a", "a [3]", " b [ 1  ] ", "c[1,300,10]")))
@@ -22,5 +25,5 @@ valid_term(as.term(c("a", "a [3]", " b [ 1  ] ", "c[1,300,10]")))
 valid_term(as.term(c("a b", "a[1]b", "a[0]", "b[1,]", "c[]", "d[1][2]")))
 }
 \seealso{
-\code{\link{term-vector}}
+\code{\link{term-vector}} and \code{\link{repair_terms}()}
 }
