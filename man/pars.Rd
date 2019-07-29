@@ -8,7 +8,6 @@
 \alias{pars<-}
 \alias{set_pars}
 \alias{pars.default}
-\alias{pars.character}
 \alias{pars.term}
 \title{Parameter Names}
 \usage{
@@ -25,9 +24,6 @@ pars(x) <- value
 set_pars(x, pars)
 
 \method{pars}{default}(x, scalar_only = FALSE, terms = FALSE, ...)
-
-\method{pars}{character}(x, scalar_only = FALSE, terms = FALSE,
-  repair = TRUE, ...)
 
 \method{pars}{term}(x, scalar_only = FALSE, terms = FALSE,
   repair = TRUE, ...)
@@ -68,8 +64,6 @@ Term elements are always repaired prior to setting.
 \section{Methods (by class)}{
 \itemize{
 \item \code{default}: Parameter names for a default object
-
-\item \code{character}: Parameter names for a character vector
 
 \item \code{term}: Parameter names for a term vector
 }}

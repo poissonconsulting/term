@@ -44,13 +44,6 @@ pars.default <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
   .pars(as.term(x), scalar_only = scalar_only, terms = terms)
 }
 
-#' @describeIn pars Parameter names for a character vector
-#' @export
-pars.character <- function(x, scalar_only = FALSE, terms = FALSE, repair = TRUE, ...) {
-  check_unused(...)
-  pars(as.term(x), scalar_only = scalar_only, terms = terms, repair = repair)
-}
-
 #' @describeIn pars Parameter names for a term vector
 #' @export
 pars.term <- function(x, scalar_only = FALSE, terms = FALSE, repair = TRUE, ...) {

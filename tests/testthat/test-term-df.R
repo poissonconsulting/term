@@ -10,4 +10,6 @@ test_that("", {
                    structure(list(term = structure(c("par[1,1]", "par[2,1]", "par[1,2]", 
 "par[2,2]"), class = c("term", "character")), n1 = 1:4), class = c("tbl_df", 
 "tbl", "data.frame"), row.names = c(NA, -4L)))
+  
+  expect_error(term_df(data.frame(x = 1)), "no applicable method")
 })

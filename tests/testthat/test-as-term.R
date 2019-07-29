@@ -56,3 +56,9 @@ test_that("as.term.character", {
   
   expect_identical(as.term(x2), x2)
 })
+
+test_that("as.term others", {
+  expect_error(as.term(factor(1)), "no applicable method")
+  expect_error(as.term(data.frame(x = 1)), "no applicable method")
+  expect_error(as.term(TRUE), "no applicable method")
+})
