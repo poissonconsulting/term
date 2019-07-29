@@ -11,4 +11,6 @@ test_that("is.incomplete_terms",{
   expect_false(is.incomplete_terms(as.term("b[1]")))
   expect_true(is.incomplete_terms(as.term("b[2]")))
   expect_false(is.incomplete_terms(as.term(c("b[2]", "b"))))
+  expect_false(is.incomplete_terms(as.term(c("a[1,1]", "a[1,2]", "a[2,1]", "a[2,2]"))))
+  expect_true(is.incomplete_terms(as.term(c("a[1,1]", "a[1,2]", "a[2,1]"))))
 })
