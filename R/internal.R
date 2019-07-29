@@ -57,10 +57,3 @@ greater_than_term <- function(e1, e2) {
   names(x) <- names
   x
 }
-
-set_class <- function(x, class) {
-  class(x) <- class
-  x
-}
-
-err <- function (...) stop(..., call. = FALSE, domain = NA)

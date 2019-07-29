@@ -26,7 +26,9 @@ subset.term <- function(x, select = NULL, na.rm = FALSE, ...) {
   x <- repair_terms(x)
   if(isTRUE(na.rm)) x <- x[!is.na(x)]
   
-  check_vector(select, .pars(x), unique = TRUE, only = TRUE)
+  check_character(select)
+  check_vector(select)
+  if(!all(select %in% .pars(x))) err("unrecognized parameters in select")
   
   if(!length(select)) return(term(0L))
   

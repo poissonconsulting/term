@@ -82,9 +82,9 @@ test_that("pars.term missing values", {
 test_that("set_pars", {
   expect_identical(set_pars(as.term("a"), "b"), as.term("b"))
   expect_error(set_pars(as.term("a"), c("b", "a")), 
-               "value must have 1 element")
+               "value must have a length of 1")
   expect_error(set_pars(as.term(c("a", "a")), c("b", "a", "c")), 
-               "value must have 1 or 2 elements")
+               "value must be of length 1 or 2")
   expect_error(set_pars(as.term("a"), ""), 
                    "invalid parameter name")
   expect_error(set_pars(as.term("a"), "1"), 
@@ -95,21 +95,20 @@ test_that("set_pars", {
   expect_identical(set_pars(as.term(c("a [ 1]", "b")), c("b", "d")), as.term(c("b[1]", "d")))
     expect_identical(set_pars(as.term(c("a [ 1]", "b")), c("b", "d")), as.term(c("b[1]", "d")))
     expect_error(set_pars(as.term(rep("a", 7)), pars = c("gamma", "theta", "rho")),
-                 "value must have 1 or 7 elements")
+                 "value must be of length 1 or 7")
 })
 
 test_that("set_pars missing values", {
   expect_error(set_pars(as.term(c("a [ 1]", "b")), c("b", NA)), 
-                   "value must not include missing values")
+                   "invalid parameter name")
   expect_identical(set_pars(NA_term_, "a"), NA_term_)
   expect_identical(set_pars(c(NA_term_, "b"), "a"), as.term(c(NA, "a")))
   expect_error(set_pars(c(NA_term_, "b"), rep("a", 3L)), 
-               "value must have 1 or 2 elements")
+               "value must be of length 1 or 2")
   expect_identical(set_pars(as.term(c("c c", "b")), "a"), as.term(c(NA, "a")))
 })
 
 test_that("set_pars<-", {
-  
   term <- as.term(c("a [ 1]", "b", NA))
   expect_error(pars(term) <- "1", "invalid parameter name")
   pars(term) <- "a1"

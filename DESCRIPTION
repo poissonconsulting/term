@@ -9,8 +9,6 @@ Description: Creates, manipulates and queries S3 vectors of parameter terms.
     Parameter terms are the labels used to reference values in vectors, matrices 
     and arrays. They are most commonly used in coefficient tables.
 License: MIT + file LICENSE
-Imports:
-    checkr
 Suggests: 
     covr,
     testthat

@@ -26,7 +26,6 @@ term.NULL <- function(x, name = "par", ...) {
 #' @describeIn term Term vector from an integer vector of the object's dimensions
 #' @export
 term.integer <- function(x, name = "par", ...) {
-  check_vector(x, c(0L, chk_max_int()))
   check_string(name)
   check_unused(...)
  
