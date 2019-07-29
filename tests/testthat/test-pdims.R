@@ -7,7 +7,13 @@ test_that("pdims", {
   
   expect_identical(pdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]"))), 
                    list(alpha = 3L, beta = c(2L, 1L)))
-  
+
+  expect_identical(pdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1,2]", "beta[2,1,1]"))), 
+                   list(alpha = 3L, beta = c(2L, 1L, 2L)))
+
+  expect_identical(pdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,2]", "beta[2,1]"))), 
+                   list(alpha = 3L, beta = c(2L, 2L)))
+
   expect_identical(pdims(as.term(c("alpha[3]", "beta[2,1]"))), 
                    list(alpha = 3L, beta = c(2L, 1L)))
   
@@ -23,7 +29,7 @@ test_that("pdims missing value", {
                    list(alpha = 3L, beta = c(2L, 1L)))
   
   expect_identical(pdims(as.term(c("alpha[1,2]", "alpha[2,1]", NA))), 
-                   list(alpha = c(1L, 2L)))
+                   list(alpha = c(2L, 2L)))
 })
 
 test_that("pdims inconsistent", {

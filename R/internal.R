@@ -28,7 +28,9 @@ greater_than_term <- function(e1, e2) {
 }
 
 max_index <- function(x) {
-  x[length(x)]
+  x <- .tindex(x)
+  x <- matrix(unlist(x), ncol = length(x[[1]]), byrow = TRUE)
+  apply(x, 2, max)
 }
 
 # assumes that pars do not require repairing and are consistent
@@ -38,13 +40,6 @@ max_index <- function(x) {
   names <- .pars(x)
   x <- split(x, .pars(x, terms = TRUE))
   x <- lapply(x, max_index)
-  x <- unlist(x)
-  x <- sub(paste0("^", .par_name_pattern), "", as.character(x))
-  x <- sub("^$", "1", x)
-  x <- gsub("\\[|\\]", "", x)
-  x <- strsplit(x, ",")
-  x <- lapply(x, as.integer)
-  names(x) <- names
   x
 }
 
