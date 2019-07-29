@@ -119,12 +119,6 @@
 
     <pre class="usage"><span class='fu'>nterms</span>(<span class='no'>x</span>, <span class='no'>...</span>)
 
-<span class='co'># S3 method for default</span>
-<span class='fu'>nterms</span>(<span class='no'>x</span>, <span class='no'>...</span>)
-
-<span class='co'># S3 method for character</span>
-<span class='fu'>nterms</span>(<span class='no'>x</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)
-
 <span class='co'># S3 method for term</span>
 <span class='fu'>nterms</span>(<span class='no'>x</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
     
@@ -161,8 +155,6 @@ are removed before the number of terms is counted.</p>
     <h2 class="hasAnchor" id="methods-by-class-"><a class="anchor" href="#methods-by-class-"></a>Methods (by class)</h2>
 
     <ul>
-<li><p><code>default</code>: Number of terms of default object</p></li>
-<li><p><code>character</code>: Number of terms of character vector</p></li>
 <li><p><code>term</code>: Number of elements of term vector</p></li>
 </ul>
     
@@ -172,7 +164,7 @@ are removed before the number of terms is counted.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>nterms</span>(<span class='fl'>3</span>:<span class='fl'>4</span>)</div><div class='output co'>#&gt; [1] 2</div><div class='input'><span class='fu'>nterms</span>(<span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fl'>1</span>:<span class='fl'>9</span>, <span class='fl'>3</span>))</div><div class='output co'>#&gt; [1] 9</div><div class='input'><span class='fu'>nterms</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[2]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span>))</div><div class='output co'>#&gt; [1] 4</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>nterms</span>(<span class='fu'><a href='as.term.html'>as.term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[2]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span>)))</div><div class='output co'>#&gt; [1] 4</div><div class='input'><span class='fu'>nterms</span>(<span class='fu'><a href='as.term.html'>as.term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[1]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[1,1]"</span>)))</div><div class='output co'>#&gt; [1] 2</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
