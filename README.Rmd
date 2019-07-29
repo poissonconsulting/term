@@ -25,8 +25,9 @@ knitr::opts_chunk$set(
 ![CRAN downloads](http://cranlogs.r-pkg.org/badges/term)
 <!-- badges: end -->
 
-`term` is an R package to create, manipulate and query S3 vectors of parameter terms 
-such as 'alpha', 'beta[3]' and 'sigma2[1,4]'.
+`term` is an R package to create, manipulate and query S3 vectors of parameter terms.
+Parameter terms are the labels used to reference values in vectors, matrices and arrays.
+They are most commonly used in coefficient tables.
 
 ## Installation 
 

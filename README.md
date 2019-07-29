@@ -23,7 +23,9 @@ status](https://www.r-pkg.org/badges/version/term)](https://cran.r-project.org/p
 <!-- badges: end -->
 
 `term` is an R package to create, manipulate and query S3 vectors of
-parameter terms such as ‘alpha’, ‘beta\[3\]’ and ‘sigma2\[1,4\]’.
+parameter terms. Parameter terms are the labels used to reference values
+in vectors, matrices and arrays. They are most commonly used in
+coefficient tables.
 
 ## Installation
 
@@ -59,6 +61,9 @@ print(term)
 
 # and the parameters extracted
 parameters(term)
+#> Warning: 'parameters' is deprecated.
+#> Use 'pars' instead.
+#> See help("Deprecated")
 #> [1] "alpha" "beta"  "sigma"
 
 # as well as the dimensions of each parameter
