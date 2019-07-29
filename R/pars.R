@@ -66,8 +66,9 @@ pars.term <- function(x, scalar_only = FALSE, terms = FALSE, repair = TRUE, ...)
 #' @export
 `pars<-.term` <- function(x, value) {
   check_vector(value, "", length = c(1L, 1L, length(x)))
-  check_grepl(value, paste0("^", .par_name_pattern ,"$"))
-  
+  if(!all(grepl(paste0("^", .par_name_pattern ,"$"), value)))
+    err("invalid parameter name")
+
   x <- repair_terms(x, scalars = FALSE)
 
   x <- sub(paste0("^", .par_name_pattern), "", x)

@@ -1,2 +1,2 @@
-#' @importFrom checkr check_vector check_grepl chk_max_int
+#' @importFrom checkr check_vector chk_max_int
 NULL

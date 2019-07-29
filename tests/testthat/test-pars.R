@@ -86,9 +86,9 @@ test_that("set_pars", {
   expect_error(set_pars(as.term(c("a", "a")), c("b", "a", "c")), 
                "value must have 1 or 2 elements")
   expect_error(set_pars(as.term("a"), ""), 
-                   "value must match regular expression")
+                   "invalid parameter name")
   expect_error(set_pars(as.term("a"), "1"), 
-                   "value must match regular expression")
+                   "invalid parameter name")
   
   expect_identical(set_pars(as.term(c("a", "b")), "b"), as.term(c("b", "b")))
   expect_identical(set_pars(as.term(c("a", "b")), c("b", "d")), as.term(c("b", "d")))
@@ -111,7 +111,7 @@ test_that("set_pars missing values", {
 test_that("set_pars<-", {
   
   term <- as.term(c("a [ 1]", "b", NA))
-  expect_error(pars(term) <- "1", "value must match regular expression")
+  expect_error(pars(term) <- "1", "invalid parameter name")
   pars(term) <- "a1"
   expect_identical(term, as.term(c("a1[1]", "a1", NA)))
 })
