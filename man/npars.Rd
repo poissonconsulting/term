@@ -7,7 +7,8 @@
 \usage{
 npars(x, ...)
 
-\method{npars}{term}(x, scalar_only = FALSE, na.rm = FALSE, ...)
+\method{npars}{term}(x, scalar_only = FALSE, repair = TRUE,
+  na.rm = FALSE, ...)
 }
 \arguments{
 \item{x}{An R object.}
@@ -16,7 +17,9 @@ npars(x, ...)
 
 \item{scalar_only}{A flag specifying whether to only count parameters with one term.}
 
-\item{na.rm}{A flag specifying whether to remove invalid or missing term elements
+\item{repair}{A flag specifying whether to repair the term vector.}
+
+\item{na.rm}{A flag specifying whether to remove missing term elements
 before getting the number of parameters.}
 }
 \value{
@@ -26,8 +29,8 @@ A count of the number of parameters.
 Gets the number of parameters of an object as returned by \code{\link{pars}()}.
 }
 \details{
-By default (\code{na.rm = TRUE}) the function returns \code{NA_integer_}
-if the term vector includes invalid or missing term elements.
+By default (\code{na.rm = TRUE}) the function repairs the vector and 
+returns \code{NA_integer_} if the term vector includes missing term elements.
 }
 \section{Methods (by class)}{
 \itemize{
@@ -40,5 +43,5 @@ npars(as.term(c("sigma", "alpha[1]", "alpha[2]")), scalar_only = TRUE)
 }
 \seealso{
 \code{\link{pars}()}, \code{\link{term-vector}} 
-and \code{\link{valid_term}()}
+and \code{\link{repair_terms}()}
 }
