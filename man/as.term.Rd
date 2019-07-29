@@ -4,7 +4,7 @@
 \alias{as.character.term}
 \alias{as.term}
 \alias{as.term.character}
-\alias{as.term.default}
+\alias{as.term.numeric}
 \title{Coerce to a Term Vector}
 \usage{
 \method{as.character}{term}(x, ...)
@@ -13,7 +13,7 @@ as.term(x, ...)
 
 \method{as.term}{character}(x, ...)
 
-\method{as.term}{default}(x, name = "par", ...)
+\method{as.term}{numeric}(x, name = "par", ...)
 }
 \arguments{
 \item{x}{The object to coerce.}
@@ -31,7 +31,7 @@ Coerces an R object to a \code{\link{term-vector}}.
 
 \item \code{character}: Coerce character vector to term vector
 
-\item \code{default}: Coerce default object to term vector
+\item \code{numeric}: Coerce default object to term vector
 }}
 
 \examples{

@@ -22,7 +22,7 @@ as.term.character <- function(x, ...) {
 
 #' @describeIn as.term Coerce default object to term vector
 #' @export
-as.term.default <- function(x, name = "par", ...) {
+as.term.numeric <- function(x, name = "par", ...) {
   check_string(name)
   check_unused(...)
   term(dims(x), name = name)
