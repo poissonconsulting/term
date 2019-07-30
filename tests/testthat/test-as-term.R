@@ -38,6 +38,7 @@ test_that("as.term.character", {
   expect_error(as.term("a", "b"), "... must be unused")
   x <- c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]", "parm[2,1]", "parm[1,2]", "parm[10]", "parm3")
   
+  
   expect_identical(as.term(c("a", "a[", NA, "a[1]")),
                            structure(c("a", "a[", NA, "a[1]"), class = c("term", "character"
 )))

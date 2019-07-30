@@ -27,7 +27,8 @@ knitr::opts_chunk$set(
 
 `term` is an R package to create, manipulate and query vectors of parameter terms.
 Parameter terms are the labels used to reference values in vectors, matrices and arrays.
-They are most commonly used in coefficient tables.
+They are represent the names in `coef()` tables and the column names in 
+`mcmc` and `mcmc.list` objects.
 
 ## Installation 
 
@@ -44,28 +45,95 @@ remotes::install_github("poissonconsulting/term")
 
 ## Demonstration
 
+### Creating Term Vectors
 ```{r}
-library(tibble) # for prettier printing of df
 library(term)
 
-# creates a data frame with a term vector 
-df <- term_df(matrix(1:4, 2))
+# character vectors can be converted into term vectors
+term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
+                  "beta[1,2]", "beta[2,2]", "sigma"))
 
-df
+# term vectors print like character vectors
+term
 
-# extract the term vector
-term <- df$term
-
+# they are S3 class objects that also inherit from character
 str(term)
 
-# then extract the parameter names
-pars(term)
+# term vectors can also be created from numeric atomic objects
+as.term(matrix(1:4, 2), "theta")
+```
 
-# the dimensions of each parameter
+### Querying Term Vectors
+```{r}
+# get the parameter names
+pars(term)
+# and parameter dimensions
 pdims(term)
 
-# and the index of each term
+# get the parameter names by term
+pars(term, terms = TRUE)
+# and the term indices
 tindex(term)
+```
+
+### Validating Term Vectors
+```{r}
+# term vectors can be tested for whether they have (parseably) valid, 
+# (dimensionally) consistent, complete and duplicated terms
+
+# valid terms
+valid_term(as.term(c("a", "a[1]", "a [2]", " b [3  ] ", "c[1,10]")))
+
+# invalid terms
+valid_term(as.term(c("a a", "a[]", "a[2", " b[3 3]", "c[1,10]c")))
+
+# consistent terms
+consistent_term(as.term(c("a", "a[2]", "b[1,1]", "b[10,99]")))
+
+# inconsistent terms
+consistent_term(as.term(c("a", "a[2,1]", "b[1,1]", "b[10,99,1]")))
+
+# complete terms
+!is.incomplete_terms(as.term(c("a", "a[2]", "b[1,1]", "b[2,1]")))
+
+# incomplete terms
+!is.incomplete_terms(as.term(c("a", "a[3]", "b[1,1]", "b[2,2]")))
+
+# unique terms
+anyDuplicated(as.term(c("a", "b")))
+
+# duplicated terms
+anyDuplicated(as.term(c("a", "a")))
+```
+
+### Fixing Term Vectors
+```{r}
+term <- as.term(c("b[4]", "b   [2]", "b", "b[1", "b[2, 2]", "b", "a [ 1 ] ", NA))
+term
+
+# valid terms can be repaired (otherwise they are converted to missing values)
+term <- repair_terms(term)
+term
+
+# missing values can easily removed
+term <- term[!is.na(term)]
+term
+
+# and only unique values retained
+term <- unique(term)
+term
+
+# a term vector can be sorted by parameter name and index
+term <- sort(term)
+term
+
+# an inconsistent term removed
+term <- term[term != "b[2,2]"]
+term
+
+# and incomplete terms completed
+term <- sort(complete_terms(term))
+term
 ```
 
 ## Contribution

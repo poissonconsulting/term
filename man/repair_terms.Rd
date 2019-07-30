@@ -15,7 +15,7 @@ repair_terms(x, scalars = TRUE)
 The repaired term vector.
 }
 \description{
-Repairs a terms vector. I
+Repairs a terms vector.
 }
 \details{
 Invalid elements are replaced by missing values and spaces removed.

@@ -1,6 +1,6 @@
 #' Repair Terms
 #'
-#' Repairs a terms vector. I
+#' Repairs a terms vector.
 #' 
 #' Invalid elements are replaced by missing values and spaces removed.
 #' 

@@ -20,6 +20,7 @@ as.term.character <- function(x, ..., repair = FALSE) {
   check_flag(repair)
   check_unused(...)
   x <- set_class(x, c("term", "character"))
+  x[is.na(x)] <- NA_term_
   if(repair) x <- repair_terms(x)
   x
 }

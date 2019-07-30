@@ -24,8 +24,8 @@ status](https://www.r-pkg.org/badges/version/term)](https://cran.r-project.org/p
 
 `term` is an R package to create, manipulate and query vectors of
 parameter terms. Parameter terms are the labels used to reference values
-in vectors, matrices and arrays. They are most commonly used in
-coefficient tables.
+in vectors, matrices and arrays. They are represent the names in
+`coef()` tables and the column names in `mcmc` and `mcmc.list` objects.
 
 ## Installation
 
@@ -42,50 +42,149 @@ To install the latest development version from
 
 ## Demonstration
 
+### Creating Term Vectors
+
 ``` r
-library(tibble) # for prettier printing of df
 library(term)
 
-# creates a data frame with a term vector 
-df <- term_df(matrix(1:4, 2))
+# character vectors can be converted into term vectors
+term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
+                  "beta[1,2]", "beta[2,2]", "sigma"))
 
-df
-#> # A tibble: 4 x 2
-#>   term        n1
-#>   <term>   <int>
-#> 1 par[1,1]     1
-#> 2 par[2,1]     2
-#> 3 par[1,2]     3
-#> 4 par[2,2]     4
+# term vectors print like character vectors
+term
+#> [1] "alpha[1]"  "alpha[2]"  "beta[1,1]" "beta[2,1]" "beta[1,2]" "beta[2,2]"
+#> [7] "sigma"
 
-# extract the term vector
-term <- df$term
-
+# they are S3 class objects that also inherit from character
 str(term)
-#>  'term' chr [1:4] "par[1,1]" "par[2,1]" "par[1,2]" "par[2,2]"
+#>  'term' chr [1:7] "alpha[1]" "alpha[2]" "beta[1,1]" "beta[2,1]" ...
 
-# then extract the parameter names
+# term vectors can also be created from numeric atomic objects
+as.term(matrix(1:4, 2), "theta")
+#> [1] "theta[1,1]" "theta[2,1]" "theta[1,2]" "theta[2,2]"
+```
+
+### Querying Term Vectors
+
+``` r
+# get the parameter names
 pars(term)
-#> [1] "par"
-
-# the dimensions of each parameter
+#> [1] "alpha" "beta"  "sigma"
+# and parameter dimensions
 pdims(term)
-#> $par
+#> $alpha
+#> [1] 2
+#> 
+#> $beta
 #> [1] 2 2
+#> 
+#> $sigma
+#> [1] 1
 
-# and the index of each term
+# get the parameter names by term
+pars(term, terms = TRUE)
+#> [1] "alpha" "alpha" "beta"  "beta"  "beta"  "beta"  "sigma"
+# and the term indices
 tindex(term)
-#> $`par[1,1]`
+#> $`alpha[1]`
+#> [1] 1
+#> 
+#> $`alpha[2]`
+#> [1] 2
+#> 
+#> $`beta[1,1]`
 #> [1] 1 1
 #> 
-#> $`par[2,1]`
+#> $`beta[2,1]`
 #> [1] 2 1
 #> 
-#> $`par[1,2]`
+#> $`beta[1,2]`
 #> [1] 1 2
 #> 
-#> $`par[2,2]`
+#> $`beta[2,2]`
 #> [1] 2 2
+#> 
+#> $sigma
+#> [1] 1
+```
+
+### Validating Term Vectors
+
+``` r
+# term vectors can be tested for whether they have (parseably) valid, 
+# (dimensionally) consistent, complete and duplicated terms
+
+# valid terms
+valid_term(as.term(c("a", "a[1]", "a [2]", " b [3  ] ", "c[1,10]")))
+#> [1] TRUE TRUE TRUE TRUE TRUE
+
+# invalid terms
+valid_term(as.term(c("a a", "a[]", "a[2", " b[3 3]", "c[1,10]c")))
+#> [1] FALSE FALSE FALSE FALSE FALSE
+
+# consistent terms
+consistent_term(as.term(c("a", "a[2]", "b[1,1]", "b[10,99]")))
+#> [1] TRUE TRUE TRUE TRUE
+
+# inconsistent terms
+consistent_term(as.term(c("a", "a[2,1]", "b[1,1]", "b[10,99,1]")))
+#> [1] FALSE FALSE FALSE FALSE
+
+# complete terms
+!is.incomplete_terms(as.term(c("a", "a[2]", "b[1,1]", "b[2,1]")))
+#> [1] TRUE
+
+# incomplete terms
+!is.incomplete_terms(as.term(c("a", "a[3]", "b[1,1]", "b[2,2]")))
+#> [1] FALSE
+
+# unique terms
+anyDuplicated(as.term(c("a", "b")))
+#> [1] 0
+
+# duplicated terms
+anyDuplicated(as.term(c("a", "a")))
+#> [1] 2
+```
+
+### Fixing Term Vectors
+
+``` r
+term <- as.term(c("b[4]", "b   [2]", "b", "b[1", "b[2, 2]", "b", "a [ 1 ] ", NA))
+term
+#> [1] "b[4]"     "b   [2]"  "b"        "b[1"      "b[2, 2]"  "b"       
+#> [7] "a [ 1 ] " NA
+
+# valid terms can be repaired (otherwise they are converted to missing values)
+term <- repair_terms(term)
+term
+#> [1] "b[4]"   "b[2]"   "b[1]"   NA       "b[2,2]" "b[1]"   "a"      NA
+
+# missing values can easily removed
+term <- term[!is.na(term)]
+term
+#> [1] "b[4]"   "b[2]"   "b[1]"   "b[2,2]" "b[1]"   "a"
+
+# and only unique values retained
+term <- unique(term)
+term
+#> [1] "b[4]"   "b[2]"   "b[1]"   "b[2,2]" "a"
+
+# a term vector can be sorted by parameter name and index
+term <- sort(term)
+term
+#> [1] "a"      "b[1]"   "b[2]"   "b[4]"   "b[2,2]"
+
+# an inconsistent term removed
+term <- term[term != "b[2,2]"]
+term
+#> [1] "a"    "b[1]" "b[2]" "b[4]"
+
+# and incomplete terms completed
+term <- sort(complete_terms(term))
+term
+#> [1] "a"    "b[1]" "b[2]" "b[3]" "b[4]"
 ```
 
 ## Contribution
