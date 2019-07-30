@@ -22,9 +22,9 @@ status](https://www.r-pkg.org/badges/version/term)](https://cran.r-project.org/p
 ![CRAN downloads](http://cranlogs.r-pkg.org/badges/term)
 <!-- badges: end -->
 
-`term` is an R package to create, manipulate and query vectors of
-parameter terms. Parameter terms are the labels used to reference values
-in vectors, matrices and arrays. They are represent the names in
+`term` is an R package to create, manipulate, query and repair vectors
+of parameter terms. Parameter terms are the labels used to reference
+values in vectors, matrices and arrays. They represent the names in
 `coef()` tables and the column names in `mcmc` and `mcmc.list` objects.
 
 ## Installation
@@ -148,7 +148,7 @@ anyDuplicated(as.term(c("a", "a")))
 #> [1] 2
 ```
 
-### Fixing Term Vectors
+### Repairing Term Vectors
 
 ``` r
 term <- as.term(c("b[4]", "b   [2]", "b", "b[1", "b[2, 2]", "b", "a [ 1 ] ", NA))

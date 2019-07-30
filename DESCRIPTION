@@ -5,9 +5,10 @@ Authors@R: c(
     person("Joe", "Thorley", , "joe@poissonconsulting.ca", c("aut", "cre"), comment = c(ORCID = "0000-0002-7683-4592")),
     person("Poisson Consulting", role = c("cph", "fnd"))
     )
-Description: Creates, manipulates and queries vectors of parameter terms.
+Description: Creates, manipulates, queries and repairs vectors of parameter terms.
     Parameter terms are the labels used to reference values in vectors, matrices 
-    and arrays. They are most commonly used in coefficient tables.
+    and arrays. They represent the names in `coef()` tables and 
+    the column names in `mcmc` and `mcmc.list` objects.
 License: MIT + file LICENSE
 Suggests: 
     covr,
