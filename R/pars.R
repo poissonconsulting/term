@@ -40,10 +40,10 @@ set_pars <- function(x, pars) {
 #' @describeIn pars Parameter names for a term vector
 #' @export
 pars.term <- function(x, scalar_only = FALSE, terms = FALSE, repair = TRUE, ...) {
-  check_flag(scalar_only)
-  check_flag(terms)
-  check_flag(repair)
-  check_unused(...)
+  chk_flag(scalar_only)
+  chk_flag(terms)
+  chk_flag(repair)
+  chk_unused(...)
   
   if(isTRUE(repair)) x <- repair_terms(x)
   .pars(x, scalar_only = scalar_only, terms = terms)
@@ -51,9 +51,8 @@ pars.term <- function(x, scalar_only = FALSE, terms = FALSE, repair = TRUE, ...)
 
 #' @export
 `pars<-.term` <- function(x, value) {
-  check_atomic_vector(value)
-  check_character(value)
-  check_length(value, length = c(1L, 1L, length(x)))
+  chk_is(value, "character")
+  chk_length(value, length = c(1L, 1L, length(x)))
   
   if(!all(grepl(paste0("^", .par_name_pattern ,"$"), value)))
     err("invalid parameter name")

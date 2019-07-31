@@ -17,8 +17,8 @@ as.term <- function(x, ...) UseMethod("as.term")
 #' @describeIn as.term Coerce character vector to term vector
 #' @export
 as.term.character <- function(x, ..., repair = FALSE) {
-  check_flag(repair)
-  check_unused(...)
+  chk_flag(repair)
+  chk_unused(...)
   x <- set_class(x, c("term", "character"))
   x[is.na(x)] <- NA_term_
   if(repair) x <- repair_terms(x)
@@ -28,13 +28,13 @@ as.term.character <- function(x, ..., repair = FALSE) {
 #' @describeIn as.term Coerce default object to term vector
 #' @export
 as.term.numeric <- function(x, name = "par", ...) {
-  check_string(name)
-  check_unused(...)
+  chk_string(name)
+  chk_unused(...)
   term(dims(x), name = name)
 }
 
 #' @export
 as.term.term <- function(x, ...) {
-  check_unused(...)
+  chk_unused(...)
   x
 }

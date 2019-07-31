@@ -10,9 +10,11 @@ Description: Creates, manipulates, queries and repairs vectors of parameter term
     and arrays. They represent the names in `coef()` tables and 
     the column names in `mcmc` and `mcmc.list` objects.
 License: MIT + file LICENSE
+Imports: chk
 Suggests: 
     covr,
     testthat
+Remotes: poissonconsulting/chk
 URL: https://github.com/poissonconsulting/term
 BugReports: https://github.com/poissonconsulting/term/issues
 Encoding: UTF-8

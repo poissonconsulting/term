@@ -18,8 +18,8 @@ npdims <- function(x, ...) UseMethod("npdims")
 #' @describeIn npdims Number of parameter dimensions of term vector
 #' @export
 npdims.term <- function(x, terms = FALSE, ...) {
-  check_flag(terms)
-  check_unused(...)
+  chk_flag(terms)
+  chk_unused(...)
   x <- repair_terms(x)
 
   if(!terms) {

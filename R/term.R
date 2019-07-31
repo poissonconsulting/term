@@ -19,15 +19,15 @@ term <- function(x, ...) UseMethod("term")
 
 #' @export
 term.NULL <- function(x, name = "par", ...) {
-  check_unused(...)
+  chk_unused(...)
   term(0L, name = name)
 }
 
 #' @describeIn term Term vector from an integer vector of the object's dimensions
 #' @export
 term.integer <- function(x, name = "par", ...) {
-  check_string(name)
-  check_unused(...)
+  chk_string(name)
+  chk_unused(...)
  
   if(!length(x)) return(as.term(character(0)))
   if(any(x == 0L)) return(as.term(character(0)))
@@ -45,14 +45,14 @@ term.integer <- function(x, name = "par", ...) {
 
 #' @export
 term.numeric <- function(x, name = "par", ...) {
-  check_unused(...)
+  chk_unused(...)
   term(as.integer(x), name = name)
 }
 
 #' @export
 term.list <- function(x, ...) {
   if(!length(x)) return(term(0L))
-  check_named(x)
+  chk_named(x)
   x <- mapply(term, x, names(x))
   x <- unlist(x)
   x <- as.vector(x)

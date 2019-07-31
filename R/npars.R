@@ -24,10 +24,10 @@ npars <- function(x, ...) UseMethod("npars")
 #' @describeIn npars Number of parameters of term vector
 #' @export
 npars.term <- function(x, scalar_only = FALSE, repair = TRUE, na.rm = FALSE, ...) {
-  check_flag(scalar_only)
-  check_flag(repair)
-  check_flag(na.rm)
-  check_unused(...)
+  chk_flag(scalar_only)
+  chk_flag(repair)
+  chk_flag(na.rm)
+  chk_unused(...)
   if(repair) x <- repair_terms(x, scalars = scalar_only)
   if(anyNA(x)) {
     if(isFALSE(na.rm)) return(NA_integer_)

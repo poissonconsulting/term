@@ -28,8 +28,8 @@ nterms <- function(x, ...) {
 #' @describeIn nterms Number of elements of term vector
 #' @export
 nterms.term <- function(x, na.rm = FALSE, ...) {
-  check_flag(na.rm)
-  check_unused(...)
+  chk_flag(na.rm)
+  chk_unused(...)
   
   x <- repair_terms(x)
   

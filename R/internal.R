@@ -56,3 +56,9 @@ max_index <- function(x) {
   names(x) <- names
   x
 }
+
+set_class <- function(x, class) {
+  class(x) <- class
+  x
+}
+
