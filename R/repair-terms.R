@@ -33,6 +33,6 @@ repair_terms <- function(x, scalars = TRUE) {
   x <- sub("\\[1\\]$", "", x)
   non_scalar <- unique(sub("\\[.*$", "", x[grepl("\\[", x)]))
   non_scalar <- x %in% non_scalar
-  x[non_scalar] <- paste0(x[non_scalar], "[1]")
+  x[non_scalar] <- p0(x[non_scalar], "[1]")
   as.term(x)
 }

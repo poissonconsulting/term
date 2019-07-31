@@ -22,7 +22,7 @@ greater_than_term <- function(e1, e2) {
 .pars <- function(x, scalar_only = FALSE, terms = FALSE) {
   x <- as.character(x)
   if(scalar_only) x <- x[!grepl("\\[", x)]
-  x <- sub(paste0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
+  x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
   if(!terms) x <- unique(x)
   x
 }
@@ -46,7 +46,7 @@ max_index <- function(x) {
 # assumes that pars do not require repairing
 .tindex <- function(x) {
   names <- x
-  x <- sub(paste0("^", .par_name_pattern), "", x)
+  x <- sub(p0("^", .par_name_pattern), "", x)
   x <- sub("^$", "1", x)
   x <- gsub("\\[|\\]", "", x)
   x <- strsplit(x, ",")

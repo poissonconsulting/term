@@ -54,14 +54,14 @@ pars.term <- function(x, scalar_only = FALSE, terms = FALSE, repair = TRUE, ...)
   chk_is(value, "character")
   chk_length(value, length = c(1L, 1L, length(x)))
   
-  if(!all(grepl(paste0("^", .par_name_pattern ,"$"), value)))
+  if(!all(grepl(p0("^", .par_name_pattern ,"$"), value)))
     err("invalid parameter name")
 
   x <- repair_terms(x, scalars = FALSE)
 
-  x <- sub(paste0("^", .par_name_pattern), "", x)
+  x <- sub(p0("^", .par_name_pattern), "", x)
   is.na <- is.na(x)
-  x <- paste(value, x, sep = "")
+  x <- p(value, x, sep = "")
   is.na(x[is.na]) <- TRUE
   as.term(x)
 }

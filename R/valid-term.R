@@ -17,7 +17,7 @@
 valid_term <- function(x) {
   if(!is.term(x)) err("x must be a term vector")
   if(!length(x)) return(TRUE)
-  pattern <- paste0("^\\s*", .par_name_pattern, "\\s*(\\[\\s*", 
+  pattern <- p0("^\\s*", .par_name_pattern, "\\s*(\\[\\s*", 
                     .index_pattern, "(\\s*,\\s*", .index_pattern, 
                     ")*\\s*\\]){0,1}\\s*$")
   valid <- grepl(pattern, x)

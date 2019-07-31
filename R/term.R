@@ -33,13 +33,13 @@ term.integer <- function(x, name = "par", ...) {
   if(any(x == 0L)) return(as.term(character(0)))
   if(identical(x, 1L)) return(as.term(name))
   if(identical(length(x), 1L)) 
-    return(as.term(paste0(name, "[", 1:x, "]")))
+    return(as.term(p0(name, "[", 1:x, "]")))
 
   x <- lapply(x, function(x) 1:x)
   x <- do.call("expand.grid", x)
   x <- as.matrix(x)
-  x <- apply(x, 1L, function(x) paste(x, collapse = ","))
-  x <- paste0(name, "[", x, "]")
+  x <- apply(x, 1L, function(x) p(x, collapse = ","))
+  x <- p0(name, "[", x, "]")
   as.term(x)
 }
 
