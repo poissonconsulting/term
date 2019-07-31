@@ -1,6 +1,6 @@
 greater_than_term <- function(e1, e2) {
-  e1_parm <- .pars(e1)
-  e2_parm <- .pars(e2)
+  e1_parm <- pars(e1)
+  e2_parm <- pars(e2)
   if (e1_parm != e2_parm) return(e1_parm > e2_parm)
   
   e1 <- .tindex(e1)[[1]]
@@ -18,15 +18,6 @@ greater_than_term <- function(e1, e2) {
   e1[which] > e2[which]
 }
 
-# assumes that pars do not require repairing
-.pars <- function(x, scalar_only = FALSE, terms = FALSE) {
-  x <- as.character(x)
-  if(scalar_only) x <- x[!grepl("\\[", x)]
-  x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
-  if(!terms) x <- unique(x)
-  x
-}
-
 max_index <- function(x) {
   x <- .tindex(x)
   x <- matrix(unlist(x), ncol = length(x[[1]]), byrow = TRUE)
@@ -37,8 +28,8 @@ max_index <- function(x) {
 .pdims <- function(x) {
   x <- x[!is.na(x)]
   x <- sort(x)
-  names <- .pars(x)
-  x <- split(x, .pars(x, terms = TRUE))
+  names <- pars(x)
+  x <- split(x, pars(x, terms = TRUE))
   x <- lapply(x, max_index)
   x
 }

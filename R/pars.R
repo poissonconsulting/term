@@ -37,7 +37,7 @@ set_pars <- function(x, pars) {
 
 # internal use only
 pars.character <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
-  pars(as.term(x, scalar_only = scalar_only, terms = terms))
+  pars(as.term(x), scalar_only = scalar_only, terms = terms)
 }
 
 #' @describeIn pars Parameter names for a term vector

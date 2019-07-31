@@ -21,5 +21,5 @@ npars.term <- function(x, scalar_only = FALSE, ...) {
   chk_flag(scalar_only)
   chk_unused(...)
   if(anyNA(x)) return(NA_integer_)
-  length(.pars(x, scalar_only = scalar_only))
+  length(pars(x, scalar_only = scalar_only))
 }

@@ -27,9 +27,9 @@ subset.term <- function(x, select = NULL, na.rm = FALSE, ...) {
   if(isTRUE(na.rm)) x <- x[!is.na(x)]
   
   chk_is(select, "character")
-  if(!all(select %in% .pars(x))) err("unrecognized parameters in select")
+  if(!all(select %in% pars(x))) err("unrecognized parameters in select")
   
   if(!length(select)) return(term(0L))
   
-  x[is.na(x) | .pars(x, terms = TRUE) %in% select]
+  x[is.na(x) | pars(x, terms = TRUE) %in% select]
 }
