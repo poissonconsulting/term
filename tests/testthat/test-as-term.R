@@ -42,10 +42,7 @@ test_that("as.term.character", {
   expect_identical(as.term(c("a", "a[", NA, "a[1]")),
                            structure(c("a", "a[", NA, "a[1]"), class = c("term", "character"
 )))
-  expect_identical(as.term(c("a", "a[", NA, "a[1]"), repair = TRUE),
-                           structure(c("a", NA, NA, "a"), class = c("term", "character"
-)))
-  
+
   x2 <- as.term(x)
   expect_is(x2, "term")
   expect_true(is.term(x2))
