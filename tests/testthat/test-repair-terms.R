@@ -26,13 +26,6 @@ test_that("repair_terms", {
   expect_identical(repair_terms(as.term(c("a[1]", "a[1]"))), as.term(c("a", "a")))
   expect_identical(repair_terms(as.term(c("a[2]", "a[1]"))), as.term(c("a[2]", "a[1]")))
   expect_identical(repair_terms(as.term(c("a[2]", "a"))), as.term(c("a[2]", "a[1]")))
-
-  expect_identical(repair_terms(as.term(c("a[1]", "a[1]")), scalars = FALSE), 
-                   as.term(c("a[1]", "a[1]")))
-  expect_identical(repair_terms(as.term(c("a[2]", "a[1]")), scalars = FALSE), 
-                   as.term(c("a[2]", "a[1]")))
-  expect_identical(repair_terms(as.term(c("a[2]", "a")), scalars = FALSE), 
-                   as.term(c("a[2]", "a")))
   
   expect_identical(repair_terms(as.term(c("a[2,1]", "a"))), as.term(c("a[2,1]", "a[1]")))
 })

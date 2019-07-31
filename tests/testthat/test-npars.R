@@ -11,7 +11,7 @@ test_that("npars.term", {
 
 })
 
-test_that("npars.term scalars", {
+test_that("npars.term scalar_only", {
   expect_identical(npars(as.term(c("a[2]"))), 1L)
   expect_identical(npars(as.term(c("a[2]")), scalar_only = TRUE), 0L)
   expect_identical(npars(as.term(c("a[1]")), scalar_only = TRUE), 0L)

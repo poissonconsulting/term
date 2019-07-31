@@ -62,7 +62,7 @@ pars.term <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
   if(!all(grepl(p0("^", .par_name_pattern ,"$"), value)))
     err("invalid parameter name")
 
-  x <- repair_terms(x, scalars = FALSE)
+  x <- repair_terms(x)
 
   x <- sub(p0("^", .par_name_pattern), "", x)
   is.na <- is.na(x)
