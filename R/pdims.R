@@ -3,7 +3,6 @@
 #' Gets the parameter dimensions of an object as a named list of the dimensions
 #' of each parameter.
 #' 
-#' Missing and invalid term elements are ignored.
 #' Errors if the parameter dimensions are inconsistent.
 #' 
 #' A named list of the dimensions of each parameter can be converted
@@ -21,8 +20,8 @@ pdims <- function(x, ...) UseMethod("pdims")
 
 #' @export
 pdims.term <- function(x, ...) {
-  x <- repair_terms(x)
-  if(any(!consistent_term(x[!is.na(x)])))
+  chk_no_missing(x)
+  if(any(!consistent_term(x)))
     err("parameter dimensions are inconsistent")
   .pdims(x)
 }

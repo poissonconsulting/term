@@ -17,19 +17,15 @@ test_that("pdims", {
   expect_identical(pdims(as.term(c("alpha[3]", "beta[2,1]"))), 
                    list(alpha = 3L, beta = c(2L, 1L)))
   
-  expect_identical(pdims(as.term(c("alpha[3]", "beta[2,1]", "alpha[10,]"))), 
-                   list(alpha = 3L, beta = c(2L, 1L)))
+  expect_error(pdims(as.term(c("alpha[3]", "beta[2,1]", "alpha[10,]"))), 
+                   "missing value where TRUE/FALSE needed")
 })
 
 test_that("pdims missing value", {
-  expect_identical(pdims(NA_term_), 
-                   list(alpha = 3L)[-1])
-  
-  expect_identical(pdims(as.term(c("alpha[3]", "beta[2,1]", NA))), 
-                   list(alpha = 3L, beta = c(2L, 1L)))
-  
-  expect_identical(pdims(as.term(c("alpha[1,2]", "alpha[2,1]", NA))), 
-                   list(alpha = c(2L, 2L)))
+  expect_error(pdims(NA_term_), "x must not have missing values")
+
+  expect_error(pdims(as.term(c("alpha[3]", "beta[2,1]", NA))), 
+                   "x must not have missing values")
 })
 
 test_that("pdims inconsistent", {

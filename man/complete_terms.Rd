@@ -30,7 +30,6 @@ Missing values are ignored.
 }}
 
 \examples{
-complete_terms(as.term(c("b[1]", NA)))
 complete_terms(as.term(c("b[3]", "b[1]", "b[2]")))
 complete_terms(as.term(c("z[2,2]", "z[1,1]")))
 }

@@ -18,7 +18,7 @@ nterms(x, ...)
 A count of the number of terms.
 }
 \description{
-Gets the number of unique valid term elements of an object.
+Gets the number of unique term elements of an object.
 }
 \details{
 By default if the vector includes

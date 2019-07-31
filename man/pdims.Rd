@@ -19,7 +19,6 @@ Gets the parameter dimensions of an object as a named list of the dimensions
 of each parameter.
 }
 \details{
-Missing and invalid term elements are ignored.
 Errors if the parameter dimensions are inconsistent.
 
 A named list of the dimensions of each parameter can be converted
