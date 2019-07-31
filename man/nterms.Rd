@@ -7,14 +7,12 @@
 \usage{
 nterms(x, ...)
 
-\method{nterms}{term}(x, na.rm = FALSE, ...)
+\method{nterms}{term}(x, ...)
 }
 \arguments{
 \item{x}{The object.}
 
 \item{...}{Unused.}
-
-\item{na.rm}{A flag specifying whether to remove missing values.}
 }
 \value{
 A count of the number of terms.
@@ -23,14 +21,8 @@ A count of the number of terms.
 Gets the number of unique valid term elements of an object.
 }
 \details{
-By default if the vector includes invalid term elements of 
+By default if the vector includes
 missing values then it returns NA_integer_.
-
-If \code{na.rm = TRUE} then any invalid term elements and missing values
-are removed before the number of terms is counted.
-
-If you are certain all the terms are unique and valid then just use
-\code{length(x)}.
 }
 \section{Methods (by class)}{
 \itemize{
@@ -42,5 +34,5 @@ nterms(as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]")))
 nterms(as.term(c("alpha[1]", "alpha[1]", "beta[1,1]", "beta[1,1]")))
 }
 \seealso{
-\code{\link{term-vector}} and \code{\link{valid_term}()}
+\code{\link{term-vector}}
 }
