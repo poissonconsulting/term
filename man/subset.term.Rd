@@ -4,14 +4,12 @@
 \alias{subset.term}
 \title{Subset Term Vector}
 \usage{
-\method{subset}{term}(x, select = NULL, na.rm = FALSE, ...)
+\method{subset}{term}(x, select = NULL, ...)
 }
 \arguments{
 \item{x}{A term vector to be subsetted.}
 
 \item{select}{A character vector of the names of the parameters to include in the subsetted object.}
-
-\item{na.rm}{A flag specifying whether to remove missing or invalid terms.}
 
 \item{...}{Unused.}
 }

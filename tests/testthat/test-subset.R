@@ -20,14 +20,6 @@ test_that("subset.term",{
 })
 
 test_that("subset.term missing values",{
-  expect_identical(subset(NA_term_), NA_term_)
-  expect_identical(subset(NA_term_, na.rm = TRUE), term(0L))
-  expect_identical(subset(c(NA_term_, "a")), c(NA_term_, "a"))
-  expect_identical(subset(c(NA_term_, "a"), na.rm = TRUE), as.term("a"))
-  expect_error(subset(c(NA_term_, "a"), select = "b"), 
-               "unrecognized parameters in select")
-  expect_identical(subset(c(NA_term_, "a", "b"), select = "b"), 
-               as.term(c(NA_term_, "b")))
-  expect_identical(subset(c(NA_term_, "a", "b"), na.rm = TRUE, select = "b"), 
-               as.term("b"))
+  expect_error(subset(NA_term_), "x must not have missing values")
+  expect_error(subset(c(NA_term_, "a")), "x must not have missing values")
 })
