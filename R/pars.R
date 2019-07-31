@@ -2,15 +2,13 @@
 #'
 #' Gets or sets the parameter names for an object.
 #' 
-#' By default term elements are repaired prior to getting the parameter names.
-#' Term elements are always repaired prior to setting.
+#' It assumes that the terms do not require repairing.
 #' 
 #' @param x An R object.
 #' @param scalar_only A flag specifying whether to only get the names of
 #' parameters with one term.
 #' @param terms A flag specifying whether to return the parameter name
 #' for each term element.
-#' @param repair A flag specifying whether to repair term elements.
 #' @param ... Unused.
 #' @param value A character vector of the new parameter names.
 #' @param pars A character vector of the new parameter names.
@@ -37,16 +35,23 @@ set_pars <- function(x, pars) {
   x
 }
 
+# internal use only
+pars.character <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
+  pars(as.term(x, scalar_only = scalar_only, terms = terms))
+}
+
 #' @describeIn pars Parameter names for a term vector
 #' @export
-pars.term <- function(x, scalar_only = FALSE, terms = FALSE, repair = TRUE, ...) {
+pars.term <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
   chk_flag(scalar_only)
   chk_flag(terms)
-  chk_flag(repair)
   chk_unused(...)
   
-  if(isTRUE(repair)) x <- repair_terms(x)
-  .pars(x, scalar_only = scalar_only, terms = terms)
+  x <- as.character(x)
+  if(scalar_only) x <- x[!grepl("\\[", x)]
+  x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
+  if(!terms) x <- unique(x)
+  x
 }
 
 #' @export

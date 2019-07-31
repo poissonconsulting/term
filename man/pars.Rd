@@ -22,8 +22,7 @@ pars(x) <- value
 
 set_pars(x, pars)
 
-\method{pars}{term}(x, scalar_only = FALSE, terms = FALSE,
-  repair = TRUE, ...)
+\method{pars}{term}(x, scalar_only = FALSE, terms = FALSE, ...)
 }
 \arguments{
 \item{x}{An R object.}
@@ -39,8 +38,6 @@ parameters with one term.}
 
 \item{terms}{A flag specifying whether to return the parameter name
 for each term element.}
-
-\item{repair}{A flag specifying whether to repair term elements.}
 }
 \value{
 A character vector of the parameter names.
@@ -55,8 +52,7 @@ Gets or sets the parameter names for an object.
 
 \code{set_parameters()} is deprecated.
 
-By default term elements are repaired prior to getting the parameter names.
-Term elements are always repaired prior to setting.
+It assumes that the terms do not require repairing.
 }
 \section{Methods (by class)}{
 \itemize{
