@@ -21,7 +21,6 @@ pdims <- function(x, ...) UseMethod("pdims")
 #' @export
 pdims.term <- function(x, ...) {
   chk_no_missing(x)
-  if(any(!consistent_term(x)))
-    err("parameter dimensions are inconsistent")
+  if(is.inconsistent_terms(x)) err("parameter dimensions are inconsistent")
   .pdims(x)
 }
