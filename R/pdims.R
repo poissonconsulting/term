@@ -22,5 +22,9 @@ pdims <- function(x, ...) UseMethod("pdims")
 pdims.term <- function(x, ...) {
   chk_no_missing(x)
   if(is.inconsistent_terms(x)) err("parameter dimensions are inconsistent")
-  .pdims(x)
+  x <- sort(x)
+  names <- pars(x)
+  x <- split(x, pars(x, terms = TRUE))
+  x <- lapply(x, max_index)
+  x
 }

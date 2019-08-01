@@ -22,7 +22,7 @@ npdims.term <- function(x, terms = FALSE, ...) {
   chk_unused(...)
 
   if(!terms) {
-    return(vapply(.pdims(x), length, 1L))
+    return(vapply(pdims(x), length, 1L))
   }
   x <- tindex(x)
   names(x) <- pars(as.term(names(x)), terms = TRUE)

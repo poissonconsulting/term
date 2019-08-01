@@ -24,16 +24,6 @@ max_index <- function(x) {
   apply(x, 2, max)
 }
 
-# assumes that pars are consistent
-.pdims <- function(x) {
-  x <- x[!is.na(x)]
-  x <- sort(x)
-  names <- pars(x)
-  x <- split(x, pars(x, terms = TRUE))
-  x <- lapply(x, max_index)
-  x
-}
-
 set_class <- function(x, class) {
   class(x) <- class
   x
