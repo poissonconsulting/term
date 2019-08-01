@@ -2,11 +2,12 @@
 #'
 #' Tests whether an R object inherits from class \code{term}.
 #' 
-#' It does not test the validity of the term elements.
+#' It does not test the validity of consistency of the term elements.
 #'
 #' @param x The object to test.
 #' @return A flag indicating whether the test was positive.
-#' @seealso \code{\link{term-vector}} and \code{\link{valid_term}()}
+#' @seealso \code{\link{term-vector}}, \code{\link{valid_term}()}
+#' and \code{\link{consistent_term}()}
 #' @export
 #' 
 #' @examples

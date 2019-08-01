@@ -2,8 +2,6 @@
 #' 
 #' Subsets a term vector.
 #' 
-#' The term vector is repaired prior to subsetting.
-#' 
 #' @param x A term vector to be subsetted.
 #' @param select A character vector of the names of the parameters to include in the subsetted object.
 #' @param ... Unused.
