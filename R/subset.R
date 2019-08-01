@@ -8,7 +8,7 @@
 #' @param select A character vector of the names of the parameters to include in the subsetted object.
 #' @param ... Unused.
 #' @return The modified term vector.
-#' @seealso \code{\link{term-vector}} and \code{\link{repair_terms}()}
+#' @seealso \code{\link{term-vector}}
 #' @export
 #' 
 #' @examples 

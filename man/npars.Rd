@@ -32,6 +32,5 @@ npars(as.term(c("sigma", "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]")))
 npars(as.term(c("sigma", "alpha[1]", "alpha[2]")), scalar_only = TRUE)
 }
 \seealso{
-\code{\link{pars}()}, \code{\link{term-vector}} 
-and \code{\link{repair_terms}()}
+\code{\link{pars}()} and \code{\link{term-vector}}
 }

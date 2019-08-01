@@ -51,8 +51,6 @@ Gets or sets the parameter names for an object.
 \code{parameters<-} is deprecated.
 
 \code{set_parameters()} is deprecated.
-
-It assumes that the terms do not require repairing.
 }
 \section{Methods (by class)}{
 \itemize{
@@ -65,7 +63,4 @@ term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
 pars(term)
 pars(term, scalar_only = TRUE)
 pars(term, terms = TRUE)
-}
-\seealso{
-\code{\link{repair_terms}()}
 }

@@ -11,7 +11,7 @@
 
 as.term(x, ...)
 
-\method{as.term}{character}(x, ...)
+\method{as.term}{character}(x, ..., repair = FALSE)
 
 \method{as.term}{numeric}(x, name = "par", ...)
 }
@@ -19,6 +19,8 @@ as.term(x, ...)
 \item{x}{The object to coerce.}
 
 \item{...}{Unused.}
+
+\item{repair}{A flag specifying whether to repair terms.}
 
 \item{name}{A string of the name for the parameter.}
 }

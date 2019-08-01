@@ -9,7 +9,7 @@
 #' @param incomparables Ignored.
 #' @param ... Unused.
 #' @return A vector of unique terms.
-#' @seealso \code{\link{term-vector}} and \code{\link{repair_terms}()}
+#' @seealso \code{\link{term-vector}}
 #' @export
 #' 
 #' @examples 

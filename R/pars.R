@@ -2,8 +2,6 @@
 #'
 #' Gets or sets the parameter names for an object.
 #' 
-#' It assumes that the terms do not require repairing.
-#' 
 #' @param x An R object.
 #' @param scalar_only A flag specifying whether to only get the names of
 #' parameters with one term.
@@ -13,7 +11,6 @@
 #' @param value A character vector of the new parameter names.
 #' @param pars A character vector of the new parameter names.
 #' @return A character vector of the parameter names.
-#' @seealso \code{\link{repair_terms}()}
 #' @export
 #' 
 #' @examples

@@ -5,6 +5,7 @@
 #' @param x The object to coerce.
 #' @param name A string of the name for the parameter.
 #' @param ... Unused.
+#' @param repair A flag specifying whether to repair terms.
 #' @seealso \code{\link{term-vector}} and \code{\link{repair_terms}()}
 #' @export
 #' 
@@ -15,10 +16,12 @@ as.term <- function(x, ...) UseMethod("as.term")
 
 #' @describeIn as.term Coerce character vector to term vector
 #' @export
-as.term.character <- function(x, ...) {
+as.term.character <- function(x, ..., repair = FALSE) {
   chk_unused(...)
+  chk_flag(repair)
   x <- set_class(x, c("term", "character"))
   x[is.na(x)] <- NA_term_
+  if(repair) x <- repair_terms(x)
   x
 }
 

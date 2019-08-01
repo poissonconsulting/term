@@ -18,6 +18,6 @@ test_that("tindex", {
   expect_identical(tindex(NA_term_), structure(list(NA_integer_), .Names = NA_character_))
   
   expect_identical(tindex(as.term(c("alpha", "alpha[2]", "beta[1,1]", "beta[2 ,1  ]", NA))),
-                   structure(list(1L, 2L, c(1L, 1L), 2:1, NA_integer_), .Names = c("alpha[1]", 
-                                                                                   "alpha[2]", "beta[1,1]", "beta[2,1]", NA)))
+                   structure(list(1L, 2L, c(1L, 1L), 2:1, NA_integer_), .Names = c("alpha", 
+"alpha[2]", "beta[1,1]", "beta[2 ,1  ]", NA)))
 })

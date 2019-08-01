@@ -27,5 +27,5 @@ prior to extracting unique elements.
 unique(as.term(c("b", "a", "a[1]", "a", NA, "aa", NA)))
 }
 \seealso{
-\code{\link{term-vector}} and \code{\link{repair_terms}()}
+\code{\link{term-vector}}
 }

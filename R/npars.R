@@ -6,8 +6,7 @@
 #' @param scalar_only A flag specifying whether to only count parameters with one term.
 #' @param ... Unused.
 #' @return A count of the number of parameters.
-#' @seealso \code{\link{pars}()}, \code{\link{term-vector}} 
-#' and \code{\link{repair_terms}()}
+#' @seealso \code{\link{pars}()} and \code{\link{term-vector}} 
 #' @export
 #' 
 #' @examples

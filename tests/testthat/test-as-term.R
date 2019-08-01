@@ -42,6 +42,10 @@ test_that("as.term.character", {
   expect_identical(as.term(c("a", "a[", NA, "a[1]")),
                            structure(c("a", "a[", NA, "a[1]"), class = c("term", "character"
 )))
+  
+  expect_identical(as.term(c("a", "a[", NA, "a[1]"), repair = TRUE),
+                           structure(c("a", NA, NA, "a"), class = c("term", "character"
+)))
 
   x2 <- as.term(x)
   expect_is(x2, "term")
@@ -54,7 +58,7 @@ test_that("as.term.character", {
                    list(`parm3[10]` = 10L, `parm3[2]` = 2L, 
                         `parm[2,2]` = c(2L, 2L), `parm[1,1]` = c(1L, 1L), 
                         `parm[2,1]` = 2:1, `parm[1,2]` = 1:2, 
-                        `parm[10]` = 10L, `parm3[1]` = 1L))
+                        `parm[10]` = 10L, `parm3` = 1L))
   expect_identical(x2 > x2, rep(FALSE, length(x2)))
   
   expect_identical(sort(x2), as.term(c("parm[10]", "parm[1,1]", "parm[2,1]", "parm[1,2]",

@@ -29,5 +29,5 @@ subset(term, "beta")
 subset(term, c("alpha", "sigma"))
 }
 \seealso{
-\code{\link{term-vector}} and \code{\link{repair_terms}()}
+\code{\link{term-vector}}
 }

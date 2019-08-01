@@ -22,7 +22,6 @@ tindex.character <- function(x, ...) tindex(as.term(x))
 #' @describeIn tindex Term indices for term vector
 #' @export
 tindex.term <- function(x, ...) {
-  x <- repair_terms(x)
   names <- x
   x <- sub(p0("^", .par_name_pattern), "", x)
   x <- sub("^$", "1", x)
