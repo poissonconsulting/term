@@ -7,24 +7,18 @@
 \usage{
 is.incomplete_terms(x, ...)
 
-\method{is.incomplete_terms}{term}(x, na.rm = FALSE, ...)
+\method{is.incomplete_terms}{term}(x, ...)
 }
 \arguments{
 \item{x}{An object.}
 
 \item{...}{Unused}
-
-\item{na.rm}{A flag specifying whether to ignore missing values.}
 }
 \value{
 A logical scalar indicating whether the object's terms are incomplete.
 }
 \description{
 Tests whether a term vector has absent elements.
-}
-\details{
-The test is performed after the object's terms have been repaired.
-By default if the term has any missing values then NA is return.
 }
 \section{Methods (by class)}{
 \itemize{
@@ -34,9 +28,7 @@ By default if the term has any missing values then NA is return.
 \examples{
 is.incomplete_terms(as.term("b[2]"))
 is.incomplete_terms(as.term(c("b[2]", "b[1]")))
-is.incomplete_terms(as.term(c("b[2]", "b[1]", NA)))
 }
 \seealso{
-\code{\link{term-vector}()}, \code{\link{repair_terms}()} 
-and \code{\link{complete_terms}()}
+\code{\link{term-vector}()} and \code{\link{complete_terms}()}
 }
