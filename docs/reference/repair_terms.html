@@ -66,7 +66,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">term</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9100</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9102</span>
       </span>
     </div>
 
@@ -117,7 +117,7 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>repair_terms</span>(<span class='no'>x</span>, <span class='kw'>scalars</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+    <pre class="usage"><span class='fu'>repair_terms</span>(<span class='no'>x</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -125,10 +125,6 @@
     <tr>
       <th>x</th>
       <td><p>A term vector.</p></td>
-    </tr>
-    <tr>
-      <th>scalars</th>
-      <td><p>A flag specifying whether to repair scalars (see details).</p></td>
     </tr>
     </table>
     
@@ -139,7 +135,7 @@
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Invalid elements are replaced by missing values and spaces removed.</p>
-<p>By default (<code>scalars = TRUE</code>) if a parameter such as <code>b</code> 
+<p>If a parameter such as <code>b</code> 
 is a scalar then <code>b[1]</code> is replaced by <code>b</code>
 but if higher indices are included such as <code>b[2]</code> then <code>b</code>
 is replaced by <code>b[1]</code>.</p>

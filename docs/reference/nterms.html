@@ -34,7 +34,7 @@
 
 <meta property="og:title" content="Number of Terms — nterms" />
 
-<meta property="og:description" content="Gets the number of unique valid term elements of an object." />
+<meta property="og:description" content="Gets the number of unique term elements of an object." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -66,7 +66,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">term</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9100</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9102</span>
       </span>
     </div>
 
@@ -113,14 +113,14 @@
 
     <div class="ref-description">
     
-    <p>Gets the number of unique valid term elements of an object.</p>
+    <p>Gets the number of unique term elements of an object.</p>
     
     </div>
 
     <pre class="usage"><span class='fu'>nterms</span>(<span class='no'>x</span>, <span class='no'>...</span>)
 
 <span class='co'># S3 method for term</span>
-<span class='fu'>nterms</span>(<span class='no'>x</span>, <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
+<span class='fu'>nterms</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -133,10 +133,6 @@
       <th>...</th>
       <td><p>Unused.</p></td>
     </tr>
-    <tr>
-      <th>na.rm</th>
-      <td><p>A flag specifying whether to remove missing values.</p></td>
-    </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
@@ -145,12 +141,8 @@
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>By default if the vector includes invalid term elements of 
+    <p>By default if the vector includes
 missing values then it returns NA_integer_.</p>
-<p>If <code>na.rm = TRUE</code> then any invalid term elements and missing values
-are removed before the number of terms is counted.</p>
-<p>If you are certain all the terms are unique and valid then just use
-<code><a href='https://rdrr.io/r/base/length.html'>length(x)</a></code>.</p>
     
     <h2 class="hasAnchor" id="methods-by-class-"><a class="anchor" href="#methods-by-class-"></a>Methods (by class)</h2>
 
@@ -160,7 +152,7 @@ are removed before the number of terms is counted.</p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='term-object.html'>term-vector</a></code> and <code><a href='valid_term.html'>valid_term</a>()</code></p></div>
+    <div class='dont-index'><p><code><a href='term-object.html'>term-vector</a></code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>

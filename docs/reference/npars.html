@@ -66,7 +66,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">term</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9100</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9102</span>
       </span>
     </div>
 
@@ -120,8 +120,7 @@
     <pre class="usage"><span class='fu'>npars</span>(<span class='no'>x</span>, <span class='no'>...</span>)
 
 <span class='co'># S3 method for term</span>
-<span class='fu'>npars</span>(<span class='no'>x</span>, <span class='kw'>scalar_only</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>repair</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-  <span class='kw'>na.rm</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
+<span class='fu'>npars</span>(<span class='no'>x</span>, <span class='kw'>scalar_only</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -138,25 +137,11 @@
       <th>scalar_only</th>
       <td><p>A flag specifying whether to only count parameters with one term.</p></td>
     </tr>
-    <tr>
-      <th>repair</th>
-      <td><p>A flag specifying whether to repair the term vector.</p></td>
-    </tr>
-    <tr>
-      <th>na.rm</th>
-      <td><p>A flag specifying whether to remove missing term elements
-before getting the number of parameters.</p></td>
-    </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A count of the number of parameters.</p>
-    
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>By default (<code>na.rm = TRUE</code>) the function repairs the vector and 
-returns <code>NA_integer_</code> if the term vector includes missing term elements.</p>
     
     <h2 class="hasAnchor" id="methods-by-class-"><a class="anchor" href="#methods-by-class-"></a>Methods (by class)</h2>
 
@@ -166,8 +151,7 @@ returns <code>NA_integer_</code> if the term vector includes missing term elemen
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='pars.html'>pars</a>()</code>, <code><a href='term-object.html'>term-vector</a></code> 
-and <code><a href='repair_terms.html'>repair_terms</a>()</code></p></div>
+    <div class='dont-index'><p><code><a href='pars.html'>pars</a>()</code> and <code><a href='term-object.html'>term-vector</a></code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -179,8 +163,6 @@ and <code><a href='repair_terms.html'>repair_terms</a>()</code></p></div>
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
-
-      <li><a href="#details">Details</a></li>
 
       <li><a href="#methods-by-class-">Methods (by class)</a></li>
 

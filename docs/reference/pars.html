@@ -66,7 +66,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">term</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9100</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9102</span>
       </span>
     </div>
 
@@ -130,8 +130,7 @@
 <span class='fu'>set_pars</span>(<span class='no'>x</span>, <span class='no'>pars</span>)
 
 <span class='co'># S3 method for term</span>
-<span class='fu'>pars</span>(<span class='no'>x</span>, <span class='kw'>scalar_only</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>terms</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>repair</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='no'>...</span>)</pre>
+<span class='fu'>pars</span>(<span class='no'>x</span>, <span class='kw'>scalar_only</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>terms</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -162,10 +161,6 @@ parameters with one term.</p></td>
       <td><p>A flag specifying whether to return the parameter name
 for each term element.</p></td>
     </tr>
-    <tr>
-      <th>repair</th>
-      <td><p>A flag specifying whether to repair term elements.</p></td>
-    </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
@@ -177,18 +172,12 @@ for each term element.</p></td>
     <p><code>parameters()</code> is deprecated.</p>
 <p><code>parameters&lt;-</code> is deprecated.</p>
 <p><code>set_parameters()</code> is deprecated.</p>
-<p>By default term elements are repaired prior to getting the parameter names.
-Term elements are always repaired prior to setting.</p>
     
     <h2 class="hasAnchor" id="methods-by-class-"><a class="anchor" href="#methods-by-class-"></a>Methods (by class)</h2>
 
     <ul>
 <li><p><code>term</code>: Parameter names for a term vector</p></li>
 </ul>
-    
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'><p><code><a href='repair_terms.html'>repair_terms</a>()</code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -206,8 +195,6 @@ Term elements are always repaired prior to setting.</p>
       <li><a href="#details">Details</a></li>
 
       <li><a href="#methods-by-class-">Methods (by class)</a></li>
-
-      <li><a href="#see-also">See also</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>
