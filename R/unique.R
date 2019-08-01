@@ -2,9 +2,6 @@
 #' 
 #' Extracts unique elements from a term vector.
 #' 
-#' If necessary the user should repair the terms 
-#' prior to extracting unique elements.
-#' 
 #' @param x A term vector.
 #' @param incomparables Ignored.
 #' @param ... Unused.

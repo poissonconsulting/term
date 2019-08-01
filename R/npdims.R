@@ -20,7 +20,6 @@ npdims <- function(x, ...) UseMethod("npdims")
 npdims.term <- function(x, terms = FALSE, ...) {
   chk_flag(terms)
   chk_unused(...)
-  x <- repair_terms(x)
 
   if(!terms) {
     return(vapply(.pdims(x), length, 1L))

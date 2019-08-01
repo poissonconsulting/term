@@ -17,8 +17,8 @@ test_that("pdims", {
   expect_identical(pdims(as.term(c("alpha[3]", "beta[2,1]"))), 
                    list(alpha = 3L, beta = c(2L, 1L)))
   
-  expect_error(pdims(as.term(c("alpha[3]", "beta[2,1]", "alpha[10,]"))), 
-                   "missing value where TRUE/FALSE needed")
+  expect_identical(pdims(as.term(c("alpha[3]", "beta[2,1]", "alpha[10,]"))), 
+                   list(alpha = 10L, beta = 2:1))
 })
 
 test_that("pdims missing value", {

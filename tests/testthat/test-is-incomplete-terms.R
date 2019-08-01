@@ -6,7 +6,7 @@ test_that("is.incomplete_terms",{
   expect_error(is.incomplete_terms(as.term(c("b", NA))), "x must not have missing values")
   expect_false(is.incomplete_terms(as.term(c("b", "b[2]"))))
   expect_error(is.incomplete_terms(as.term(c("b", "b[2]", "b[4,] "))), 
-               "missing value where TRUE/FALSE needed")
+               "parameter dimensions are inconsistent")
   expect_false(is.incomplete_terms(as.term("b[1]")))
   expect_true(is.incomplete_terms(as.term("b[2]")))
   expect_false(is.incomplete_terms(as.term(c("b[2]", "b"))))

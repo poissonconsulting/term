@@ -19,10 +19,6 @@ A vector of unique terms.
 \description{
 Extracts unique elements from a term vector.
 }
-\details{
-If necessary the user should repair the terms 
-prior to extracting unique elements.
-}
 \examples{
 unique(as.term(c("b", "a", "a[1]", "a", NA, "aa", NA)))
 }
