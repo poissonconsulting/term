@@ -3,8 +3,8 @@ greater_than_term <- function(e1, e2) {
   e2_parm <- pars(e2)
   if (e1_parm != e2_parm) return(e1_parm > e2_parm)
   
-  e1 <- .tindex(e1)[[1]]
-  e2 <- .tindex(e2)[[1]]
+  e1 <- tindex(e1)[[1]]
+  e2 <- tindex(e2)[[1]]
   
   if (length(e1) != length(e2)) return(length(e1) > length(e2))
   
@@ -19,12 +19,12 @@ greater_than_term <- function(e1, e2) {
 }
 
 max_index <- function(x) {
-  x <- .tindex(x)
+  x <- tindex(x)
   x <- matrix(unlist(x), ncol = length(x[[1]]), byrow = TRUE)
   apply(x, 2, max)
 }
 
-# assumes that pars do not require repairing and are consistent
+# assumes that pars are consistent
 .pdims <- function(x) {
   x <- x[!is.na(x)]
   x <- sort(x)
@@ -34,22 +34,7 @@ max_index <- function(x) {
   x
 }
 
-# assumes that pars do not require repairing
-.tindex <- function(x) {
-  names <- x
-  x <- sub(p0("^", .par_name_pattern), "", x)
-  x <- sub("^$", "1", x)
-  x <- gsub("\\[|\\]", "", x)
-  x <- strsplit(x, ",")
-  x <- lapply(x, as.integer)
-  x[is.na(x)] <- 1L
-  x[is.na(names)] <- NA_integer_
-  names(x) <- names
-  x
-}
-
 set_class <- function(x, class) {
   class(x) <- class
   x
 }
-
