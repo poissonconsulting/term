@@ -10,7 +10,7 @@
 #' @examples
 #' c(NA_term_, "b", "a[1]", "")
 c.term <- function(..., recursive = FALSE) {
-  if(!isFALSE(recursive)) err("recursive is ignored")
+  chk_false(recursive)
   dots <- list(...)
   as.term(c(unlist(lapply(dots, unclass))))
 }

@@ -1,7 +1,7 @@
 context("repair-terms")
 
 test_that("repair_terms", {
-  expect_error(repair_terms(NA_character_), "x must be a term vector")
+  expect_error(repair_terms(NA_character_),  "`x` must inherit from class 'term'.")
   expect_identical(repair_terms(term(0L)), term(0L))
   expect_identical(repair_terms(NA_term_), NA_term_)
   expect_identical(repair_terms(as.term("")), NA_term_)

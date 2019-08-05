@@ -6,7 +6,7 @@ test_that("is.incomplete_terms",{
   expect_identical(is.incomplete_terms(as.term(c("b", NA))), NA)
   expect_false(is.incomplete_terms(as.term(c("b", "b[2]"))))
   expect_error(is.incomplete_terms(as.term(c("b", "b[2]", "b[4,] "))), 
-               "parameter dimensions are inconsistent")
+               "^`x` must have terms with consistent parameter dimensions[.]$")
   expect_false(is.incomplete_terms(as.term("b[1]")))
   expect_true(is.incomplete_terms(as.term("b[2]")))
   expect_false(is.incomplete_terms(as.term(c("b[2]", "b"))))

@@ -15,7 +15,7 @@
 #' # invalid term elements
 #' valid_term(as.term(c("a b", "a[1]b", "a[0]", "b[1,]", "c[]", "d[1][2]")))
 valid_term <- function(x) {
-  if(!is.term(x)) err("x must be a term vector")
+  chk_inherits(x, "term")
   if(!length(x)) return(TRUE)
   pattern <- p0("^\\s*", .par_name_pattern, "\\s*(\\[\\s*", 
                     .index_pattern, "(\\s*,\\s*", .index_pattern, 

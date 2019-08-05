@@ -26,7 +26,7 @@ test_that("term", {
 
 test_that("term.list", {
   expect_identical(term(list()), term(0L))
-  expect_error(term(list(1L)), "x must be named")
+  expect_error(term(list(1L)), "^`x` must be named[.]$")
   expect_identical(term(list(x = 1L)), as.term("x"))
   expect_identical(term(list(x = 0)), term(0))
   expect_identical(term(list(x = 0, y = 1)), as.term("y"))

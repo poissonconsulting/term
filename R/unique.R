@@ -12,7 +12,8 @@
 #' @examples 
 #' unique(as.term(c("b", "a", "a[1]", "a", NA, "aa", NA)))
 unique.term <- function(x, incomparables = FALSE, ...) {
+  chk_false(incomparables)
   chk_unused(...)
-  if(!isFALSE(incomparables)) err("incomparables is ignored")
+
   as.term(unique(as.character(x)))
 }

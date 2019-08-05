@@ -1,7 +1,7 @@
 context("valid-term")
 
 test_that("valid_term", {
-  expect_error(valid_term(NA_character_), "x must be a term vector")
+  expect_error(valid_term(NA_character_), "^`x` must inherit from class 'term'[.]$")
   expect_identical(valid_term(term(0L)), TRUE)
   expect_identical(valid_term(as.term(c("a", NA_character_))), c(TRUE, NA))
   expect_identical(valid_term(as.term(c("a", "a [3]", " b [ 1  ] ", "c[1]"))),

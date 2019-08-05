@@ -22,13 +22,13 @@ test_that("pdims", {
 })
 
 test_that("pdims missing value", {
-  expect_error(pdims(NA_term_), "x must not have missing values")
+  expect_error(pdims(NA_term_), "^`x` must not have missing values[.]$")
 
   expect_error(pdims(as.term(c("alpha[3]", "beta[2,1]", NA))), 
-                   "x must not have missing values")
+                   "^`x` must not have missing values[.]$")
 })
 
 test_that("pdims inconsistent", {
   expect_error(pdims(as.term(c("alpha[1]", "alpha[1,1]"))),
-                   "parameter dimensions are inconsistent")
+                   "^`x` must have terms with consistent parameter dimensions[.]$")
 })

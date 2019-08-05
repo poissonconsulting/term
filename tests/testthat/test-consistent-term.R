@@ -1,7 +1,7 @@
 context("consistent-term")
 
 test_that("consistent_term", {
-  expect_error(consistent_term(1), "x must be a term vector")
+  expect_error(consistent_term(1), "`x` must inherit from class 'term'.")
   expect_identical(consistent_term(term(0L)), logical(0))
   expect_identical(consistent_term(NA_term_), NA)
   expect_identical(consistent_term(as.term("a")), TRUE)

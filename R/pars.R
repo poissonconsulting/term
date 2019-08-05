@@ -53,12 +53,12 @@ pars.term <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
 
 #' @export
 `pars<-.term` <- function(x, value) {
-  chk_is(value, "character")
-  chk_length(value, length = c(1L, 1L, length(x)))
-  
-  if(!all(grepl(p0("^", .par_name_pattern ,"$"), value)))
-    err("invalid parameter name")
-
+  chk_inherits(value, "character")
+  chk_values(length(value), values = c(1L, 1L, length(x)))
+  if(!chk_grepl(value, p0("^", .par_name_pattern ,"$"), err = FALSE)) {
+    err(ngettext(length(x), "`value` must be a valid parameter name.",
+                 "`value` must be valid parameter names."))
+  }
   x <- sub(p0("^", .par_name_pattern), "", x)
   is.na <- is.na(x)
   x <- p(value, x, sep = "")

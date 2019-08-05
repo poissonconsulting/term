@@ -20,9 +20,9 @@ subset.term <- function(x, select = NULL, ...) {
   
   if(is.null(select)) return(x)
 
-  chk_is(select, "character")
-  if(!all(select %in% pars(x))) err("unrecognized parameters in select")
-  
+  chk_inherits(select, "character")
+  chk_match(select, pars(x))
+
   if(!length(select)) return(term(0L))
   
   x[pars(x, terms = TRUE) %in% select]
