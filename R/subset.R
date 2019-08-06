@@ -21,7 +21,7 @@ subset.term <- function(x, select = NULL, ...) {
   if(is.null(select)) return(x)
 
   chk_is(select, "character")
-  chk_match(select, pars(x))
+  chk_in(select, pars(x))
 
   if(!length(select)) return(term(0L))
   
