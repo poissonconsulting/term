@@ -53,7 +53,7 @@ pars.term <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
 
 #' @export
 `pars<-.term` <- function(x, value) {
-  chk_inherits(value, "character")
+  chk_is(value, "character")
   chk_match(length(value), values = c(1L, length(x)))
   if(!chk_grepl(value, p0("^", .par_name_pattern ,"$"), err = FALSE)) {
     err(ngettext(length(x), "`value` must be a valid parameter name.",

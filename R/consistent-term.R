@@ -11,7 +11,7 @@
 #' consistent_term(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")))
 #' consistent_term(as.term(c("alpha[1]", NA_term_, "beta[1,1]", "beta[2]")))
 consistent_term <- function(x) {
-  chk_inherits(x, "term")
+  chk_is(x, "term")
   x <- npdims(x, terms = TRUE)
   y <- x[!is.na(x)]
   for(par in unique(names(y))) {
