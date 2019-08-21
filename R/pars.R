@@ -57,15 +57,29 @@ pars.term <- function(x, scalar = NA, terms = FALSE, ...) {
 
 #' @export
 `pars<-.term` <- function(x, value) {
+  chk_no_missing(x)
   chk_is(value, "character")
-  chk_in(length(value), values = c(1L, length(x)))
+  chk_no_missing(value)
+  chk_unique(value)
+  
+  if(any(!valid_term(x))) err("`x` must not include invalid terms.")
+  
+  if(!identical(npars(x), length(value)))
+    err("`value` must be length ", npars(x), ", not ", length(value), ".")
+  
+  if(!length(x)) return(x)
+  
   if(!chk_match(value, p0("^", .par_name_pattern ,"$"), err = FALSE)) {
-    err(ngettext(length(x), "`value` must be a valid parameter name.",
+    err(ngettext(length(value), "`value` must be a valid parameter name.",
                  "`value` must be valid parameter names."))
   }
+  pars <- pars(x)
+  term_pars <- pars(x, term = TRUE)
+  term_value <- NA_character_
+  for(i in seq_along(pars))
+    term_value[term_pars == pars[i]] <- value[i]
+  
   x <- sub(p0("^", .par_name_pattern), "", x)
-  is.na <- is.na(x)
-  x <- p(value, x, sep = "")
-  is.na(x[is.na]) <- TRUE
+  x <- p(term_value, x, sep = "")
   as.term(x)
 }
