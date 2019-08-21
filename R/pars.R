@@ -3,8 +3,9 @@
 #' Gets or sets the parameter names for an object.
 #' 
 #' @param x An R object.
-#' @param scalar_only A flag specifying whether to only get the names of
-#' parameters with one term.
+#' @param scalar A logical scalar specifying whether to get the names of
+#' all parameters (NA), only scalars (TRUE) or all parameters 
+#' except scalars (FALSE).
 #' @param terms A flag specifying whether to return the parameter name
 #' for each term element.
 #' @param ... Unused.
@@ -17,7 +18,7 @@
 #' term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
 #' "beta[1,2]", "beta[2,2]", "sigma", NA))
 #' pars(term)
-#' pars(term, scalar_only = TRUE)
+#' pars(term, scalar = TRUE)
 #' pars(term, terms = TRUE)
 pars <- function(x, ...) UseMethod("pars")
 
@@ -33,19 +34,22 @@ set_pars <- function(x, pars) {
 }
 
 # internal use only
-pars.character <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
-  pars(as.term(x), scalar_only = scalar_only, terms = terms)
+pars.character <- function(x, scalar = NA, terms = FALSE, ...) {
+  pars(as.term(x), scalar = scalar, terms = terms)
 }
 
 #' @describeIn pars Parameter names for a term vector
 #' @export
-pars.term <- function(x, scalar_only = FALSE, terms = FALSE, ...) {
-  chk_flag(scalar_only)
+pars.term <- function(x, scalar = NA, terms = FALSE, ...) {
+  chk_lgl(scalar)
   chk_flag(terms)
   chk_unused(...)
   
   x <- as.character(x)
-  if(scalar_only) x <- x[!grepl("\\[", x)]
+  if(!is.na(scalar)) {
+    bol <- grepl("\\[", x)
+    x <- x[if(scalar) !bol else bol]
+  }
   x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
   if(!terms) x <- unique(x)
   x

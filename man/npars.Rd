@@ -7,14 +7,14 @@
 \usage{
 npars(x, ...)
 
-\method{npars}{term}(x, scalar_only = FALSE, ...)
+\method{npars}{term}(x, scalar = NA, ...)
 }
 \arguments{
 \item{x}{An R object.}
 
 \item{...}{Unused.}
 
-\item{scalar_only}{A flag specifying whether to only count parameters with one term.}
+\item{scalar}{A flag specifying whether to only count parameters with one term.}
 }
 \value{
 A count of the number of parameters.
@@ -29,7 +29,7 @@ Gets the number of parameters of an object as returned by \code{\link{pars}()}.
 
 \examples{
 npars(as.term(c("sigma", "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]")))
-npars(as.term(c("sigma", "alpha[1]", "alpha[2]")), scalar_only = TRUE)
+npars(as.term(c("sigma", "alpha[1]", "alpha[2]")), scalar = TRUE)
 }
 \seealso{
 \code{\link{pars}()} and \code{\link{term-vector}}

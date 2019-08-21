@@ -18,7 +18,7 @@ nterms <- function(x, ...) {
   UseMethod("nterms")
 }
 
-#' @describeIn nterms Number of elements of term vector
+#' @describeIn nterms Number of unique term elements of term vector
 #' @export
 nterms.term <- function(x, ...) {
   if(anyNA(x)) return(NA_integer_)

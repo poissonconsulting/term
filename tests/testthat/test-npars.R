@@ -11,10 +11,14 @@ test_that("npars.term", {
 
 })
 
-test_that("npars.term scalar_only", {
+test_that("npars.term scalar", {
   expect_identical(npars(as.term(c("a[2]"))), 1L)
-  expect_identical(npars(as.term(c("a[2]")), scalar_only = TRUE), 0L)
-  expect_identical(npars(as.term(c("a[1]")), scalar_only = TRUE), 0L)
+  expect_identical(npars(as.term(c("a[2]")), scalar = TRUE), 0L)
+  expect_identical(npars(as.term(c("a[1]")), scalar = TRUE), 0L)
+  expect_identical(npars(as.term(c("a[1]")), scalar = FALSE), 1L)
+  expect_identical(npars(as.term(c("a[1]", "b", "c")), scalar = FALSE), 1L)
+  expect_identical(npars(as.term(c("a[1]", "b", "c")), scalar = TRUE), 2L)
+  expect_identical(npars(as.term(c("a[1]", "b", "c"))), 3L)
 })
 
 test_that("npars.term invalid elements", {

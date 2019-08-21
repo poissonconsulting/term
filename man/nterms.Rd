@@ -26,7 +26,7 @@ missing values then it returns NA_integer_.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{term}: Number of elements of term vector
+\item \code{term}: Number of unique term elements of term vector
 }}
 
 \examples{
