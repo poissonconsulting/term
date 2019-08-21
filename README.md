@@ -132,12 +132,12 @@ consistent_term(as.term(c("a", "a[2,1]", "b[1,1]", "b[10,99,1]")))
 #> [1] FALSE FALSE FALSE FALSE
 
 # complete terms
-!is.incomplete_terms(as.term(c("a", "a[2]", "b[1,1]", "b[2,1]")))
-#> [1] TRUE
+is.incomplete_terms(as.term(c("a", "a[2]", "b[1,1]", "b[2,1]")))
+#> [1] FALSE
 
 # incomplete terms
-!is.incomplete_terms(as.term(c("a", "a[3]", "b[1,1]", "b[2,2]")))
-#> [1] FALSE
+is.incomplete_terms(as.term(c("a", "a[3]", "b[1,1]", "b[2,2]")))
+#> [1] TRUE
 
 # unique terms
 anyDuplicated(as.term(c("a", "b")))
@@ -156,7 +156,7 @@ term
 #> [1] "b[4]"     "b   [2]"  "b"        "b[1"      "b[2, 2]"  "b"       
 #> [7] "a [ 1 ] " NA
 
-# valid terms can be repaired (otherwise they are converted to missing values)
+# valid terms can be repaired (invalid terms are converted to missing values)
 term <- repair_terms(term)
 term
 #> [1] "b[4]"   "b[2]"   "b[1]"   NA       "b[2,2]" "b[1]"   "a"      NA
