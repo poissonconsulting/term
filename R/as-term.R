@@ -16,7 +16,7 @@ as.term <- function(x, ...) UseMethod("as.term")
 
 #' @describeIn as.term Coerce character vector to term vector
 #' @export
-as.term.character <- function(x, ..., repair = FALSE) {
+as.term.character <- function(x, repair = FALSE, ...) {
   chk_unused(...)
   chk_flag(repair)
   x <- set_class(x, c("term", "character"))

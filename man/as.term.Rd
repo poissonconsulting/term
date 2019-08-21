@@ -11,7 +11,7 @@
 
 as.term(x, ...)
 
-\method{as.term}{character}(x, ..., repair = FALSE)
+\method{as.term}{character}(x, repair = FALSE, ...)
 
 \method{as.term}{numeric}(x, name = "par", ...)
 }
