@@ -69,7 +69,7 @@ pars.term <- function(x, scalar = NA, terms = FALSE, ...) {
   
   if(!length(x)) return(x)
   
-  if(!chk_match(value, p0("^", .par_name_pattern ,"$"), err = FALSE)) {
+  if(!vld_match(value, p0("^", .par_name_pattern ,"$"))) {
     err(ngettext(length(value), "`value` must be a valid parameter name.",
                  "`value` must be valid parameter names."))
   }
