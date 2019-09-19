@@ -58,7 +58,7 @@ pars.term <- function(x, scalar = NA, terms = FALSE, ...) {
 #' @export
 `pars<-.term` <- function(x, value) {
   chk_no_missing(x)
-  chk_is(value, "character")
+  chk_s3_class(value, "character")
   chk_no_missing(value)
   chk_unique(value)
   

@@ -20,7 +20,7 @@
 #' repair_terms(as.term(c("a [3]", " b [ 1  ] ")))
 #' repair_terms(as.term(c("a", NA)))
 repair_terms <- function(x) {
-  chk_is(x, "term")
+  chk_s3_class(x, "term")
   if(!length(x)) return(x)
   is.na(x[is.na(x) | !valid_term(x)]) <- TRUE
   x <- as.character(x)

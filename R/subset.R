@@ -20,7 +20,7 @@ subset.term <- function(x, select = NULL, ...) {
   
   if(is.null(select)) return(x)
 
-  chk_is(select, "character")
+  chk_s3_class(select, "character")
   chk_subset(select, pars(x))
 
   if(!length(select)) return(term(0L))
