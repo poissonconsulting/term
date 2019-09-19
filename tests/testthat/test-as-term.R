@@ -35,7 +35,7 @@ test_that("as.term.array", {
 })
 
 test_that("as.term.character", {
-  expect_error(as.term("a", "b"), "^`repair` must be a flag [(]TRUE or FALSE[)][.]$")
+  expect_error(as.term("a", "b"), "^`repair` must be a flag [(]TRUE or FALSE[)][.]$", class = "chk_error")
   x <- c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]", "parm[2,1]", "parm[1,2]", "parm[10]", "parm3")
   
   
