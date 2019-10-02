@@ -15,11 +15,9 @@ status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/ter
 coverage](https://codecov.io/gh/poissonconsulting/term/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/term?branch=master)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Tinyverse
-status](https://tinyverse.netlify.com/badge/term)](https://CRAN.R-project.org/package=term)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/term)](https://cran.r-project.org/package=term)
-![CRAN downloads](http://cranlogs.r-pkg.org/badges/term)
+<!-- [![Tinyverse status](https://tinyverse.netlify.com/badge/term)](https://CRAN.R-project.org/package=term) -->
+<!-- [![CRAN status](https://www.r-pkg.org/badges/version/term)](https://cran.r-project.org/package=term) -->
+<!-- ![CRAN downloads](http://cranlogs.r-pkg.org/badges/term) -->
 <!-- badges: end -->
 
 `term` is an R package to create, manipulate, query and repair vectors
@@ -29,16 +27,22 @@ values in vectors, matrices and arrays. They represent the names in
 
 ## Installation
 
-To install the latest release version from
-[CRAN](https://cran.r-project.org)
-
-    install.packages("term")
-
-To install the latest development version from
+To install the developmental version from
 [GitHub](https://github.com/poissonconsulting/term)
 
-    # install.packages("remotes")
-    remotes::install_github("poissonconsulting/term")
+``` r
+# install.packages("remotes")
+remotes::install_github("poissonconsulting/term")
+```
+
+To install the latest developmental release from the Poisson drat
+[repository](https://github.com/poissonconsulting/drat)
+
+``` r
+# install.packages("drat")
+drat::addRepo("poissonconsulting")
+install.packages("term")
+```
 
 ## Demonstration
 
@@ -198,4 +202,4 @@ always welcome.
 Please note that the ‘term’ project is released with a [Contributor Code
 of
 Conduct](https://poissonconsulting.github.io/term/CODE_OF_CONDUCT.html).
-By contributing to this project, you agree to abide by its terms
+By contributing to this project, you agree to abide by its terms.
