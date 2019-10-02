@@ -9,5 +9,5 @@
 #' as.term(c("a[1]", "a[2]"))
 #' as.term(matrix(1:4, 2))
 #' term(2L)
-#' term(c(2L,2L), "alpha")
+#' term(c(2L, 2L), "alpha")
 NULL

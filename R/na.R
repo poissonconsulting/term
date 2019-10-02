@@ -1,11 +1,11 @@
 #' Missing Term
-#' 
+#'
 #' A missing term element.
-#' 
+#'
 #' @seealso \code{\link{term-vector}}
 #' @export
-#' 
-#' @examples 
+#'
+#' @examples
 #' is.term(NA_term_)
 #' is.na(NA_term_)
 NA_term_ <- set_class(NA_character_, c("term", "character"))

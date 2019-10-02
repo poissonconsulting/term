@@ -7,7 +7,7 @@
 #' @return A logical scalar indicating whether the object's terms are inconsistent.
 #' @seealso \code{\link{term-vector}()} and \code{\link{consistent_term}()}
 #' @export
-#' 
+#'
 #' @examples
 #' is.inconsistent_terms(as.term("b[2]"))
 #' is.inconsistent_terms(as.term(c("b[2]", "b[1]")))

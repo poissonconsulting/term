@@ -1,6 +1,6 @@
 context("is-inconsistent-terms")
 
-test_that("is.inconsistent_terms",{
+test_that("is.inconsistent_terms", {
   expect_false(is.inconsistent_terms(term(0L)))
   expect_false(is.inconsistent_terms(as.term("b")))
   expect_error(is.inconsistent_terms(as.term(c("b", NA))), NA)

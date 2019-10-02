@@ -1,15 +1,15 @@
 #' Extract Unique Terms
-#' 
+#'
 #' Extracts unique elements from a term vector.
-#' 
+#'
 #' @param x A term vector.
 #' @param incomparables Ignored.
 #' @param ... Unused.
 #' @return A vector of unique terms.
 #' @seealso \code{\link{term-vector}}
 #' @export
-#' 
-#' @examples 
+#'
+#' @examples
 #' unique(as.term(c("b", "a", "a[1]", "a", NA, "aa", NA)))
 unique.term <- function(x, incomparables = FALSE, ...) {
   chk_false(incomparables)

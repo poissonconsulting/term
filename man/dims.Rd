@@ -42,6 +42,6 @@ dims(data.frame())
 dims(data.frame(x = 1:3))
 }
 \seealso{
-\code{\link[base]{dim}()}, \code{\link{term-vector}} 
+\code{\link[base]{dim}()}, \code{\link{term-vector}}
 and \code{\link{term}()}
 }

@@ -1,10 +1,10 @@
 #' Repair Terms
 #'
 #' Repairs a terms vector.
-#' 
+#'
 #' Invalid elements are replaced by missing values and spaces removed.
-#' 
-#' If a parameter such as \code{b} 
+#'
+#' If a parameter such as \code{b}
 #' is a scalar then \code{b[1]} is replaced by \code{b}
 #' but if higher indices are included such as \code{b[2]} then \code{b}
 #' is replaced by \code{b[1]}.
@@ -13,7 +13,7 @@
 #' @return The repaired term vector.
 #' @seealso \code{\link{term-vector}} and \code{\link{valid_term}}
 #' @export
-#' 
+#'
 #' @examples
 #' repair_terms(as.term(c("b[3]", "b")))
 #' repair_terms(as.term(c("a[3]", "b[1]")))

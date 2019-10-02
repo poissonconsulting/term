@@ -18,7 +18,7 @@ Repairs a terms vector.
 \details{
 Invalid elements are replaced by missing values and spaces removed.
 
-If a parameter such as \code{b} 
+If a parameter such as \code{b}
 is a scalar then \code{b[1]} is replaced by \code{b}
 but if higher indices are included such as \code{b[2]} then \code{b}
 is replaced by \code{b[1]}.

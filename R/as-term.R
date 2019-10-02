@@ -1,17 +1,17 @@
 #' Coerce to a Term Vector
 #'
 #' Coerces an R object to a \code{\link{term-vector}}.
-#' 
+#'
 #' @param x The object to coerce.
 #' @param name A string of the name for the parameter.
 #' @param ... Unused.
 #' @param repair A flag specifying whether to repair terms.
 #' @seealso \code{\link{term-vector}} and \code{\link{repair_terms}()}
 #' @export
-#' 
+#'
 #' @examples
 #' as.term(matrix(1:4, 2))
-#' as.term(c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]")) 
+#' as.term(c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]"))
 as.term <- function(x, ...) UseMethod("as.term")
 
 #' @describeIn as.term Coerce character vector to term vector

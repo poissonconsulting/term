@@ -7,7 +7,7 @@
 #' @return A logical scalar indicating whether the object's terms are incomplete.
 #' @seealso \code{\link{term-vector}()} and \code{\link{complete_terms}()}
 #' @export
-#' 
+#'
 #' @examples
 #' is.incomplete_terms(as.term("b[2]"))
 #' is.incomplete_terms(as.term(c("b[2]", "b[1]")))

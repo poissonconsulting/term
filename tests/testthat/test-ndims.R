@@ -17,7 +17,7 @@ test_that("ndims.matrix", {
 })
 
 test_that("ndims.array", {
-  expect_identical(ndims(array(1:12, c(2,3,2))), 3L)
+  expect_identical(ndims(array(1:12, c(2, 3, 2))), 3L)
 })
 
 test_that("ndims.data.frame", {

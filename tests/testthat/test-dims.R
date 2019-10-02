@@ -27,7 +27,7 @@ test_that("dims.matrix", {
 })
 
 test_that("dims.array", {
-  expect_identical(dims(array(1:12, c(2,3,2))), c(2L, 3L, 2L))
+  expect_identical(dims(array(1:12, c(2, 3, 2))), c(2L, 3L, 2L))
 })
 
 test_that("dims.data.frame", {

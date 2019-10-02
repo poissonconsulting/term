@@ -21,7 +21,7 @@ Subsets a term vector.
 }
 \examples{
 term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
-"beta[1,2]", "beta[2,2]", "sigma"))
+  "beta[1,2]", "beta[2,2]", "sigma"))
 subset(term, "beta")
 subset(term, c("alpha", "sigma"))
 }

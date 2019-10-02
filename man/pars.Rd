@@ -34,7 +34,7 @@ set_pars(x, pars)
 \item{pars}{A character vector of the new parameter names.}
 
 \item{scalar}{A logical scalar specifying whether to get the names of
-all parameters (NA), only scalars (TRUE) or all parameters 
+all parameters (NA), only scalars (TRUE) or all parameters
 except scalars (FALSE).}
 
 \item{terms}{A flag specifying whether to return the parameter name
@@ -60,7 +60,7 @@ Gets or sets the parameter names for an object.
 
 \examples{
 term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
-"beta[1,2]", "beta[2,2]", "sigma", NA))
+  "beta[1,2]", "beta[2,2]", "sigma", NA))
 pars(term)
 pars(term, scalar = TRUE)
 pars(term, terms = TRUE)

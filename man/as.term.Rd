@@ -38,7 +38,7 @@ Coerces an R object to a \code{\link{term-vector}}.
 
 \examples{
 as.term(matrix(1:4, 2))
-as.term(c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]")) 
+as.term(c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]"))
 }
 \seealso{
 \code{\link{term-vector}} and \code{\link{repair_terms}()}

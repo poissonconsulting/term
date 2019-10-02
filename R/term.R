@@ -7,11 +7,11 @@
 #' @param name A string specifying the name of the parameter.
 #' @param ... Unused.
 #' @return A term vector.
-#' @seealso \code{\link{term-vector}}, \code{\link{dims}()} and 
+#' @seealso \code{\link{term-vector}}, \code{\link{dims}()} and
 #' \code{\link{pdims}()}
 #' @export
-#' 
-#' @examples 
+#'
+#' @examples
 #' term(0L)
 #' term(1L)
 #' term(2L)
@@ -28,11 +28,11 @@ term.NULL <- function(x, name = "par", ...) {
 term.integer <- function(x, name = "par", ...) {
   chk_string(name)
   chk_unused(...)
- 
+
   if(!length(x)) return(as.term(character(0)))
   if(any(x == 0L)) return(as.term(character(0)))
   if(identical(x, 1L)) return(as.term(name))
-  if(identical(length(x), 1L)) 
+  if(identical(length(x), 1L))
     return(as.term(p0(name, "[", 1:x, "]")))
 
   x <- lapply(x, function(x) 1:x)
