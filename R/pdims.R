@@ -6,12 +6,12 @@
 #' Errors if the parameter dimensions are inconsistent.
 #'
 #' A named list of the dimensions of each parameter can be converted
-#' into the equivalent \code{\link{term-vector}} using \code{\link{term}()}.
+#' into the equivalent [term-vector()] using [term()].
 #'
 #' @param x The object
 #' @param ... Unused.
 #' @return A named list of the dimensions of each parameter.
-#' @seealso \code{\link{dims}()} and \code{\link{term}()}
+#' @seealso [dims()] and [term()]
 #' @export
 #'
 #' @examples

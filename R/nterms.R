@@ -8,7 +8,7 @@
 #' @param x The object.
 #' @param ... Unused.
 #' @return A count of the number of terms.
-#' @seealso \code{\link{term-vector}}
+#' @seealso [term-vector()]
 #' @export
 #'
 #' @examples

@@ -6,7 +6,7 @@
 #'
 #' @param x A term vector.
 #' @return A logical vector indicating whether each term is valid.
-#' @seealso \code{\link{term-vector}} and \code{\link{repair_terms}()}
+#' @seealso [term-vector()] and [repair_terms()]
 #' @export
 #'
 #' @examples

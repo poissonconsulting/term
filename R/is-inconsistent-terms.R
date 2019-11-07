@@ -5,7 +5,7 @@
 #' @param x An object.
 #' @param ... Unused
 #' @return A logical scalar indicating whether the object's terms are inconsistent.
-#' @seealso \code{\link{term-vector}()} and \code{\link{consistent_term}()}
+#' @seealso [term-vector()] and [consistent_term()]
 #' @export
 #'
 #' @examples

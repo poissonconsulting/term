@@ -1,5 +1,5 @@
 #' @rdname tindex
-#' @details \code{tdims()} is deprecated.
+#' @details `tdims()` is deprecated.
 #' @export
 tdims <- function(x) {
   .Deprecated("tindex")
@@ -7,7 +7,7 @@ tdims <- function(x) {
 }
 
 #' @rdname pars
-#' @details \code{parameters()} is deprecated.
+#' @details `parameters()` is deprecated.
 #' @export
 parameters <- function(x, ...) {
   .Deprecated("pars")
@@ -15,7 +15,7 @@ parameters <- function(x, ...) {
 }
 
 #' @rdname pars
-#' @details \code{parameters<-} is deprecated.
+#' @details `parameters<-` is deprecated.
 #' @export
 `pararameters<-` <- function(x, value) {
   .Deprecated("pars<-")
@@ -23,7 +23,7 @@ parameters <- function(x, ...) {
 }
 
 #' @rdname pars
-#' @details \code{set_parameters()} is deprecated.
+#' @details `set_parameters()` is deprecated.
 #' @export
 set_parameters <- function(x, pars) {
   .Deprecated("set_pars")

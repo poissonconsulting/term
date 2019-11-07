@@ -26,5 +26,5 @@ subset(term, "beta")
 subset(term, c("alpha", "sigma"))
 }
 \seealso{
-\code{\link{term-vector}}
+\code{\link[=term-vector]{term-vector()}}
 }

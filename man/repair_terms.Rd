@@ -30,5 +30,5 @@ repair_terms(as.term(c("a [3]", " b [ 1  ] ")))
 repair_terms(as.term(c("a", NA)))
 }
 \seealso{
-\code{\link{term-vector}} and \code{\link{valid_term}}
+\code{\link[=term-vector]{term-vector()}} and \code{\link[=valid_term]{valid_term()}}
 }

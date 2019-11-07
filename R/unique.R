@@ -6,7 +6,7 @@
 #' @param incomparables Ignored.
 #' @param ... Unused.
 #' @return A vector of unique terms.
-#' @seealso \code{\link{term-vector}}
+#' @seealso [term-vector()]
 #' @export
 #'
 #' @examples

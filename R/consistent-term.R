@@ -4,7 +4,7 @@
 #'
 #' @param x A term vector.
 #' @return A logical vector indicating whether the number of dimensions is consistent.
-#' @seealso \code{\link{term-vector}} and \code{\link{npdims}}
+#' @seealso [term-vector()] and [npdims()]
 #' @export
 #'
 #' @examples

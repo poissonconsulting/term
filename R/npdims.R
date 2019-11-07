@@ -1,13 +1,13 @@
 #' Number of Parameter Dimensions
 #'
-#' Gets the number of parameter dimensions of an object as returned by \code{\link{pdims}()}.
+#' Gets the number of parameter dimensions of an object as returned by [pdims()].
 #'
 #' @param x The object.
 #' @param terms A flag specifying whether to get the number of dimensions for each
 #' term element.
 #' @param ... Unused.
 #' @return A named integer vector of the number of dimensions of each parameter.
-#' @seealso \code{\link{pdims}()} and \code{\link{term-vector}}
+#' @seealso [pdims()] and [term-vector()]
 #' @export
 #'
 #' @examples

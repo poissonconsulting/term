@@ -1,12 +1,12 @@
 #' Number of Parameters
 #'
-#' Gets the number of parameters of an object as returned by \code{\link{pars}()}.
+#' Gets the number of parameters of an object as returned by [pars()].
 #'
 #' @param x An R object.
 #' @param scalar A flag specifying whether to only count parameters with one term.
 #' @param ... Unused.
 #' @return A count of the number of parameters.
-#' @seealso \code{\link{pars}()} and \code{\link{term-vector}}
+#' @seealso [pars()] and [term-vector()]
 #' @export
 #'
 #' @examples

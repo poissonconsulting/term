@@ -20,7 +20,7 @@ npars(x, ...)
 A count of the number of parameters.
 }
 \description{
-Gets the number of parameters of an object as returned by \code{\link{pars}()}.
+Gets the number of parameters of an object as returned by \code{\link[=pars]{pars()}}.
 }
 \section{Methods (by class)}{
 \itemize{
@@ -32,5 +32,5 @@ npars(as.term(c("sigma", "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]")))
 npars(as.term(c("sigma", "alpha[1]", "alpha[2]")), scalar = TRUE)
 }
 \seealso{
-\code{\link{pars}()} and \code{\link{term-vector}}
+\code{\link[=pars]{pars()}} and \code{\link[=term-vector]{term-vector()}}
 }

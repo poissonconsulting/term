@@ -4,7 +4,7 @@
 #' @param recursive Ignored.
 #'
 #' @return A term vector.
-#' @seealso \code{\link{term-vector}}
+#' @seealso [term-vector()]
 #' @export
 #'
 #' @examples

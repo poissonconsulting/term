@@ -34,6 +34,6 @@ term(1L)
 term(2L)
 }
 \seealso{
-\code{\link{term-vector}}, \code{\link{dims}()} and
-\code{\link{pdims}()}
+\code{\link[=term-vector]{term-vector()}}, \code{\link[=dims]{dims()}} and
+\code{\link[=pdims]{pdims()}}
 }

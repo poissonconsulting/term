@@ -1,6 +1,6 @@
 #' Term Object
 #'
-#' A \code{term} object is a S3 vector of parameter terms.
+#' A `term` object is a S3 vector of parameter terms.
 #'
 #' @name term-object
 #' @aliases term_object term-vector term_vector

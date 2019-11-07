@@ -1,11 +1,11 @@
 #' Number of Dimensions of an Object
 #'
-#' Gets the number of dimensions of an object as defined by \code{\link{dims}()}.
+#' Gets the number of dimensions of an object as defined by [dims()].
 #'
 #' @param x An R object.
 #' @param ... Unused
 #' @return A count of the number of dimensions.
-#' @seealso \code{\link{dims}()}
+#' @seealso [dims()]
 #' @export
 #'
 #' @examples

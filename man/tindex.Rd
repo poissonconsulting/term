@@ -39,5 +39,5 @@ It is useful for extracting the values of individual terms.
 tindex(as.term(c("alpha", "alpha[2]", "beta[1,1]", "beta[2 ,1  ]")))
 }
 \seealso{
-\code{\link{term-vector}}
+\code{\link[=term-vector]{term-vector()}}
 }

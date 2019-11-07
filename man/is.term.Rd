@@ -23,6 +23,6 @@ is.term(c("parameter[2]", "parameter[10]"))
 is.term(as.term(c("parameter[2]", "parameter[10]")))
 }
 \seealso{
-\code{\link{term-vector}}, \code{\link{valid_term}()}
-and \code{\link{consistent_term}()}
+\code{\link[=term-vector]{term-vector()}}, \code{\link[=valid_term]{valid_term()}}
+and \code{\link[=consistent_term]{consistent_term()}}
 }

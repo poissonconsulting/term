@@ -24,7 +24,7 @@ ndims(x, ...)
 A count of the number of dimensions.
 }
 \description{
-Gets the number of dimensions of an object as defined by \code{\link{dims}()}.
+Gets the number of dimensions of an object as defined by \code{\link[=dims]{dims()}}.
 }
 \section{Methods (by class)}{
 \itemize{
@@ -46,5 +46,5 @@ ndims(data.frame())
 ndims(data.frame(x = 1:3))
 }
 \seealso{
-\code{\link{dims}()}
+\code{\link[=dims]{dims()}}
 }

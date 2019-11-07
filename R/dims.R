@@ -2,14 +2,14 @@
 #'
 #' Gets the dimensions of an object.
 #'
-#' Unlike \code{base::dim()}, dims works as intuitively expected for vectors and data.frames.
+#' Unlike `base::dim()`, dims works as intuitively expected for vectors and data.frames.
 #' A integer vector of the dimensions of a parameter can be converted
-#' into the equivalent \code{\link{term-vector}} using \code{\link{term}()}.
+#' into the equivalent [term-vector()] using [term()].
 #' @param x An R object.
 #' @param ... Unused
 #' @return An integer vector of the dimensions.
-#' @seealso \code{\link[base]{dim}()}, \code{\link{term-vector}}
-#' and \code{\link{term}()}
+#' @seealso [base::dim()], [term-vector()]
+#' and [term()]
 #' @export
 #'
 #' @examples

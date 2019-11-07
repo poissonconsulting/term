@@ -21,7 +21,7 @@ term element.}
 A named integer vector of the number of dimensions of each parameter.
 }
 \description{
-Gets the number of parameter dimensions of an object as returned by \code{\link{pdims}()}.
+Gets the number of parameter dimensions of an object as returned by \code{\link[=pdims]{pdims()}}.
 }
 \section{Methods (by class)}{
 \itemize{
@@ -33,5 +33,5 @@ npdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")))
 npdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")), terms = TRUE)
 }
 \seealso{
-\code{\link{pdims}()} and \code{\link{term-vector}}
+\code{\link[=pdims]{pdims()}} and \code{\link[=term-vector]{term-vector()}}
 }

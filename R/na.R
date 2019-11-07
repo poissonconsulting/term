@@ -2,7 +2,7 @@
 #'
 #' A missing term element.
 #'
-#' @seealso \code{\link{term-vector}}
+#' @seealso [term-vector()]
 #' @export
 #'
 #' @examples

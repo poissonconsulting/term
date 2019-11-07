@@ -25,7 +25,7 @@ as.term(x, ...)
 \item{name}{A string of the name for the parameter.}
 }
 \description{
-Coerces an R object to a \code{\link{term-vector}}.
+Coerces an R object to a \code{\link[=term-vector]{term-vector()}}.
 }
 \section{Methods (by class)}{
 \itemize{
@@ -41,5 +41,5 @@ as.term(matrix(1:4, 2))
 as.term(c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]"))
 }
 \seealso{
-\code{\link{term-vector}} and \code{\link{repair_terms}()}
+\code{\link[=term-vector]{term-vector()}} and \code{\link[=repair_terms]{repair_terms()}}
 }

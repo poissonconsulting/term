@@ -16,6 +16,6 @@ is.term(NA_term_)
 is.na(NA_term_)
 }
 \seealso{
-\code{\link{term-vector}}
+\code{\link[=term-vector]{term-vector()}}
 }
 \keyword{datasets}

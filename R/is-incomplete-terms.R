@@ -5,7 +5,7 @@
 #' @param x An object.
 #' @param ... Unused
 #' @return A logical scalar indicating whether the object's terms are incomplete.
-#' @seealso \code{\link{term-vector}()} and \code{\link{complete_terms}()}
+#' @seealso [term-vector()] and [complete_terms()]
 #' @export
 #'
 #' @examples

@@ -31,5 +31,5 @@ is.inconsistent_terms(as.term(c("b[2]", "b[1]")))
 is.inconsistent_terms(as.term(c("b[2]", "b[1,1]")))
 }
 \seealso{
-\code{\link{term-vector}()} and \code{\link{consistent_term}()}
+\code{\link[=term-vector]{term-vector()}} and \code{\link[=consistent_term]{consistent_term()}}
 }

@@ -6,7 +6,7 @@
 #' @param select A character vector of the names of the parameters to include in the subsetted object.
 #' @param ... Unused.
 #' @return The modified term vector.
-#' @seealso \code{\link{term-vector}}
+#' @seealso [term-vector()]
 #' @export
 #'
 #' @examples

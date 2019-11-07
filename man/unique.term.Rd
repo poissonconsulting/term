@@ -23,5 +23,5 @@ Extracts unique elements from a term vector.
 unique(as.term(c("b", "a", "a[1]", "a", NA, "aa", NA)))
 }
 \seealso{
-\code{\link{term-vector}}
+\code{\link[=term-vector]{term-vector()}}
 }

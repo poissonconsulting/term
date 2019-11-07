@@ -1,12 +1,12 @@
 #' Coerce to a Term Vector
 #'
-#' Coerces an R object to a \code{\link{term-vector}}.
+#' Coerces an R object to a [term-vector()].
 #'
 #' @param x The object to coerce.
 #' @param name A string of the name for the parameter.
 #' @param ... Unused.
 #' @param repair A flag specifying whether to repair terms.
-#' @seealso \code{\link{term-vector}} and \code{\link{repair_terms}()}
+#' @seealso [term-vector()] and [repair_terms()]
 #' @export
 #'
 #' @examples

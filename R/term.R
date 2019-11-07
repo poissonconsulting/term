@@ -7,8 +7,8 @@
 #' @param name A string specifying the name of the parameter.
 #' @param ... Unused.
 #' @return A term vector.
-#' @seealso \code{\link{term-vector}}, \code{\link{dims}()} and
-#' \code{\link{pdims}()}
+#' @seealso [term-vector()], [dims()] and
+#' [pdims()]
 #' @export
 #'
 #' @examples

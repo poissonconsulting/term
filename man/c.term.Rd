@@ -21,5 +21,5 @@ Combine Term Vectors
 c(NA_term_, "b", "a[1]", "")
 }
 \seealso{
-\code{\link{term-vector}}
+\code{\link[=term-vector]{term-vector()}}
 }

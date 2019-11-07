@@ -30,5 +30,5 @@ is.incomplete_terms(as.term("b[2]"))
 is.incomplete_terms(as.term(c("b[2]", "b[1]")))
 }
 \seealso{
-\code{\link{term-vector}()} and \code{\link{complete_terms}()}
+\code{\link[=term-vector]{term-vector()}} and \code{\link[=complete_terms]{complete_terms()}}
 }

@@ -4,14 +4,14 @@
 #'
 #' Invalid elements are replaced by missing values and spaces removed.
 #'
-#' If a parameter such as \code{b}
-#' is a scalar then \code{b[1]} is replaced by \code{b}
-#' but if higher indices are included such as \code{b[2]} then \code{b}
-#' is replaced by \code{b[1]}.
+#' If a parameter such as `b`
+#' is a scalar then `b[1]` is replaced by `b`
+#' but if higher indices are included such as `b[2]` then `b`
+#' is replaced by `b[1]`.
 #'
 #' @param x A term vector.
 #' @return The repaired term vector.
-#' @seealso \code{\link{term-vector}} and \code{\link{valid_term}}
+#' @seealso [term-vector()] and [valid_term()]
 #' @export
 #'
 #' @examples

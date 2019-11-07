@@ -8,7 +8,7 @@
 #' @param x An R object.
 #' @param ... Unused
 #' @return The repaired and complete term vector.
-#' @seealso \code{\link{term-vector}}, \code{\link{repair_terms}()} and \code{\link{is.incomplete_terms}()}.
+#' @seealso [term-vector()], [repair_terms()] and [is.incomplete_terms()].
 #' @export
 #'
 #' @examples
