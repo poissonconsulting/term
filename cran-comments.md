@@ -6,6 +6,7 @@ release 3.6.1
 
 * Ubuntu (travis) - oldrelease, release and devel
 * Ubuntu (rhub) - release
+* Fedora (rhub) - devel
 
 * Windows (appveyor) - release
 * Windows (win-builder) - release and devel
