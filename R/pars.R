@@ -15,8 +15,10 @@
 #' @export
 #'
 #' @examples
-#' term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
-#'   "beta[1,2]", "beta[2,2]", "sigma", NA))
+#' term <- as.term(c(
+#'   "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
+#'   "beta[1,2]", "beta[2,2]", "sigma", NA
+#' ))
 #' pars(term)
 #' pars(term, scalar = TRUE)
 #' pars(term, terms = TRUE)
@@ -46,12 +48,12 @@ pars.term <- function(x, scalar = NA, terms = FALSE, ...) {
   chk_unused(...)
 
   x <- as.character(x)
-  if(!is.na(scalar)) {
+  if (!is.na(scalar)) {
     bol <- grepl("\\[", x)
-    x <- x[if(scalar) !bol else bol]
+    x <- x[if (scalar) !bol else bol]
   }
   x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
-  if(!terms) x <- unique(x)
+  if (!terms) x <- unique(x)
   x
 }
 
@@ -62,22 +64,28 @@ pars.term <- function(x, scalar = NA, terms = FALSE, ...) {
   chk_not_any_na(value)
   chk_unique(value)
 
-  if(any(!valid_term(x))) err("`x` must not include invalid terms.")
+  if (any(!valid_term(x))) err("`x` must not include invalid terms.")
 
-  if(!identical(npars(x), length(value)))
+  if (!identical(npars(x), length(value))) {
     err("`value` must be length ", npars(x), ", not ", length(value), ".")
+  }
 
-  if(!length(x)) return(x)
+  if (!length(x)) {
+    return(x)
+  }
 
-  if(!vld_match(value, p0("^", .par_name_pattern, "$"))) {
-    err(ngettext(length(value), "`value` must be a valid parameter name.",
-      "`value` must be valid parameter names."))
+  if (!vld_match(value, p0("^", .par_name_pattern, "$"))) {
+    err(ngettext(
+      length(value), "`value` must be a valid parameter name.",
+      "`value` must be valid parameter names."
+    ))
   }
   pars <- pars(x)
   term_pars <- pars(x, term = TRUE)
   term_value <- NA_character_
-  for(i in seq_along(pars))
+  for (i in seq_along(pars)) {
     term_value[term_pars == pars[i]] <- value[i]
+  }
 
   x <- sub(p0("^", .par_name_pattern), "", x)
   x <- p(term_value, x, sep = "")

@@ -21,8 +21,9 @@ pdims <- function(x, ...) UseMethod("pdims")
 #' @export
 pdims.term <- function(x, ...) {
   chk_not_any_na(x)
-  if(is.inconsistent_terms(x))
+  if (is.inconsistent_terms(x)) {
     err("`x` must have terms with consistent parameter dimensions.")
+  }
   x <- sort(x)
   names <- pars(x)
   x <- split(x, pars(x, terms = TRUE))

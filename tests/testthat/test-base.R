@@ -5,6 +5,8 @@ test_that("anyDuplicated", {
 })
 
 test_that("unique", {
-  expect_identical(unique(as.term(c("a[2]", "a[1]", "a[1]"))),
-    as.term(c("a[2]", "a[1]")))
+  expect_identical(
+    unique(as.term(c("a[2]", "a[1]", "a[1]"))),
+    as.term(c("a[2]", "a[1]"))
+  )
 })

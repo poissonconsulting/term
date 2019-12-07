@@ -1,8 +1,9 @@
 #' @export
 print.term <- function(x, ...) {
-  if(!length(x)) {
+  if (!length(x)) {
     cat("term(0)")
-  } else
+  } else {
     print(unclass(x))
+  }
   invisible(x)
 }

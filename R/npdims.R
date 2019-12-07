@@ -21,7 +21,7 @@ npdims.term <- function(x, terms = FALSE, ...) {
   chk_flag(terms)
   chk_unused(...)
 
-  if(!terms) {
+  if (!terms) {
     return(vapply(pdims(x), length, 1L))
   }
   x <- tindex(x)

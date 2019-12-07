@@ -29,11 +29,18 @@ term.integer <- function(x, name = "par", ...) {
   chk_string(name)
   chk_unused(...)
 
-  if(!length(x)) return(as.term(character(0)))
-  if(any(x == 0L)) return(as.term(character(0)))
-  if(identical(x, 1L)) return(as.term(name))
-  if(identical(length(x), 1L))
+  if (!length(x)) {
+    return(as.term(character(0)))
+  }
+  if (any(x == 0L)) {
+    return(as.term(character(0)))
+  }
+  if (identical(x, 1L)) {
+    return(as.term(name))
+  }
+  if (identical(length(x), 1L)) {
     return(as.term(p0(name, "[", 1:x, "]")))
+  }
 
   x <- lapply(x, function(x) 1:x)
   x <- do.call("expand.grid", x)
@@ -51,7 +58,9 @@ term.numeric <- function(x, name = "par", ...) {
 
 #' @export
 term.list <- function(x, ...) {
-  if(!length(x)) return(term(0L))
+  if (!length(x)) {
+    return(term(0L))
+  }
   chk_named(x)
   x <- mapply(term, x, names(x))
   x <- unlist(x)

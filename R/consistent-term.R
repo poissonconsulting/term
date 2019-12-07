@@ -14,7 +14,7 @@ consistent_term <- function(x) {
   chk_s3_class(x, "term")
   x <- npdims(x, terms = TRUE)
   y <- x[!is.na(x)]
-  for(par in unique(names(y))) {
+  for (par in unique(names(y))) {
     bol <- names(y) == par
     y[bol] <- length(unique(y[bol])) == 1L
   }

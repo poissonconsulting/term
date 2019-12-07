@@ -21,6 +21,8 @@ nterms <- function(x, ...) {
 #' @describeIn nterms Number of unique term elements of term vector
 #' @export
 nterms.term <- function(x, ...) {
-  if(anyNA(x)) return(NA_integer_)
+  if (anyNA(x)) {
+    return(NA_integer_)
+  }
   length(unique(x))
 }

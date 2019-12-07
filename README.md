@@ -52,8 +52,10 @@ install.packages("term")
 library(term)
 
 # character vectors can be converted into term vectors
-term <- as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
-  "beta[1,2]", "beta[2,2]", "sigma"))
+term <- as.term(c(
+  "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
+  "beta[1,2]", "beta[2,2]", "sigma"
+))
 
 # term vectors print like character vectors
 term
@@ -62,7 +64,7 @@ term
 
 # they are S3 class objects that also inherit from character
 str(term)
-#>  'term' chr [1:7] "alpha[1]" "alpha[2]" "beta[1,1]" "beta[2,1]" ...
+#>  'term' chr [1:7] "alpha[1]" "alpha[2]" "beta[1,1]" "beta[2,1]" "beta[1,2]" ...
 
 # term vectors can also be created from numeric atomic objects
 as.term(matrix(1:4, 2), "theta")
@@ -157,8 +159,8 @@ anyDuplicated(as.term(c("a", "a")))
 ``` r
 term <- as.term(c("b[4]", "b   [2]", "b", "b[1", "b[2, 2]", "b", "a [ 1 ] ", NA))
 term
-#> [1] "b[4]"     "b   [2]"  "b"        "b[1"      "b[2, 2]"  "b"       
-#> [7] "a [ 1 ] " NA
+#> [1] "b[4]"     "b   [2]"  "b"        "b[1"      "b[2, 2]"  "b"        "a [ 1 ] "
+#> [8] NA
 
 # valid terms can be repaired (invalid terms are converted to missing values)
 term <- repair_terms(term)

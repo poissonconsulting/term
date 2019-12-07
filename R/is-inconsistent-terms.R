@@ -17,6 +17,8 @@ is.inconsistent_terms <- function(x, ...) UseMethod("is.inconsistent_terms")
 #' @describeIn is.inconsistent_terms Test whether a term vector is inconsistent
 #' @export
 is.inconsistent_terms.term <- function(x, ...) {
-  if(!length(x)) return(FALSE)
+  if (!length(x)) {
+    return(FALSE)
+  }
   any(!consistent_term(x))
 }

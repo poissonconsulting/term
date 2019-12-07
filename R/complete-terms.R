@@ -19,7 +19,9 @@ complete_terms <- function(x, ...) UseMethod("complete_terms")
 #' @describeIn complete_terms Complete terms of a terms vector
 #' @export
 complete_terms.term <- function(x, ...) {
-  if(!length(x)) return(x)
+  if (!length(x)) {
+    return(x)
+  }
   x <- repair_terms(x)
   as.term(c(x, setdiff(term(pdims(x)), x)))
 }

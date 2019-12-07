@@ -21,7 +21,9 @@
 #' repair_terms(as.term(c("a", NA)))
 repair_terms <- function(x) {
   chk_s3_class(x, "term")
-  if(!length(x)) return(x)
+  if (!length(x)) {
+    return(x)
+  }
   is.na(x[is.na(x) | !valid_term(x)]) <- TRUE
   x <- as.character(x)
   x <- gsub("\\s+", "", x)

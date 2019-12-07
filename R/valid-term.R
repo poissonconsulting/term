@@ -16,10 +16,14 @@
 #' valid_term(as.term(c("a b", "a[1]b", "a[0]", "b[1,]", "c[]", "d[1][2]")))
 valid_term <- function(x) {
   chk_s3_class(x, "term")
-  if(!length(x)) return(TRUE)
-  pattern <- p0("^\\s*", .par_name_pattern, "\\s*(\\[\\s*",
+  if (!length(x)) {
+    return(TRUE)
+  }
+  pattern <- p0(
+    "^\\s*", .par_name_pattern, "\\s*(\\[\\s*",
     .index_pattern, "(\\s*,\\s*", .index_pattern,
-    ")*\\s*\\]){0,1}\\s*$")
+    ")*\\s*\\]){0,1}\\s*$"
+  )
   valid <- grepl(pattern, x)
   is.na(valid[is.na(x)]) <- TRUE
   valid

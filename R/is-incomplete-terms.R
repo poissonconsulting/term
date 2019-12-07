@@ -16,8 +16,12 @@ is.incomplete_terms <- function(x, ...) UseMethod("is.incomplete_terms")
 #' @describeIn is.incomplete_terms Test whether a term vector is incomplete
 #' @export
 is.incomplete_terms.term <- function(x, ...) {
-  if(!length(x)) return(FALSE)
-  if(anyNA(x)) return(NA)
+  if (!length(x)) {
+    return(FALSE)
+  }
+  if (anyNA(x)) {
+    return(NA)
+  }
   x <- unique(x)
   length(x) < sum(vapply(pdims(x), prod, 1))
 }

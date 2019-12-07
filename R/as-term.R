@@ -21,7 +21,7 @@ as.term.character <- function(x, repair = FALSE, ...) {
   chk_flag(repair)
   x <- set_class(x, c("term", "character"))
   x[is.na(x)] <- NA_term_
-  if(repair) x <- repair_terms(x)
+  if (repair) x <- repair_terms(x)
   x
 }
 

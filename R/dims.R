@@ -27,4 +27,6 @@ dims.default <- function(x, ...) {
 
 #' @describeIn dims Dimensions of a data frame
 #' @export
-dims.data.frame <- function(x, ...) return(c(nrow(x), ncol(x)))
+dims.data.frame <- function(x, ...) {
+  return(c(nrow(x), ncol(x)))
+}

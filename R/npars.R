@@ -19,6 +19,8 @@ npars <- function(x, ...) UseMethod("npars")
 npars.term <- function(x, scalar = NA, ...) {
   chk_lgl(scalar)
   chk_unused(...)
-  if(anyNA(x)) return(NA_integer_)
+  if (anyNA(x)) {
+    return(NA_integer_)
+  }
   length(pars(x, scalar = scalar))
 }
