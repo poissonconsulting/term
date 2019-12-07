@@ -98,21 +98,23 @@
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(term)</span>
 <span id="cb3-2"><a href="#cb3-2"></a></span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="co"># character vectors can be converted into term vectors</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a>term &lt;-<span class="st"> </span><span class="kw"><a href="reference/as.term.html">as.term</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"alpha[1]"</span>, <span class="st">"alpha[2]"</span>, <span class="st">"beta[1,1]"</span>, <span class="st">"beta[2,1]"</span>,</span>
-<span id="cb3-5"><a href="#cb3-5"></a>                  <span class="st">"beta[1,2]"</span>, <span class="st">"beta[2,2]"</span>, <span class="st">"sigma"</span>))</span>
-<span id="cb3-6"><a href="#cb3-6"></a></span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="co"># term vectors print like character vectors</span></span>
-<span id="cb3-8"><a href="#cb3-8"></a>term</span>
-<span id="cb3-9"><a href="#cb3-9"></a><span class="co">#&gt; [1] "alpha[1]"  "alpha[2]"  "beta[1,1]" "beta[2,1]" "beta[1,2]" "beta[2,2]"</span></span>
-<span id="cb3-10"><a href="#cb3-10"></a><span class="co">#&gt; [7] "sigma"</span></span>
-<span id="cb3-11"><a href="#cb3-11"></a></span>
-<span id="cb3-12"><a href="#cb3-12"></a><span class="co"># they are S3 class objects that also inherit from character</span></span>
-<span id="cb3-13"><a href="#cb3-13"></a><span class="kw"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(term)</span>
-<span id="cb3-14"><a href="#cb3-14"></a><span class="co">#&gt;  'term' chr [1:7] "alpha[1]" "alpha[2]" "beta[1,1]" "beta[2,1]" ...</span></span>
-<span id="cb3-15"><a href="#cb3-15"></a></span>
-<span id="cb3-16"><a href="#cb3-16"></a><span class="co"># term vectors can also be created from numeric atomic objects</span></span>
-<span id="cb3-17"><a href="#cb3-17"></a><span class="kw"><a href="reference/as.term.html">as.term</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, <span class="dv">2</span>), <span class="st">"theta"</span>)</span>
-<span id="cb3-18"><a href="#cb3-18"></a><span class="co">#&gt; [1] "theta[1,1]" "theta[2,1]" "theta[1,2]" "theta[2,2]"</span></span></code></pre></div>
+<span id="cb3-4"><a href="#cb3-4"></a>term &lt;-<span class="st"> </span><span class="kw"><a href="reference/as.term.html">as.term</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(</span>
+<span id="cb3-5"><a href="#cb3-5"></a>  <span class="st">"alpha[1]"</span>, <span class="st">"alpha[2]"</span>, <span class="st">"beta[1,1]"</span>, <span class="st">"beta[2,1]"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6"></a>  <span class="st">"beta[1,2]"</span>, <span class="st">"beta[2,2]"</span>, <span class="st">"sigma"</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>))</span>
+<span id="cb3-8"><a href="#cb3-8"></a></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="co"># term vectors print like character vectors</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a>term</span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="co">#&gt; [1] "alpha[1]"  "alpha[2]"  "beta[1,1]" "beta[2,1]" "beta[1,2]" "beta[2,2]"</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="co">#&gt; [7] "sigma"</span></span>
+<span id="cb3-13"><a href="#cb3-13"></a></span>
+<span id="cb3-14"><a href="#cb3-14"></a><span class="co"># they are S3 class objects that also inherit from character</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a><span class="kw"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(term)</span>
+<span id="cb3-16"><a href="#cb3-16"></a><span class="co">#&gt;  'term' chr [1:7] "alpha[1]" "alpha[2]" "beta[1,1]" "beta[2,1]" "beta[1,2]" ...</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a></span>
+<span id="cb3-18"><a href="#cb3-18"></a><span class="co"># term vectors can also be created from numeric atomic objects</span></span>
+<span id="cb3-19"><a href="#cb3-19"></a><span class="kw"><a href="reference/as.term.html">as.term</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, <span class="dv">2</span>), <span class="st">"theta"</span>)</span>
+<span id="cb3-20"><a href="#cb3-20"></a><span class="co">#&gt; [1] "theta[1,1]" "theta[2,1]" "theta[1,2]" "theta[2,2]"</span></span></code></pre></div>
 </div>
 <div id="querying-term-vectors" class="section level3">
 <h3 class="hasAnchor">
@@ -160,7 +162,7 @@
 <div id="validating-term-vectors" class="section level3">
 <h3 class="hasAnchor">
 <a href="#validating-term-vectors" class="anchor"></a>Validating Term Vectors</h3>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># term vectors can be tested for whether they have (parseably) valid, </span></span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># term vectors can be tested for whether they have (parseably) valid,</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="co"># (dimensionally) consistent, complete and duplicated terms</span></span>
 <span id="cb5-3"><a href="#cb5-3"></a></span>
 <span id="cb5-4"><a href="#cb5-4"></a><span class="co"># valid terms</span></span>
@@ -200,8 +202,8 @@
 <a href="#repairing-term-vectors" class="anchor"></a>Repairing Term Vectors</h3>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>term &lt;-<span class="st"> </span><span class="kw"><a href="reference/as.term.html">as.term</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"b[4]"</span>, <span class="st">"b   [2]"</span>, <span class="st">"b"</span>, <span class="st">"b[1"</span>, <span class="st">"b[2, 2]"</span>, <span class="st">"b"</span>, <span class="st">"a [ 1 ] "</span>, <span class="ot">NA</span>))</span>
 <span id="cb6-2"><a href="#cb6-2"></a>term</span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="co">#&gt; [1] "b[4]"     "b   [2]"  "b"        "b[1"      "b[2, 2]"  "b"       </span></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="co">#&gt; [7] "a [ 1 ] " NA</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="co">#&gt; [1] "b[4]"     "b   [2]"  "b"        "b[1"      "b[2, 2]"  "b"        "a [ 1 ] "</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co">#&gt; [8] NA</span></span>
 <span id="cb6-5"><a href="#cb6-5"></a></span>
 <span id="cb6-6"><a href="#cb6-6"></a><span class="co"># valid terms can be repaired (invalid terms are converted to missing values)</span></span>
 <span id="cb6-7"><a href="#cb6-7"></a>term &lt;-<span class="st"> </span><span class="kw"><a href="reference/repair_terms.html">repair_terms</a></span>(term)</span>
