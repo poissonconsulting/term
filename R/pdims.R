@@ -20,7 +20,7 @@ pdims <- function(x, ...) UseMethod("pdims")
 
 #' @export
 pdims.term <- function(x, ...) {
-  chk_no_missing(x)
+  chk_not_any_na(x)
   if(is.inconsistent_terms(x))
     err("`x` must have terms with consistent parameter dimensions.")
   x <- sort(x)

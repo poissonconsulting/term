@@ -49,7 +49,7 @@ Gets or sets the parameter names for an object.
 \details{
 \code{parameters()} is deprecated.
 
-\code{parameters<-} is deprecated.
+\verb{parameters<-} is deprecated.
 
 \code{set_parameters()} is deprecated.
 }

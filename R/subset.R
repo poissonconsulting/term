@@ -15,7 +15,7 @@
 #' subset(term, "beta")
 #' subset(term, c("alpha", "sigma"))
 subset.term <- function(x, select = NULL, ...) {
-  chk_no_missing(x)
+  chk_not_any_na(x)
   chk_unused(...)
 
   if(is.null(select)) return(x)

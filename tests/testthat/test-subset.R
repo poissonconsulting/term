@@ -22,9 +22,9 @@ test_that("subset.term", {
 })
 
 test_that("subset.term missing values", {
-  expect_error(subset(NA_term_), "^`x` must not have missing values[.]$",
+  expect_error(subset(NA_term_), "^`x` must not have any missing values[.]$",
     class = "chk_error")
   expect_error(subset(c(NA_term_, "a")),
-    "^`x` must not have missing values[.]$",
+    "^`x` must not have any missing values[.]$",
     class = "chk_error")
 })

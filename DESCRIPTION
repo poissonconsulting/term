@@ -10,15 +10,14 @@ Description: Creates, manipulates, queries and repairs vectors of parameter term
     and arrays. They represent the names in `coef()` tables and 
     the column names in `mcmc` and `mcmc.list` objects.
 License: MIT + file LICENSE
-Imports: chk (>= 0.0.1.9023)
+Imports: chk
 Suggests: 
     covr,
     testthat
-Remotes: poissonconsulting/chk
 URL: https://github.com/poissonconsulting/term
 BugReports: https://github.com/poissonconsulting/term/issues
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 Language: en-US
 Roxygen: list(markdown = TRUE)

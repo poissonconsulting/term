@@ -80,8 +80,8 @@ test_that("set_pars", {
 
 test_that("set_pars missing values", {
   expect_error(set_pars(as.term(c("a [ 1]", "b")), c("b", NA)),
-    "^`value` must not have missing values[.]$", class = "chk_error")
-  expect_error(set_pars(NA_term_, "a"), "^`x` must not have missing values[.]$",
+    "^`value` must not have any missing values[.]$", class = "chk_error")
+  expect_error(set_pars(NA_term_, "a"), "^`x` must not have any missing values[.]$",
     class = "chk_error")
   expect_error(set_pars(as.term(c("c c", "b")), "a"),
     "^`x` must not include invalid terms[.]$")
