@@ -19,7 +19,7 @@ release 3.6.1
 * This is a resubmission of a new release.
 
 > Thanks, no need to single quote the function name, simply write coef().
-For the object names, pleese use undirected quotes.
+For the object names, please use undirected quotes.
 
 Done.
 
