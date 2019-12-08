@@ -10,6 +10,7 @@ Description: Creates, manipulates, queries and repairs vectors of parameter term
     and arrays. They represent the names in `coef()` tables and 
     the column names in `mcmc` and `mcmc.list` objects.
 License: MIT + file LICENSE
+Depends: R (>= 3.3)
 Imports: chk
 Suggests: 
     covr,
