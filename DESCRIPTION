@@ -7,8 +7,8 @@ Authors@R: c(
     )
 Description: Creates, manipulates, queries and repairs vectors of parameter terms.
     Parameter terms are the labels used to reference values in vectors, matrices 
-    and arrays. They represent the names in `coef()` tables and 
-    the column names in `mcmc` and `mcmc.list` objects.
+    and arrays. They represent the names in 'coef()' tables and 
+    the column names in 'mcmc' and 'mcmc.list' objects.
 License: MIT + file LICENSE
 Depends: R (>= 3.3)
 Imports: chk

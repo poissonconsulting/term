@@ -18,6 +18,11 @@ release 3.6.1
 
 * This is a resubmission of a new release.
 
+> Thanks, no need to single quote the function name, simply write coef().
+For the object names, pleese use undirected quotes.
+
+Done.
+
 > Please add \value to .Rd files and explain the functions results in the documentation. (tindex.Rd)
 
 Done.
