@@ -6,8 +6,7 @@
 #' while the index for `sigma` is `1L`.
 #' It is useful for extracting the values of individual terms.
 #'
-#' @param x The object
-#' @param ... Unused.
+#' @inheritParams params
 #' @return A named list of the index for each term.
 #' @seealso [term-vector()]
 #' @export

@@ -16,9 +16,9 @@ ndims(x, ...)
 \method{ndims}{data.frame}(x, ...)
 }
 \arguments{
-\item{x}{An R object.}
+\item{x}{The object.}
 
-\item{...}{Unused}
+\item{...}{Unused.}
 }
 \value{
 A count of the number of dimensions.

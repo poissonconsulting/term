@@ -6,17 +6,20 @@
 \arguments{
 \item{x}{The object.}
 
-\item{name}{A string of the name for the parameter.}
+\item{name}{A string specifying the name of the parameter.}
 
 \item{...}{Unused.}
 
-\item{repair}{A flag specifying whether to repair terms.
+\item{repair}{A flag specifying whether to repair terms.}
 
-npdims}
+\item{select}{A character vector of the names of the parameters to include in the subsetted object.}
 
-\item{terms}{A flag specifying whether to get the number of dimensions for each
-term element.}
+\item{value}{A character vector of the new parameter names.}
+
+\item{pars}{A character vector of the new parameter names.}
+
+\item{incomparables}{Ignored.}
 }
 \description{
-as-term, is, complete-terms, consistent-term
+Parameter Descriptions for term Functions
 }

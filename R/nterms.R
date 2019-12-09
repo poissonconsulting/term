@@ -5,8 +5,7 @@
 #' By default if the vector includes
 #' missing values then it returns NA_integer_.
 #'
-#' @param x The object.
-#' @param ... Unused.
+#' @inheritParams params
 #' @return A count of the number of terms.
 #' @seealso [term-vector()]
 #' @export

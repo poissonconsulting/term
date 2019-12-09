@@ -7,7 +7,7 @@
 \method{subset}{term}(x, select = NULL, ...)
 }
 \arguments{
-\item{x}{A term vector to be subsetted.}
+\item{x}{The object.}
 
 \item{select}{A character vector of the names of the parameters to include in the subsetted object.}
 

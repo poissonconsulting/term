@@ -10,9 +10,9 @@ is.inconsistent_terms(x, ...)
 \method{is.inconsistent_terms}{term}(x, ...)
 }
 \arguments{
-\item{x}{An object.}
+\item{x}{The object.}
 
-\item{...}{Unused}
+\item{...}{Unused.}
 }
 \value{
 A logical scalar indicating whether the object's terms are inconsistent.

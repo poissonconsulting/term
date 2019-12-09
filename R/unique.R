@@ -2,9 +2,7 @@
 #'
 #' Extracts unique elements from a term vector.
 #'
-#' @param x A term vector.
-#' @param incomparables Ignored.
-#' @param ... Unused.
+#' @inheritParams params
 #' @return A vector of unique terms.
 #' @seealso [term-vector()]
 #' @export

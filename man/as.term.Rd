@@ -20,11 +20,9 @@ as.term(x, ...)
 
 \item{...}{Unused.}
 
-\item{repair}{A flag specifying whether to repair terms.
+\item{repair}{A flag specifying whether to repair terms.}
 
-npdims}
-
-\item{name}{A string of the name for the parameter.}
+\item{name}{A string specifying the name of the parameter.}
 }
 \description{
 Coerces an R object to a \code{\link[=term-vector]{term-vector()}}.

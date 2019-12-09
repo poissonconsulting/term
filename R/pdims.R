@@ -8,8 +8,7 @@
 #' A named list of the dimensions of each parameter can be converted
 #' into the equivalent [term-vector()] using [term()].
 #'
-#' @param x The object
-#' @param ... Unused.
+#' @inheritParams params
 #' @return A named list of the dimensions of each parameter.
 #' @seealso [dims()] and [term()]
 #' @export

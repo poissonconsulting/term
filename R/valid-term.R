@@ -4,7 +4,7 @@
 #'
 #' Repairing a term vector replaces invalid terms with a missing value.
 #'
-#' @param x A term vector.
+#' @inheritParams params
 #' @return A logical vector indicating whether each term is valid.
 #' @seealso [term-vector()] and [repair_terms()]
 #' @export

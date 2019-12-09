@@ -2,9 +2,8 @@
 #'
 #' Gets the number of parameters of an object as returned by [pars()].
 #'
-#' @param x An R object.
+#' @inheritParams params
 #' @param scalar A flag specifying whether to only count parameters with one term.
-#' @param ... Unused.
 #' @return A count of the number of parameters.
 #' @seealso [pars()] and [term-vector()]
 #' @export

@@ -7,7 +7,7 @@
 valid_term(x)
 }
 \arguments{
-\item{x}{A term vector.}
+\item{x}{The object.}
 }
 \value{
 A logical vector indicating whether each term is valid.

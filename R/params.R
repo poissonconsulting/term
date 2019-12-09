@@ -1,18 +1,17 @@
 #' Parameter Descriptions for term Functions
 #' 
-#' as-term, is, complete-terms, consistent-term
 #' @param x The object.
-#' @param name A string of the name for the parameter.
+#' @param name A string specifying the name of the parameter.
 #' @param ... Unused.
+#' 
 #' @param repair A flag specifying whether to repair terms.
 #' 
-#' npdims
-#' @param terms A flag specifying whether to get the number of dimensions for each
-#' term element.
+#' @param select A character vector of the names of the parameters to include in the subsetted object.
 #' 
+#' @param value A character vector of the new parameter names.
+#' @param pars A character vector of the new parameter names.
 #' 
-#' 
-#' 
+#' @param incomparables Ignored.
 #' 
 #'
 #' @name params

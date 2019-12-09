@@ -14,8 +14,7 @@ npdims(x, ...)
 
 \item{...}{Unused.}
 
-\item{terms}{A flag specifying whether to get the number of dimensions for each
-term element.}
+\item{terms}{A flag specifying whether to get the number of dimensions for each term element.}
 }
 \value{
 A named integer vector of the number of dimensions of each parameter.

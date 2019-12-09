@@ -10,7 +10,7 @@ npars(x, ...)
 \method{npars}{term}(x, scalar = NA, ...)
 }
 \arguments{
-\item{x}{An R object.}
+\item{x}{The object.}
 
 \item{...}{Unused.}
 
