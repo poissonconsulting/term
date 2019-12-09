@@ -2,10 +2,8 @@
 #'
 #' Coerces an R object to a [term-vector()].
 #'
-#' @param x The object to coerce.
-#' @param name A string of the name for the parameter.
-#' @param ... Unused.
-#' @param repair A flag specifying whether to repair terms.
+#' @inheritParams params
+#'
 #' @seealso [term-vector()] and [repair_terms()]
 #' @export
 #'

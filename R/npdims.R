@@ -2,10 +2,7 @@
 #'
 #' Gets the number of parameter dimensions of an object as returned by [pdims()].
 #'
-#' @param x The object.
-#' @param terms A flag specifying whether to get the number of dimensions for each
-#' term element.
-#' @param ... Unused.
+#' @inheritParams params
 #' @return A named integer vector of the number of dimensions of each parameter.
 #' @seealso [pdims()] and [term-vector()]
 #' @export

@@ -5,8 +5,8 @@
 #' The vector is repaired before being completed.
 #' Missing values are ignored.
 #'
-#' @param x An R object.
-#' @param ... Unused
+#' @inheritParams params
+#'
 #' @return The repaired and complete term vector.
 #' @seealso [term-vector()], [repair_terms()] and [is.incomplete_terms()].
 #' @export

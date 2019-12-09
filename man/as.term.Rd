@@ -16,11 +16,13 @@ as.term(x, ...)
 \method{as.term}{numeric}(x, name = "par", ...)
 }
 \arguments{
-\item{x}{The object to coerce.}
+\item{x}{The object.}
 
 \item{...}{Unused.}
 
-\item{repair}{A flag specifying whether to repair terms.}
+\item{repair}{A flag specifying whether to repair terms.
+
+npdims}
 
 \item{name}{A string of the name for the parameter.}
 }

@@ -2,7 +2,7 @@
 #'
 #' Test whether the number of dimensions of terms in the same parameter are consistent.
 #'
-#' @param x A term vector.
+#' @inheritParams params
 #' @return A logical vector indicating whether the number of dimensions is consistent.
 #' @seealso [term-vector()] and [npdims()]
 #' @export
