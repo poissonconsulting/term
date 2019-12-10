@@ -2,7 +2,7 @@
 #' @details `tdims()` is deprecated.
 #' @export
 tdims <- function(x) {
-  .Deprecated("tindex")
+  deprecate_soft("0.0.1", what = "tdims()", with = "tindex()")
   tindex(x)
 }
 
@@ -10,7 +10,7 @@ tdims <- function(x) {
 #' @details `parameters()` is deprecated.
 #' @export
 parameters <- function(x, ...) {
-  .Deprecated("pars")
+  deprecate_soft("0.0.1", what = "parameters()", with = "pars()")
   UseMethod("pars")
 }
 
@@ -18,7 +18,7 @@ parameters <- function(x, ...) {
 #' @details `parameters<-` is deprecated.
 #' @export
 `pararameters<-` <- function(x, value) {
-  .Deprecated("pars<-")
+  deprecate_soft("0.0.1", what = "pararameters()", with = "pars()")
   UseMethod("pars<-", x)
 }
 
@@ -26,6 +26,6 @@ parameters <- function(x, ...) {
 #' @details `set_parameters()` is deprecated.
 #' @export
 set_parameters <- function(x, pars) {
-  .Deprecated("set_pars")
+  deprecate_soft("0.0.1", what = "set_parameters()", with = "set_pars()")
   set_pars(x, pars)
 }
