@@ -15,9 +15,11 @@ status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/ter
 coverage](https://codecov.io/gh/poissonconsulting/term/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/term?branch=master)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-<!-- [![Tinyverse status](https://tinyverse.netlify.com/badge/term)](https://CRAN.R-project.org/package=term) -->
-<!-- [![CRAN status](https://www.r-pkg.org/badges/version/term)](https://cran.r-project.org/package=term) -->
-<!-- ![CRAN downloads](http://cranlogs.r-pkg.org/badges/term) -->
+[![Tinyverse
+status](https://tinyverse.netlify.com/badge/term)](https://CRAN.R-project.org/package=term)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/term)](https://cran.r-project.org/package=term)
+![CRAN downloads](http://cranlogs.r-pkg.org/badges/term)
 <!-- badges: end -->
 
 `term` is an R package to create, manipulate, query and repair vectors
