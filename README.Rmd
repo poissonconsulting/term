@@ -32,6 +32,11 @@ They represent the names in `coef()` tables and the column names in
 
 ## Installation 
 
+To install the latest release from [CRAN](https://cran.r-project.org)
+```{r, eval=FALSE}
+install.packages("term")
+```
+
 To install the developmental version from [GitHub](https://github.com/poissonconsulting/term)
 ```{r, eval=FALSE}
 # install.packages("remotes")

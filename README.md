@@ -29,6 +29,12 @@ values in vectors, matrices and arrays. They represent the names in
 
 ## Installation
 
+To install the latest release from [CRAN](https://cran.r-project.org)
+
+``` r
+install.packages("term")
+```
+
 To install the developmental version from
 [GitHub](https://github.com/poissonconsulting/term)
 
