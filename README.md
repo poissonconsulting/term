@@ -127,7 +127,7 @@ tindex(term)
 
 ``` r
 # term vectors can be tested for whether they have (parseably) valid,
-# (dimensionally) consistent, complete and duplicated terms
+# (dimensionally) consistent and complete terms.
 
 # valid terms
 valid_term(as.term(c("a", "a[1]", "a [2]", " b [3  ] ", "c[1,10]")))
@@ -152,14 +152,15 @@ is.incomplete_terms(as.term(c("a", "a[2]", "b[1,1]", "b[2,1]")))
 # incomplete terms
 is.incomplete_terms(as.term(c("a", "a[3]", "b[1,1]", "b[2,2]")))
 #> [1] TRUE
+```
 
-# unique terms
-anyDuplicated(as.term(c("a", "b")))
-#> [1] 0
+### Checking Term Vectors
 
-# duplicated terms
-anyDuplicated(as.term(c("a", "a")))
-#> [1] 2
+``` r
+x <- as.term(c("a[1]", "a[3]"))
+chk_term(x, validate = "valid")
+chk_term(x, validate = "complete")
+#> Error: All elements of term vector `x` must be complete.
 ```
 
 ### Repairing Term Vectors

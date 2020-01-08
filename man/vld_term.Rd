@@ -4,16 +4,14 @@
 \alias{vld_term}
 \title{Validate Term}
 \usage{
-vld_term(x, validate = "class", any_na = FALSE)
+vld_term(x, validate = "class")
 }
 \arguments{
 \item{x}{The object to check.}
 
 \item{validate}{A string specifying the level of the validation.
 The possible values in order of increasing strictness
-are 'class', 'valid', 'consistent', 'complete', 'unique' and 'sorted'.}
-
-\item{any_na}{A flag specifying whether to permit missing values.}
+are 'class', 'valid', 'consistent' and 'complete'.}
 }
 \value{
 A flag indicating whether the condition was met.
@@ -21,8 +19,13 @@ A flag indicating whether the condition was met.
 \description{
 Validates the elements of a term vector.
 }
+\details{
+Missing values are ignored as are duplicates and order.
+}
 \examples{
 vld_term(c("x[2]", "x[1]"))
 vld_term(as.term(c("x[2]", "x[1]")))
-vld_term(as.term(c("x[2]", "x[1]")), validate = "sorted")
+}
+\seealso{
+\code{\link[=chk_term]{chk_term()}}
 }

@@ -1,6 +1,4 @@
-# term 0.0.1.9000
-
-- Added vld_term to validate term objects.
+- Added `chk_term()` and `vld_term()`.
 
 # term 0.0.1
 
