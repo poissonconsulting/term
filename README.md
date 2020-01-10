@@ -25,7 +25,8 @@ status](https://www.r-pkg.org/badges/version/term)](https://cran.r-project.org/p
 `term` is an R package to create, manipulate, query and repair vectors
 of parameter terms. Parameter terms are the labels used to reference
 values in vectors, matrices and arrays. They represent the names in
-`coef()` tables and the column names in `mcmc` and `mcmc.list` objects.
+coefficient tables and the column names in `mcmc` and `mcmc.list`
+objects.
 
 ## Installation
 
