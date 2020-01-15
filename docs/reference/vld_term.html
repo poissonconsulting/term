@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Number of Dimensions of an Object — ndims • term</title>
+<title>Validate Term — vld_term • term</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,8 @@
 
 
 
-<meta property="og:title" content="Number of Dimensions of an Object — ndims" />
-<meta property="og:description" content="Gets the number of dimensions of an object as defined by dims()." />
+<meta property="og:title" content="Validate Term — vld_term" />
+<meta property="og:description" content="Validates the elements of a term vector." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -108,65 +108,51 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Number of Dimensions of an Object</h1>
-    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/term/blob/master/R/ndims.R'><code>R/ndims.R</code></a></small>
-    <div class="hidden name"><code>ndims.Rd</code></div>
+    <h1>Validate Term</h1>
+    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/term/blob/master/R/vld.R'><code>R/vld.R</code></a></small>
+    <div class="hidden name"><code>vld_term.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Gets the number of dimensions of an object as defined by <code><a href='dims.html'>dims()</a></code>.</p>
+    <p>Validates the elements of a term vector.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>ndims</span>(<span class='no'>x</span>, <span class='no'>...</span>)
-
-<span class='co'># S3 method for default</span>
-<span class='fu'>ndims</span>(<span class='no'>x</span>, <span class='no'>...</span>)
-
-<span class='co'># S3 method for matrix</span>
-<span class='fu'>ndims</span>(<span class='no'>x</span>, <span class='no'>...</span>)
-
-<span class='co'># S3 method for data.frame</span>
-<span class='fu'>ndims</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>vld_term</span>(<span class='no'>x</span>, <span class='kw'>validate</span> <span class='kw'>=</span> <span class='st'>"class"</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>An R object.</p></td>
+      <td><p>The object to check.</p></td>
     </tr>
     <tr>
-      <th>...</th>
-      <td><p>Unused</p></td>
+      <th>validate</th>
+      <td><p>A string specifying the level of the validation.
+The possible values in order of increasing strictness
+are 'class', 'valid', 'consistent' and 'complete'.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A count of the number of dimensions.</p>
-    <h2 class="hasAnchor" id="methods-by-class-"><a class="anchor" href="#methods-by-class-"></a>Methods (by class)</h2>
+    <p>A flag indicating whether the condition was met.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    
-<ul>
-<li><p><code>default</code>: Number of dimensions of a default object</p></li>
-<li><p><code>matrix</code>: Number of dimensions of a matrix</p>
-<p>Always 2L.</p></li>
-<li><p><code>data.frame</code>: Number of dimensions of a data.frame</p>
-<p>Always 2L.</p></li>
-</ul>
+    <p>Missing values are ignored as are duplicates and order.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='dims.html'>dims()</a></code></p></div>
+    <div class='dont-index'><p><code><a href='chk_term.html'>chk_term()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>ndims</span>(<span class='fu'><a href='https://rdrr.io/r/base/character.html'>character</a></span>(<span class='fl'>0</span>))</div><div class='output co'>#&gt; [1] 1</div><div class='input'><span class='fu'>ndims</span>(<span class='fl'>1</span>:<span class='fl'>3</span>)</div><div class='output co'>#&gt; [1] 1</div><div class='input'><span class='fu'>ndims</span>(<span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>())</div><div class='output co'>#&gt; [1] 2</div><div class='input'><span class='fu'>ndims</span>(<span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>3</span>))</div><div class='output co'>#&gt; [1] 2</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>vld_term</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"x[2]"</span>, <span class='st'>"x[1]"</span>))</div><div class='output co'>#&gt; [1] FALSE</div><div class='input'><span class='fu'>vld_term</span>(<span class='fu'><a href='as.term.html'>as.term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"x[2]"</span>, <span class='st'>"x[1]"</span>)))</div><div class='output co'>#&gt; [1] TRUE</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
-      <li><a href="#methods-by-class-">Methods (by class)</a></li>
+      <li><a href="#details">Details</a></li>
       <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
