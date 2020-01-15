@@ -15,17 +15,26 @@ status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/ter
 coverage](https://codecov.io/gh/poissonconsulting/term/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/term?branch=master)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-<!-- [![Tinyverse status](https://tinyverse.netlify.com/badge/term)](https://CRAN.R-project.org/package=term) -->
-<!-- [![CRAN status](https://www.r-pkg.org/badges/version/term)](https://cran.r-project.org/package=term) -->
-<!-- ![CRAN downloads](http://cranlogs.r-pkg.org/badges/term) -->
+[![Tinyverse
+status](https://tinyverse.netlify.com/badge/term)](https://CRAN.R-project.org/package=term)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/term)](https://cran.r-project.org/package=term)
+![CRAN downloads](http://cranlogs.r-pkg.org/badges/term)
 <!-- badges: end -->
 
 `term` is an R package to create, manipulate, query and repair vectors
 of parameter terms. Parameter terms are the labels used to reference
 values in vectors, matrices and arrays. They represent the names in
-`coef()` tables and the column names in `mcmc` and `mcmc.list` objects.
+coefficient tables and the column names in `mcmc` and `mcmc.list`
+objects.
 
 ## Installation
+
+To install the latest release from [CRAN](https://cran.r-project.org)
+
+``` r
+install.packages("term")
+```
 
 To install the developmental version from
 [GitHub](https://github.com/poissonconsulting/term)
@@ -119,7 +128,7 @@ tindex(term)
 
 ``` r
 # term vectors can be tested for whether they have (parseably) valid,
-# (dimensionally) consistent, complete and duplicated terms
+# (dimensionally) consistent and complete terms.
 
 # valid terms
 valid_term(as.term(c("a", "a[1]", "a [2]", " b [3  ] ", "c[1,10]")))
@@ -144,14 +153,15 @@ is.incomplete_terms(as.term(c("a", "a[2]", "b[1,1]", "b[2,1]")))
 # incomplete terms
 is.incomplete_terms(as.term(c("a", "a[3]", "b[1,1]", "b[2,2]")))
 #> [1] TRUE
+```
 
-# unique terms
-anyDuplicated(as.term(c("a", "b")))
-#> [1] 0
+### Checking Term Vectors
 
-# duplicated terms
-anyDuplicated(as.term(c("a", "a")))
-#> [1] 2
+``` r
+x <- as.term(c("a[1]", "a[3]"))
+chk_term(x, validate = "valid")
+chk_term(x, validate = "complete")
+#> Error: All elements of term vector `x` must be complete.
 ```
 
 ### Repairing Term Vectors

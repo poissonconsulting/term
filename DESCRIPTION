@@ -1,14 +1,14 @@
 Package: term
 Title: Create, Manipulate and Query Parameter Terms
-Version: 0.0.1
+Version: 0.1.0
 Authors@R: c(
     person("Joe", "Thorley", , "joe@poissonconsulting.ca", c("aut", "cre"), comment = c(ORCID = "0000-0002-7683-4592")),
     person("Ayla", "Pearson", role = "ctb", comment = c(ORCID = "0000-0001-7388-1222")),
     person("Poisson Consulting", role = c("cph", "fnd"))
     )
 Description: Creates, manipulates, queries and repairs vectors of parameter terms.
-    Parameter terms are the labels used to reference values in vectors, matrices
-    and arrays. They represent the names in coef() tables and
+    Parameter terms are the labels used to reference values in vectors, matrices 
+    and arrays. They represent the names in coefficient tables and 
     the column names in 'mcmc' and 'mcmc.list' objects.
 License: MIT + file LICENSE
 Depends: R (>= 3.3)
