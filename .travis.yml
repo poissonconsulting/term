@@ -5,6 +5,10 @@ cache: packages
 r:
   - devel
   - release
+  - oldrel
+  - 3.5
+  - 3.4
+  - 3.3
   
 r_packages:
   - covr
