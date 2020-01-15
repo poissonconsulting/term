@@ -25,7 +25,7 @@ set_pars(x, pars)
 \method{pars}{term}(x, scalar = NA, terms = FALSE, ...)
 }
 \arguments{
-\item{x}{An R object.}
+\item{x}{The object.}
 
 \item{...}{Unused.}
 
@@ -38,7 +38,7 @@ all parameters (NA), only scalars (TRUE) or all parameters
 except scalars (FALSE).}
 
 \item{terms}{A flag specifying whether to return the parameter name
-for each term element.}
+for each term element}
 }
 \value{
 A character vector of the parameter names.

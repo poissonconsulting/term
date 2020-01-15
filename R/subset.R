@@ -2,9 +2,7 @@
 #'
 #' Subsets a term vector.
 #'
-#' @param x A term vector to be subsetted.
-#' @param select A character vector of the names of the parameters to include in the subsetted object.
-#' @param ... Unused.
+#' @inheritParams params
 #' @return The modified term vector.
 #' @seealso [term-vector()]
 #' @export

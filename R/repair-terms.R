@@ -9,7 +9,7 @@
 #' but if higher indices are included such as `b[2]` then `b`
 #' is replaced by `b[1]`.
 #'
-#' @param x A term vector.
+#' @inheritParams params
 #' @return The repaired term vector.
 #' @seealso [term-vector()] and [valid_term()]
 #' @export

@@ -7,7 +7,7 @@
 repair_terms(x)
 }
 \arguments{
-\item{x}{A term vector.}
+\item{x}{The object.}
 }
 \value{
 The repaired term vector.

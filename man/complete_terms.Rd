@@ -10,9 +10,9 @@ complete_terms(x, ...)
 \method{complete_terms}{term}(x, ...)
 }
 \arguments{
-\item{x}{An R object.}
+\item{x}{The object.}
 
-\item{...}{Unused}
+\item{...}{Unused.}
 }
 \value{
 The repaired and complete term vector.

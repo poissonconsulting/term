@@ -7,7 +7,7 @@
 \method{unique}{term}(x, incomparables = FALSE, ...)
 }
 \arguments{
-\item{x}{A term vector.}
+\item{x}{The object.}
 
 \item{incomparables}{Ignored.}
 

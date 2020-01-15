@@ -4,7 +4,7 @@
 #'
 #' It does not test the validity of consistency of the term elements.
 #'
-#' @param x The object to test.
+#' @inheritParams params
 #' @return A flag indicating whether the test was positive.
 #' @seealso [term-vector()], [valid_term()]
 #' and [consistent_term()]

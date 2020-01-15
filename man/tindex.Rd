@@ -13,7 +13,7 @@ tindex(x, ...)
 \method{tindex}{term}(x, ...)
 }
 \arguments{
-\item{x}{The object}
+\item{x}{The object.}
 
 \item{...}{Unused.}
 }

@@ -2,8 +2,7 @@
 #'
 #' Gets the number of dimensions of an object as defined by [dims()].
 #'
-#' @param x An R object.
-#' @param ... Unused
+#' @inheritParams params
 #' @return A count of the number of dimensions.
 #' @seealso [dims()]
 #' @export

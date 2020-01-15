@@ -2,15 +2,12 @@
 #'
 #' Gets or sets the parameter names for an object.
 #'
-#' @param x An R object.
+#' @inheritParams params
 #' @param scalar A logical scalar specifying whether to get the names of
 #' all parameters (NA), only scalars (TRUE) or all parameters
 #' except scalars (FALSE).
 #' @param terms A flag specifying whether to return the parameter name
-#' for each term element.
-#' @param ... Unused.
-#' @param value A character vector of the new parameter names.
-#' @param pars A character vector of the new parameter names.
+#' for each term element
 #' @return A character vector of the parameter names.
 #' @export
 #'

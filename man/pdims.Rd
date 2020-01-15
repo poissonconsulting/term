@@ -7,7 +7,7 @@
 pdims(x, ...)
 }
 \arguments{
-\item{x}{The object}
+\item{x}{The object.}
 
 \item{...}{Unused.}
 }

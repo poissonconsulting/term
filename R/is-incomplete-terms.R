@@ -2,8 +2,7 @@
 #'
 #' Tests whether a term vector has absent elements.
 #'
-#' @param x An object.
-#' @param ... Unused
+#' @inheritParams params
 #' @return A logical scalar indicating whether the object's terms are incomplete.
 #' @seealso [term-vector()] and [complete_terms()]
 #' @export

@@ -2,8 +2,7 @@
 #'
 #' Tests whether a term vector has inconsistent elements.
 #'
-#' @param x An object.
-#' @param ... Unused
+#' @inheritParams params
 #' @return A logical scalar indicating whether the object's terms are inconsistent.
 #' @seealso [term-vector()] and [consistent_term()]
 #' @export

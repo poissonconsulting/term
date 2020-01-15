@@ -5,8 +5,7 @@
 #' Unlike `base::dim()`, dims works as intuitively expected for vectors and data.frames.
 #' A integer vector of the dimensions of a parameter can be converted
 #' into the equivalent [term-vector()] using [term()].
-#' @param x An R object.
-#' @param ... Unused
+#' @inheritParams params
 #' @return An integer vector of the dimensions.
 #' @seealso [base::dim()], [term-vector()]
 #' and [term()]

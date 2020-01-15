@@ -13,9 +13,9 @@ dims(x, ...)
 \method{dims}{data.frame}(x, ...)
 }
 \arguments{
-\item{x}{An R object.}
+\item{x}{The object.}
 
-\item{...}{Unused}
+\item{...}{Unused.}
 }
 \value{
 An integer vector of the dimensions.

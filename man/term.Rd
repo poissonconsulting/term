@@ -10,8 +10,7 @@ term(x, ...)
 \method{term}{integer}(x, name = "par", ...)
 }
 \arguments{
-\item{x}{An integer vector of the object dimensions
-or a named list of the parameter's dimensions.}
+\item{x}{An integer vector of the object dimensions or a named list of the parameter's dimensions.}
 
 \item{...}{Unused.}
 
