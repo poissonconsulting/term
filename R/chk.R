@@ -17,11 +17,12 @@ chk_term <- function(x, validate = "class", x_name = NULL) {
     return(invisible())
   }
   if (is.null(x_name)) x_name <- deparse_backtick(substitute(x))
-  
-  if(!is.term(x)) abort_chk(x_name, " must be a term vector")
+
+  if (!is.term(x)) abort_chk(x_name, " must be a term vector")
   x <- x[!is.na(x)]
-  if(!all(valid_term(x))) 
+  if (!all(valid_term(x))) {
     abort_chk("All elements of term vector ", x_name, " must be valid")
-  if(is.inconsistent_terms(x)) abort_chk("All elements of term vector ", x_name, " must be consistent")
+  }
+  if (is.inconsistent_terms(x)) abort_chk("All elements of term vector ", x_name, " must be consistent")
   abort_chk("All elements of term vector ", x_name, " must be complete")
 }

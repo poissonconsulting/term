@@ -1,6 +1,6 @@
 ## Test environments
 
-release 3.6.1
+release 3.6.2
 
 * OS X (local) - release
 
@@ -14,15 +14,4 @@ release 3.6.1
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
-
-* This is a resubmission of a new release.
-
-> Thanks, no need to single quote the function name, simply write coef().
-For the object names, please use undirected quotes.
-
-Done.
-
-> Please add \value to .Rd files and explain the functions results in the documentation. (tindex.Rd)
-
-Done.
+0 errors | 0 warnings | 0 note
