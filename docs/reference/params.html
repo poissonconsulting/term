@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Parameter Names — parameters • term</title>
+<title>Parameter Descriptions for term Functions — params • term</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,8 @@
 
 
 
-<meta property="og:title" content="Parameter Names — parameters" />
-<meta property="og:description" content="Gets or sets the parameter names for an object." />
+<meta property="og:title" content="Parameter Descriptions for term Functions — params" />
+<meta property="og:description" content="Parameter Descriptions for term Functions" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -108,29 +108,15 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Parameter Names</h1>
-    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/term/blob/master/R/deprecated.R'><code>R/deprecated.R</code></a>, <a href='https://github.com/poissonconsulting/term/blob/master/R/pars.R'><code>R/pars.R</code></a></small>
-    <div class="hidden name"><code>pars.Rd</code></div>
+    <h1>Parameter Descriptions for term Functions</h1>
+    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/term/blob/master/R/params.R'><code>R/params.R</code></a></small>
+    <div class="hidden name"><code>params.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Gets or sets the parameter names for an object.</p>
+    <p>Parameter Descriptions for term Functions</p>
     </div>
 
-    <pre class="usage"><span class='fu'>parameters</span>(<span class='no'>x</span>, <span class='no'>...</span>)
-
-<span class='fu'>pararameters</span>(<span class='no'>x</span>) <span class='kw'>&lt;-</span> <span class='no'>value</span>
-
-<span class='fu'>set_parameters</span>(<span class='no'>x</span>, <span class='no'>pars</span>)
-
-<span class='fu'>pars</span>(<span class='no'>x</span>, <span class='no'>...</span>)
-
-<span class='fu'>pars</span>(<span class='no'>x</span>) <span class='kw'>&lt;-</span> <span class='no'>value</span>
-
-<span class='fu'>set_pars</span>(<span class='no'>x</span>, <span class='no'>pars</span>)
-
-<span class='co'># S3 method for term</span>
-<span class='fu'>pars</span>(<span class='no'>x</span>, <span class='kw'>scalar</span> <span class='kw'>=</span> <span class='fl'>NA</span>, <span class='kw'>terms</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -140,8 +126,20 @@
       <td><p>The object.</p></td>
     </tr>
     <tr>
+      <th>name</th>
+      <td><p>A string specifying the name of the parameter.</p></td>
+    </tr>
+    <tr>
       <th>...</th>
       <td><p>Unused.</p></td>
+    </tr>
+    <tr>
+      <th>repair</th>
+      <td><p>A flag specifying whether to repair terms.</p></td>
+    </tr>
+    <tr>
+      <th>select</th>
+      <td><p>A character vector of the names of the parameters to include in the subsetted object.</p></td>
     </tr>
     <tr>
       <th>value</th>
@@ -152,48 +150,17 @@
       <td><p>A character vector of the new parameter names.</p></td>
     </tr>
     <tr>
-      <th>scalar</th>
-      <td><p>A logical scalar specifying whether to get the names of
-all parameters (NA), only scalars (TRUE) or all parameters
-except scalars (FALSE).</p></td>
-    </tr>
-    <tr>
-      <th>terms</th>
-      <td><p>A flag specifying whether to return the parameter name
-for each term element</p></td>
+      <th>incomparables</th>
+      <td><p>Ignored.</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A character vector of the parameter names.</p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p><code>parameters()</code> is deprecated.</p>
-<p><code>parameters&lt;-</code> is deprecated.</p>
-<p><code>set_parameters()</code> is deprecated.</p>
-    <h2 class="hasAnchor" id="methods-by-class-"><a class="anchor" href="#methods-by-class-"></a>Methods (by class)</h2>
-
-    
-<ul>
-<li><p><code>term</code>: Parameter names for a term vector</p></li>
-</ul>
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>term</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='as.term.html'>as.term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(
-  <span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[2]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span>,
-  <span class='st'>"beta[1,2]"</span>, <span class='st'>"beta[2,2]"</span>, <span class='st'>"sigma"</span>, <span class='fl'>NA</span>
-))
-<span class='fu'>pars</span>(<span class='no'>term</span>)</div><div class='output co'>#&gt; [1] "alpha" "beta"  "sigma" NA     </div><div class='input'><span class='fu'>pars</span>(<span class='no'>term</span>, <span class='kw'>scalar</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; [1] "sigma" NA     </div><div class='input'><span class='fu'>pars</span>(<span class='no'>term</span>, <span class='kw'>terms</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; [1] "alpha" "alpha" "beta"  "beta"  "beta"  "beta"  "sigma" NA     </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#methods-by-class-">Methods (by class)</a></li>
-      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
