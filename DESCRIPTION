@@ -1,6 +1,6 @@
 Package: term
 Title: Create, Manipulate and Query Parameter Terms
-Version: 0.1.0.9000
+Version: 0.1.0.9001
 Authors@R: c(
     person("Joe", "Thorley", , "joe@poissonconsulting.ca", c("aut", "cre"), comment = c(ORCID = "0000-0002-7683-4592")),
     person("Ayla", "Pearson", role = "ctb", comment = c(ORCID = "0000-0001-7388-1222")),
@@ -14,10 +14,14 @@ License: MIT + file LICENSE
 Depends: R (>= 3.3)
 Imports:
     chk,
-    lifecycle
+    lifecycle,
+    universals,
+    extras
 Suggests:
     covr,
     testthat
+Remotes:
+    poissonconsulting/extras
 URL: https://github.com/poissonconsulting/term
 BugReports: https://github.com/poissonconsulting/term/issues
 RdMacros:
