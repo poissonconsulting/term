@@ -2,7 +2,7 @@
 % Please edit documentation in R/dims.R
 \name{dims.term}
 \alias{dims.term}
-\title{Dimensions of a default object}
+\title{Dimensions of a term}
 \usage{
 \method{dims}{term}(x, ...)
 }
@@ -11,13 +11,18 @@
 
 \item{...}{Other arguments passed to methods.}
 }
+\value{
+An integer vector of the dimensions.
+}
 \description{
-Dimensions of a default object
+Gets the dimensions of an object.
+Unlike \code{base::dim()}, dims works as intuitively expected
+for vectors and data.frames.
 }
 \examples{
 dims(as.term("beta[1,1]"))
 dims(as.term(c("beta[1,1]", "beta[1,2]")))
 }
 \seealso{
-\code{\link[universals]{dims}()}
+\code{\link[base:dim]{base::dim()}}
 }

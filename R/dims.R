@@ -2,10 +2,11 @@
 #' @export
 universals::dims
 
-#' Dimensions of a default object
-#' @inheritParams universals::dims
-#' @seealso \code{\link[universals]{dims}()}
+#' Dimensions of a term
+#' 
+#' @inherit universals::dims
 #' @export
+#' @examples 
 #' @examples 
 #' dims(as.term("beta[1,1]"))
 #' dims(as.term(c("beta[1,1]", "beta[1,2]")))
