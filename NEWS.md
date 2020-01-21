@@ -1,5 +1,5 @@
 - Migrated `ndims()` to extras package.
-- Migrated `ndims()` to extras package.
+- Migrated `dims()` to extras package.
 
 # term 0.1.0
 
