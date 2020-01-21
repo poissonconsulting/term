@@ -1,3 +1,6 @@
+- Migrated `ndims()` to extras package.
+- Migrated `ndims()` to extras package.
+
 # term 0.1.0
 
 - Added `chk_term()` and `vld_term()`.
