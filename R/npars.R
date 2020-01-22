@@ -4,7 +4,7 @@ universals::npars
 
 #' Number of Parameters of a term
 #' 
-#' @inherit universals::dims
+#' @inherit universals::npars
 #' @param scalar A flag specifying whether to only count parameters with one term.
 #' @export
 #'
