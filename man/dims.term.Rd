@@ -20,6 +20,7 @@ Unlike \code{base::dim()}, dims works as intuitively expected
 for vectors and data.frames.
 }
 \examples{
+
 dims(as.term("beta[1,1]"))
 dims(as.term(c("beta[1,1]", "beta[1,2]")))
 }

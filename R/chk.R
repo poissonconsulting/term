@@ -16,7 +16,7 @@ chk_term <- function(x, validate = "class", x_name = NULL) {
   if (vld_term(x, validate = validate)) {
     return(invisible())
   }
-  if (is.null(x_name)) x_name <- deparse_backtick(substitute(x))
+  if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
 
   if (!is.term(x)) abort_chk(x_name, " must be a term vector")
   x <- x[!is.na(x)]
