@@ -23,7 +23,7 @@ pdims.term <- function(x, ...) {
   }
   x <- sort(x)
   names <- pars(x)
-  x <- split(x, pars(x, terms = TRUE))
+  x <- split(x, pars_terms(x))
   x <- lapply(x, max_index)
   x
 }

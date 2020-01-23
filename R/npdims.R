@@ -19,7 +19,7 @@ npdims.term <- function(x, terms = FALSE, ...) {
     return(vapply(pdims(x), length, 1L))
   }
   x <- tindex(x)
-  names(x) <- pars(as.term(names(x)), terms = TRUE)
+  names(x) <- pars_terms(as.term(names(x)))
   is.na <- vapply(x, identical, TRUE, y = NA_integer_)
   x <- vapply(x, length, 1L)
   is.na(x[is.na]) <- TRUE

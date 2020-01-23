@@ -74,7 +74,7 @@ test_that("as.term.character", {
   x3 <- as.character(x2)
   expect_identical(x, x3)
 
-  expect_identical(pars(x2, terms = TRUE), c(rep("parm3", 2), rep("parm", 5), "parm3"))
+  expect_identical(pars_terms(x2), c(rep("parm3", 2), rep("parm", 5), "parm3"))
   expect_identical(
     tindex(x2),
     list(

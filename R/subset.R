@@ -29,5 +29,5 @@ subset.term <- function(x, select = NULL, ...) {
     return(term(0L))
   }
 
-  x[pars(x, terms = TRUE) %in% select]
+  x[pars_terms(x) %in% select]
 }
