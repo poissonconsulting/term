@@ -1,13 +1,14 @@
 #' Term Vector
 #'
 #' Creates a term vector from object dimensions.
+#' A `term` vector is a S3 vector of parameter terms.
 #'
 #' @param x An integer vector of the object dimensions or a named list of the parameter's dimensions.
 #' @inheritParams params
 #'
 #' @return A term vector.
-#' @seealso [term-vector()], [dims()] and
-#' [pdims()]
+#' @aliases term-object term_object term-vector term_vector
+#' @seealso [dims()] and [pdims()]
 #' @export
 #'
 #' @examples

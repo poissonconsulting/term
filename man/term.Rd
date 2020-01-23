@@ -2,6 +2,10 @@
 % Please edit documentation in R/term.R
 \name{term}
 \alias{term}
+\alias{term-object}
+\alias{term_object}
+\alias{term-vector}
+\alias{term_vector}
 \alias{term.integer}
 \title{Term Vector}
 \usage{
@@ -21,6 +25,7 @@ A term vector.
 }
 \description{
 Creates a term vector from object dimensions.
+A \code{term} vector is a S3 vector of parameter terms.
 }
 \section{Methods (by class)}{
 \itemize{
@@ -33,6 +38,5 @@ term(1L)
 term(2L)
 }
 \seealso{
-\code{\link[=term-vector]{term-vector()}}, \code{\link[=dims]{dims()}} and
-\code{\link[=pdims]{pdims()}}
+\code{\link[=dims]{dims()}} and \code{\link[=pdims]{pdims()}}
 }
