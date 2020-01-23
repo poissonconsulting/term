@@ -1,4 +1,3 @@
-#' @importFrom universals pars_terms
 #' @export
 universals::pars_terms
 

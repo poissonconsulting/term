@@ -1,4 +1,3 @@
-#' @importFrom universals pdims
 #' @export
 universals::pdims
 

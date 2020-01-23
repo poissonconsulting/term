@@ -1,3 +1,3 @@
-#' @import chk extras
+#' @import chk universals extras
 #' @import lifecycle
 NULL

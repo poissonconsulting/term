@@ -1,4 +1,3 @@
-#' @importFrom universals nterms
 #' @export
 universals::nterms
 

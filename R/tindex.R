@@ -1,4 +1,3 @@
-#' @importFrom universals tindex
 #' @export
 universals::tindex
 

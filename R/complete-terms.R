@@ -1,4 +1,3 @@
-#' @importFrom universals complete_terms
 #' @export
 universals::complete_terms
 

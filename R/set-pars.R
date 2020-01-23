@@ -1,4 +1,3 @@
-#' @importFrom universals set_pars
 #' @export
 universals::set_pars
 

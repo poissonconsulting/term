@@ -1,4 +1,3 @@
-#' @importFrom universals npdims
 #' @export
 universals::npdims
 
