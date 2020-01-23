@@ -10,11 +10,7 @@
 #' @examples
 #' is.incomplete_terms(as.term("b[2]"))
 #' is.incomplete_terms(as.term(c("b[2]", "b[1]")))
-is.incomplete_terms <- function(x, ...) UseMethod("is.incomplete_terms")
-
-#' @describeIn is.incomplete_terms Test whether a term vector is incomplete
-#' @export
-is.incomplete_terms.term <- function(x, ...) {
+is.incomplete_terms <- function(x, ...) {
   if (!length(x)) {
     return(FALSE)
   }

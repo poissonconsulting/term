@@ -2,12 +2,9 @@
 % Please edit documentation in R/is-incomplete-terms.R
 \name{is.incomplete_terms}
 \alias{is.incomplete_terms}
-\alias{is.incomplete_terms.term}
 \title{Is Incomplete Terms}
 \usage{
 is.incomplete_terms(x, ...)
-
-\method{is.incomplete_terms}{term}(x, ...)
 }
 \arguments{
 \item{x}{The object.}
@@ -20,11 +17,6 @@ A logical scalar indicating whether the object's terms are incomplete.
 \description{
 Tests whether a term vector has absent elements.
 }
-\section{Methods (by class)}{
-\itemize{
-\item \code{term}: Test whether a term vector is incomplete
-}}
-
 \examples{
 is.incomplete_terms(as.term("b[2]"))
 is.incomplete_terms(as.term(c("b[2]", "b[1]")))

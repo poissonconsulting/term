@@ -2,12 +2,9 @@
 % Please edit documentation in R/is-inconsistent-terms.R
 \name{is.inconsistent_terms}
 \alias{is.inconsistent_terms}
-\alias{is.inconsistent_terms.term}
 \title{Is Inconsistent Terms}
 \usage{
 is.inconsistent_terms(x, ...)
-
-\method{is.inconsistent_terms}{term}(x, ...)
 }
 \arguments{
 \item{x}{The object.}
@@ -20,11 +17,6 @@ A logical scalar indicating whether the object's terms are inconsistent.
 \description{
 Tests whether a term vector has inconsistent elements.
 }
-\section{Methods (by class)}{
-\itemize{
-\item \code{term}: Test whether a term vector is inconsistent
-}}
-
 \examples{
 is.inconsistent_terms(as.term("b[2]"))
 is.inconsistent_terms(as.term(c("b[2]", "b[1]")))
