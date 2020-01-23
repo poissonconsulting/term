@@ -8,9 +8,9 @@
 #' @export
 #'
 #' @examples
-#' is.incomplete_terms(as.term("b[2]"))
-#' is.incomplete_terms(as.term(c("b[2]", "b[1]")))
-is.incomplete_terms <- function(x, ...) {
+#' is_incomplete_terms(as.term("b[2]"))
+#' is_incomplete_terms(as.term(c("b[2]", "b[1]")))
+is_incomplete_terms <- function(x, ...) {
   if (!length(x)) {
     return(FALSE)
   }

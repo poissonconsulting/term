@@ -10,7 +10,7 @@ universals::complete_terms
 #' Missing values are ignored.
 #'
 #' @inherit universals::complete_terms
-#' @seealso [term-vector()], [repair_terms()] and [is.incomplete_terms()].
+#' @seealso [term-vector()], [repair_terms()] and [is_incomplete_terms()].
 #' @export
 #'
 #' @examples

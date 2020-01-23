@@ -7,7 +7,6 @@
 #' @name term_deprecated
 NULL
 
-
 #' @describeIn term_deprecated Is Term
 #'
 #' \lifecycle{soft-deprecated}
@@ -20,6 +19,20 @@ is.term <- function(x) {
     with = "is_term()"
   )  
   is_term(x)
+}
+
+#' @describeIn term_deprecated Is Incomplete Terms
+#'
+#' \lifecycle{soft-deprecated}
+#'
+#' Replace by [is_incomplete_terms()]
+#' @export
+is.incomplete_terms <- function(x) {
+  deprecate_soft("0.0.1",
+    what = "is.incomplete_terms()",
+    with = "is_incomplete_terms()"
+  )  
+  is_incomplete_terms(x)
 }
 
 #' @describeIn term_deprecated Get Parameters

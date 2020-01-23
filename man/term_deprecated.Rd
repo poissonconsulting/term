@@ -3,6 +3,7 @@
 \name{term_deprecated}
 \alias{term_deprecated}
 \alias{is.term}
+\alias{is.incomplete_terms}
 \alias{parameters}
 \alias{parameters<-}
 \alias{pararameters<-}
@@ -11,6 +12,8 @@
 \title{Deprecated Functions}
 \usage{
 is.term(x)
+
+is.incomplete_terms(x)
 
 parameters(x, ...)
 
@@ -41,6 +44,12 @@ Deprecated \code{term()} functions
 \lifecycle{soft-deprecated}
 
 Replace by \code{\link[=is_term]{is_term()}}
+
+\item \code{is.incomplete_terms}: Is Incomplete Terms
+
+\lifecycle{soft-deprecated}
+
+Replace by \code{\link[=is_incomplete_terms]{is_incomplete_terms()}}
 
 \item \code{parameters}: Get Parameters
 

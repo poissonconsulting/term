@@ -42,5 +42,5 @@ vld_term <- function(x, validate = "complete") {
   if (validate == "consistent") {
     return(TRUE)
   }
-  !is.incomplete_terms(x)
+  !is_incomplete_terms(x)
 }
