@@ -4,10 +4,8 @@
 #'
 #' Missing values are ignored as are duplicates and order.
 #'
+#' @inheritParams params
 #' @inheritParams chk::chk_flag
-#' @param validate A string specifying the level of the validation.
-#' The possible values in order of increasing strictness
-#' are 'class', 'valid', 'consistent' and 'complete'.
 #' @return A flag indicating whether the condition was met.
 #' @seealso [chk_term()]
 #' @export

@@ -20,7 +20,7 @@ as.term(x, ...)
 
 \item{...}{Unused.}
 
-\item{repair}{A logical scalar specifying whether to repair the term vector.}
+\item{repair}{A flag specifying whether to repair terms.}
 
 \item{name}{A string specifying the name of the parameter.}
 }

@@ -7,7 +7,7 @@
 vld_term(x, validate = "class")
 }
 \arguments{
-\item{x}{The object to check.}
+\item{x}{The object.}
 
 \item{validate}{A string specifying the level of the validation.
 The possible values in order of increasing strictness

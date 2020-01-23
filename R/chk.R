@@ -2,8 +2,8 @@
 #'
 #' Checks if term using `[vld_term](x)`.
 #'
+#' @inheritParams params
 #' @inheritParams chk::chk_flag
-#' @inheritParams vld_term
 #' @return `NULL`, invisibly. Called for the side effect of throwing an error
 #'   if the condition is not met.
 #' @export
