@@ -1,7 +1,5 @@
 #' Deprecated Functions
 #'
-#' Deprecated `term()` functions
-#'
 #' @inheritParams params
 #' @keywords internal
 #' @name term_deprecated

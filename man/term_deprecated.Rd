@@ -38,7 +38,7 @@ tdims(x)
 \item{pars}{A character vector of the new parameter names.}
 }
 \description{
-Deprecated \code{term()} functions
+Deprecated Functions
 }
 \section{Functions}{
 \itemize{
