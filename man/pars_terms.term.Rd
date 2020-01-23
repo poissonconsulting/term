@@ -31,5 +31,6 @@ Other {parameters}:
 \code{\link[universals]{set_pars}()}
 
 Other {terms}: 
+\code{\link[universals]{complete_terms}()},
 \code{\link[universals]{nterms}()}
 }
