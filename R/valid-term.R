@@ -17,7 +17,7 @@
 valid_term <- function(x) {
   chk_s3_class(x, "term")
   if (!length(x)) {
-    return(TRUE)
+    return(logical(0))
   }
   pattern <- p0(
     "^\\s*", .par_name_pattern, "\\s*(\\[\\s*",
