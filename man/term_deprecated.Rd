@@ -4,6 +4,7 @@
 \alias{term_deprecated}
 \alias{is.term}
 \alias{is.incomplete_terms}
+\alias{is.inconsistent_terms}
 \alias{parameters}
 \alias{parameters<-}
 \alias{pararameters<-}
@@ -14,6 +15,8 @@
 is.term(x)
 
 is.incomplete_terms(x)
+
+is.inconsistent_terms(x)
 
 parameters(x, ...)
 
@@ -50,6 +53,12 @@ Replace by \code{\link[=is_term]{is_term()}}
 \lifecycle{soft-deprecated}
 
 Replace by \code{\link[=is_incomplete_terms]{is_incomplete_terms()}}
+
+\item \code{is.inconsistent_terms}: Is Inconsistent Terms
+
+\lifecycle{soft-deprecated}
+
+Replace by \code{\link[=is_inconsistent_terms]{is_inconsistent_terms()}}
 
 \item \code{parameters}: Get Parameters
 

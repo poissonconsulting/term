@@ -36,7 +36,7 @@ vld_term <- function(x, validate = "complete") {
   if (validate == "valid") {
     return(TRUE)
   }
-  if (is.inconsistent_terms(x)) {
+  if (is_inconsistent_terms(x)) {
     return(FALSE)
   }
   if (validate == "consistent") {

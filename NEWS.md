@@ -1,3 +1,4 @@
+- Soft deprecated `is.inconsistent_terms()` for `is_inconsistent_terms()`.
 - Soft deprecated `is.incomplete_terms()` for `is_incomplete_terms()`.
 - Soft deprecated `is.term()` for `is_term()`.
 - Soft deprecated 'class' value of `validate` argument of `chk_term()` and `vld_term()` and set to be 'complete'.

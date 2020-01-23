@@ -8,10 +8,10 @@
 #' @export
 #'
 #' @examples
-#' is.inconsistent_terms(as.term("b[2]"))
-#' is.inconsistent_terms(as.term(c("b[2]", "b[1]")))
-#' is.inconsistent_terms(as.term(c("b[2]", "b[1,1]")))
-is.inconsistent_terms <- function(x, ...) {
+#' is_inconsistent_terms(as.term("b[2]"))
+#' is_inconsistent_terms(as.term(c("b[2]", "b[1]")))
+#' is_inconsistent_terms(as.term(c("b[2]", "b[1,1]")))
+is_inconsistent_terms <- function(x, ...) {
   if (!length(x)) {
     return(FALSE)
   }

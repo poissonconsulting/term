@@ -35,6 +35,20 @@ is.incomplete_terms <- function(x) {
   is_incomplete_terms(x)
 }
 
+#' @describeIn term_deprecated Is Inconsistent Terms
+#'
+#' \lifecycle{soft-deprecated}
+#'
+#' Replace by [is_inconsistent_terms()]
+#' @export
+is.inconsistent_terms <- function(x) {
+  deprecate_soft("0.0.1",
+    what = "is.inconsistent_terms()",
+    with = "is_inconsistent_terms()"
+  )  
+  is_inconsistent_terms(x)
+}
+
 #' @describeIn term_deprecated Get Parameters
 #'
 #' \lifecycle{soft-deprecated}
