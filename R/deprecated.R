@@ -8,6 +8,20 @@
 NULL
 
 
+#' @describeIn term_deprecated Is Term
+#'
+#' \lifecycle{soft-deprecated}
+#'
+#' Replace by [is_term()]
+#' @export
+is.term <- function(x) {
+  deprecate_soft("0.0.1",
+    what = "is.term()",
+    with = "is_term()"
+  )  
+  is_term(x)
+}
+
 #' @describeIn term_deprecated Get Parameters
 #'
 #' \lifecycle{soft-deprecated}
@@ -19,7 +33,7 @@ parameters <- function(x, ...) {
     what = "parameters()",
     with = "pars()"
   )
-  UseMethod("pars")
+  pars(x, ...)
 }
 
 
@@ -34,7 +48,8 @@ parameters <- function(x, ...) {
     what = "parameters<-",
     with = "pars<-"
   )
-  UseMethod("pars<-", x)
+  pars(x) <- value
+  x
 }
 
 
@@ -49,7 +64,8 @@ parameters <- function(x, ...) {
     what = "pararameters<-",
     with = "pars<-"
   )
-  UseMethod("pars<-", x)
+  pars(x) <- value
+  x
 }
 
 
@@ -79,19 +95,4 @@ tdims <- function(x) {
     with = "tindex()"
   )
   tindex(x)
-}
-
-
-#' @describeIn term_deprecated Is Term
-#'
-#' \lifecycle{soft-deprecated}
-#'
-#' Replace by [is_term()]
-#' @export
-is.term <- function(x) {
-  deprecate_soft("0.0.1",
-    what = "is.term()",
-    with = "is_term()"
-  )  
-  is_term(x)
 }

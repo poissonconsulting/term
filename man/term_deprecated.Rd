@@ -2,14 +2,16 @@
 % Please edit documentation in R/deprecated.R
 \name{term_deprecated}
 \alias{term_deprecated}
+\alias{is.term}
 \alias{parameters}
 \alias{parameters<-}
 \alias{pararameters<-}
 \alias{set_parameters}
 \alias{tdims}
-\alias{is.term}
 \title{Deprecated Functions}
 \usage{
+is.term(x)
+
 parameters(x, ...)
 
 parameters(x) <- value
@@ -19,8 +21,6 @@ pararameters(x) <- value
 set_parameters(x, pars)
 
 tdims(x)
-
-is.term(x)
 }
 \arguments{
 \item{x}{The object.}
@@ -36,6 +36,12 @@ Deprecated \code{term()} functions
 }
 \section{Functions}{
 \itemize{
+\item \code{is.term}: Is Term
+
+\lifecycle{soft-deprecated}
+
+Replace by \code{\link[=is_term]{is_term()}}
+
 \item \code{parameters}: Get Parameters
 
 \lifecycle{soft-deprecated}
@@ -65,12 +71,6 @@ Replace by \code{\link[=set_pars]{set_pars()}}
 \lifecycle{soft-deprecated}
 
 Replace by \code{\link[=tindex]{tindex()}}
-
-\item \code{is.term}: Is Term
-
-\lifecycle{soft-deprecated}
-
-Replace by \code{\link[=is_term]{is_term()}}
 }}
 
 \keyword{internal}
