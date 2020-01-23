@@ -4,7 +4,7 @@
 \alias{chk_term}
 \title{Check Term}
 \usage{
-chk_term(x, validate = "class", x_name = NULL)
+chk_term(x, validate = "complete", x_name = NULL)
 }
 \arguments{
 \item{x}{The object.}

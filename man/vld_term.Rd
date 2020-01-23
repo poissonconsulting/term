@@ -4,7 +4,7 @@
 \alias{vld_term}
 \title{Validate Term}
 \usage{
-vld_term(x, validate = "class")
+vld_term(x, validate = "complete")
 }
 \arguments{
 \item{x}{The object.}

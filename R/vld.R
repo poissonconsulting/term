@@ -12,7 +12,7 @@
 #' @examples
 #' vld_term(c("x[2]", "x[1]"))
 #' vld_term(as.term(c("x[2]", "x[1]")))
-vld_term <- function(x, validate = "class") {
+vld_term <- function(x, validate = "complete") {
   chk_string(validate)
   chk_subset(validate, c("class", "valid", "consistent", "complete"))
 

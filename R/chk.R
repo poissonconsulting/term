@@ -12,7 +12,7 @@
 #' chk_term(x)
 #' x <- c("x[2]", "x[1]")
 #' try(chk_term(x, validate = "sorted"))
-chk_term <- function(x, validate = "class", x_name = NULL) {
+chk_term <- function(x, validate = "complete", x_name = NULL) {
   if (vld_term(x, validate = validate)) {
     return(invisible())
   }
