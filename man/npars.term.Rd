@@ -9,7 +9,9 @@
 \arguments{
 \item{x}{An object.}
 
-\item{scalar}{A flag specifying whether to only count parameters with one term.}
+\item{scalar}{A logical scalar specifying whether to include
+all parameters (NA), only scalars (TRUE) or all parameters
+except scalars (FALSE).}
 
 \item{...}{Other arguments passed to methods.}
 }
@@ -32,4 +34,9 @@ Other {MCMC dimensions}:
 \code{\link[universals]{nsams}()},
 \code{\link[universals]{nsims}()},
 \code{\link[universals]{nterms}()}
+
+Other {parameters}: 
+\code{\link[universals]{pars_terms}()},
+\code{\link[universals]{pars}()},
+\code{\link[universals]{set_pars}()}
 }

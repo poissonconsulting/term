@@ -18,6 +18,10 @@
 
 \item{pars}{A character vector of the new parameter names.}
 
+\item{scalar}{A logical scalar specifying whether to include
+all parameters (NA), only scalars (TRUE) or all parameters
+except scalars (FALSE).}
+
 \item{incomparables}{Ignored.}
 }
 \description{

@@ -107,7 +107,7 @@ test_that("set_pars", {
   expect_identical(set_pars(as.term(c("a", "b")), c("b", "d")), as.term(c("b", "d")))
   expect_identical(set_pars(as.term(c("a [ 1]", "b")), c("b", "d")), as.term(c("b [ 1]", "d")))
   expect_error(
-    set_pars(as.term(rep("a", 7)), pars = c("gamma", "theta", "rho")),
+    set_pars(as.term(rep("a", 7)), value = c("gamma", "theta", "rho")),
     "^`value` must be length 1, not 3[.]$"
   )
 })
