@@ -4,12 +4,10 @@
 \alias{scalar_term}
 \title{Scalar Terms}
 \usage{
-scalar_term(x, repair = TRUE)
+scalar_term(x)
 }
 \arguments{
 \item{x}{The object.}
-
-\item{repair}{A logical scalar specifying whether to repair the term vector.}
 }
 \value{
 A logical vector indicating whether each term is scalar.
@@ -18,11 +16,13 @@ A logical vector indicating whether each term is scalar.
 Test whether each element in a term vector is scalar.
 }
 \details{
-The function tests for the absence of a \code{[}
-after by default repairing the term vector.
+The function tests for the absence of a \code{[}.
+
+A modified term vector may need to be repaired first.
 }
 \examples{
 scalar_term(as.term(c("a", "a[2]", "b[1]", "c[1,1]")))
+scalar_term(repair_terms(as.term(c("a", "a[2]", "b[1]", "c[1,1]"))))
 }
 \seealso{
 \code{\link[=term-vector]{term-vector()}} and \code{\link[=repair_terms]{repair_terms()}}
