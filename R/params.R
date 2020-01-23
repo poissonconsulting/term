@@ -13,6 +13,7 @@
 #' @param scalar A logical scalar specifying whether to include 
 #' all parameters (NA), only scalars (TRUE) or all parameters
 #' except scalars (FALSE).
+#' @param repair A logical scalar specifying whether to repair the term vector.
 #' @param incomparables Ignored.
 #'
 #' @name params
