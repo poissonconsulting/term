@@ -2,8 +2,6 @@
 #' @export
 universals::dims
 
-#' Dimensions of a term
-#'
 #' @inherit universals::dims
 #' @export
 #' @examples

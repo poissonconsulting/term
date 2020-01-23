@@ -2,11 +2,7 @@
 #' @export
 universals::complete_terms
 
-#' Complete Terms
-#'
-#' Adds any absent elements to a terms vector.
-#'
-#' The vector is repaired before being completed.
+#' @details The term vector is repaired before being completed.
 #' Missing values are ignored.
 #'
 #' @inherit universals::complete_terms

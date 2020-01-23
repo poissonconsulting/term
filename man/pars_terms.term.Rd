@@ -2,7 +2,7 @@
 % Please edit documentation in R/pars-terms.R
 \name{pars_terms.term}
 \alias{pars_terms.term}
-\title{Term Parameter Names}
+\title{Get Term Parameters}
 \usage{
 \method{pars_terms}{term}(x, ...)
 }

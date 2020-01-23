@@ -2,7 +2,7 @@
 % Please edit documentation in R/dims.R
 \name{dims.term}
 \alias{dims.term}
-\title{Dimensions of a term}
+\title{Dimensions of an Object}
 \usage{
 \method{dims}{term}(x, ...)
 }

@@ -2,11 +2,7 @@
 #' @export
 universals::pars_terms
 
-#' Term Parameter Names
-#'
 #' @inherit universals::pars_terms
-#'
-#' @inheritParams params
 #' @export
 #'
 #' @examples

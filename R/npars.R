@@ -2,8 +2,6 @@
 #' @export
 universals::npars
 
-#' Number of Parameters of a term
-#' 
 #' @inherit universals::npars
 #' @inheritParams params
 #' @export

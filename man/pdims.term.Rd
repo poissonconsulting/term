@@ -15,7 +15,7 @@
 A named list of the dimensions of each parameter.
 }
 \description{
-Gets the parameter dimensions of a term.
+Gets the parameter dimensions of an object.
 }
 \details{
 Errors if the parameter dimensions are inconsistent.

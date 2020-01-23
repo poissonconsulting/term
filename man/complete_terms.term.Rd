@@ -15,10 +15,10 @@
 The modified object.
 }
 \description{
-Adds any absent elements to a terms vector.
+Completes an objects terms.
 }
 \details{
-The vector is repaired before being completed.
+The term vector is repaired before being completed.
 Missing values are ignored.
 }
 \examples{

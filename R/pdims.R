@@ -2,11 +2,7 @@
 #' @export
 universals::pdims
 
-#' Parameter Dimensions
-#'
-#' Gets the parameter dimensions of a term.
-#'
-#' Errors if the parameter dimensions are inconsistent.
+#' @details Errors if the parameter dimensions are inconsistent.
 #'
 #' A named list of the dimensions of each parameter can be converted
 #' into the equivalent [term-vector()] using [term()].

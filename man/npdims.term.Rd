@@ -27,11 +27,13 @@ npdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")), terms = TRU
 \code{\link[universals:pars]{pars()}}
 
 Other {MCMC dimensions}: 
+\code{\link[universals]{collapse_chains}()},
 \code{\link[universals]{nchains}()},
 \code{\link[universals]{niters}()},
 \code{\link[universals]{nsams}()},
 \code{\link[universals]{nsims}()},
-\code{\link[universals]{nterms}()}
+\code{\link[universals]{nterms}()},
+\code{\link[universals]{split_chains}()}
 
 Other {parameters}: 
 \code{\link[universals]{pars_terms}()},
