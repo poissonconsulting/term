@@ -1,4 +1,4 @@
-- `chk_term()` and `vld_term()` argument `validate` now 'complete'.
+- Deprecated 'class' value of `validate` argument of `chk_term()` and `vld_term()` and set to be 'complete'.
 - Added `scalar_term()` to test if each term element is scalar.
 - Added `pars_terms()`.
 - Migrated `ndims()` to extras package.

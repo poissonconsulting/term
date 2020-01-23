@@ -6,7 +6,12 @@ test_that("vld_term", {
   expect_true(vld_term(as.term(character(0))))
   expect_true(vld_term(as.term(NA_character_)))
 
+    rlang::with_options(lifecycle_verbosity = "error", {
+      expect_error(vld_term(as.term(c("x[2]", "x[1")), validate = "class"), class = "defunctError")
+    })
+  rlang::with_options(lifecycle_verbosity = "quiet", {
   expect_true(vld_term(as.term(c("x[2]", "x[1")), validate = "class"))
+  })
   expect_false(vld_term(as.term(c("x[2]", "x[1")), validate = "valid"))
   expect_true(vld_term(as.term(c("x[2]", "x[1]")), validate = "valid"))
   expect_true(vld_term(as.term(c("x[2]", "x[1,1]")), validate = "valid"))

@@ -19,6 +19,7 @@ Imports:
     extras
 Suggests:
     covr,
+    rlang,
     testthat
 Remotes:
     poissonconsulting/extras
