@@ -27,13 +27,11 @@ nterms(as.term(c("alpha[1]", "alpha[1]", "beta[1,1]", "beta[1,1]")))
 }
 \seealso{
 Other {MCMC dimensions}: 
-\code{\link[universals]{collapse_chains}()},
 \code{\link[universals]{nchains}()},
 \code{\link[universals]{niters}()},
 \code{\link[universals]{npars}()},
 \code{\link[universals]{nsams}()},
-\code{\link[universals]{nsims}()},
-\code{\link[universals]{split_chains}()}
+\code{\link[universals]{nsims}()}
 
 Other {terms}: 
 \code{\link[universals]{complete_terms}()},

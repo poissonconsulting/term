@@ -29,13 +29,11 @@ npars(as.term(c("sigma", "alpha[1]", "alpha[2]")), scalar = TRUE)
 \code{\link[universals:pars]{pars()}}
 
 Other {MCMC dimensions}: 
-\code{\link[universals]{collapse_chains}()},
 \code{\link[universals]{nchains}()},
 \code{\link[universals]{niters}()},
 \code{\link[universals]{nsams}()},
 \code{\link[universals]{nsims}()},
-\code{\link[universals]{nterms}()},
-\code{\link[universals]{split_chains}()}
+\code{\link[universals]{nterms}()}
 
 Other {parameters}: 
 \code{\link[universals]{pars_terms}()},
