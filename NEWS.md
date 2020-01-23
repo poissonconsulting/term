@@ -1,3 +1,4 @@
+- Added `pars_terms()`.
 - Migrated `ndims()` to extras package.
 - Migrated `dims()` to extras package.
 
