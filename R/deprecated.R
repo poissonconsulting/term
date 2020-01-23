@@ -2,10 +2,10 @@
 #'
 #' @inheritParams params
 #' @keywords internal
-#' @name term_deprecated
+#' @name deprecated
 NULL
 
-#' @describeIn term_deprecated Is Term
+#' @describeIn deprecated Is Term
 #'
 #' \lifecycle{soft-deprecated}
 #'
@@ -19,7 +19,7 @@ is.term <- function(x) {
   is_term(x)
 }
 
-#' @describeIn term_deprecated Is Incomplete Terms
+#' @describeIn deprecated Is Incomplete Terms
 #'
 #' \lifecycle{soft-deprecated}
 #'
@@ -33,7 +33,7 @@ is.incomplete_terms <- function(x) {
   is_incomplete_terms(x)
 }
 
-#' @describeIn term_deprecated Is Inconsistent Terms
+#' @describeIn deprecated Is Inconsistent Terms
 #'
 #' \lifecycle{soft-deprecated}
 #'
@@ -47,7 +47,7 @@ is.inconsistent_terms <- function(x) {
   is_inconsistent_terms(x)
 }
 
-#' @describeIn term_deprecated Get Parameters
+#' @describeIn deprecated Get Parameters
 #'
 #' \lifecycle{soft-deprecated}
 #'
@@ -62,7 +62,7 @@ parameters <- function(x, ...) {
 }
 
 
-#' @describeIn term_deprecated Setting Parameters
+#' @describeIn deprecated Setting Parameters
 #'
 #' \lifecycle{soft-deprecated}
 #'
@@ -78,7 +78,7 @@ parameters <- function(x, ...) {
 }
 
 
-#' @describeIn term_deprecated Setting Parameters
+#' @describeIn deprecated Setting Parameters
 #'
 #' \lifecycle{soft-deprecated}
 #'
@@ -94,7 +94,7 @@ parameters <- function(x, ...) {
 }
 
 
-#' @describeIn term_deprecated Set Parameters
+#' @describeIn deprecated Set Parameters
 #'
 #' \lifecycle{soft-deprecated}
 #'
@@ -108,7 +108,7 @@ set_parameters <- function(x, pars) {
   set_pars(x, pars)
 }
 
-#' @describeIn term_deprecated Term Index
+#' @describeIn deprecated Term Index
 #'
 #' \lifecycle{soft-deprecated}
 #'
