@@ -67,7 +67,6 @@ set_parameters <- function(x, pars) {
   set_pars(x, pars)
 }
 
-
 #' @describeIn term_deprecated Term Index
 #'
 #' \lifecycle{soft-deprecated}
@@ -80,4 +79,19 @@ tdims <- function(x) {
     with = "tindex()"
   )
   tindex(x)
+}
+
+
+#' @describeIn term_deprecated Is Term
+#'
+#' \lifecycle{soft-deprecated}
+#'
+#' Replace by [is_term()]
+#' @export
+is.term <- function(x) {
+  deprecate_soft("0.0.1",
+    what = "is.term()",
+    with = "is_term()"
+  )  
+  is_term(x)
 }

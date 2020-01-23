@@ -7,6 +7,7 @@
 \alias{pararameters<-}
 \alias{set_parameters}
 \alias{tdims}
+\alias{is.term}
 \title{Deprecated Functions}
 \usage{
 parameters(x, ...)
@@ -18,6 +19,8 @@ pararameters(x) <- value
 set_parameters(x, pars)
 
 tdims(x)
+
+is.term(x)
 }
 \arguments{
 \item{x}{The object.}
@@ -62,6 +65,12 @@ Replace by \code{\link[=set_pars]{set_pars()}}
 \lifecycle{soft-deprecated}
 
 Replace by \code{\link[=tindex]{tindex()}}
+
+\item \code{is.term}: Is Term
+
+\lifecycle{soft-deprecated}
+
+Replace by \code{\link[=is_term]{is_term()}}
 }}
 
 \keyword{internal}

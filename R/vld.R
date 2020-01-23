@@ -15,12 +15,12 @@
 vld_term <- function(x, validate = "complete") {
   chk_string(validate)
   if(validate == "class") {
-    deprecate_soft("0.1.0.9001", "vld_term(validate =)",
+    deprecate_soft("0.1.0", "vld_term(validate =)",
    details = "More specifically the 'class' value of the `validate` argument has been deprecated for `vld_s3_class(class = 'term')` and the default value of validate has been replaced by 'complete'")
   }
   chk_subset(validate, c("class", "valid", "consistent", "complete"))
   
-  if (!is.term(x)) {
+  if (!is_term(x)) {
     return(FALSE)
   }
   x <- x[!is.na(x)]

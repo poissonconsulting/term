@@ -70,7 +70,7 @@ test_that("as.term.character", {
 
   x2 <- as.term(x)
   expect_is(x2, "term")
-  expect_true(is.term(x2))
+  expect_true(is_term(x2))
   x3 <- as.character(x2)
   expect_identical(x, x3)
 

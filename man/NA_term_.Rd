@@ -12,7 +12,7 @@ NA_term_
 A missing term element.
 }
 \examples{
-is.term(NA_term_)
+is_term(NA_term_)
 is.na(NA_term_)
 }
 \seealso{
