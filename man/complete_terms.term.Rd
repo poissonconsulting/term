@@ -15,7 +15,7 @@
 The modified object.
 }
 \description{
-Completes an objects terms.
+Completes an object's terms.
 }
 \details{
 The term vector is repaired before being completed.

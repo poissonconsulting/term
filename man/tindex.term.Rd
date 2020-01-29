@@ -12,7 +12,7 @@
 \item{...}{Other arguments passed to methods.}
 }
 \value{
-A named list of the index for each term.
+A named list of integer vectors of the index for each term.
 }
 \description{
 Gets the index for each term of an object.

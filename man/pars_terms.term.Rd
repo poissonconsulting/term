@@ -2,20 +2,24 @@
 % Please edit documentation in R/pars-terms.R
 \name{pars_terms.term}
 \alias{pars_terms.term}
-\title{Get Term Parameters}
+\title{Term Parameters}
 \usage{
-\method{pars_terms}{term}(x, ...)
+\method{pars_terms}{term}(x, scalar = NA, ...)
 }
 \arguments{
 \item{x}{An object.}
 
+\item{scalar}{A logical scalar specifying whether to include
+all parameters (NA), only scalars (TRUE) or all parameters
+except scalars (FALSE).}
+
 \item{...}{Other arguments passed to methods.}
 }
 \value{
-A character vector of the parameter names.
+A character vector of the term parameter names.
 }
 \description{
-Gets a character vector of the name of each parameter for each term.
+Gets the name of each parameter for each term.
 }
 \examples{
 term <- as.term(c(

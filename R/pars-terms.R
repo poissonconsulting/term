@@ -2,6 +2,7 @@
 universals::pars_terms
 
 #' @inherit universals::pars_terms
+#' @inheritParams params
 #' @export
 #'
 #' @examples
@@ -10,12 +11,18 @@ universals::pars_terms
 #'   "beta[1,2]", "beta[2,2]", "sigma", NA
 #' ))
 #' pars_terms(term)
-pars_terms.term <- function(x, ...) {
+pars_terms.term <- function(x, scalar = NA, ...) {
+  chk_lgl(scalar)
+  chk_unused(...)
+  scalar_term <- scalar_term(x)
   x <- as.character(x)
-  sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
+  x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
+  if(vld_true(scalar)) x <- x[scalar_term]
+  if(vld_false(scalar)) x <- x[!scalar_term]
+  x
 }
 
 # internal use only
-pars_terms.character <- function(x, ...) {
-  pars_terms(as.term(x))
+pars_terms.character <- function(x, scalar = NA, ...) {
+  pars_terms(as.term(x), scalar = scalar, ...)
 }

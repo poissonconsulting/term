@@ -29,7 +29,7 @@ set_pars.term <- function(x, value) {
     ))
   }
   pars <- pars(x)
-  term_pars <- pars(x, term = TRUE)
+  term_pars <- pars_terms(x)
   term_value <- NA_character_
   for (i in seq_along(pars)) {
     term_value[term_pars == pars[i]] <- value[i]

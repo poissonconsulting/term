@@ -22,6 +22,10 @@ pars.term <- function(x, scalar = NA, terms = FALSE, ...) {
   chk_lgl(scalar)
   chk_flag(terms)
   chk_unused(...)
+  
+  if(!missing(terms)) {
+    deprecate_soft("0.1.0.9003", "pars(terms =)", details = "If `terms = TRUE` use `pars_terms() otherwise replace `pars(terms = FALSE)` with `pars()`.")
+  }
 
   x <- as.character(x)
   if (!is.na(scalar)) {
@@ -34,6 +38,6 @@ pars.term <- function(x, scalar = NA, terms = FALSE, ...) {
 }
 
 # internal use only
-pars.character <- function(x, scalar = NA, terms = FALSE, ...) {
-  pars(as.term(x), scalar = scalar, terms = terms)
+pars.character <- function(x, scalar = NA, ...) {
+  pars(as.term(x), scalar = scalar, ...)
 }

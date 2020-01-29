@@ -22,7 +22,7 @@ for each term element.}
 A character vector of the parameter names.
 }
 \description{
-Gets character vector of parameter names.
+Gets the parameter names.
 }
 \examples{
 term <- as.term(c(

@@ -12,7 +12,7 @@
 \item{...}{Other arguments passed to methods.}
 }
 \value{
-A count of the number of terms.
+A integer scalar of the number of terms.
 }
 \description{
 Gets the number of unique terms.
