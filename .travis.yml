@@ -1,5 +1,5 @@
-language: R
-sudo: required
+os: linux
+language: r
 cache: packages
 
 r:
