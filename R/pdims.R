@@ -16,8 +16,6 @@ pdims.term <- function(x, ...) {
   if (is_inconsistent_terms(x)) {
     err("`x` must have terms with consistent parameter dimensions.")
   }
-  x <- sort(x)
-  names <- pars(x)
   x <- split(x, pars_terms(x))
   x <- lapply(x, max_index)
   x

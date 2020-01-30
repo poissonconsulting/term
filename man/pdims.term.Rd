@@ -30,8 +30,5 @@ pdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")))
 Other {dimensions}: 
 \code{\link[universals]{dims}()},
 \code{\link[universals]{ndims}()},
-\code{\link[universals]{npdims_terms}()},
-\code{\link[universals]{npdims}()},
-\code{\link[universals]{pdims_terms}()},
-\code{\link[universals]{tindex}()}
+\code{\link[universals]{npdims}()}
 }

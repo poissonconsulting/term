@@ -30,9 +30,6 @@ dims(as.term(c("beta[1,1]", "beta[1,2]")))
 
 Other {dimensions}: 
 \code{\link[universals]{ndims}()},
-\code{\link[universals]{npdims_terms}()},
 \code{\link[universals]{npdims}()},
-\code{\link[universals]{pdims_terms}()},
-\code{\link[universals]{pdims}()},
-\code{\link[universals]{tindex}()}
+\code{\link[universals]{pdims}()}
 }

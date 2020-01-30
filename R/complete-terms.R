@@ -1,10 +1,18 @@
+#' Complete Terms
+#'
+#' Completes an object's terms.
+#'
+#' @inheritParams params
 #' @export
-universals::complete_terms
+complete_terms <- function(x, ...) {   
+  UseMethod("complete_terms")
+}
 
+#' @describeIn complete_terms Complete Terms for a term Vector
+#' 
 #' @details The term vector is repaired before being completed.
 #' Missing values are ignored.
 #'
-#' @inherit universals::complete_terms
 #' @seealso [term-vector()], [repair_terms()] and [is_incomplete_terms()].
 #' @export
 #'

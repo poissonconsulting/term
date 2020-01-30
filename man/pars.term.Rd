@@ -36,6 +36,5 @@ pars(term, terms = TRUE)
 \seealso{
 Other {parameters}: 
 \code{\link[universals]{npars}()},
-\code{\link[universals]{pars_terms}()},
 \code{\link[universals]{set_pars}()}
 }

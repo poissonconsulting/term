@@ -12,7 +12,9 @@
 #' consistent_term(as.term(c("alpha[1]", NA_term_, "beta[1,1]", "beta[2]")))
 consistent_term <- function(x) {
   chk_s3_class(x, "term")
-  x <- npdims(x, terms = TRUE)
+  names <- pars_terms(x)
+  x <- npdims_terms(x)
+  names(x) <- names
   y <- x[!is.na(x)]
   for (par in unique(names(y))) {
     bol <- names(y) == par

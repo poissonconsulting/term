@@ -2,7 +2,7 @@
 % Please edit documentation in R/npdims.R
 \name{npdims.term}
 \alias{npdims.term}
-\title{Number of Parameter Dimensions of a term}
+\title{Number of Dimensions of each Parameter}
 \usage{
 \method{npdims}{term}(x, terms = FALSE, ...)
 }
@@ -21,7 +21,6 @@ Gets the number of parameters of an object as returned by \code{\link[universals
 }
 \examples{
 npdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")))
-npdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")), terms = TRUE)
 }
 \seealso{
 \code{\link[universals:pars]{pars()}}
@@ -34,7 +33,6 @@ Other {MCMC dimensions}:
 \code{\link[universals]{nterms}()}
 
 Other {parameters}: 
-\code{\link[universals]{pars_terms}()},
 \code{\link[universals]{pars}()},
 \code{\link[universals]{set_pars}()}
 }
