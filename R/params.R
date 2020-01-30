@@ -12,7 +12,7 @@
 #' @param select A character vector of the names of the parameters to include in the subsetted object.
 #'
 #' @param value A character vector of the new parameter names.
-#' @param pars A character vector of the new parameter names.
+#' @param pars A character vector of parameter names.
 #' @param scalar A logical scalar specifying whether to include 
 #' all parameters (NA), only scalars (TRUE) or all parameters
 #' except scalars (FALSE).

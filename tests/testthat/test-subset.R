@@ -4,7 +4,7 @@ test_that("subset.term", {
   term <- as.term(c("alpha[1]", "alpha[2]", "sigma"))
   expect_identical(subset(term, character(0)), term(0L))
   expect_error(subset(term, "beta"),
-    "^`select` must match 'alpha' or 'sigma', not 'beta'[.]$",
+    "^`pars` must match 'alpha' or 'sigma', not 'beta'[.]$",
     class = "chk_error"
   )
   term <- as.term(c(
@@ -28,10 +28,25 @@ test_that("subset.term", {
     ))
   )
   expect_error(subset(term, "tt"),
-    "^`select` must match 'alpha', 'beta' or 'sigma', not 'tt'[.]$",
+    "^`pars` must match 'alpha', 'beta' or 'sigma', not 'tt'[.]$",
     class = "chk_error"
   )
 })
+
+test_that("subset.term deprecated", {
+  term <- as.term(c("alpha[1]", "alpha[2]", "sigma"))
+  
+  rlang::with_options(lifecycle_verbosity = "error", {
+    expect_error(subset(term, select = NULL), class = "defunctError")
+  })
+ 
+    suppressWarnings(expect_error(subset(term, select = "alpha", pars = "alpha"), class = "defunctError"))
+    
+  rlang::with_options(lifecycle_verbosity = "quiet", {
+  expect_identical(subset(term, select = character(0)), term(0L))
+  })
+})
+
 
 test_that("subset.term missing values", {
   expect_error(subset(NA_term_), "^`x` must not have any missing values[.]$",

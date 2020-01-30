@@ -32,7 +32,7 @@ tdims(x)
 
 \item{value}{A character vector of the new parameter names.}
 
-\item{pars}{A character vector of the new parameter names.}
+\item{pars}{A character vector of parameter names.}
 }
 \description{
 Deprecated Functions

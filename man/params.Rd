@@ -20,7 +20,7 @@ are 'class', 'valid', 'consistent' and 'complete'.}
 
 \item{value}{A character vector of the new parameter names.}
 
-\item{pars}{A character vector of the new parameter names.}
+\item{pars}{A character vector of parameter names.}
 
 \item{scalar}{A logical scalar specifying whether to include
 all parameters (NA), only scalars (TRUE) or all parameters

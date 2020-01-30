@@ -14,20 +14,31 @@
 #' ))
 #' subset(term, "beta")
 #' subset(term, c("alpha", "sigma"))
-subset.term <- function(x, select = NULL, ...) {
+subset.term <- function(x, pars = NULL, select = NULL, ...) {
   chk_not_any_na(x)
   chk_unused(...)
-
-  if (is.null(select)) {
+  
+  if(!missing(select)) {
+    deprecate_soft("0.1.0.9003", "subset(select =)",
+                   "subset(pars =)")
+  }
+  if(!is.null(select)) {
+    chk_s3_class(select, "character")
+    chk_subset(select, pars(x))
+    if(!is.null(pars))
+      deprecate_stop("0.1.0.9003", "subset(select =)",
+                   "subset(pars =)")
+    pars <- select
+  }
+  if (is.null(pars)) {
     return(x)
   }
+  chk_s3_class(pars, "character")
+  chk_subset(pars, pars(x))
 
-  chk_s3_class(select, "character")
-  chk_subset(select, pars(x))
-
-  if (!length(select)) {
+  if (!length(pars)) {
     return(term(0L))
   }
 
-  x[pars_terms(x) %in% select]
+  x[pars_terms(x) %in% pars]
 }
