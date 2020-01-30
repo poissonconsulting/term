@@ -7,7 +7,6 @@
 \alias{is.inconsistent_terms}
 \alias{parameters}
 \alias{parameters<-}
-\alias{pararameters<-}
 \alias{set_parameters}
 \alias{tdims}
 \title{Deprecated Functions}
@@ -21,8 +20,6 @@ is.inconsistent_terms(x)
 parameters(x, ...)
 
 parameters(x) <- value
-
-pararameters(x) <- value
 
 set_parameters(x, pars)
 
@@ -67,12 +64,6 @@ Replace by \code{\link[=is_inconsistent_terms]{is_inconsistent_terms()}}
 Replace by \code{\link[=pars]{pars()}}
 
 \item \code{parameters<-}: Setting Parameters
-
-\lifecycle{soft-deprecated}
-
-Replace by pars<-
-
-\item \code{pararameters<-}: Setting Parameters
 
 \lifecycle{soft-deprecated}
 

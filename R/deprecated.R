@@ -77,23 +77,6 @@ parameters <- function(x, ...) {
   x
 }
 
-
-#' @describeIn deprecated Setting Parameters
-#'
-#' \lifecycle{soft-deprecated}
-#'
-#' Replace by pars<-
-#' @export
-`pararameters<-` <- function(x, value) {
-  deprecate_soft("0.0.1.9000",
-    what = "pararameters<-",
-    with = "pars<-"
-  )
-  pars(x) <- value
-  x
-}
-
-
 #' @describeIn deprecated Set Parameters
 #'
 #' \lifecycle{soft-deprecated}
