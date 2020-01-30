@@ -30,6 +30,15 @@ max_index <- function(x) {
   apply(x, 2, max)
 }
 
+scalar_term <- function(x) {
+  if (!length(x)) {
+    return(logical(0))
+  }
+  scalar <- !grepl("\\[", x)
+  is.na(scalar[is.na(x)]) <- TRUE
+  scalar
+}
+
 set_class <- function(x, class) {
   class(x) <- class
   x
