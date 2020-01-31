@@ -4,11 +4,11 @@ test_that("set_pars", {
   expect_identical(set_pars(as.term("a"), "b"), as.term("b"))
   expect_error(
     set_pars(as.term("a"), c("b", "a")),
-    "^`value` must be length 1, not 2[.]$"
+    "^`value` must be length 1, not 2[.]$", class = "chk_error"
   )
   expect_error(
     set_pars(as.term(c("a", "a")), c("b", "a", "c")),
-    "^`value` must be length 1, not 3[.]$"
+    "^`value` must be length 1, not 3[.]$", class = "chk_error"
   )
   expect_error(
     set_pars(as.term("a"), ""),
@@ -24,7 +24,7 @@ test_that("set_pars", {
   expect_identical(set_pars(as.term(c("a [ 1]", "b")), c("b", "d")), as.term(c("b [ 1]", "d")))
   expect_error(
     set_pars(as.term(rep("a", 7)), value = c("gamma", "theta", "rho")),
-    "^`value` must be length 1, not 3[.]$"
+    "^`value` must be length 1, not 3[.]$", class = "chk_error"
   )
 })
 

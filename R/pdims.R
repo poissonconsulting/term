@@ -14,7 +14,7 @@ universals::pdims
 pdims.term <- function(x, ...) {
   chk_not_any_na(x)
   if (is_inconsistent_terms(x)) {
-    err("`x` must have terms with consistent parameter dimensions.")
+    abort_chk("`x` must have terms with consistent parameter dimensions.")
   }
   x <- split(x, pars_terms(x))
   x <- lapply(x, max_index)

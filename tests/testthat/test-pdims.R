@@ -47,6 +47,6 @@ test_that("pdims missing value", {
 test_that("pdims inconsistent", {
   expect_error(
     pdims(as.term(c("alpha[1]", "alpha[1,1]"))),
-    "^`x` must have terms with consistent parameter dimensions[.]$"
+    "^`x` must have terms with consistent parameter dimensions[.]$", class = "chk_error"
   )
 })
