@@ -6,13 +6,13 @@ universals::set_pars
 #' @inherit universals::set_pars
 #'
 #' @export
-set_pars.term <- function(x, value) {
+set_pars.term <- function(x, value, ...) {
   chk_not_any_na(x)
+  chk_term(x, validate = "valid")
   chk_s3_class(value, "character")
   chk_not_any_na(value)
   chk_unique(value)
-
-  if (any(!valid_term(x))) err("`x` must not include invalid terms.")
+  chk_unused(...)
 
   if (!identical(npars(x), length(value))) {
     err("`value` must be length ", npars(x), ", not ", length(value), ".")

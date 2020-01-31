@@ -38,7 +38,7 @@ test_that("set_pars missing values", {
   )
   expect_error(
     set_pars(as.term(c("c c", "b")), "a"),
-    "^`x` must not include invalid terms[.]$"
+    "^All elements of term vector `x` must be valid[.]$", class = "chk_error"
   )
 })
 
