@@ -23,10 +23,7 @@ set_pars.term <- function(x, value, ...) {
   }
 
   if (!vld_match(value, p0("^", .par_name_pattern, "$"))) {
-    err(ngettext(
-      length(value), "`value` must be a valid parameter name.",
-      "`value` must be valid parameter names."
-    ))
+    abort_chk("Parameter name%s in `value` must be valid.", n = length(value))
   }
   pars <- pars(x)
   term_pars <- pars_terms(x)
