@@ -12,11 +12,11 @@ test_that("set_pars", {
   )
   expect_error(
     set_pars(as.term("a"), ""),
-    "^Parameter name in `value` must be valid[.]$", class = "chk_error"
+    "^`value` must match regular expression", class = "chk_error"
   )
   expect_error(
     set_pars(as.term("a"), "1"),
-    "^Parameter name in `value` must be valid[.]$", class = "chk_error"
+    "^`value` must match regular expression", class = "chk_error"
   )
 
   expect_identical(set_pars(as.term(c("a", "b")), c("b", "a")), as.term(c("b", "a")))

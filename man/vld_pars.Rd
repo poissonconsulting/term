@@ -22,6 +22,3 @@ The character vector must consist of unique, non-missing values.
 vld_pars(c("x", "a1._", "X"))
 vld_pars(c("x[1]", "a1", "a1", "._0"))
 }
-\seealso{
-\code{\link[=vld_pars]{vld_pars()}}
-}
