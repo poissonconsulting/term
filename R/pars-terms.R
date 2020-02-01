@@ -5,6 +5,7 @@
 #' @inheritParams params
 #' @param x A term vector.
 #' @return A character vector of the term parameter names.
+#' @family {parameters}
 #' @export
 #' 
 #' @examples

@@ -20,6 +20,9 @@ A character vector of the parameter names.
 \description{
 Gets the name of each scalar parameter.
 }
+\details{
+Useful for subsetting MCMC objects.
+}
 \section{Methods (by class)}{
 \itemize{
 \item \code{term}: Scalar Parameter Names for term vector
@@ -31,5 +34,10 @@ term <- as.term(c(
   "beta[1,2]", "beta[2,2]", "sigma", NA
 ))
 pars_scalar(term)
+}
+\seealso{
+Other {parameters}: 
+\code{\link{pars.term}()},
+\code{\link{pars_terms}()}
 }
 \concept{{parameters}}

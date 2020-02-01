@@ -8,6 +8,7 @@ universals::pars
 #' @inheritParams params
 #' @param terms A flag specifying whether to return the parameter name
 #' for each term element.
+#' @family {parameters}
 #' @export
 #'
 #' @examples
@@ -16,8 +17,6 @@ universals::pars
 #'   "beta[1,2]", "beta[2,2]", "sigma", NA
 #' ))
 #' pars(term)
-#' pars(term, scalar = TRUE)
-#' pars(term, terms = TRUE)
 pars.term <- function(x, scalar = NA, terms = FALSE, ...) {
   chk_lgl(scalar)
   chk_flag(terms)

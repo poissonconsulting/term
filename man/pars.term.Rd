@@ -30,11 +30,10 @@ term <- as.term(c(
   "beta[1,2]", "beta[2,2]", "sigma", NA
 ))
 pars(term)
-pars(term, scalar = TRUE)
-pars(term, terms = TRUE)
 }
 \seealso{
 Other {parameters}: 
-\code{\link[universals]{npars}()},
-\code{\link[universals]{set_pars}()}
+\code{\link{pars_scalar}()},
+\code{\link{pars_terms}()}
 }
+\concept{{parameters}}

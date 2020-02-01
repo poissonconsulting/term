@@ -28,3 +28,9 @@ term <- as.term(c(
 ))
 pars_terms(term)
 }
+\seealso{
+Other {parameters}: 
+\code{\link{pars.term}()},
+\code{\link{pars_scalar}()}
+}
+\concept{{parameters}}

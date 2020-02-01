@@ -1,6 +1,8 @@
 #' Scalar Parameters 
 #'
 #' Gets the name of each scalar parameter.
+#' 
+#' Useful for subsetting MCMC objects.
 #'
 #' @inheritParams params
 #' @return A character vector of the parameter names.
