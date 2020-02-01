@@ -22,17 +22,3 @@ test_that("vld_term", {
   expect_true(vld_term(as.term(c("x[2,1]", "x[1,1]", "x[1,1]")), validate = "complete"))
   expect_true(vld_term(as.term(c("x[2,1]", "x[1,1]", "x[1,1]", NA)), validate = "complete"))
 })
-
-test_that("vld_pars", {
-  expect_true(vld_pars(character(0)))
-  expect_false(vld_pars(factor(0)))
-  expect_false(vld_pars(NA_character_))
-  expect_true(vld_pars("a"))
-  expect_false(vld_pars(c("a", "a")))
-  expect_true(vld_pars(c("a", "A")))
-  expect_false(vld_pars("a[1]"))
-  expect_true(vld_pars("a1._"))
-  expect_false(vld_pars(".a"))
-  expect_false(vld_pars("_a"))
-  expect_false(vld_pars("1a"))
-})
