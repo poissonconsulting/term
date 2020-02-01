@@ -33,6 +33,7 @@ pars(term)
 }
 \seealso{
 Other {parameters}: 
+\code{\link{npars_scalar}()},
 \code{\link{pars_scalar}()},
 \code{\link{pars_terms}()}
 }
