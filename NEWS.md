@@ -1,3 +1,4 @@
+- Added `pars_scalar()`.
 - Soft deprecated `subset(select = )` for `subset(pars = )`.
 - Soft deprecated `terms` argument of `npdims()`.
 - Soft deprecated `is.inconsistent_terms()` for `is_inconsistent_terms()`.
