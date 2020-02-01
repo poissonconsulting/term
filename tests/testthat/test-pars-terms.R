@@ -8,6 +8,9 @@ test_that("pars.term", {
   rlang::with_options(lifecycle_verbosity = "quiet", {
   expect_identical(pars_terms(terms, scalar = TRUE), "sigma")
     })
+  rlang::with_options(lifecycle_verbosity = "quiet", {
+  expect_identical(pars_terms(terms, scalar = FALSE), c("alpha", "alpha", "beta",  "beta",  "beta",  "beta"))
+    })
   expect_identical(
     pars_terms(terms),
     c("alpha", "alpha", "beta", "beta", "beta", "beta", "sigma")

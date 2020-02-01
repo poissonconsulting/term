@@ -42,6 +42,14 @@ test_that("set_pars missing values", {
   )
 })
 
+test_that("set_pars no values", {
+  term <- as.term(character(0))
+  expect_identical(set_pars(term, character(0)), term)
+  expect_error(set_pars(term, "c"), 
+               "^`value` must be length 0, not 1[.]$",
+               class = "chk_error")
+})
+
 test_that("set_pars missing values", {
   term <- as.term(c("a [1]", "a[3,2]", "b", "bb"))
   pars(term) <- c("c", "d", "cd")
