@@ -41,6 +41,6 @@ pars.term <- function(x, scalar = NA, terms = FALSE, ...) {
 }
 
 # internal use only
-pars.character <- function(x, scalar = NA, ...) {
-  pars(as.term(x), scalar = scalar, ...)
+pars.character <- function(x, ...) {
+  pars(as.term(x))
 }

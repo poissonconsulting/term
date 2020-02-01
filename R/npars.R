@@ -16,5 +16,6 @@ npars.term <- function(x, scalar = NA, ...) {
   if (anyNA(x)) {
     return(NA_integer_)
   }
+  if(missing(scalar)) return(length(pars(x)))
   length(pars(x, scalar = scalar))
 }

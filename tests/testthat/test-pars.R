@@ -13,7 +13,9 @@ test_that("pars.term", {
     "beta[1,2]", "beta[2,2]", "sigma"
   ))
   expect_identical(pars(terms), c("alpha", "beta", "sigma"))
+  rlang::with_options(lifecycle_verbosity = "quiet", {
   expect_identical(pars(terms, scalar = TRUE), "sigma")
+  })
 })
 
 test_that("pars.term deprecated terms", {
@@ -40,6 +42,7 @@ test_that("pars.term deprecated terms", {
 
 test_that("pars.term", {
   expect_identical(pars(as.term("b")), "b")
+  rlang::with_options(lifecycle_verbosity = "quiet", {
   expect_identical(pars(as.term("b"), scalar = TRUE), "b")
   expect_identical(pars(as.term("b[1]")), "b")
   expect_identical(pars(as.term("b[1]"), scalar = TRUE), character(0))
@@ -49,9 +52,11 @@ test_that("pars.term", {
   expect_identical(pars(as.term(c("b", "b[1]", "b[2]")), scalar = TRUE), "b")
   expect_identical(pars(as.term(c("b[1]", "b[2]"))), "b")
   expect_identical(pars(as.term(c("b[1]", "b[2]")), scalar = TRUE), character(0))
+  })
 })
 
 test_that("pars.term missing values", {
+  rlang::with_options(lifecycle_verbosity = "quiet", {
   expect_identical(pars(as.term(NA_character_)), NA_character_)
   expect_identical(pars(as.term(c(NA_character_, "a"))), c(NA_character_, "a"))
   expect_identical(pars(as.term(c("a", NA_character_, "a"))), c("a", NA_character_))
@@ -85,4 +90,5 @@ test_that("pars.term missing values", {
     pars(as.term(c("b[2]", NA_character_, "a")), scalar = TRUE),
     c(NA_character_, "a")
   )
+  })
 })
