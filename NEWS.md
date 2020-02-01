@@ -1,3 +1,5 @@
+- Soft deprecated `pars(scalar =)` and `npars(scalar =)` for `pars_scalar()` and `npars_scalar()`.
+- Soft deprecated `pars_terms(scalar =)`.
 - Added `pars_scalar()` and `npars_scalar()`.
 - Soft deprecated `subset(select = )` for `subset(pars = )`.
 - Soft deprecated `terms` argument of `npdims()`.

@@ -19,6 +19,10 @@ pars_terms <- function(x, scalar = NA, ...) {
   chk_lgl(scalar)
   chk_unused(...)
   
+  if(!missing(scalar)) {
+    deprecate_soft("0.1.0.9003", "pars_terms(scalar =)")
+  }
+  
   scalar_term <- scalar_term(x)
   x <- as.character(x)
   x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
