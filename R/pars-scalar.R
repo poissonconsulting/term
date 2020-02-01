@@ -27,5 +27,5 @@ pars_scalar.term <- function(x, ...) {
   x <- x[scalar_term(x)]
   x <- as.character(x)
   x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
-  x <- unique(x)
+  unique(x)
 }
