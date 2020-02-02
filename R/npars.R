@@ -11,7 +11,7 @@ npars.term <- function(x, scalar = NA, ...) {
   chk_unused(...)
   
   if(!missing(scalar)) {
-    deprecate_soft("0.1.0.9003", "npars(scalar =)", details = "If `scalar = TRUE` use `npars_scalar() otherwise replace `pars(scalar = NA)` with `npars()`.")
+    deprecate_soft("0.1.0.9003", "term::npars(scalar =)", details = "If `scalar = TRUE` use `npars_scalar() otherwise replace `pars(scalar = NA)` with `npars()`.")
   }
   if (anyNA(x)) {
     return(NA_integer_)
