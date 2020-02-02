@@ -23,11 +23,11 @@ pars.term <- function(x, scalar = NA, terms = FALSE, ...) {
   chk_unused(...)
   
   if(!missing(terms)) {
-    deprecate_soft("0.1.0.9003", "pars(terms =)", details = "If `terms = TRUE` use `pars_terms() otherwise replace `pars(terms = FALSE)` with `pars()`.")
+    deprecate_soft("0.1.0.9003", "term::pars(terms =)", details = "If `terms = TRUE` use `pars_terms() otherwise replace `pars(terms = FALSE)` with `pars()`.")
   }
   
   if(!missing(scalar)) {
-    deprecate_soft("0.1.0.9003", "pars(scalar =)", details = "If `scalar = TRUE` use `pars_scalar() otherwise replace `pars(scalar = NA)` with `pars()`.")
+    deprecate_soft("0.1.0.9003", "term::pars(scalar =)", details = "If `scalar = TRUE` use `pars_scalar() otherwise replace `pars(scalar = NA)` with `pars()`.")
   }
 
   x <- as.character(x)
