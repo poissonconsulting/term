@@ -13,8 +13,8 @@ NULL
 #' @export
 is.term <- function(x) {
   deprecate_soft("0.0.1.9000",
-    what = "is.term()",
-    with = "is_term()"
+    what = "term::is.term()",
+    with = "term::is_term()"
   )  
   is_term(x)
 }
@@ -27,8 +27,8 @@ is.term <- function(x) {
 #' @export
 is.incomplete_terms <- function(x) {
   deprecate_soft("0.0.1.9000",
-    what = "is.incomplete_terms()",
-    with = "is_incomplete_terms()"
+    what = "term::is.incomplete_terms()",
+    with = "term::is_incomplete_terms()"
   )  
   is_incomplete_terms(x)
 }
@@ -41,8 +41,8 @@ is.incomplete_terms <- function(x) {
 #' @export
 is.inconsistent_terms <- function(x) {
   deprecate_soft("0.0.1.9000",
-    what = "is.inconsistent_terms()",
-    with = "is_inconsistent_terms()"
+    what = "term::is.inconsistent_terms()",
+    with = "term::is_inconsistent_terms()"
   )  
   is_inconsistent_terms(x)
 }
@@ -55,8 +55,8 @@ is.inconsistent_terms <- function(x) {
 #' @export
 parameters <- function(x, ...) {
   deprecate_soft("0.0.1.9000",
-    what = "parameters()",
-    with = "pars()"
+    what = "term::parameters()",
+    with = "term::pars()"
   )
   pars(x, ...)
 }
@@ -85,8 +85,8 @@ parameters <- function(x, ...) {
 #' @export
 set_parameters <- function(x, pars) {
   deprecate_soft("0.0.1.9000",
-    what = "set_parameters()",
-    with = "set_pars()"
+    what = "term::set_parameters()",
+    with = "term::set_pars()"
   )
   set_pars(x, pars)
 }
@@ -99,8 +99,8 @@ set_parameters <- function(x, pars) {
 #' @export
 tdims <- function(x) {
   deprecate_soft("0.0.1.9000",
-    what = "tdims()",
-    with = "tindex()"
+    what = "term::tdims()",
+    with = "term::tindex()"
   )
   tindex(x)
 }
