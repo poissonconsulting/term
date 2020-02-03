@@ -1,8 +1,8 @@
-context("term")
-
-test_that("term", {
+test_that("term()", {
   expect_identical(term(par = 0L), new_term())
   expect_identical(term(), new_term())
+  expect_identical(term(NA), NA_term_)
+  expect_identical(term(NA_character_), NA_term_)
   expect_identical(term(par = 0), new_term())
   expect_identical(term(par = 1L), new_term("par"))
   expect_identical(term(par = 2L), new_term(c("par[1]", "par[2]")))
@@ -32,7 +32,7 @@ test_that("term", {
   )
 })
 
-test_that("term.list", {
+test_that("term() with list", {
   expect_identical(term(!!!list()), new_term())
   expect_error(term("x", 1L), class = "vctrs_error_incompatible")
   expect_identical(term(x = 1L), new_term("x"))
@@ -46,4 +46,13 @@ test_that("term.list", {
     term(!!!list(y = c(2L, 2L), x = 2)),
     new_term(c("y[1,1]", "y[2,1]", "y[1,2]", "y[2,2]", "x[1]", "x[2]"))
   )
+})
+
+
+test_that("term() with term", {
+  expect_identical(term(new_term()), new_term())
+  expect_identical(term(new_term("a")), new_term("a"))
+  expect_identical(term(term("a", "b"), "c"), new_term(c("a", "b", "c")))
+  expect_identical(term(NA_term_), NA_term_)
+  expect_identical(term("a", NA_term_), new_term(c("a", NA)))
 })
