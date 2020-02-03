@@ -1,3 +1,4 @@
+- `is_complete_terms()` now requires same number of duplicate copies.
 - Soft deprecated `pars(scalar =)` and `npars(scalar =)` for `pars_scalar()` and `npars_scalar()`.
 - Soft deprecated `pars_terms(scalar =)`.
 - Added `pars_scalar()` and `npars_scalar()`.
