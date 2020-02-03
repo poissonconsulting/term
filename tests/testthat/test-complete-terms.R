@@ -4,7 +4,7 @@ test_that("complete_terms", {
   expect_error(complete_terms(NA_term_), "^`x` must not have any missing values[.]$",
     class = "chk_error"
   )
-  expect_identical(complete_terms(term(0L)), term(0L))
+  expect_identical(complete_terms(new_term()), new_term())
   expect_error(
     complete_terms(new_term(c(NA_term_, "b[2]"))),
     "^`x` must not have any missing values[.]$",

@@ -1,7 +1,7 @@
 context("is-incomplete-terms")
 
 test_that("is_incomplete_terms", {
-  expect_false(is_incomplete_terms(term(0L)))
+  expect_false(is_incomplete_terms(new_term()))
   expect_false(is_incomplete_terms(new_term("b")))
   expect_identical(is_incomplete_terms(new_term(c("b", NA))), NA)
   expect_false(is_incomplete_terms(new_term(c("b", "b[2]"))))
