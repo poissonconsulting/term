@@ -98,7 +98,7 @@ pdims(term)
 #> [1] 1
 
 # get the parameter names by term
-pars(term, terms = TRUE)
+pars_terms(term)
 #> [1] "alpha" "alpha" "beta"  "beta"  "beta"  "beta"  "sigma"
 # and the term indices
 tindex(term)
@@ -147,11 +147,11 @@ consistent_term(as.term(c("a", "a[2,1]", "b[1,1]", "b[10,99,1]")))
 #> [1] FALSE FALSE FALSE FALSE
 
 # complete terms
-is.incomplete_terms(as.term(c("a", "a[2]", "b[1,1]", "b[2,1]")))
+is_incomplete_terms(as.term(c("a", "a[2]", "b[1,1]", "b[2,1]")))
 #> [1] FALSE
 
 # incomplete terms
-is.incomplete_terms(as.term(c("a", "a[3]", "b[1,1]", "b[2,2]")))
+is_incomplete_terms(as.term(c("a", "a[3]", "b[1,1]", "b[2,2]")))
 #> [1] TRUE
 ```
 
@@ -159,6 +159,7 @@ is.incomplete_terms(as.term(c("a", "a[3]", "b[1,1]", "b[2,2]")))
 
 ``` r
 x <- as.term(c("a[1]", "a[3]"))
+chk::chk_s3_class(x, "term")
 chk_term(x, validate = "valid")
 chk_term(x, validate = "complete")
 #> Error: All elements of term vector `x` must be complete.

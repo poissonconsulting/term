@@ -80,7 +80,7 @@ pars(term)
 pdims(term)
 
 # get the parameter names by term
-pars(term, terms = TRUE)
+pars_terms(term)
 # and the term indices
 tindex(term)
 ```
@@ -103,15 +103,16 @@ consistent_term(as.term(c("a", "a[2]", "b[1,1]", "b[10,99]")))
 consistent_term(as.term(c("a", "a[2,1]", "b[1,1]", "b[10,99,1]")))
 
 # complete terms
-is.incomplete_terms(as.term(c("a", "a[2]", "b[1,1]", "b[2,1]")))
+is_incomplete_terms(as.term(c("a", "a[2]", "b[1,1]", "b[2,1]")))
 
 # incomplete terms
-is.incomplete_terms(as.term(c("a", "a[3]", "b[1,1]", "b[2,2]")))
+is_incomplete_terms(as.term(c("a", "a[3]", "b[1,1]", "b[2,2]")))
 ```
 
 ### Checking Term Vectors
 ```{r, error=TRUE}
 x <- as.term(c("a[1]", "a[3]"))
+chk::chk_s3_class(x, "term")
 chk_term(x, validate = "valid")
 chk_term(x, validate = "complete")
 ```
