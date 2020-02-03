@@ -9,7 +9,6 @@
 #' see `chk_valid()` for details.
 #'
 #' @param ... Term values.
-#' @inheritParams params
 #'
 #' @return A term vector.
 #' @aliases term-object term_object term-vector term_vector
