@@ -10,6 +10,10 @@
 #' @examples
 #' new_term()
 #' new_term(c("a", "b[1]", "b[2]"))
+#'
+#' # Terms are not checked for validity:
+#' new_term("r[")
+#' repair_term(new_term("r["))
 new_term <- function(x = character()) {
   new_vctr(x, class = "term")
 }
