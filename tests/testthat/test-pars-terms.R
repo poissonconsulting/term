@@ -1,7 +1,7 @@
 context("pars-terms")
 
 test_that("pars.term", {
-  terms <- as.term(c(
+  terms <- new_term(c(
     "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
     "beta[1,2]", "beta[2,2]", "sigma"
   ))
@@ -18,17 +18,17 @@ test_that("pars.term", {
 })
 
 test_that("pars_terms.term missing values", {
-  expect_identical(pars_terms(as.term(NA_character_)), NA_character_)
+  expect_identical(pars_terms(new_term(NA_character_)), NA_character_)
   expect_identical(
-    pars_terms(as.term(c(NA_character_, "a"))),
+    pars_terms(new_term(c(NA_character_, "a"))),
     c(NA_character_, "a")
   )
   expect_identical(
-    pars_terms(as.term(c("a", NA_character_, "a"))),
+    pars_terms(new_term(c("a", NA_character_, "a"))),
     c("a", NA_character_, "a")
   )
   expect_identical(
-    pars_terms(as.term(c(NA_character_, "a", NA_character_, "a"))),
+    pars_terms(new_term(c(NA_character_, "a", NA_character_, "a"))),
     c(NA_character_, "a", NA_character_, "a")
   )
 })

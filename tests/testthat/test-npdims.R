@@ -2,11 +2,11 @@ context("npdims")
 
 test_that("npdims.term", {
   expect_identical(
-    npdims(as.term(character(0))),
+    npdims(new_term(character(0))),
     rlang::set_names(integer(0), character(0))
   )
   expect_identical(
-    npdims(as.term(c(
+    npdims(new_term(c(
       "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
       "beta[1,2]", "beta[2,2]", "sigma"
     ))),
@@ -14,18 +14,18 @@ test_that("npdims.term", {
   )
 
   rlang::with_options(lifecycle_verbosity = "error", {
-    expect_error(npdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")), terms = TRUE), class = "defunctError")
+    expect_error(npdims(new_term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")), terms = TRUE), class = "defunctError")
   })
 
   rlang::with_options(lifecycle_verbosity = "quiet", {
   expect_identical(
-    npdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")), terms = TRUE),
+    npdims(new_term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")), terms = TRUE),
     c(alpha = 1L, alpha = 1L, beta = 2L, beta = 2L)
   )})
 
   rlang::with_options(lifecycle_verbosity = "quiet", {
   expect_identical(
-    npdims(as.term(c("beta[1,1]", "alpha[1]", "alpha[3]", "beta[10]")), terms = TRUE),
+    npdims(new_term(c("beta[1,1]", "alpha[1]", "alpha[3]", "beta[10]")), terms = TRUE),
     c(beta = 2L, alpha = 1L, alpha = 1L, beta = 1L)
   )})
 

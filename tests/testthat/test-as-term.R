@@ -1,33 +1,33 @@
 context("as-term")
 
 test_that("as.term.integer", {
-  expect_identical(as.term(1L, name = "par"), as.term("par"))
+  expect_identical(as.term(1L, name = "par"), new_term("par"))
   expect_identical(
     as.term(c(1L, 4L), name = "par"),
-    as.term(c("par[1]", "par[2]"))
+    new_term(c("par[1]", "par[2]"))
   )
   expect_identical(
     as.term(integer(0), name = "par"),
-    as.term(character(0))
+    new_term(character(0))
   )
 })
 
 test_that("as.term.double", {
-  expect_identical(as.term(1, name = "par"), as.term("par"))
+  expect_identical(as.term(1, name = "par"), new_term("par"))
   expect_identical(
     as.term(c(1, 4), name = "par"),
-    as.term(c("par[1]", "par[2]"))
+    new_term(c("par[1]", "par[2]"))
   )
   expect_identical(
     as.term(double(0), name = "par"),
-    as.term(character(0))
+    new_term(character(0))
   )
 })
 
 test_that("as.term.matrix", {
   expect_identical(
     as.term(matrix(1)[-1, -1], "t"),
-    as.term(character(0))
+    new_term(character(0))
   )
   expect_identical(
     as.term(matrix(1:12, c(3, 4)), "t"),
@@ -41,7 +41,7 @@ test_that("as.term.matrix", {
 test_that("as.term.array", {
   expect_identical(
     as.term(array(1, c(1, 1, 1))[-1, -1, -1], "t"),
-    as.term(character(0))
+    new_term(character(0))
   )
   expect_identical(
     as.term(array(1:12, c(2, 3, 2)), "t"),
@@ -88,7 +88,7 @@ test_that("as.term.character", {
 
   skip("sort() broken")
 
-  expect_identical(sort(x2), as.term(c(
+  expect_identical(sort(x2), new_term(c(
     "parm[10]", "parm[1,1]", "parm[2,1]", "parm[1,2]",
     "parm[2,2]", "parm3", "parm3[2]", "parm3[10]"
   )))

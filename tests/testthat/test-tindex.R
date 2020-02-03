@@ -1,7 +1,7 @@
 context("tindex")
 
 test_that("tindex", {
-  term <- as.term(c(
+  term <- new_term(c(
     "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
     "beta[1,2]", "sigma", "beta[2,2]"
   ))
@@ -16,12 +16,12 @@ test_that("tindex", {
   )
 
   expect_identical(
-    tindex(as.term(NA_character_)),
+    tindex(new_term(NA_character_)),
     rlang::set_names(list(NA_integer_), NA_character_)
   )
 
   expect_identical(
-    tindex(as.term(c("a", NA_character_))),
+    tindex(new_term(c("a", NA_character_))),
     rlang::set_names(list(1L, NA_integer_), c("a", NA))
   )
 
@@ -31,7 +31,7 @@ test_that("tindex", {
   )
 
   expect_identical(
-    tindex(as.term(c("alpha", "alpha[2]", "beta[1,1]", "beta[2 ,1  ]", NA))),
+    tindex(new_term(c("alpha", "alpha[2]", "beta[1,1]", "beta[2 ,1  ]", NA))),
     rlang::set_names(
       list(1L, 2L, c(1L, 1L), 2:1, NA_integer_),
       c("alpha", "alpha[2]", "beta[1,1]", "beta[2 ,1  ]", NA)
