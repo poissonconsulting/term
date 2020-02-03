@@ -1,13 +1,17 @@
 > term(0)
-term(0)
+<term[0]>
 
-> as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", "beta[1,2]",
+> new_term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", "beta[1,2]",
 +   "beta[2,2]", "sigma"))
-[1] "alpha[1]"  "alpha[2]"  "beta[1,1]" "beta[2,1]" "beta[1,2]" "beta[2,2]"
-[7] "sigma"    
+<term[7]>
+[1] alpha[1]  alpha[2]  beta[1,1] beta[2,1] beta[1,2] beta[2,2] sigma    
 
-> as.term(c("alpha[1]", "sigma", "alpha[2]", "beta[1,1]", "beta[2,1]",
+> new_term(c("alpha[1]", "sigma", "alpha[2]", "beta[1,1]", "beta[2,1]",
 +   "beta[1,2]", "beta[2,2]"))
-[1] "alpha[1]"  "sigma"     "alpha[2]"  "beta[1,1]" "beta[2,1]" "beta[1,2]"
-[7] "beta[2,2]"
+<term[7]>
+[1] alpha[1]  sigma     alpha[2]  beta[1,1] beta[2,1] beta[1,2] beta[2,2]
+
+> new_term(c("with space", ""))
+<term[2]>
+[1] `with space` ``          
 
