@@ -20,7 +20,7 @@ are 'class', 'valid', 'consistent' and 'complete'.}
 if the condition is not met.
 }
 \description{
-Checks if term using \verb{[vld_term](x)}.
+Checks if term using \code{\link[=vld_term]{vld_term()}}.
 }
 \examples{
 x <- as.term(c("x[2]", "x[1]"))

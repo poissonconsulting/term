@@ -1,6 +1,21 @@
 #' Validate Term
 #'
 #' Validates the elements of a term vector.
+#' Use [chk_s3_class()] to check if an object is a term.
+#'
+#' Internal validity of a term can be checked on three levels:
+#'
+#' - `"valid"` checks that all terms are of the form
+#'   `x`, `x[#]`, `x[#,#]` etc. where `x` is an identifier
+#'   and `#` are positive integers.
+#' - `"consistent"` checks that all terms are addressed
+#'   with the same dimensionality; the terms `x[1]` and `x[2,3]`
+#'   are inconsistent.
+#' - `"complete"` checks that the values span all possible values
+#'   across all dimensions; if `x[3,4]` exist, the vector must
+#'   contain at least 11 more terms to be consistent
+#'   (`x[1,1]` to `x[1,4]`, `x[2,1]` to `x[2,4]` and
+#'   `x[3,1]` to `x[3,3]`).
 #'
 #' Missing values are ignored as are duplicates and order.
 #'
@@ -19,7 +34,7 @@ vld_term <- function(x, validate = "complete") {
    details = "More specifically the 'class' value of the `validate` argument has been deprecated for `vld_s3_class(class = 'term')` and the default value of validate has been replaced by 'complete'")
   }
   chk_subset(validate, c("class", "valid", "consistent", "complete"))
-  
+
   if (!is_term(x)) {
     return(FALSE)
   }

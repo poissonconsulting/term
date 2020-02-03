@@ -22,6 +22,8 @@ If a parameter such as \code{b}
 is a scalar then \code{b[1]} is replaced by \code{b}
 but if higher indices are included such as \code{b[2]} then \code{b}
 is replaced by \code{b[1]}.
+Note that repairing does not necessarily establish
+consistency or completeness, see \code{\link[=vld_term]{vld_term()}} for details.
 }
 \examples{
 repair_terms(as.term(c("b[3]", "b")))

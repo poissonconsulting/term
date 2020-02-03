@@ -8,6 +8,8 @@
 #' is a scalar then `b[1]` is replaced by `b`
 #' but if higher indices are included such as `b[2]` then `b`
 #' is replaced by `b[1]`.
+#' Note that repairing does not necessarily establish
+#' consistency or completeness, see [vld_term()] for details.
 #'
 #' @inheritParams params
 #' @return The repaired term vector.
