@@ -4,12 +4,12 @@
 #'
 #' @inheritParams params
 #' @export
-complete_terms <- function(x, ...) {   
+complete_terms <- function(x, ...) {
   UseMethod("complete_terms")
 }
 
 #' @describeIn complete_terms Complete Terms for a term Vector
-#' 
+#'
 #' @details The term vector is repaired before being completed.
 #' Missing values are ignored.
 #'
@@ -24,5 +24,5 @@ complete_terms.term <- function(x, ...) {
     return(x)
   }
   x <- repair_terms(x)
-  as.term(c(x, setdiff(term(pdims(x)), x)))
+  as.term(c(x, setdiff(term_impl(pdims(x)), x)))
 }

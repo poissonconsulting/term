@@ -64,7 +64,7 @@ term_impl <- function(args) {
 }
 
 term_compat_args <- function(`_x` = x, name = "par", ..., x = NULL) {
-  list(x = `_x`, name = name)
+  list(x = if (is.null(x)) `_x` else NULL, name = name)
 }
 
 term_from_pdims <- function(x, name) {
