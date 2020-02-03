@@ -12,7 +12,7 @@ new_term(x = character())
 \description{
 Use this function to quickly construct a \link{term} object
 from a character vector, without checking the input.
-Use \code{\link[=as_term]{as_term()}} to validate the input.
+Use \code{\link[=term]{term()}} to repair the input.
 }
 \examples{
 new_term()

@@ -1,3 +1,11 @@
+#' Find the common type for a pair of vector types
+#'
+#' This implements double dispatch for [vec_ptype2()]
+#' with objects of the [term] class on the LHS.
+#'
+#' @inherit vctrs::vec_ptype2
+#' @inheritParams vctrs::vec_ptype2
+#' @seealso [vctrs::vec_ptype2()]
 #' @method vec_ptype2 term
 #' @export
 #' @export vec_ptype2.term

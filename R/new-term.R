@@ -2,7 +2,7 @@
 #'
 #' Use this function to quickly construct a [term] object
 #' from a character vector, without checking the input.
-#' Use [as_term()] to validate the input.
+#' Use [term()] to repair the input.
 #'
 #' @param x A character vector.
 #'
