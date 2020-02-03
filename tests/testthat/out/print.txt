@@ -14,3 +14,10 @@
 <term[2]>
 [1] `with space` ``          
 
+> term("r[")
+Error: All elements of term vector `unnamed_args_term` must be valid.
+
+> term("r  [ 1  ,2  ]")
+<term[1]>
+[1] r[1,2]
+

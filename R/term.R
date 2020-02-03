@@ -23,7 +23,12 @@
 #' combimed <- term(par = 2:4, "alpha")
 #' pdims(combined)
 #' term(!!!pdims(combined))
+#'
+#' # Invalid terms are rejected:
 #' try(term("r["))
+#'
+#' # Valid terms are repaired
+#' term("r  [ 1  ,2  ]")
 term <- function(...) {
   args <- list2(...)
   compat_args <- exec(term_compat_args, !!!args)
@@ -41,14 +46,15 @@ term <- function(...) {
     return(term_impl(compat_args$x))
   }
 
-  term_impl(args)
+  repair_terms_impl(term_impl(args))
 }
 
 term_impl <- function(args) {
   named <- (names2(args) != "")
   unnamed_args <- unname(args[!named])
   chk_all(unnamed_args, chk_string)
-  chk_term(new_term(unlist_chr(unnamed_args)), "valid")
+  unnamed_args_term <- new_term(unlist_chr(unnamed_args))
+  chk_term(unnamed_args_term, "valid")
 
   named_args <- args[named]
   chk_all(named_args, chk_whole_numeric)
@@ -60,7 +66,8 @@ term_impl <- function(args) {
     SIMPLIFY = FALSE
   )
 
-  new_term(unlist_chr(unname(args)))
+  expanded_args <- unlist_chr(unname(args))
+  new_term(expanded_args)
 }
 
 term_compat_args <- function(`_x` = x, name = "par", ..., x = NULL) {

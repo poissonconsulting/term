@@ -12,5 +12,9 @@ test_that("print", {
     )
 
     new_term(c("with space", ""))
+
+    term("r[")
+
+    term("r  [ 1  ,2  ]")
   })
 })

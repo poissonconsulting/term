@@ -32,7 +32,12 @@ term("q[1]", "q[2]", "q[3]")
 combimed <- term(par = 2:4, "alpha")
 pdims(combined)
 term(!!!pdims(combined))
+
+# Invalid terms are rejected:
 try(term("r["))
+
+# Valid terms are repaired
+term("r  [ 1  ,2  ]")
 }
 \seealso{
 \code{\link[=dims]{dims()}} and \code{\link[=pdims]{pdims()}}
