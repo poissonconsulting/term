@@ -37,7 +37,7 @@ subset.term <- function(x, pars = NULL, select = NULL, ...) {
   chk_subset(pars, pars(x))
 
   if (!length(pars)) {
-    return(term(0L))
+    return(new_term())
   }
 
   x[pars_terms(x) %in% pars]

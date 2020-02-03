@@ -1,16 +1,12 @@
-> term(0)
-Warning: The `x` argument of `term()` is deprecated as of term 0.2.0.
-Use named arguments to pass integer dimensions.
-
+> term()
 <term[0]>
 
-> new_term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", "beta[1,2]",
-+   "beta[2,2]", "sigma"))
+> term(alpha = 2, beta = c(2, 2), "sigma")
 <term[7]>
 [1] alpha[1]  alpha[2]  beta[1,1] beta[2,1] beta[1,2] beta[2,2] sigma    
 
-> new_term(c("alpha[1]", "sigma", "alpha[2]", "beta[1,1]", "beta[2,1]",
-+   "beta[1,2]", "beta[2,2]"))
+> term("alpha[1]", "sigma", "alpha[2]", "beta[1,1]", "beta[2,1]", "beta[1,2]",
++   "beta[2,2]")
 <term[7]>
 [1] alpha[1]  sigma     alpha[2]  beta[1,1] beta[2,1] beta[1,2] beta[2,2]
 

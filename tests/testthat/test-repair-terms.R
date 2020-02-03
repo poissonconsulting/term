@@ -4,7 +4,7 @@ test_that("repair_terms", {
   expect_error(repair_terms(NA_character_), "`x` must inherit from S3 class 'term'.",
     class = "chk_error"
   )
-  expect_identical(repair_terms(term(0L)), term(0L))
+  expect_identical(repair_terms(new_term()), new_term())
   expect_identical(repair_terms(NA_term_), NA_term_)
   expect_identical(repair_terms(new_term("")), NA_term_)
   expect_identical(repair_terms(new_term("a.a")), new_term("a.a"))

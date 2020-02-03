@@ -1,13 +1,13 @@
 context("term")
 
 test_that("term", {
-  expect_identical(term(0L), new_term())
-  expect_identical(term(), term(0L))
-  expect_identical(term(0), term(0L))
+  expect_identical(term(par = 0L), new_term())
+  expect_identical(term(), new_term())
+  expect_identical(term(par = 0), new_term())
   expect_identical(term(1L), new_term("par"))
   expect_identical(term(2L), new_term(c("par[1]", "par[2]")))
 
-  expect_identical(term(integer(0), "par"), term(0L))
+  expect_identical(term(par = integer(0)), new_term())
   expect_identical(term(1L, "par"), new_term("par"))
   expect_identical(term(3L, "par"), new_term(c("par[1]", "par[2]", "par[3]")))
   expect_identical(
@@ -33,10 +33,10 @@ test_that("term", {
 })
 
 test_that("term.list", {
-  expect_identical(term(list()), term(0L))
+  expect_identical(term(list()), new_term())
   expect_error(term(list(1L)), "must be a string", class = "chk_error")
   expect_identical(term(list(x = 1L)), new_term("x"))
-  expect_identical(term(list(x = 0)), term(0))
+  expect_identical(term(list(x = 0)), new_term())
   expect_identical(term(list(x = 0, y = 1)), new_term("y"))
   expect_identical(term(list(x = 1)), new_term("x"))
   expect_identical(term(list(y = 3)), new_term(c("y[1]", "y[2]", "y[3]")))
