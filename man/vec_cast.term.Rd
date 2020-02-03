@@ -2,7 +2,7 @@
 % Please edit documentation in R/vec-cast.R
 \name{vec_cast.term}
 \alias{vec_cast.term}
-\title{Cast a term vector to specified type}
+\title{Cast a vector to specified type}
 \usage{
 \method{vec_cast}{term}(x, to, ...)
 }
@@ -16,11 +16,17 @@
 extensions and should be empty.}
 }
 \description{
-Cast a term vector to specified type
+\code{vec_cast()} provides general coercions from one type of vector to another,
+and along with \code{\link[vctrs:vec_ptype2]{vec_ptype2()}} forms the foundation of the vctrs type system.
+It should generally not be called by R users, but is important for R
+developers. \code{vec_restore()} is designed specifically for casting a bare
+vector to the original type; it's useful when relying \code{NextMethod()} for
+the actual implementation. \code{vec_cast_common(...)} casts a collection to
+vectors to the same type.
 }
 \examples{
-vec_cast(new_term(c("a[1]", "a[2]")), "")
-vec_cast(c("a[1]", "a[2]"), new_term(""))
+vec_cast(new_term(c("a[1]", "a[2]")), character())
+vec_cast(c("a[1]", "a[2]"), new_term())
 }
 \seealso{
 \code{\link[vctrs:vec_cast]{vctrs::vec_cast()}}
