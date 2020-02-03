@@ -15,6 +15,18 @@ as.term <- function(x, ...) UseMethod("as.term")
 #' @describeIn as.term Coerce character vector to term vector
 #' @export
 as.term.character <- function(x, repair = FALSE, ...) {
+  lifecycle::deprecate_soft(
+    "0.2.0", "term::as.term.character()", "vctrs::vec_cast()",
+    details = "Use `term(par = dims(x))` instead."
+  )
+
+  if (!missing(repair)) {
+    lifecycle::deprecate_soft(
+      "0.2.0", "term::as.term.character(repair = )", "vctrs::vec_cast()",
+      details = "Use `repair_terms()`."
+    )
+  }
+
   chk_unused(...)
   chk_flag(repair)
 
@@ -28,13 +40,22 @@ as.term.character <- function(x, repair = FALSE, ...) {
 #' @describeIn as.term Coerce default object to term vector
 #' @export
 as.term.numeric <- function(x, name = "par", ...) {
+  lifecycle::deprecate_soft(
+    "0.2.0", "term::as.term.numeric()",
+    details = "Use `term(par = dims(x))` instead."
+  )
+
   chk_string(name)
   chk_unused(...)
-  term(!!name := dims(x))
+  term_impl(list2(!!name := dims(x)))
 }
 
 #' @export
 as.term.term <- function(x, ...) {
+  lifecycle::deprecate_soft(
+    "0.2.0", "term::as.term.term()", "vctrs::vec_cast()"
+  )
+
   chk_unused(...)
   x
 }

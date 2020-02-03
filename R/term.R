@@ -38,7 +38,7 @@ term <- function(...) {
       details = "Use named arguments to pass integer dimensions."
     )
     return(term_impl(list2(!!compat_args$name := compat_args$x)))
-  } else if (is.list(compat_args$x)) {
+  } else if (is.list(compat_args$x) && !is.data.frame(compat_args$x)) {
     lifecycle::deprecate_soft(
       "0.2.0", "term::term(x =)",
       details = "Use named arguments directly, or splice a list as in `term(!!!x)`."

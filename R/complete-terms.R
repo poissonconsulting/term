@@ -24,5 +24,5 @@ complete_terms.term <- function(x, ...) {
     return(x)
   }
   x <- repair_terms(x)
-  term(x, !!!setdiff(term_impl(pdims(x)), x))
+  term(x, setdiff(term_impl(pdims(x)), x))
 }

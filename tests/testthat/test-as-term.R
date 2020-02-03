@@ -1,6 +1,8 @@
 context("as-term")
 
 test_that("as.term.integer", {
+  rlang::scoped_options(lifecycle_verbosity = "quiet")
+
   expect_identical(as.term(1L, name = "par"), new_term("par"))
   expect_identical(
     as.term(c(1L, 4L), name = "par"),
@@ -13,6 +15,8 @@ test_that("as.term.integer", {
 })
 
 test_that("as.term.double", {
+  rlang::scoped_options(lifecycle_verbosity = "quiet")
+
   expect_identical(as.term(1, name = "par"), new_term("par"))
   expect_identical(
     as.term(c(1, 4), name = "par"),
@@ -25,6 +29,8 @@ test_that("as.term.double", {
 })
 
 test_that("as.term.matrix", {
+  rlang::scoped_options(lifecycle_verbosity = "quiet")
+
   expect_identical(
     as.term(matrix(1)[-1, -1], "t"),
     new_term(character(0))
@@ -39,6 +45,8 @@ test_that("as.term.matrix", {
 })
 
 test_that("as.term.array", {
+  rlang::scoped_options(lifecycle_verbosity = "quiet")
+
   expect_identical(
     as.term(array(1, c(1, 1, 1))[-1, -1, -1], "t"),
     new_term(character(0))
@@ -54,6 +62,8 @@ test_that("as.term.array", {
 })
 
 test_that("as.term.character", {
+  rlang::scoped_options(lifecycle_verbosity = "quiet")
+
   expect_error(as.term("a", "b"), "^`repair` must be a flag [(]TRUE or FALSE[)][.]$", class = "chk_error")
   x <- c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]", "parm[2,1]", "parm[1,2]", "parm[10]", "parm3")
 
@@ -95,6 +105,8 @@ test_that("as.term.character", {
 })
 
 test_that("as.term others", {
+  rlang::scoped_options(lifecycle_verbosity = "quiet")
+
   expect_error(as.term(factor(1)), "no applicable method")
   expect_error(as.term(data.frame(x = 1)), "no applicable method")
   expect_error(as.term(TRUE), "no applicable method")
