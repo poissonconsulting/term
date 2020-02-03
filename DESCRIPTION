@@ -17,11 +17,11 @@ Imports:
     chk,
     extras (>= 0.0.0.9008),
     lifecycle,
+    rlang,
     universals,
     vctrs
 Suggests:
     covr,
-    rlang,
     testthat
 Remotes:
     poissonconsulting/extras
