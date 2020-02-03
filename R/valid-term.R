@@ -16,6 +16,10 @@
 #' valid_term(as.term(c("a b", "a[1]b", "a[0]", "b[1,]", "c[]", "d[1][2]")))
 valid_term <- function(x) {
   chk_s3_class(x, "term")
+  valid_term_impl(x)
+}
+
+valid_term_impl <- function(x) {
   if (!length(x)) {
     return(logical(0))
   }

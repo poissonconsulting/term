@@ -14,9 +14,10 @@ License: MIT + file LICENSE
 Depends: R (>= 3.3)
 Imports:
     chk,
+    extras (>= 0.0.0.9008),
     lifecycle,
     universals,
-    extras (>= 0.0.0.9008)
+    vctrs
 Suggests:
     covr,
     rlang,
