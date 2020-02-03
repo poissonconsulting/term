@@ -1,3 +1,7 @@
+#' Find the common type for a pair of vector types
+#' @inherit vctrs::vec_ptype2
+#' @inheritParams vctrs::vec_ptype2
+#' @seealso [vctrs::vec_ptype2()]
 #' @method vec_ptype2 term
 #' @export
 #' @export vec_ptype2.term

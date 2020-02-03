@@ -1,6 +1,16 @@
+#' @export
+vctrs::vec_cast
+
+#' Cast a term vector to specified type
+#'
+#' @inheritParams vctrs::vec_cast
+#' @seealso [vctrs::vec_cast()]
 #' @method vec_cast term
 #' @export
 #' @export vec_cast.term
+#' @examples
+#' vec_cast(new_term(c("a[1]", "a[2]")), "")
+#' vec_cast(c("a[1]", "a[2]"), new_term(""))
 vec_cast.term <- function(x, to, ...) UseMethod("vec_cast.term")
 
 #' @method vec_cast.term default
