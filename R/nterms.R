@@ -12,8 +12,8 @@ universals::nterms
 #' @export
 #'
 #' @examples
-#' nterms(as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]")))
-#' nterms(as.term(c("alpha[1]", "alpha[1]", "beta[1,1]", "beta[1,1]")))
+#' nterms(term("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
+#' nterms(term("alpha[1]", "alpha[1]", "beta[1,1]", "beta[1,1]"))
 nterms.term <- function(x, ...) {
   if (anyNA(x)) {
     return(NA_integer_)

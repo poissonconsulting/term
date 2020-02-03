@@ -20,7 +20,7 @@ It does not test the validity of consistency of the term elements.
 }
 \examples{
 is_term(c("parameter[2]", "parameter[10]"))
-is_term(as.term(c("parameter[2]", "parameter[10]")))
+is_term(term("parameter[2]", "parameter[10]"))
 }
 \seealso{
 \code{\link[=term-vector]{term-vector()}}, \code{\link[=vld_term]{vld_term()}}, \code{\link[=valid_term]{valid_term()}}

@@ -19,9 +19,9 @@ Tests whether a term vector has absent elements.
 The vector should not require repairing.
 }
 \examples{
-is_incomplete_terms(new_term("b[2]"))
-is_incomplete_terms(new_term(c("b[2]", "b[1]")))
-is_incomplete_terms(new_term(c("b[2]", "b[1]", "b[1]")))
+is_incomplete_terms(term("b[2]"))
+is_incomplete_terms(term("b[2]", "b[1]"))
+is_incomplete_terms(term("b[2]", "b[1]", "b[1]"))
 }
 \seealso{
 \code{\link[=term-vector]{term-vector()}} and \code{\link[=complete_terms]{complete_terms()}}

@@ -21,6 +21,6 @@ while the index for \code{sigma} is \code{1L}.
 It is useful for extracting the values of individual terms.
 }
 \examples{
-tindex(as.term(c("alpha", "alpha[2]", "beta[1,1]", "beta[2 ,1  ]")))
+tindex(term("alpha", "alpha[2]", "beta[1,1]", "beta[2 ,1  ]"))
 }
 \concept{{dimensions}}

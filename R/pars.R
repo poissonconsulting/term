@@ -12,20 +12,20 @@ universals::pars
 #' @export
 #'
 #' @examples
-#' term <- as.term(c(
+#' term <- term(
 #'   "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
 #'   "beta[1,2]", "beta[2,2]", "sigma", NA
-#' ))
+#' )
 #' pars(term)
 pars.term <- function(x, scalar = NA, terms = FALSE, ...) {
   chk_lgl(scalar)
   chk_flag(terms)
   chk_unused(...)
-  
+
   if(!missing(terms)) {
     deprecate_soft("0.1.0.9003", "term::pars(terms =)", details = "If `terms = TRUE` use `pars_terms() otherwise replace `pars(terms = FALSE)` with `pars()`.")
   }
-  
+
   if(!missing(scalar)) {
     deprecate_soft("0.1.0.9003", "term::pars(scalar =)", details = "If `scalar = TRUE` use `pars_scalar() otherwise replace `pars(scalar = NA)` with `pars()`.")
   }
@@ -38,9 +38,4 @@ pars.term <- function(x, scalar = NA, terms = FALSE, ...) {
   x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
   if (!terms) x <- unique(x)
   x
-}
-
-# internal use only
-pars.character <- function(x, ...) {
-  pars(as.term(x))
 }

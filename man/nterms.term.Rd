@@ -22,8 +22,8 @@ If the term vector includes
 missing values then it returns NA_integer.
 }
 \examples{
-nterms(as.term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]")))
-nterms(as.term(c("alpha[1]", "alpha[1]", "beta[1,1]", "beta[1,1]")))
+nterms(term("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
+nterms(term("alpha[1]", "alpha[1]", "beta[1,1]", "beta[1,1]"))
 }
 \seealso{
 Other {MCMC dimensions}: 

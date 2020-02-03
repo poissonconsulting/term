@@ -11,9 +11,9 @@
 #'
 #' @examples
 #' # valid term elements
-#' valid_term(as.term(c("a", "a [3]", " b [ 1  ] ", "c[1,300,10]")))
+#' valid_term(term("a", "a [3]", " b [ 1  ] ", "c[1,300,10]"))
 #' # invalid term elements
-#' valid_term(as.term(c("a b", "a[1]b", "a[0]", "b[1,]", "c[]", "d[1][2]")))
+#' valid_term(term("a b", "a[1]b", "a[0]", "b[1,]", "c[]", "d[1][2]"))
 valid_term <- function(x) {
   chk_s3_class(x, "term")
   valid_term_impl(x)

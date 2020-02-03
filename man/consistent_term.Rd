@@ -16,8 +16,8 @@ A logical vector indicating whether the number of dimensions is consistent.
 Test whether the number of dimensions of terms in the same parameter are consistent.
 }
 \examples{
-consistent_term(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")))
-consistent_term(as.term(c("alpha[1]", NA_term_, "beta[1,1]", "beta[2]")))
+consistent_term(term("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]"))
+consistent_term(term("alpha[1]", NA_term_, "beta[1,1]", "beta[2]"))
 }
 \seealso{
 \code{\link[=term-vector]{term-vector()}} and \code{\link[=npdims]{npdims()}}

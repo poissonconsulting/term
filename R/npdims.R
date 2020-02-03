@@ -8,7 +8,7 @@ universals::npdims
 #' @export
 #'
 #' @examples
-#' npdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")))
+#' npdims(term("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]"))
 npdims.term <- function(x, terms = FALSE, ...) {
   chk_flag(terms)
   chk_unused(...)

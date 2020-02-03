@@ -24,7 +24,7 @@ A named list of the dimensions of each parameter can be converted
 into the equivalent \code{\link[=term-vector]{term-vector()}} using \code{\link[=term]{term()}}.
 }
 \examples{
-pdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")))
+pdims(term("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]"))
 }
 \seealso{
 Other {dimensions}: 

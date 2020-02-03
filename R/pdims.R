@@ -10,7 +10,7 @@ universals::pdims
 #' @export
 #'
 #' @examples
-#' pdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")))
+#' pdims(term("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]"))
 pdims.term <- function(x, ...) {
   chk_not_any_na(x)
   if (is_inconsistent_terms(x)) {
