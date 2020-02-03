@@ -30,7 +30,7 @@ as.term.character <- function(x, repair = FALSE, ...) {
 as.term.numeric <- function(x, name = "par", ...) {
   chk_string(name)
   chk_unused(...)
-  term(dims(x), name = name)
+  term(!!name := dims(x))
 }
 
 #' @export
