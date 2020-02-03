@@ -86,8 +86,6 @@ test_that("as.term.character", {
   )
   expect_identical(x2 > x2, rep(FALSE, length(x2)))
 
-  skip("sort() broken")
-
   expect_identical(sort(x2), new_term(c(
     "parm[10]", "parm[1,1]", "parm[2,1]", "parm[1,2]",
     "parm[2,2]", "parm3", "parm3[2]", "parm3[10]"
