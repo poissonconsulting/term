@@ -1,6 +1,6 @@
 #' Check Term
 #'
-#' Checks if term using `[vld_term](x)`.
+#' Checks if term using [vld_term()].
 #'
 #' @inheritParams params
 #' @inheritParams chk::chk_flag
