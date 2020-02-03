@@ -2,6 +2,7 @@
 
 S3method(complete_terms,term)
 S3method(dims,term)
+S3method(format,term)
 S3method(npars,term)
 S3method(npars_scalar,default)
 S3method(npdims,term)

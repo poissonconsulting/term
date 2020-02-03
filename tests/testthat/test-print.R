@@ -12,5 +12,6 @@ test_that("print", {
       "alpha[1]", "sigma", "alpha[2]", "beta[1,1]", "beta[2,1]",
       "beta[1,2]", "beta[2,2]"
     ))
+    new_term(c("with space", ""))
   })
 })
