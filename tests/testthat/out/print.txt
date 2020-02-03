@@ -1,4 +1,7 @@
 > term(0)
+Warning: The `x` argument of `term()` is deprecated as of term 0.2.0.
+Use named arguments to pass integer dimensions.
+
 <term[0]>
 
 > new_term(c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", "beta[1,2]",
