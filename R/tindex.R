@@ -12,9 +12,15 @@
 #' @export
 #'
 #' @examples
-#' tindex(as.term(c("alpha", "alpha[2]", "beta[1,1]", "beta[2 ,1  ]")))
+#' tindex(term("alpha", "alpha[2]", "beta[1,1]", "beta[2 ,1  ]"))
 tindex <- function(x) {
-  x <- as.term(x)
+  if (!is_term(x)) {
+    lifecycle::deprecate_soft(
+      "0.2.0", "term::tindex(x = 'must be a term object')"
+    )
+    x <- vec_cast(x, new_term())
+  }
+
   names <- x
   x <- sub(p0("^", .par_name_pattern), "", x)
   x <- sub("^$", "1", x)

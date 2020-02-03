@@ -34,7 +34,7 @@ test_that("term", {
 
 test_that("term.list", {
   expect_identical(term(!!!list()), new_term())
-  expect_error(term("x", 1L), "must be a string", class = "chk_error")
+  expect_error(term("x", 1L), class = "vctrs_error_incompatible")
   expect_identical(term(x = 1L), new_term("x"))
   expect_identical(term(x = 0), new_term())
   expect_identical(term(x = 0, y = 1), new_term("y"))

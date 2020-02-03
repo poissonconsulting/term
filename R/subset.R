@@ -8,16 +8,16 @@
 #' @export
 #'
 #' @examples
-#' term <- as.term(c(
+#' term <- term(
 #'   "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
 #'   "beta[1,2]", "beta[2,2]", "sigma"
-#' ))
+#' )
 #' subset(term, "beta")
 #' subset(term, c("alpha", "sigma"))
 subset.term <- function(x, pars = NULL, select = NULL, ...) {
   chk_not_any_na(x)
   chk_unused(...)
-  
+
   if(!missing(select)) {
     deprecate_soft("0.1.0.9003", "term::subset(select =)",
                    "term::subset(pars =)")

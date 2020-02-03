@@ -8,7 +8,7 @@
 #'   if the condition is not met.
 #' @export
 #' @examples
-#' x <- as.term(c("x[2]", "x[1]"))
+#' x <- term("x[2]", "x[1]")
 #' chk_term(x)
 #' x <- c("x[2]", "x[1]")
 #' try(chk_term(x, validate = "sorted"))

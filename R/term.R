@@ -51,8 +51,9 @@ term <- function(...) {
 
 term_impl <- function(args) {
   named <- (names2(args) != "")
-  unnamed_args <- unname(args[!named])
-  chk_all(unnamed_args, chk_string)
+  # FIXME: Replace with as_term()
+  unnamed_args <- lapply(unname(args[!named]), vec_cast, new_term())
+
   unnamed_args_term <- new_term(unlist_chr(unnamed_args))
   chk_term(unnamed_args_term, "valid")
 
