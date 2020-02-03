@@ -36,7 +36,7 @@ test_that("repair_terms", {
 
 test_that("repair_terms missing values", {
   expect_identical(repair_terms(NA_term_), NA_term_)
-  expect_identical(repair_terms(c(NA_term_, "a")), as.term(c(NA_term_, "a")))
+  expect_identical(repair_terms(c(NA_term_, new_term("a"))), as.term(c(NA_term_, "a")))
   expect_identical(repair_terms(as.term(c("a", NA_term_, "a"))), as.term(c("a", NA_term_, "a")))
   expect_identical(
     repair_terms(as.term(c(NA_character_, "a", NA_character_, "a"))),

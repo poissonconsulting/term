@@ -35,13 +35,13 @@ test_that("subset.term", {
 
 test_that("subset.term deprecated", {
   term <- as.term(c("alpha[1]", "alpha[2]", "sigma"))
-  
+
   rlang::with_options(lifecycle_verbosity = "error", {
     expect_error(subset(term, select = NULL), class = "defunctError")
   })
- 
+
     suppressWarnings(expect_error(subset(term, select = "alpha", pars = "alpha"), class = "defunctError"))
-    
+
   rlang::with_options(lifecycle_verbosity = "quiet", {
   expect_identical(subset(term, select = character(0)), term(0L))
   })
@@ -52,7 +52,7 @@ test_that("subset.term missing values", {
   expect_error(subset(NA_term_), "^`x` must not have any missing values[.]$",
     class = "chk_error"
   )
-  expect_error(subset(c(NA_term_, "a")),
+  expect_error(subset(c(NA_term_, new_term("a"))),
     "^`x` must not have any missing values[.]$",
     class = "chk_error"
   )
