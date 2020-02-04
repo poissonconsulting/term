@@ -60,24 +60,25 @@ install.packages("term")
 ``` r
 library(term)
 
-# character vectors can be converted into term vectors
-term <- as.term(c(
+# term vectors can be constructed from character vectors
+term <- term(
   "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
   "beta[1,2]", "beta[2,2]", "sigma"
-))
+)
 
 # term vectors print like character vectors
 term
-#> [1] "alpha[1]"  "alpha[2]"  "beta[1,1]" "beta[2,1]" "beta[1,2]" "beta[2,2]"
-#> [7] "sigma"
+#> <term[7]>
+#> [1] alpha[1]  alpha[2]  beta[1,1] beta[2,1] beta[1,2] beta[2,2] sigma
 
 # they are S3 class objects that also inherit from character
 str(term)
-#>  'term' chr [1:7] "alpha[1]" "alpha[2]" "beta[1,1]" "beta[2,1]" "beta[1,2]" ...
+#>  term [1:7] alpha[1], alpha[2], beta[1,1], beta[2,1], beta[1,2], beta[2,2],...
 
 # term vectors can also be created from numeric atomic objects
 as.term(matrix(1:4, 2), "theta")
-#> [1] "theta[1,1]" "theta[2,1]" "theta[1,2]" "theta[2,2]"
+#> <term[4]>
+#> [1] theta[1,1] theta[2,1] theta[1,2] theta[2,2]
 ```
 
 ### Querying Term Vectors
@@ -131,34 +132,34 @@ tindex(term)
 # (dimensionally) consistent and complete terms.
 
 # valid terms
-valid_term(as.term(c("a", "a[1]", "a [2]", " b [3  ] ", "c[1,10]")))
+valid_term(term("a", "a[1]", "a [2]", " b [3  ] ", "c[1,10]"))
 #> [1] TRUE TRUE TRUE TRUE TRUE
 
 # invalid terms
-valid_term(as.term(c("a a", "a[]", "a[2", " b[3 3]", "c[1,10]c")))
+valid_term(new_term(c("a a", "a[]", "a[2", " b[3 3]", "c[1,10]c")))
 #> [1] FALSE FALSE FALSE FALSE FALSE
 
 # consistent terms
-consistent_term(as.term(c("a", "a[2]", "b[1,1]", "b[10,99]")))
+consistent_term(term("a", "a[2]", "b[1,1]", "b[10,99]"))
 #> [1] TRUE TRUE TRUE TRUE
 
 # inconsistent terms
-consistent_term(as.term(c("a", "a[2,1]", "b[1,1]", "b[10,99,1]")))
+consistent_term(term("a", "a[2,1]", "b[1,1]", "b[10,99,1]"))
 #> [1] FALSE FALSE FALSE FALSE
 
 # complete terms
-is_incomplete_terms(as.term(c("a", "a[2]", "b[1,1]", "b[2,1]")))
+is_incomplete_terms(term("a", "a[2]", "b[1,1]", "b[2,1]"))
 #> [1] FALSE
 
 # incomplete terms
-is_incomplete_terms(as.term(c("a", "a[3]", "b[1,1]", "b[2,2]")))
+is_incomplete_terms(term("a", "a[3]", "b[1,1]", "b[2,2]"))
 #> [1] TRUE
 ```
 
 ### Checking Term Vectors
 
 ``` r
-x <- as.term(c("a[1]", "a[3]"))
+x <- term("a[1]", "a[3]")
 chk::chk_s3_class(x, "term")
 chk_term(x, validate = "valid")
 chk_term(x, validate = "complete")
@@ -168,40 +169,51 @@ chk_term(x, validate = "complete")
 ### Repairing Term Vectors
 
 ``` r
-term <- as.term(c("b[4]", "b   [2]", "b", "b[1", "b[2, 2]", "b", "a [ 1 ] ", NA))
+term <- new_term(c("b[4]", "b   [2]", "b", "b[1", "b[2, 2]", "b", "a [ 1 ] ", NA))
 term
-#> [1] "b[4]"     "b   [2]"  "b"        "b[1"      "b[2, 2]"  "b"        "a [ 1 ] "
-#> [8] NA
+#> <term[8]>
+#> [1] b[4]       `b   [2]`  b          b[1        `b[2, 2]`  b          `a [ 1 ] `
+#> [8] <NA>
 
 # valid terms can be repaired (invalid terms are converted to missing values)
 term <- repair_terms(term)
 term
-#> [1] "b[4]"   "b[2]"   "b[1]"   NA       "b[2,2]" "b[1]"   "a"      NA
+#> <term[8]>
+#> [1] b[4]   b[2]   b[1]   <NA>   b[2,2] b[1]   a      <NA>
+
+# the `term()` constructor rejects invalid terms
+term("b[4]", "b   [2]", "b", "b[1", "b[2, 2]", "b", "a [ 1 ] ", NA)
+#> Error: All elements of term vector `unnamed_args_term` must be valid.
 
 # missing values can easily removed
 term <- term[!is.na(term)]
 term
-#> [1] "b[4]"   "b[2]"   "b[1]"   "b[2,2]" "b[1]"   "a"
+#> <term[6]>
+#> [1] b[4]   b[2]   b[1]   b[2,2] b[1]   a
 
 # and only unique values retained
 term <- unique(term)
 term
-#> [1] "b[4]"   "b[2]"   "b[1]"   "b[2,2]" "a"
+#> <term[5]>
+#> [1] b[4]   b[2]   b[1]   b[2,2] a
 
 # a term vector can be sorted by parameter name and index
 term <- sort(term)
 term
-#> [1] "a"      "b[1]"   "b[2]"   "b[4]"   "b[2,2]"
+#> <term[5]>
+#> [1] a      b[1]   b[2]   b[4]   b[2,2]
 
 # an inconsistent term removed
 term <- term[term != "b[2,2]"]
 term
-#> [1] "a"    "b[1]" "b[2]" "b[4]"
+#> <term[4]>
+#> [1] a    b[1] b[2] b[4]
 
 # and incomplete terms completed
 term <- sort(complete_terms(term))
 term
-#> [1] "a"    "b[1]" "b[2]" "b[3]" "b[4]"
+#> <term[5]>
+#> [1] a    b[1] b[2] b[3] b[4]
 ```
 
 ## Contribution
