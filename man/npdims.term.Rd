@@ -20,7 +20,7 @@ An integer scalar of the number of parameters.
 Gets the number of parameters of an object as returned by \code{\link[universals:pars]{pars()}}.
 }
 \examples{
-npdims(as.term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")))
+npdims(term("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]"))
 }
 \seealso{
 \code{\link[universals:pars]{pars()}}

@@ -22,7 +22,7 @@ An integer scalar of the number of parameters.
 Gets the number of parameters of an object as returned by \code{\link[universals:pars]{pars()}}.
 }
 \examples{
-npars(as.term(c("sigma", "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]")))
+npars(term("sigma", "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
 }
 \seealso{
 \code{\link[universals:pars]{pars()}}

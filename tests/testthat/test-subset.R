@@ -2,7 +2,7 @@ context("subset")
 
 test_that("subset.term", {
   term <- new_term(c("alpha[1]", "alpha[2]", "sigma"))
-  expect_identical(subset(term, character(0)), term(0L))
+  expect_identical(subset(term, character(0)), new_term())
   expect_error(subset(term, "beta"),
     "^`pars` must match 'alpha' or 'sigma', not 'beta'[.]$",
     class = "chk_error"
@@ -43,7 +43,7 @@ test_that("subset.term deprecated", {
     suppressWarnings(expect_error(subset(term, select = "alpha", pars = "alpha"), class = "defunctError"))
 
   rlang::with_options(lifecycle_verbosity = "quiet", {
-  expect_identical(subset(term, select = character(0)), term(0L))
+  expect_identical(subset(term, select = character(0)), new_term())
   })
 })
 

@@ -26,7 +26,7 @@
 #' @export
 #' @examples
 #' vld_term(c("x[2]", "x[1]"))
-#' vld_term(as.term(c("x[2]", "x[1]")))
+#' vld_term(term("x[2]", "x[1]"))
 vld_term <- function(x, validate = "complete") {
   chk_string(validate)
   if(validate == "class") {

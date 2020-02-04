@@ -6,7 +6,7 @@ universals::npars
 #' @export
 #'
 #' @examples
-#' npars(as.term(c("sigma", "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]")))
+#' npars(term("sigma", "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
 npars.term <- function(x, scalar = NA, ...) {
   chk_unused(...)
   

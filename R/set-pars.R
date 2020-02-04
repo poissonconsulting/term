@@ -28,5 +28,5 @@ set_pars.term <- function(x, value, ...) {
 
   x <- sub(p0("^", .par_name_pattern), "", x)
   x <- p(term_value, x, sep = "")
-  as.term(x)
+  new_term(x)
 }

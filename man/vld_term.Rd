@@ -40,7 +40,7 @@ Missing values are ignored as are duplicates and order.
 }
 \examples{
 vld_term(c("x[2]", "x[1]"))
-vld_term(as.term(c("x[2]", "x[1]")))
+vld_term(term("x[2]", "x[1]"))
 }
 \seealso{
 \code{\link[=chk_term]{chk_term()}}

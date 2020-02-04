@@ -18,9 +18,9 @@ A logical scalar indicating whether the object's terms are inconsistent.
 Tests whether a term vector has inconsistent elements.
 }
 \examples{
-is_inconsistent_terms(as.term("b[2]"))
-is_inconsistent_terms(as.term(c("b[2]", "b[1]")))
-is_inconsistent_terms(as.term(c("b[2]", "b[1,1]")))
+is_inconsistent_terms(term("b[2]"))
+is_inconsistent_terms(term("b[2]", "b[1]"))
+is_inconsistent_terms(term("b[2]", "b[1,1]"))
 }
 \seealso{
 \code{\link[=term-vector]{term-vector()}} and \code{\link[=consistent_term]{consistent_term()}}

@@ -22,8 +22,8 @@ Unlike \code{base::dim()}, dims returns the length of an atomic vector.
 }
 \examples{
 
-dims(as.term("beta[1,1]"))
-dims(as.term(c("beta[1,1]", "beta[1,2]")))
+dims(term("beta[1,1]"))
+dims(term("beta[1,1]", "beta[1,2]"))
 }
 \seealso{
 \code{\link[base:dim]{base::dim()}}

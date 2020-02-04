@@ -9,9 +9,9 @@
 #' @export
 #'
 #' @examples
-#' is_incomplete_terms(new_term("b[2]"))
-#' is_incomplete_terms(new_term(c("b[2]", "b[1]")))
-#' is_incomplete_terms(new_term(c("b[2]", "b[1]", "b[1]")))
+#' is_incomplete_terms(term("b[2]"))
+#' is_incomplete_terms(term("b[2]", "b[1]"))
+#' is_incomplete_terms(term("b[2]", "b[1]", "b[1]"))
 is_incomplete_terms <- function(x, ...) {
   if (!length(x)) {
     return(FALSE)

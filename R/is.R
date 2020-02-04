@@ -12,7 +12,7 @@
 #'
 #' @examples
 #' is_term(c("parameter[2]", "parameter[10]"))
-#' is_term(as.term(c("parameter[2]", "parameter[10]")))
+#' is_term(term("parameter[2]", "parameter[10]"))
 is_term <- function(x) {
   vld_s3_class(x, "term")
 }

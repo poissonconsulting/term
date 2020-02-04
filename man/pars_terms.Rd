@@ -22,10 +22,10 @@ A character vector of the term parameter names.
 Gets the name of each parameter for each term.
 }
 \examples{
-term <- as.term(c(
+term <- term(
   "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
   "beta[1,2]", "beta[2,2]", "sigma", NA
-))
+)
 pars_terms(term)
 }
 \seealso{

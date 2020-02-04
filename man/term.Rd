@@ -6,36 +6,40 @@
 \alias{term_object}
 \alias{term-vector}
 \alias{term_vector}
-\alias{term.integer}
 \title{Term Vector}
 \usage{
-term(x, ...)
-
-\method{term}{integer}(x, name = "par", ...)
+term(...)
 }
 \arguments{
-\item{x}{An integer vector of the object dimensions or a named list of the parameter's dimensions.}
-
-\item{...}{Unused.}
-
-\item{name}{A string specifying the name of the parameter.}
+\item{...}{Unnamed values are term values,
+named values describe the parameter in the name
+and the dimensionality in the value.}
 }
 \value{
 A term vector.
 }
 \description{
-Creates a term vector from object dimensions.
-A \code{term} vector is a S3 vector of parameter terms.
+Creates a term vector from values.
+A \code{term} vector is an S3 vector of parameter terms
+of the form \code{p}, \verb{q[#]} or \verb{r[#,#]} where \verb{#} are
+positive integers.
+This function checks that all terms are valid
+but does not require stronger levels of consistency,
+see \code{chk_valid()} for details.
 }
-\section{Methods (by class)}{
-\itemize{
-\item \code{integer}: Term vector from an integer vector of the object's dimensions
-}}
-
 \examples{
-term(0L)
-term(1L)
-term(2L)
+term()
+term("p", "q[1]", "q[2]", "q[3]")
+term("q[1]", "q[2]", "q[3]")
+combimed <- term(par = 2:4, "alpha")
+pdims(combined)
+term(!!!pdims(combined))
+
+# Invalid terms are rejected:
+try(term("r["))
+
+# Valid terms are repaired
+term("r  [ 1  ,2  ]")
 }
 \seealso{
 \code{\link[=dims]{dims()}} and \code{\link[=pdims]{pdims()}}
