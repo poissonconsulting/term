@@ -31,7 +31,7 @@ see \code{chk_valid()} for details.
 term()
 term("p", "q[1]", "q[2]", "q[3]")
 term("q[1]", "q[2]", "q[3]")
-combimed <- term(par = 2:4, "alpha")
+combined <- term(par = 2:4, "alpha")
 pdims(combined)
 term(!!!pdims(combined))
 

@@ -11,7 +11,6 @@
 #' @param ... Unnamed values are term values,
 #'   named values describe the parameter in the name
 #'   and the dimensionality in the value.
-#' @inheritParams params
 #'
 #' @return A term vector.
 #' @aliases term-object term_object term-vector term_vector
@@ -22,7 +21,7 @@
 #' term()
 #' term("p", "q[1]", "q[2]", "q[3]")
 #' term("q[1]", "q[2]", "q[3]")
-#' combimed <- term(par = 2:4, "alpha")
+#' combined <- term(par = 2:4, "alpha")
 #' pdims(combined)
 #' term(!!!pdims(combined))
 #'
