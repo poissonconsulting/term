@@ -20,5 +20,5 @@ new_term(c("a", "b[1]", "b[2]"))
 
 # Terms are not checked for validity:
 new_term("r[")
-repair_term(new_term("r["))
+repair_terms(new_term("r["))
 }

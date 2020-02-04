@@ -13,7 +13,7 @@
 #'
 #' # Terms are not checked for validity:
 #' new_term("r[")
-#' repair_term(new_term("r["))
+#' repair_terms(new_term("r["))
 new_term <- function(x = character()) {
   new_vctr(x, class = "term")
 }

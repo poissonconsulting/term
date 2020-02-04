@@ -17,10 +17,10 @@
 #' @export
 #'
 #' @examples
-#' repair_terms(new_term("b[3]", "b"))
-#' repair_terms(new_term("a[3]", "b[1]"))
-#' repair_terms(new_term("a [3]", " b [ 1  ] "))
-#' repair_terms(new_term("a", NA))
+#' repair_terms(new_term(c("b[3]", "b")))
+#' repair_terms(new_term(c("a[3]", "b[1]")))
+#' repair_terms(new_term(c("a [3]", " b [ 1  ] ")))
+#' repair_terms(new_term(c("a", NA)))
 repair_terms <- function(x) {
   chk_s3_class(x, "term")
   new_term(repair_terms_impl(unclass(x)))

@@ -26,10 +26,10 @@ Note that repairing does not necessarily establish
 consistency or completeness, see \code{\link[=vld_term]{vld_term()}} for details.
 }
 \examples{
-repair_terms(new_term("b[3]", "b"))
-repair_terms(new_term("a[3]", "b[1]"))
-repair_terms(new_term("a [3]", " b [ 1  ] "))
-repair_terms(new_term("a", NA))
+repair_terms(new_term(c("b[3]", "b")))
+repair_terms(new_term(c("a[3]", "b[1]")))
+repair_terms(new_term(c("a [3]", " b [ 1  ] ")))
+repair_terms(new_term(c("a", NA)))
 }
 \seealso{
 \code{\link[=term-vector]{term-vector()}} and \code{\link[=valid_term]{valid_term()}}
