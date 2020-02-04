@@ -11,7 +11,9 @@
 term(...)
 }
 \arguments{
-\item{...}{Term values.}
+\item{...}{Unnamed values are term values,
+named values describe the parameter in the name
+and the dimensionality in the value.}
 }
 \value{
 A term vector.

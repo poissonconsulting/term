@@ -8,7 +8,9 @@
 #' but does not require stronger levels of consistency,
 #' see `chk_valid()` for details.
 #'
-#' @param ... Term values.
+#' @param ... Unnamed values are term values,
+#'   named values describe the parameter in the name
+#'   and the dimensionality in the value.
 #' @inheritParams params
 #'
 #' @return A term vector.
