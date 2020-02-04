@@ -19,38 +19,6 @@ It forms the foundation of the vctrs type system, along with \code{\link[vctrs:v
 This powers type coercion but should not usually be called directly;
 instead call \code{\link[vctrs:vec_ptype_common]{vec_ptype_common()}}.
 }
-\section{Coercion rules}{
-
-
-vctrs thinks of the vector types as forming a partially ordered set, or
-poset. Then finding the common type from a set of types is a matter of
-finding the least-upper-bound; if the least-upper-bound does not exist,
-there is no common type. This is the case for many pairs of 1d vectors.
-
-The poset of the most important base vectors is shown below:
-(where datetime stands for \code{POSIXt}, and date for \code{Date})
-
-\figure{coerce.png}
-
-}
-
-\section{S3 dispatch}{
-
-
-\code{vec_ptype2()} dispatches on both arguments. This is implemented by having
-methods of \code{vec_ptype2()}, e.g. \code{vec_ptype2.integer()} also be S3 generics,
-which call e.g. \code{vec_ptype2.integer.double()}. \code{vec_ptype2.x.y()} must
-return the same value as \code{vec_ptype2.y.x()}; this is currently not enforced,
-but should be tested.
-
-Whenever you implement a \code{vec_ptype2.new_class()} generic/method,
-make sure to always provide \code{vec_ptype2.new_class.default()}. It
-should normally call \code{vec_default_ptype2()}.
-
-See \code{vignette("s3-vector")} for full details.
-
-}
-
 \seealso{
 \code{\link[vctrs:vec_ptype2]{vctrs::vec_ptype2()}}
 }

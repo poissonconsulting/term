@@ -1,12 +1,7 @@
 #' @export
 vctrs::vec_cast
 
-#' Cast a term vector to specified type
-#'
-#' This implements double dispatch for [vec_cast()] converting
-#' to the [term] class.
-#'
-#' @inheritParams vctrs::vec_cast
+#' @inherit vctrs::vec_cast title description params
 #' @seealso [vctrs::vec_cast()]
 #' @method vec_cast term
 #' @export
