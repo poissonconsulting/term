@@ -1,5 +1,4 @@
-#' @inherit vctrs::vec_ptype2
-#' @inheritParams vctrs::vec_ptype2
+#' @inherit vctrs::vec_ptype2 title description params
 #' @seealso [vctrs::vec_ptype2()]
 #' @method vec_ptype2 term
 #' @export
