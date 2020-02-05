@@ -12,6 +12,24 @@ pars_scalar <- function(x, ...) {
   UseMethod("pars_scalar")
 }
 
+#' @describeIn pars_scalar Scalar Parameter Names for default
+#' @export
+pars_scalar.default <- function(x, ...) {
+  chk_unused(...)
+  x <- as.term(x)
+  pars_scalar(x)
+}
+
+#' @describeIn pars_scalar Scalar Parameter Names for character
+#' @export
+#' @examples
+#' pars_scalar(c("a", "b[1]", "a[3]"))
+pars_scalar.character <- function(x, ...) {
+  chk_unused(...)
+  x <- term(x) # stricter than default
+  pars_scalar(x)
+}
+
 #' @describeIn pars_scalar Scalar Parameter Names for term vector
 #' @export
 #' @examples

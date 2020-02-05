@@ -2,10 +2,16 @@
 % Please edit documentation in R/pars-scalar.R
 \name{pars_scalar}
 \alias{pars_scalar}
+\alias{pars_scalar.default}
+\alias{pars_scalar.character}
 \alias{pars_scalar.term}
 \title{Scalar Parameters}
 \usage{
 pars_scalar(x, ...)
+
+\method{pars_scalar}{default}(x, ...)
+
+\method{pars_scalar}{character}(x, ...)
 
 \method{pars_scalar}{term}(x, ...)
 }
@@ -25,10 +31,15 @@ Useful for subsetting MCMC objects.
 }
 \section{Methods (by class)}{
 \itemize{
+\item \code{default}: Scalar Parameter Names for default
+
+\item \code{character}: Scalar Parameter Names for character
+
 \item \code{term}: Scalar Parameter Names for term vector
 }}
 
 \examples{
+pars_scalar(c("a", "b[1]", "a[3]"))
 term <- term(
   "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
   "beta[1,2]", "beta[2,2]", "sigma", NA
