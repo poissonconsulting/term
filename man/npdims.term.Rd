@@ -17,7 +17,7 @@
 An integer scalar of the number of parameters.
 }
 \description{
-Gets the number of parameters of an object as returned by \code{\link[universals:pars]{pars()}}.
+Gets the number of parameters of an object.
 }
 \examples{
 npdims(term("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]"))
@@ -28,11 +28,14 @@ npdims(term("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]"))
 Other {MCMC dimensions}: 
 \code{\link[universals]{nchains}()},
 \code{\link[universals]{niters}()},
+\code{\link[universals]{npars_scalar}()},
 \code{\link[universals]{nsams}()},
 \code{\link[universals]{nsims}()},
 \code{\link[universals]{nterms}()}
 
 Other {parameters}: 
+\code{\link[universals]{npars_scalar}()},
+\code{\link[universals]{pars_scalar}()},
 \code{\link[universals]{pars}()},
 \code{\link[universals]{set_pars}()}
 }
