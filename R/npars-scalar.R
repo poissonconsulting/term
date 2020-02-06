@@ -1,15 +1,13 @@
-#' Number of Scalar Parameters
-#'
-#' Gets the number of parameters of an object as returned by [pars_scalar()].
-#'
-#' @inheritParams params
-#' @return An integer scalar of the number of scalar parameters.
-#' @family {parameters}
 #' @export
-npars_scalar <- function(x, ...) UseMethod("npars_scalar")
+universals::npars_scalar
 
-#' @describeIn npars_scalar Number of Scalar Parameters
+#' Number of Dimensions of each Parameter
+#'
+#' @inherit universals::npars_scalar
 #' @export
+#'
+#' @examples
+#' npars_scalar(term("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]"))
 npars_scalar.default <- function(x, ...) {
   if (anyNA(x)) {
     return(NA_integer_)
