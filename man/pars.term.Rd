@@ -33,7 +33,6 @@ pars(term)
 }
 \seealso{
 Other {parameters}: 
-\code{\link{pars_scalar}()},
 \code{\link{pars_terms}()}
 }
 \concept{{parameters}}

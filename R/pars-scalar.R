@@ -1,18 +1,7 @@
-#' Scalar Parameters
-#'
-#' Gets the name of each scalar parameter.
-#'
-#' Useful for subsetting MCMC objects.
-#'
-#' @inheritParams params
-#' @return A character vector of the parameter names.
-#' @family {parameters}
 #' @export
-pars_scalar <- function(x, ...) {
-  UseMethod("pars_scalar")
-}
+universals::pars_scalar
 
-#' @describeIn pars_scalar Scalar Parameter Names for default
+#' @inherit universals::npars_scalar
 #' @export
 pars_scalar.default <- function(x, ...) {
   chk_unused(...)
@@ -20,7 +9,7 @@ pars_scalar.default <- function(x, ...) {
   pars_scalar(x)
 }
 
-#' @describeIn pars_scalar Scalar Parameter Names for character
+#' @inherit universals::npars_scalar
 #' @export
 #' @examples
 #' pars_scalar(c("a", "b[1]", "a[3]"))
@@ -30,7 +19,7 @@ pars_scalar.character <- function(x, ...) {
   pars_scalar(x)
 }
 
-#' @describeIn pars_scalar Scalar Parameter Names for term vector
+#' @inherit universals::npars_scalar
 #' @export
 #' @examples
 #' term <- term(
