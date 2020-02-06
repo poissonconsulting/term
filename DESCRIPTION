@@ -24,7 +24,8 @@ Suggests:
     covr,
     testthat
 Remotes:
-    poissonconsulting/extras
+    poissonconsulting/extras,
+    poissonconsulting/universals
 URL: https://github.com/poissonconsulting/term
 BugReports: https://github.com/poissonconsulting/term/issues
 RdMacros:

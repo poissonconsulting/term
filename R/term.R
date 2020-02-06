@@ -33,7 +33,7 @@
 term <- function(...) {
   args <- list2(...)
   compat_args <- exec(term_compat_args, !!!args)
-  if (is.numeric(compat_args$x)) {
+  if (is.numeric(compat_args$x) && all(compat_args$x != 0)) {
     lifecycle::deprecate_soft(
       "0.2.0", "term::term(x =)",
       details = "Use named arguments to pass integer dimensions."
@@ -53,20 +53,23 @@ term <- function(...) {
 }
 
 term_impl <- function(args) {
-  named <- (names2(args) != "")
+  numbers <- vapply(args, is.numeric, logical(1))
+  strings <- vapply(args, is.character, logical(1))
+  nas <- vapply(args, anyNA, logical(1))
+  chk_true(all(numbers | strings | nas))
+
   # FIXME: Replace with as_term()
-  unnamed_args <- lapply(unname(args[!named]), vec_cast, new_term())
+  string_args <- lapply(unname(args[strings]), vec_cast, new_term())
+  string_args_term <- new_term(unlist_chr(string_args))
+  chk_term(string_args_term, "valid")
 
-  unnamed_args_term <- new_term(unlist_chr(unnamed_args))
-  chk_term(unnamed_args_term, "valid")
+  number_args <- args[numbers]
+  chk_all(number_args, chk_whole_numeric)
+  chk_all(number_args, chk_gte)
 
-  named_args <- args[named]
-  chk_all(named_args, chk_whole_numeric)
-  chk_all(named_args, chk_gte)
-
-  args[named] <- mapply(
+  args[numbers] <- mapply(
     term_from_pdims,
-    named_args, names(named_args),
+    number_args, names2(number_args),
     SIMPLIFY = FALSE
   )
 
@@ -86,9 +89,13 @@ term_from_pdims <- function(x, name) {
   if (any(x == 0)) {
     return(new_term())
   }
+
+  chk_false(name == "")
+
   if (length(x) == 1 && x == 1) {
     return(new_term(name))
   }
+
   x <- lapply(x, seq_len)
   x <- do.call("expand.grid", x)
   x <- as.matrix(x)

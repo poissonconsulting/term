@@ -3,6 +3,10 @@ context("term")
 test_that("term", {
   expect_identical(term(par = 0L), new_term())
   expect_identical(term(), new_term())
+  expect_identical(term(0), new_term())
+  expect_identical(term(0L), new_term())
+  expect_identical(term(c(0, 3)), new_term())
+  expect_identical(term(c(2, 0, 5)), new_term())
   expect_identical(term(par = 0), new_term())
   expect_identical(term(par = 1L), new_term("par"))
   expect_identical(term(par = 2L), new_term(c("par[1]", "par[2]")))
@@ -30,11 +34,16 @@ test_that("term", {
       "par2[1,1,2]", "par2[2,1,2]", "par2[1,2,2]", "par2[2,2,2]"
     ))
   )
+
+  expect_identical(term("a"), new_term("a"))
+  expect_identical(term("a", "b"), new_term(c("a", "b")))
+  expect_identical(term(NA), new_term(NA_character_))
+  expect_identical(term("a", NA), new_term(c("a", NA)))
 })
 
 test_that("term.list", {
   expect_identical(term(!!!list()), new_term())
-  expect_error(term("x", 1L), class = "vctrs_error_incompatible")
+  expect_chk_error(term("x", 1L))
   expect_identical(term(x = 1L), new_term("x"))
   expect_identical(term(x = 0), new_term())
   expect_identical(term(x = 0, y = 1), new_term("y"))
