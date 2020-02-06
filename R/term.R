@@ -55,11 +55,11 @@ term <- function(...) {
 term_impl <- function(args) {
   numbers <- vapply(args, is.numeric, logical(1))
   strings <- vapply(args, is.character, logical(1))
-  chk_true(all(numbers | strings))
+  nas <- vapply(args, anyNA, logical(1))
+  chk_true(all(numbers | strings | nas))
 
   # FIXME: Replace with as_term()
-  string_args <- lapply(unname(args[!numbers]), vec_cast, new_term())
-
+  string_args <- lapply(unname(args[strings]), vec_cast, new_term())
   string_args_term <- new_term(unlist_chr(string_args))
   chk_term(string_args_term, "valid")
 

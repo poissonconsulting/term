@@ -34,6 +34,11 @@ test_that("term", {
       "par2[1,1,2]", "par2[2,1,2]", "par2[1,2,2]", "par2[2,2,2]"
     ))
   )
+
+  expect_identical(term("a"), new_term("a"))
+  expect_identical(term("a", "b"), new_term(c("a", "b")))
+  expect_identical(term(NA), new_term(NA_character_))
+  expect_identical(term("a", NA), new_term(c("a", NA)))
 })
 
 test_that("term.list", {
