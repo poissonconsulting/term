@@ -19,7 +19,7 @@ pars_terms <- function(x, scalar = NULL, ...) {
   if(!is.null(scalar)) chk_flag(scalar)
   chk_unused(...)
 
-  if(!missing(scalar)) {
+  if(!is.null(scalar)) {
     deprecate_soft("0.1.0.9003", "term::pars_terms(scalar =)")
   }
 

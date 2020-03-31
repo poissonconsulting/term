@@ -44,7 +44,7 @@ pars.term <- function(x, scalar = NULL, terms = FALSE, ...) {
   chk_flag(terms)
   chk_unused(...)
 
-  if(!missing(terms)) {
+  if(terms) {
     deprecate_soft("0.1.0.9003", "term::pars(terms =)", details = "If `terms = TRUE` use `pars_terms() otherwise replace `pars(terms = FALSE)` with `pars()`.")
   }
 
