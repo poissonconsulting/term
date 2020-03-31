@@ -1,3 +1,15 @@
+# term 0.1.0.9006
+
+- Replace `pars_scalar()` and `npars_scalar()` with `pars(scalar = TRUE)` and `npars(scalar = TRUE)`.
+- `is_complete_terms()` now requires same number of duplicate copies.
+- Added `pars_scalar()`.
+- Added `vld_pars()` to validate parameter names.
+- Soft deprecated `subset(select = )` for `subset(pars = )`.
+- Soft deprecated `is.term()` or `is_term()`.
+- `chk_term()` and `vld_term()` argument `validate` now 'complete'.
+- Added `scalar_term()` to test if each term element is scalar.
+- Added `pars_terms()`.
+
 # term 0.1.0.9005
 
 - Redefined `term` as a `vtcr` class with
