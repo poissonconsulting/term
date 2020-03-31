@@ -9,7 +9,7 @@ pars_terms(x, scalar = NULL, ...)
 \arguments{
 \item{x}{A term vector.}
 
-\item{scalar}{A flag specifying whether to only include scalar parameters.}
+\item{scalar}{A flag specifying whether to by default return all parameters (NULL), or only scalar parameters (TRUE) or only non-scalar parameters (FALSE).}
 
 \item{...}{Unused.}
 }

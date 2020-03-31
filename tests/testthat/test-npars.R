@@ -16,12 +16,17 @@ test_that("npars.term", {
 })
 
 test_that("npars.term scalar", {
-  rlang::with_options(lifecycle_verbosity = "quiet", {
-    expect_identical(npars(new_term(c("a[2]")), scalar = TRUE), 0L)
-    expect_identical(npars(new_term(c("a[1]")), scalar = TRUE), 0L)
-    expect_identical(npars(new_term(c("a[1]")), scalar = FALSE), 1L)
-    expect_identical(npars(new_term(c("a[1]", "b", "c")), scalar = TRUE), 2L)
-  })
+  expect_identical(npars(new_term(c("a[2]")), scalar = TRUE), 0L)
+  expect_identical(npars(new_term(c("a[1]")), scalar = TRUE), 0L)
+  expect_identical(npars(new_term(c("a[1]")), scalar = FALSE), 1L)
+  expect_identical(npars(new_term(c("a[1]", "b", "c")), scalar = TRUE), 2L)
+})
+
+test_that("npars.term scalar = FALSE", {
+  expect_identical(npars(new_term(c("a[2]")), scalar = FALSE), 1L)
+  expect_identical(npars(new_term(c("a[1]")), scalar = FALSE), 1L)
+  expect_identical(npars(new_term(c("a[1]")), scalar = TRUE), 0L)
+  expect_identical(npars(new_term(c("a[1]", "b", "c")), scalar = FALSE), 1L)
 })
 
 test_that("npars.term invalid elements", {

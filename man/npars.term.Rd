@@ -4,12 +4,12 @@
 \alias{npars.term}
 \title{Number of Parameters}
 \usage{
-\method{npars}{term}(x, scalar = FALSE, ...)
+\method{npars}{term}(x, scalar = NULL, ...)
 }
 \arguments{
 \item{x}{An object.}
 
-\item{scalar}{A flag specifying whether to only include scalar parameters.}
+\item{scalar}{A flag specifying whether to by default return all parameters (NULL), or only scalar parameters (TRUE) or only non-scalar parameters (FALSE).}
 
 \item{...}{Other arguments passed to methods.}
 }

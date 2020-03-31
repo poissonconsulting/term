@@ -4,12 +4,12 @@
 \alias{pars.default}
 \title{Parameter Names}
 \usage{
-\method{pars}{default}(x, scalar = FALSE, ...)
+\method{pars}{default}(x, scalar = NULL, ...)
 }
 \arguments{
 \item{x}{An object.}
 
-\item{scalar}{A flag specifying whether to only include scalar parameters.}
+\item{scalar}{A flag specifying whether to by default return all parameters (NULL), or only scalar parameters (TRUE) or only non-scalar parameters (FALSE).}
 
 \item{...}{Other arguments passed to methods.}
 }

@@ -4,7 +4,7 @@ universals::pars
 #' @inherit universals::pars
 #' @inheritParams params
 #' @export
-pars.default <- function(x, scalar = FALSE, ...) {
+pars.default <- function(x, scalar = NULL, ...) {
   chk_unused(...)
   x <- as.term(x)
   pars(x, scalar = scalar)
@@ -15,7 +15,7 @@ pars.default <- function(x, scalar = FALSE, ...) {
 #' @export
 #' @examples
 #' pars(c("a", "b[1]", "a[3]"))
-pars.character <- function(x, scalar = FALSE, ...) {
+pars.character <- function(x, scalar = NULL, ...) {
   chk_unused(...)
   x <- term(x) # stricter than default
   pars(x, scalar = scalar)
@@ -39,8 +39,8 @@ pars.character <- function(x, scalar = FALSE, ...) {
 #' pars(term)
 #' pars(term, scalar = TRUE)
 #' pars(term, scalar = FALSE)
-pars.term <- function(x, scalar = FALSE, terms = FALSE, ...) {
-  chk_flag(scalar)
+pars.term <- function(x, scalar = NULL, terms = FALSE, ...) {
+  if(!is.null(scalar)) chk_flag(scalar)
   chk_flag(terms)
   chk_unused(...)
 
@@ -49,8 +49,9 @@ pars.term <- function(x, scalar = FALSE, terms = FALSE, ...) {
   }
 
   x <- as.character(x)
-  if(scalar) {
-    x <- x[!grepl("\\[", x)]
+  if(!is.null(scalar)) {
+    bol <- grepl("\\[", x)
+    x <- x[is.na(x) | if(scalar) !bol else bol]
   }
   x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
   if (!terms) x <- unique(x)

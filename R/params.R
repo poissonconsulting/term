@@ -13,7 +13,7 @@
 #'
 #' @param value A character vector of the new parameter names.
 #' @param pars A character vector of parameter names.
-#' @param scalar A flag specifying whether to only include scalar parameters.
+#' @param scalar A flag specifying whether to by default return all parameters (NULL), or only scalar parameters (TRUE) or only non-scalar parameters (FALSE).
 #' @param incomparables Ignored.
 #'
 #' @name params
