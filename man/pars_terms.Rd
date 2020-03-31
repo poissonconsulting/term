@@ -4,14 +4,12 @@
 \alias{pars_terms}
 \title{Term Parameters}
 \usage{
-pars_terms(x, scalar = NA, ...)
+pars_terms(x, scalar = NULL, ...)
 }
 \arguments{
 \item{x}{A term vector.}
 
-\item{scalar}{A logical scalar specifying whether to include
-all parameters (NA), only scalars (TRUE) or all parameters
-except scalars (FALSE).}
+\item{scalar}{A flag specifying whether to only include scalar parameters.}
 
 \item{...}{Unused.}
 }

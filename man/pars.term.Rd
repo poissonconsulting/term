@@ -4,14 +4,12 @@
 \alias{pars.term}
 \title{Parameter Names}
 \usage{
-\method{pars}{term}(x, scalar = NA, terms = FALSE, ...)
+\method{pars}{term}(x, scalar = FALSE, terms = FALSE, ...)
 }
 \arguments{
 \item{x}{An object.}
 
-\item{scalar}{A logical scalar specifying whether to include
-all parameters (NA), only scalars (TRUE) or all parameters
-except scalars (FALSE).}
+\item{scalar}{A flag specifying whether to only include scalar parameters.}
 
 \item{terms}{A flag specifying whether to return the parameter name
 for each term element.}
@@ -19,7 +17,7 @@ for each term element.}
 \item{...}{Other arguments passed to methods.}
 }
 \value{
-A character vector of the parameter names.
+A character vector of the names of the parameters.
 }
 \description{
 Gets the parameter names.
@@ -30,6 +28,8 @@ term <- term(
   "beta[1,2]", "beta[2,2]", "sigma", NA
 )
 pars(term)
+pars(term, scalar = TRUE)
+pars(term, scalar = FALSE)
 }
 \seealso{
 Other {parameters}: 

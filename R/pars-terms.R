@@ -14,9 +14,9 @@
 #'   "beta[1,2]", "beta[2,2]", "sigma", NA
 #' )
 #' pars_terms(term)
-pars_terms <- function(x, scalar = NA, ...) {
+pars_terms <- function(x, scalar = NULL, ...) {
   chk_s3_class(x, "term")
-  chk_lgl(scalar)
+  if(!is.null(scalar)) chk_flag(scalar)
   chk_unused(...)
 
   if(!missing(scalar)) {

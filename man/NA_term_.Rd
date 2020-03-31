@@ -4,7 +4,9 @@
 \name{NA_term_}
 \alias{NA_term_}
 \title{Missing Term}
-\format{An object of class \code{term} (inherits from \code{vctrs_vctr}) of length 1.}
+\format{
+An object of class \code{term} (inherits from \code{vctrs_vctr}) of length 1.
+}
 \usage{
 NA_term_
 }

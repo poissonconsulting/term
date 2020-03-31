@@ -13,9 +13,7 @@
 #'
 #' @param value A character vector of the new parameter names.
 #' @param pars A character vector of parameter names.
-#' @param scalar A logical scalar specifying whether to include
-#' all parameters (NA), only scalars (TRUE) or all parameters
-#' except scalars (FALSE).
+#' @param scalar A flag specifying whether to only include scalar parameters.
 #' @param incomparables Ignored.
 #'
 #' @name params

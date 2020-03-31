@@ -22,9 +22,7 @@ are 'class', 'valid', 'consistent' and 'complete'.}
 
 \item{pars}{A character vector of parameter names.}
 
-\item{scalar}{A logical scalar specifying whether to include
-all parameters (NA), only scalars (TRUE) or all parameters
-except scalars (FALSE).}
+\item{scalar}{A flag specifying whether to only include scalar parameters.}
 
 \item{incomparables}{Ignored.}
 }

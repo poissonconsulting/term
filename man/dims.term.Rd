@@ -28,7 +28,7 @@ dims(term("beta[1,1]", "beta[1,2]"))
 \seealso{
 \code{\link[base:dim]{base::dim()}}
 
-Other {dimensions}: 
+Other dimensions: 
 \code{\link[universals]{ndims}()},
 \code{\link[universals]{npdims}()},
 \code{\link[universals]{pdims}()}

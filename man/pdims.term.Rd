@@ -27,7 +27,7 @@ into the equivalent \code{\link[=term-vector]{term-vector()}} using \code{\link[
 pdims(term("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]"))
 }
 \seealso{
-Other {dimensions}: 
+Other dimensions: 
 \code{\link[universals]{dims}()},
 \code{\link[universals]{ndims}()},
 \code{\link[universals]{npdims}()}

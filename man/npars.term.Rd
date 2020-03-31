@@ -4,14 +4,12 @@
 \alias{npars.term}
 \title{Number of Parameters}
 \usage{
-\method{npars}{term}(x, scalar = NA, ...)
+\method{npars}{term}(x, scalar = FALSE, ...)
 }
 \arguments{
 \item{x}{An object.}
 
-\item{scalar}{A logical scalar specifying whether to include
-all parameters (NA), only scalars (TRUE) or all parameters
-except scalars (FALSE).}
+\item{scalar}{A flag specifying whether to only include scalar parameters.}
 
 \item{...}{Other arguments passed to methods.}
 }
@@ -27,17 +25,14 @@ npars(term("sigma", "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
 \seealso{
 \code{\link[universals:pars]{pars()}}
 
-Other {MCMC dimensions}: 
+Other MCMC dimensions: 
 \code{\link[universals]{nchains}()},
 \code{\link[universals]{niters}()},
-\code{\link[universals]{npars_scalar}()},
 \code{\link[universals]{nsams}()},
 \code{\link[universals]{nsims}()},
 \code{\link[universals]{nterms}()}
 
-Other {parameters}: 
-\code{\link[universals]{npars_scalar}()},
-\code{\link[universals]{pars_scalar}()},
+Other parameters: 
 \code{\link[universals]{pars}()},
 \code{\link[universals]{set_pars}()}
 }

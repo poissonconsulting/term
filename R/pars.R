@@ -1,6 +1,26 @@
 #' @export
 universals::pars
 
+#' @inherit universals::pars
+#' @inheritParams params
+#' @export
+pars.default <- function(x, scalar = FALSE, ...) {
+  chk_unused(...)
+  x <- as.term(x)
+  pars(x, scalar = scalar)
+}
+
+#' @inherit universals::pars
+#' @inheritParams params
+#' @export
+#' @examples
+#' pars(c("a", "b[1]", "a[3]"))
+pars.character <- function(x, scalar = FALSE, ...) {
+  chk_unused(...)
+  x <- term(x) # stricter than default
+  pars(x, scalar = scalar)
+}
+
 #' Parameter Names
 #'
 #' @inherit universals::pars
@@ -17,8 +37,10 @@ universals::pars
 #'   "beta[1,2]", "beta[2,2]", "sigma", NA
 #' )
 #' pars(term)
-pars.term <- function(x, scalar = NA, terms = FALSE, ...) {
-  chk_lgl(scalar)
+#' pars(term, scalar = TRUE)
+#' pars(term, scalar = FALSE)
+pars.term <- function(x, scalar = FALSE, terms = FALSE, ...) {
+  chk_flag(scalar)
   chk_flag(terms)
   chk_unused(...)
 
@@ -26,14 +48,9 @@ pars.term <- function(x, scalar = NA, terms = FALSE, ...) {
     deprecate_soft("0.1.0.9003", "term::pars(terms =)", details = "If `terms = TRUE` use `pars_terms() otherwise replace `pars(terms = FALSE)` with `pars()`.")
   }
 
-  if(!missing(scalar)) {
-    deprecate_soft("0.1.0.9003", "term::pars(scalar =)", details = "If `scalar = TRUE` use `pars_scalar() otherwise replace `pars(scalar = NA)` with `pars()`.")
-  }
-
   x <- as.character(x)
-  if (!is.na(scalar)) {
-    bol <- grepl("\\[", x)
-    x <- x[if (scalar) !bol else bol]
+  if(scalar) {
+    x <- x[!grepl("\\[", x)]
   }
   x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
   if (!terms) x <- unique(x)
