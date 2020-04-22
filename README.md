@@ -7,10 +7,8 @@
 
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[![Travis build
-status](https://travis-ci.com/poissonconsulting/term.svg?branch=master)](https://travis-ci.com/poissonconsulting/term)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/term?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/term)
+[![R build
+status](https://github.com/poissonconsulting/term/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/term/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/poissonconsulting/term/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/term?branch=master)
 [![License:
@@ -183,7 +181,7 @@ term
 
 # the `term()` constructor rejects invalid terms
 term("b[4]", "b   [2]", "b", "b[1", "b[2, 2]", "b", "a [ 1 ] ", NA)
-#> Error: All elements of term vector `unnamed_args_term` must be valid.
+#> Error: All elements of term vector `string_args_term` must be valid.
 
 # missing values can easily removed
 term <- term[!is.na(term)]
