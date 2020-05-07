@@ -213,7 +213,9 @@ Please report any
 [Pull requests](https://github.com/poissonconsulting/term/pulls) are
 always welcome.
 
-Please note that the ‘term’ project is released with a [Contributor Code
+## Code of Conduct
+
+Please note that the term project is released with a [Contributor Code
 of
-Conduct](https://poissonconsulting.github.io/term/CODE_OF_CONDUCT.html).
+Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.
