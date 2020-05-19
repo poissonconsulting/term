@@ -123,8 +123,8 @@ vectors to the same type." />
     </div>
 
     <div class="ref-description">
-    <p><code><a href='https://rdrr.io/pkg/vctrs/man/vec_cast.html'>vec_cast()</a></code> provides general coercions from one type of vector to another,
-and along with <code><a href='https://rdrr.io/pkg/vctrs/man/vec_ptype2.html'>vec_ptype2()</a></code> forms the foundation of the vctrs type system.
+    <p><code><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vec_cast()</a></code> provides general coercions from one type of vector to another,
+and along with <code><a href='https://vctrs.r-lib.org/reference/vec_ptype2.html'>vec_ptype2()</a></code> forms the foundation of the vctrs type system.
 It should generally not be called by R users, but is important for R
 developers. <code>vec_restore()</code> is designed specifically for casting a bare
 vector to the original type; it's useful when relying <code><a href='https://rdrr.io/r/base/UseMethod.html'>NextMethod()</a></code> for
@@ -133,7 +133,7 @@ vectors to the same type.</p>
     </div>
 
     <pre class="usage"><span class='co'># S3 method for term</span>
-<span class='fu'><a href='https://rdrr.io/pkg/vctrs/man/vec_cast.html'>vec_cast</a></span>(<span class='no'>x</span>, <span class='no'>to</span>, <span class='no'>...</span>)</pre>
+<span class='fu'><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vec_cast</a></span>(<span class='no'>x</span>, <span class='no'>to</span>, <span class='no'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -149,17 +149,17 @@ vectors to the same type.</p>
     <tr>
       <th>...</th>
       <td><p>For <code>vec_cast_common()</code>, vectors to cast. For
-<code><a href='https://rdrr.io/pkg/vctrs/man/vec_cast.html'>vec_cast()</a></code> and <code>vec_restore()</code>, these dots are only for future
+<code><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vec_cast()</a></code> and <code>vec_restore()</code>, these dots are only for future
 extensions and should be empty.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='https://rdrr.io/pkg/vctrs/man/vec_cast.html'>vctrs::vec_cast()</a></code></p></div>
+    <div class='dont-index'><p><code><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vctrs::vec_cast()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/vctrs/man/vec_cast.html'>vec_cast</a></span>(<span class='fu'><a href='new_term.html'>new_term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"a[1]"</span>, <span class='st'>"a[2]"</span>)), <span class='fu'><a href='https://rdrr.io/r/base/character.html'>character</a></span>())</div><div class='output co'>#&gt; [1] "a[1]" "a[2]"</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/vctrs/man/vec_cast.html'>vec_cast</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"a[1]"</span>, <span class='st'>"a[2]"</span>), <span class='fu'><a href='new_term.html'>new_term</a></span>())</div><div class='output co'>#&gt; &lt;term[2]&gt;
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vec_cast</a></span>(<span class='fu'><a href='new_term.html'>new_term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"a[1]"</span>, <span class='st'>"a[2]"</span>)), <span class='fu'><a href='https://rdrr.io/r/base/character.html'>character</a></span>())</div><div class='output co'>#&gt; [1] "a[1]" "a[2]"</div><div class='input'><span class='fu'><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vec_cast</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"a[1]"</span>, <span class='st'>"a[2]"</span>), <span class='fu'><a href='new_term.html'>new_term</a></span>())</div><div class='output co'>#&gt; &lt;term[2]&gt;
 #&gt; [1] a[1] a[2]</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
