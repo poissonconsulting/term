@@ -18,6 +18,9 @@ An integer scalar of the number of parameters.
 }
 \description{
 Gets the number of parameters of an object.
+
+The default methods returns the length of \code{\link[universals:pars]{pars()}} if none are
+\code{NA}, otherwise it returns \code{NA}.
 }
 \examples{
 npars(term("sigma", "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))
