@@ -2,7 +2,7 @@
 % Please edit documentation in R/vec-ptype2.R
 \name{vec_ptype2.term}
 \alias{vec_ptype2.term}
-\title{Find the common type for a pair of vector types}
+\title{Find the common type for a pair of vectors}
 \usage{
 \method{vec_ptype2}{term}(x, y, ...)
 }
@@ -14,10 +14,15 @@
 \item{...}{These dots are for future extensions and must be empty.}
 }
 \description{
-\code{vec_ptype2()} finds the common type for a pair of vectors, or dies trying.
-It forms the foundation of the vctrs type system, along with \code{\link[vctrs:vec_cast]{vec_cast()}}.
-This powers type coercion but should not usually be called directly;
-instead call \code{\link[vctrs:vec_ptype_common]{vec_ptype_common()}}.
+\code{vec_ptype2()} defines the coercion hierarchy for a set of related
+vector types. Along with \code{\link[vctrs:vec_cast]{vec_cast()}}, this generic forms the
+foundation of type coercions in vctrs.
+
+\code{vec_ptype2()} is relevant when you are implementing vctrs methods
+for your class, but it should not usually be called directly. If
+you need to find the common type of a set of inputs, call
+\code{\link[vctrs:vec_ptype_common]{vec_ptype_common()}} instead. This function supports multiple
+inputs and \link[vctrs:vec_ptype_finalise]{finalises} the common type.
 }
 \seealso{
 \code{\link[vctrs:vec_ptype2]{vctrs::vec_ptype2()}}
