@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Find the common type for a pair of vector types — vec_ptype2.term • term</title>
+<title>Find the common type for a pair of vectors — vec_ptype2.term • term</title>
 
 
 <!-- jquery -->
@@ -39,11 +39,15 @@
 
 
 
-<meta property="og:title" content="Find the common type for a pair of vector types — vec_ptype2.term" />
-<meta property="og:description" content="vec_ptype2() finds the common type for a pair of vectors, or dies trying.
-It forms the foundation of the vctrs type system, along with vec_cast().
-This powers type coercion but should not usually be called directly;
-instead call vec_ptype_common()." />
+<meta property="og:title" content="Find the common type for a pair of vectors — vec_ptype2.term" />
+<meta property="og:description" content="vec_ptype2() defines the coercion hierarchy for a set of related
+vector types. Along with vec_cast(), this generic forms the
+foundation of type coercions in vctrs.
+vec_ptype2() is relevant when you are implementing vctrs methods
+for your class, but it should not usually be called directly. If
+you need to find the common type of a set of inputs, call
+vec_ptype_common() instead. This function supports multiple
+inputs and finalises the common type." />
 
 
 
@@ -114,16 +118,20 @@ instead call vec_ptype_common()." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Find the common type for a pair of vector types</h1>
+    <h1>Find the common type for a pair of vectors</h1>
     <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/term/blob/master/R/vec-ptype2.R'><code>R/vec-ptype2.R</code></a></small>
     <div class="hidden name"><code>vec_ptype2.term.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p><code>vec_ptype2()</code> finds the common type for a pair of vectors, or dies trying.
-It forms the foundation of the vctrs type system, along with <code><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vec_cast()</a></code>.
-This powers type coercion but should not usually be called directly;
-instead call <code><a href='https://vctrs.r-lib.org/reference/vec_ptype.html'>vec_ptype_common()</a></code>.</p>
+    <p><code>vec_ptype2()</code> defines the coercion hierarchy for a set of related
+vector types. Along with <code><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vec_cast()</a></code>, this generic forms the
+foundation of type coercions in vctrs.</p>
+<p><code>vec_ptype2()</code> is relevant when you are implementing vctrs methods
+for your class, but it should not usually be called directly. If
+you need to find the common type of a set of inputs, call
+<code><a href='https://vctrs.r-lib.org/reference/vec_ptype.html'>vec_ptype_common()</a></code> instead. This function supports multiple
+inputs and <a href='https://vctrs.r-lib.org/reference/new_partial.html'>finalises</a> the common type.</p>
     </div>
 
     <pre class="usage"><span class='co'># S3 method for term</span>

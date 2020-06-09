@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cast a vector to specified type — vec_cast.term • term</title>
+<title>Cast a vector to a specified type — vec_cast.term • term</title>
 
 
 <!-- jquery -->
@@ -39,14 +39,10 @@
 
 
 
-<meta property="og:title" content="Cast a vector to specified type — vec_cast.term" />
-<meta property="og:description" content="vec_cast() provides general coercions from one type of vector to another,
-and along with vec_ptype2() forms the foundation of the vctrs type system.
-It should generally not be called by R users, but is important for R
-developers. vec_restore() is designed specifically for casting a bare
-vector to the original type; it's useful when relying NextMethod() for
-the actual implementation. vec_cast_common(...) casts a collection to
-vectors to the same type." />
+<meta property="og:title" content="Cast a vector to a specified type — vec_cast.term" />
+<meta property="og:description" content="vec_cast() provides directional conversions from one type of
+vector to another. Along with vec_ptype2(), this generic forms
+the foundation of type coercions in vctrs." />
 
 
 
@@ -117,19 +113,15 @@ vectors to the same type." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Cast a vector to specified type</h1>
+    <h1>Cast a vector to a specified type</h1>
     <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/term/blob/master/R/vec-cast.R'><code>R/vec-cast.R</code></a></small>
     <div class="hidden name"><code>vec_cast.term.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p><code><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vec_cast()</a></code> provides general coercions from one type of vector to another,
-and along with <code><a href='https://vctrs.r-lib.org/reference/vec_ptype2.html'>vec_ptype2()</a></code> forms the foundation of the vctrs type system.
-It should generally not be called by R users, but is important for R
-developers. <code>vec_restore()</code> is designed specifically for casting a bare
-vector to the original type; it's useful when relying <code><a href='https://rdrr.io/r/base/UseMethod.html'>NextMethod()</a></code> for
-the actual implementation. <code>vec_cast_common(...)</code> casts a collection to
-vectors to the same type.</p>
+    <p><code><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vec_cast()</a></code> provides directional conversions from one type of
+vector to another. Along with <code><a href='https://vctrs.r-lib.org/reference/vec_ptype2.html'>vec_ptype2()</a></code>, this generic forms
+the foundation of type coercions in vctrs.</p>
     </div>
 
     <pre class="usage"><span class='co'># S3 method for term</span>
@@ -149,8 +141,8 @@ vectors to the same type.</p>
     <tr>
       <th>...</th>
       <td><p>For <code>vec_cast_common()</code>, vectors to cast. For
-<code><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vec_cast()</a></code> and <code>vec_restore()</code>, these dots are only for future
-extensions and should be empty.</p></td>
+<code><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vec_cast()</a></code>, <code>vec_cast_default()</code>, and <code>vec_restore()</code>, these
+dots are only for future extensions and should be empty.</p></td>
     </tr>
     </table>
 
