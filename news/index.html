@@ -118,41 +118,40 @@
 <h1 class="page-header" data-toc-text="0.2.0">
 <a href="#term-020" class="anchor"></a>term 0.2.0<small> Unreleased </small>
 </h1>
+<div id="breaking-changes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#breaking-changes" class="anchor"></a>Breaking changes</h2>
 <ul>
-<li>Same as previous version.</li>
-</ul>
-</div>
-    <div id="term-0109007" class="section level1">
-<h1 class="page-header" data-toc-text="0.1.0.9007">
-<a href="#term-0109007" class="anchor"></a>term 0.1.0.9007<small> Unreleased </small>
-</h1>
-<ul>
-<li>Use extras from CRAN.</li>
-</ul>
-</div>
-    <div id="term-0109006" class="section level1">
-<h1 class="page-header" data-toc-text="0.1.0.9006">
-<a href="#term-0109006" class="anchor"></a>term 0.1.0.9006<small> Unreleased </small>
-</h1>
-<ul>
-<li>Replace <code>pars_scalar()</code> and <code>npars_scalar()</code> with <code><a href="https://rdrr.io/pkg/universals/man/pars.html">pars(scalar = TRUE)</a></code> and <code><a href="https://rdrr.io/pkg/universals/man/npars.html">npars(scalar = TRUE)</a></code>.</li>
 <li>
 <code>is_complete_terms()</code> now requires same number of duplicate copies.</li>
-<li>Added <code>pars_scalar()</code>.</li>
-<li>Added <code>vld_pars()</code> to validate parameter names.</li>
-<li>Soft deprecated <code><a href="https://rdrr.io/r/base/subset.html">subset(select = )</a></code> for <code><a href="https://rdrr.io/r/base/subset.html">subset(pars = )</a></code>.</li>
-<li>Soft deprecated <code><a href="https://rdrr.io/pkg/term/man/deprecated.html">is.term()</a></code> or <code><a href="https://rdrr.io/pkg/term/man/is_term.html">is_term()</a></code>.</li>
 <li>
-<code><a href="https://rdrr.io/pkg/term/man/chk_term.html">chk_term()</a></code> and <code><a href="https://rdrr.io/pkg/term/man/vld_term.html">vld_term()</a></code> argument <code>validate</code> now ‘complete’.</li>
-<li>Added <code>scalar_term()</code> to test if each term element is scalar.</li>
-<li>Added <code><a href="https://rdrr.io/pkg/term/man/pars_terms.html">pars_terms()</a></code>.</li>
+<code><a href="https://rdrr.io/pkg/term/man/chk_term.html">chk_term()</a></code> and <code><a href="https://rdrr.io/pkg/term/man/vld_term.html">vld_term()</a></code> argument <code>validate</code> now defaults to <code>"complete"</code>.</li>
+<li>Soft deprecated
+<ul>
+<li>
+<code><a href="https://rdrr.io/pkg/universals/man/pars.html">pars(x, terms = TRUE)</a></code> for <code><a href="https://rdrr.io/pkg/term/man/pars_terms.html">pars_terms(x)</a></code>.</li>
+<li>
+<code>terms</code> argument of <code><a href="https://rdrr.io/pkg/universals/man/npdims.html">npdims()</a></code>.</li>
+<li>
+<code><a href="https://rdrr.io/r/base/subset.html">subset(select = )</a></code> for <code><a href="https://rdrr.io/r/base/subset.html">subset(pars = )</a></code>.</li>
+<li>
+<code><a href="https://rdrr.io/pkg/term/man/deprecated.html">is.term()</a></code> for <code><a href="https://rdrr.io/pkg/term/man/is_term.html">is_term()</a></code>.</li>
+<li>
+<code><a href="https://rdrr.io/pkg/term/man/deprecated.html">is.inconsistent_terms()</a></code> for <code><a href="https://rdrr.io/pkg/term/man/is_inconsistent_terms.html">is_inconsistent_terms()</a></code>.</li>
+<li>
+<code><a href="https://rdrr.io/pkg/term/man/deprecated.html">is.incomplete_terms()</a></code> for <code><a href="https://rdrr.io/pkg/term/man/is_incomplete_terms.html">is_incomplete_terms()</a></code>.</li>
+</ul>
+</li>
 </ul>
 </div>
-    <div id="term-0109005" class="section level1">
-<h1 class="page-header" data-toc-text="0.1.0.9005">
-<a href="#term-0109005" class="anchor"></a>term 0.1.0.9005<small> Unreleased </small>
-</h1>
+<div id="features" class="section level2">
+<h2 class="hasAnchor">
+<a href="#features" class="anchor"></a>Features</h2>
 <ul>
+<li>Added <code><a href="https://rdrr.io/pkg/universals/man/pars.html">pars(scalar = TRUE)</a></code> and <code><a href="https://rdrr.io/pkg/universals/man/npars.html">npars(scalar = TRUE)</a></code>.</li>
+<li>Added <code>vld_pars()</code> to validate parameter names.</li>
+<li>Added <code>scalar_term()</code> to test if each term element is scalar.</li>
+<li>Added <code><a href="https://rdrr.io/pkg/term/man/pars_terms.html">pars_terms()</a></code>.</li>
 <li>Redefined <code>term</code> as a <code>vtcr</code> class with
 <ul>
 <li>
@@ -163,51 +162,18 @@
 <code><a href="https://vctrs.r-lib.org/reference/vec_cast.html">vec_cast()</a></code> to safely cast character.</li>
 </ul>
 </li>
-<li>Modified
+</ul>
+</div>
+<div id="internal" class="section level2">
+<h2 class="hasAnchor">
+<a href="#internal" class="anchor"></a>Internal</h2>
 <ul>
-<li><code><a href="https://rdrr.io/pkg/term/man/repair_terms.html">repair_terms()</a></code></li>
+<li>Use extras from CRAN.</li>
 <li>
-<code>is_complete_terms()</code> so now requires same number of duplicate copies.</li>
+<code><a href="https://rdrr.io/pkg/universals/man/ndims.html">ndims()</a></code> and <code><a href="https://rdrr.io/pkg/universals/man/dims.html">dims()</a></code> imported from universals.</li>
+<li>New implementation for <code><a href="https://rdrr.io/pkg/term/man/repair_terms.html">repair_terms()</a></code>.</li>
 </ul>
-</li>
-<li>Added
-<ul>
-<li><code>pars_scalar()</code></li>
-<li>
-<code>npars_scalar()</code>.</li>
-</ul>
-</li>
-<li>Soft deprecated
-<ul>
-<li>
-<code><a href="https://rdrr.io/pkg/universals/man/pars.html">pars(x, terms = TRUE)</a></code> for <code><a href="https://rdrr.io/pkg/term/man/pars_terms.html">pars_terms(x)</a></code>.</li>
-<li>
-<code>terms</code> argument of <code><a href="https://rdrr.io/pkg/universals/man/npdims.html">npdims()</a></code>.</li>
-<li>
-<code><a href="https://rdrr.io/pkg/universals/man/pars.html">pars(scalar =)</a></code> for <code>pars_scalar()</code>.</li>
-<li>
-<code><a href="https://rdrr.io/pkg/universals/man/npars.html">npars(scalar =)</a></code> for <code>npars_scalar()</code>.</li>
-<li>
-<code><a href="https://rdrr.io/r/base/subset.html">subset(select = )</a></code> for <code><a href="https://rdrr.io/r/base/subset.html">subset(pars = )</a></code>.</li>
-<li>
-<code><a href="https://rdrr.io/pkg/term/man/deprecated.html">is.term()</a></code> for <code><a href="https://rdrr.io/pkg/term/man/is_term.html">is_term()</a></code>.</li>
-<li>
-<code><a href="https://rdrr.io/pkg/term/man/deprecated.html">is.inconsistent_terms()</a></code> for <code><a href="https://rdrr.io/pkg/term/man/is_inconsistent_terms.html">is_inconsistent_terms()</a></code>.</li>
-<li>
-<code><a href="https://rdrr.io/pkg/term/man/deprecated.html">is.incomplete_terms()</a></code> for <code><a href="https://rdrr.io/pkg/term/man/is_incomplete_terms.html">is_incomplete_terms()</a></code>.</li>
-<li>
-<code>validate = 'class'</code> for <code><a href="https://rdrr.io/pkg/term/man/chk_term.html">chk_term()</a></code> and <code><a href="https://rdrr.io/pkg/term/man/vld_term.html">vld_term()</a></code> for <code>validate = 'complete'</code>.</li>
-</ul>
-</li>
-<li>Migrated
-<ul>
-<li>
-<code>ndims()</code> to extras package.</li>
-<li>
-<code><a href="https://rdrr.io/pkg/universals/man/dims.html">dims()</a></code> to extras package.</li>
-</ul>
-</li>
-</ul>
+</div>
 </div>
     <div id="term-010" class="section level1">
 <h1 class="page-header" data-toc-text="0.1.0">
