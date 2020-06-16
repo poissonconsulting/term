@@ -119,12 +119,12 @@ Use term() to repair the input." />
     </div>
 
     <div class="ref-description">
-    <p>Use this function to quickly construct a <a href='term.html'>term</a> object
+    <p>Use this function to quickly construct a <a href='https://rdrr.io/pkg/term/man/term.html'>term</a> object
 from a character vector, without checking the input.
-Use <code><a href='term.html'>term()</a></code> to repair the input.</p>
+Use <code><a href='https://rdrr.io/pkg/term/man/term.html'>term()</a></code> to repair the input.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>new_term</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>character</a></span>())</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/term/man/new_term.html'>new_term</a></span>(x = <span class='fu'><a href='https://rdrr.io/r/base/character.html'>character</a></span>())</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -137,11 +137,11 @@ Use <code><a href='term.html'>term()</a></code> to repair the input.</p>
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>new_term</span>()</div><div class='output co'>#&gt; &lt;term[0]&gt;</div><div class='input'><span class='fu'>new_term</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"a"</span>, <span class='st'>"b[1]"</span>, <span class='st'>"b[2]"</span>))</div><div class='output co'>#&gt; &lt;term[3]&gt;
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/term/man/new_term.html'>new_term</a></span>()</div><div class='output co'>#&gt; &lt;term[0]&gt;</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/term/man/new_term.html'>new_term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"a"</span>, <span class='st'>"b[1]"</span>, <span class='st'>"b[2]"</span>))</div><div class='output co'>#&gt; &lt;term[3]&gt;
 #&gt; [1] a    b[1] b[2]</div><div class='input'>
 <span class='co'># Terms are not checked for validity:</span>
-<span class='fu'>new_term</span>(<span class='st'>"r["</span>)</div><div class='output co'>#&gt; &lt;term[1]&gt;
-#&gt; [1] r[</div><div class='input'><span class='fu'><a href='repair_terms.html'>repair_terms</a></span>(<span class='fu'>new_term</span>(<span class='st'>"r["</span>))</div><div class='output co'>#&gt; &lt;term[1]&gt;
+<span class='fu'><a href='https://rdrr.io/pkg/term/man/new_term.html'>new_term</a></span>(<span class='st'>"r["</span>)</div><div class='output co'>#&gt; &lt;term[1]&gt;
+#&gt; [1] r[</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/term/man/repair_terms.html'>repair_terms</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/term/man/new_term.html'>new_term</a></span>(<span class='st'>"r["</span>))</div><div class='output co'>#&gt; &lt;term[1]&gt;
 #&gt; [1] &lt;NA&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

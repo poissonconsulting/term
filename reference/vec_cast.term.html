@@ -125,7 +125,7 @@ the foundation of type coercions in vctrs.</p>
     </div>
 
     <pre class="usage"><span class='co'># S3 method for term</span>
-<span class='fu'><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vec_cast</a></span>(<span class='no'>x</span>, <span class='no'>to</span>, <span class='no'>...</span>)</pre>
+<span class='fu'><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vec_cast</a></span>(<span class='kw'>x</span>, <span class='kw'>to</span>, <span class='kw'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -151,7 +151,7 @@ dots are only for future extensions and should be empty.</p></td>
     <div class='dont-index'><p><code><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vctrs::vec_cast()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vec_cast</a></span>(<span class='fu'><a href='new_term.html'>new_term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"a[1]"</span>, <span class='st'>"a[2]"</span>)), <span class='fu'><a href='https://rdrr.io/r/base/character.html'>character</a></span>())</div><div class='output co'>#&gt; [1] "a[1]" "a[2]"</div><div class='input'><span class='fu'><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vec_cast</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"a[1]"</span>, <span class='st'>"a[2]"</span>), <span class='fu'><a href='new_term.html'>new_term</a></span>())</div><div class='output co'>#&gt; &lt;term[2]&gt;
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vec_cast</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/term/man/new_term.html'>new_term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"a[1]"</span>, <span class='st'>"a[2]"</span>)), <span class='fu'><a href='https://rdrr.io/r/base/character.html'>character</a></span>())</div><div class='output co'>#&gt; [1] "a[1]" "a[2]"</div><div class='input'><span class='fu'><a href='https://vctrs.r-lib.org/reference/vec_cast.html'>vec_cast</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"a[1]"</span>, <span class='st'>"a[2]"</span>), <span class='fu'><a href='https://rdrr.io/pkg/term/man/new_term.html'>new_term</a></span>())</div><div class='output co'>#&gt; &lt;term[2]&gt;
 #&gt; [1] a[1] a[2]</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

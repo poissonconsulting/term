@@ -122,7 +122,7 @@ Use chk_s3_class() to check if an object is a term." />
 Use <code>chk_s3_class()</code> to check if an object is a term.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>vld_term</span>(<span class='no'>x</span>, <span class='kw'>validate</span> <span class='kw'>=</span> <span class='st'>"complete"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/term/man/vld_term.html'>vld_term</a></span>(<span class='kw'>x</span>, validate = <span class='st'>"complete"</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -161,10 +161,10 @@ contain at least 11 more terms to be consistent
 <p>Missing values are ignored as are duplicates and order.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='chk_term.html'>chk_term()</a></code></p></div>
+    <div class='dont-index'><p><code><a href='https://rdrr.io/pkg/term/man/chk_term.html'>chk_term()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>vld_term</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"x[2]"</span>, <span class='st'>"x[1]"</span>))</div><div class='output co'>#&gt; [1] FALSE</div><div class='input'><span class='fu'>vld_term</span>(<span class='fu'><a href='term.html'>term</a></span>(<span class='st'>"x[2]"</span>, <span class='st'>"x[1]"</span>))</div><div class='output co'>#&gt; [1] TRUE</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/term/man/vld_term.html'>vld_term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"x[2]"</span>, <span class='st'>"x[1]"</span>))</div><div class='output co'>#&gt; [1] FALSE</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/term/man/vld_term.html'>vld_term</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/term/man/term.html'>term</a></span>(<span class='st'>"x[2]"</span>, <span class='st'>"x[1]"</span>))</div><div class='output co'>#&gt; [1] TRUE</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -83,10 +83,14 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>To install the latest release from <a href="https://cran.r-project.org">CRAN</a></p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"term"</span>)</pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"term"</span>)
+</pre></div>
 <p>To install the developmental version from <a href="https://github.com/poissonconsulting/term">GitHub</a></p>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="co"># install.packages("remotes")</span>
-<span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"poissonconsulting/term"</span>)</pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="co"># install.packages("remotes")</span>
+<span class="kw">remotes</span>::<span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"poissonconsulting/term"</span>)
+</pre></div>
 </div>
 <div id="demonstration" class="section level2">
 <h2 class="hasAnchor">
@@ -94,36 +98,39 @@
 <div id="creating-term-vectors" class="section level3">
 <h3 class="hasAnchor">
 <a href="#creating-term-vectors" class="anchor"></a>Creating Term Vectors</h3>
-<div class="sourceCode" id="cb3"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">term</span>)
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/poissonconsulting/term">term</a></span>)
 
 <span class="co"># term vectors can be constructed from character vectors</span>
-<span class="no">term</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/term.html">term</a></span>(
+<span class="kw">term</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/term.html">term</a></span>(
   <span class="st">"alpha[1]"</span>, <span class="st">"alpha[2]"</span>, <span class="st">"beta[1,1]"</span>, <span class="st">"beta[2,1]"</span>,
   <span class="st">"beta[1,2]"</span>, <span class="st">"beta[2,2]"</span>, <span class="st">"sigma"</span>
 )
 
 <span class="co"># term vectors print like character vectors</span>
-<span class="no">term</span>
+<span class="kw">term</span>
 <span class="co">#&gt; &lt;term[7]&gt;</span>
 <span class="co">#&gt; [1] alpha[1]  alpha[2]  beta[1,1] beta[2,1] beta[1,2] beta[2,2] sigma</span>
 
 <span class="co"># they are S3 class objects that also inherit from character</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(<span class="no">term</span>)
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(<span class="kw">term</span>)
 <span class="co">#&gt;  term [1:7] alpha[1], alpha[2], beta[1,1], beta[2,1], beta[1,2], beta[2,2],...</span>
 
 <span class="co"># term vectors can also be created from numeric atomic objects</span>
-<span class="fu"><a href="reference/as.term.html">as.term</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span>(<span class="fl">1</span>:<span class="fl">4</span>, <span class="fl">2</span>), <span class="st">"theta"</span>)
+<span class="fu"><a href="reference/as.term.html">as.term</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span>(<span class="fl">1</span><span class="op">:</span><span class="fl">4</span>, <span class="fl">2</span>), <span class="st">"theta"</span>)
 <span class="co">#&gt; &lt;term[4]&gt;</span>
-<span class="co">#&gt; [1] theta[1,1] theta[2,1] theta[1,2] theta[2,2]</span></pre></div>
+<span class="co">#&gt; [1] theta[1,1] theta[2,1] theta[1,2] theta[2,2]</span>
+</pre></div>
 </div>
 <div id="querying-term-vectors" class="section level3">
 <h3 class="hasAnchor">
 <a href="#querying-term-vectors" class="anchor"></a>Querying Term Vectors</h3>
-<div class="sourceCode" id="cb4"><pre class="r"><span class="co"># get the parameter names</span>
-<span class="fu"><a href="https://rdrr.io/pkg/universals/man/pars.html">pars</a></span>(<span class="no">term</span>)
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="co"># get the parameter names</span>
+<span class="fu"><a href="https://rdrr.io/pkg/universals/man/pars.html">pars</a></span>(<span class="kw">term</span>)
 <span class="co">#&gt; [1] "alpha" "beta"  "sigma"</span>
 <span class="co"># and parameter dimensions</span>
-<span class="fu"><a href="https://rdrr.io/pkg/universals/man/pdims.html">pdims</a></span>(<span class="no">term</span>)
+<span class="fu"><a href="https://rdrr.io/pkg/universals/man/pdims.html">pdims</a></span>(<span class="kw">term</span>)
 <span class="co">#&gt; $alpha</span>
 <span class="co">#&gt; [1] 2</span>
 <span class="co">#&gt; </span>
@@ -134,10 +141,10 @@
 <span class="co">#&gt; [1] 1</span>
 
 <span class="co"># get the parameter names by term</span>
-<span class="fu"><a href="reference/pars_terms.html">pars_terms</a></span>(<span class="no">term</span>)
+<span class="fu"><a href="reference/pars_terms.html">pars_terms</a></span>(<span class="kw">term</span>)
 <span class="co">#&gt; [1] "alpha" "alpha" "beta"  "beta"  "beta"  "beta"  "sigma"</span>
 <span class="co"># and the term indices</span>
-<span class="fu"><a href="reference/tindex.html">tindex</a></span>(<span class="no">term</span>)
+<span class="fu"><a href="reference/tindex.html">tindex</a></span>(<span class="kw">term</span>)
 <span class="co">#&gt; $`alpha[1]`</span>
 <span class="co">#&gt; [1] 1</span>
 <span class="co">#&gt; </span>
@@ -157,12 +164,14 @@
 <span class="co">#&gt; [1] 2 2</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; $sigma</span>
-<span class="co">#&gt; [1] 1</span></pre></div>
+<span class="co">#&gt; [1] 1</span>
+</pre></div>
 </div>
 <div id="validating-term-vectors" class="section level3">
 <h3 class="hasAnchor">
 <a href="#validating-term-vectors" class="anchor"></a>Validating Term Vectors</h3>
-<div class="sourceCode" id="cb5"><pre class="r"><span class="co"># term vectors can be tested for whether they have (parseably) valid,</span>
+<div class="sourceCode" id="cb5"><pre class="downlit">
+<span class="co"># term vectors can be tested for whether they have (parseably) valid,</span>
 <span class="co"># (dimensionally) consistent and complete terms.</span>
 
 <span class="co"># valid terms</span>
@@ -187,29 +196,33 @@
 
 <span class="co"># incomplete terms</span>
 <span class="fu"><a href="reference/is_incomplete_terms.html">is_incomplete_terms</a></span>(<span class="fu"><a href="reference/term.html">term</a></span>(<span class="st">"a"</span>, <span class="st">"a[3]"</span>, <span class="st">"b[1,1]"</span>, <span class="st">"b[2,2]"</span>))
-<span class="co">#&gt; [1] TRUE</span></pre></div>
+<span class="co">#&gt; [1] TRUE</span>
+</pre></div>
 </div>
 <div id="checking-term-vectors" class="section level3">
 <h3 class="hasAnchor">
 <a href="#checking-term-vectors" class="anchor"></a>Checking Term Vectors</h3>
-<div class="sourceCode" id="cb6"><pre class="r"><span class="no">x</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/term.html">term</a></span>(<span class="st">"a[1]"</span>, <span class="st">"a[3]"</span>)
-<span class="kw pkg">chk</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/chk/man/chk_s3_class.html">chk_s3_class</a></span>(<span class="no">x</span>, <span class="st">"term"</span>)
-<span class="fu"><a href="reference/chk_term.html">chk_term</a></span>(<span class="no">x</span>, <span class="kw">validate</span> <span class="kw">=</span> <span class="st">"valid"</span>)
-<span class="fu"><a href="reference/chk_term.html">chk_term</a></span>(<span class="no">x</span>, <span class="kw">validate</span> <span class="kw">=</span> <span class="st">"complete"</span>)
-<span class="co">#&gt; Error: All elements of term vector `x` must be complete.</span></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit">
+<span class="kw">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/term.html">term</a></span>(<span class="st">"a[1]"</span>, <span class="st">"a[3]"</span>)
+<span class="kw">chk</span>::<span class="fu"><a href="https://rdrr.io/pkg/chk/man/chk_s3_class.html">chk_s3_class</a></span>(<span class="kw">x</span>, <span class="st">"term"</span>)
+<span class="fu"><a href="reference/chk_term.html">chk_term</a></span>(<span class="kw">x</span>, validate = <span class="st">"valid"</span>)
+<span class="fu"><a href="reference/chk_term.html">chk_term</a></span>(<span class="kw">x</span>, validate = <span class="st">"complete"</span>)
+<span class="co">#&gt; Error: All elements of term vector `x` must be complete.</span>
+</pre></div>
 </div>
 <div id="repairing-term-vectors" class="section level3">
 <h3 class="hasAnchor">
 <a href="#repairing-term-vectors" class="anchor"></a>Repairing Term Vectors</h3>
-<div class="sourceCode" id="cb7"><pre class="r"><span class="no">term</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/new_term.html">new_term</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"b[4]"</span>, <span class="st">"b   [2]"</span>, <span class="st">"b"</span>, <span class="st">"b[1"</span>, <span class="st">"b[2, 2]"</span>, <span class="st">"b"</span>, <span class="st">"a [ 1 ] "</span>, <span class="fl">NA</span>))
-<span class="no">term</span>
+<div class="sourceCode" id="cb7"><pre class="downlit">
+<span class="kw">term</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/new_term.html">new_term</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"b[4]"</span>, <span class="st">"b   [2]"</span>, <span class="st">"b"</span>, <span class="st">"b[1"</span>, <span class="st">"b[2, 2]"</span>, <span class="st">"b"</span>, <span class="st">"a [ 1 ] "</span>, <span class="fl">NA</span>))
+<span class="kw">term</span>
 <span class="co">#&gt; &lt;term[8]&gt;</span>
 <span class="co">#&gt; [1] b[4]       `b   [2]`  b          b[1        `b[2, 2]`  b          `a [ 1 ] `</span>
 <span class="co">#&gt; [8] &lt;NA&gt;</span>
 
 <span class="co"># valid terms can be repaired (invalid terms are converted to missing values)</span>
-<span class="no">term</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/repair_terms.html">repair_terms</a></span>(<span class="no">term</span>)
-<span class="no">term</span>
+<span class="kw">term</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/repair_terms.html">repair_terms</a></span>(<span class="kw">term</span>)
+<span class="kw">term</span>
 <span class="co">#&gt; &lt;term[8]&gt;</span>
 <span class="co">#&gt; [1] b[4]   b[2]   b[1]   &lt;NA&gt;   b[2,2] b[1]   a      &lt;NA&gt;</span>
 
@@ -218,34 +231,35 @@
 <span class="co">#&gt; Error: All elements of term vector `string_args_term` must be valid.</span>
 
 <span class="co"># missing values can easily removed</span>
-<span class="no">term</span> <span class="kw">&lt;-</span> <span class="no">term</span>[!<span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span>(<span class="no">term</span>)]
-<span class="no">term</span>
+<span class="kw">term</span> <span class="op">&lt;-</span> <span class="kw">term</span>[<span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span>(<span class="kw">term</span>)]
+<span class="kw">term</span>
 <span class="co">#&gt; &lt;term[6]&gt;</span>
 <span class="co">#&gt; [1] b[4]   b[2]   b[1]   b[2,2] b[1]   a</span>
 
 <span class="co"># and only unique values retained</span>
-<span class="no">term</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span>(<span class="no">term</span>)
-<span class="no">term</span>
+<span class="kw">term</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span>(<span class="kw">term</span>)
+<span class="kw">term</span>
 <span class="co">#&gt; &lt;term[5]&gt;</span>
 <span class="co">#&gt; [1] b[4]   b[2]   b[1]   b[2,2] a</span>
 
 <span class="co"># a term vector can be sorted by parameter name and index</span>
-<span class="no">term</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sort.html">sort</a></span>(<span class="no">term</span>)
-<span class="no">term</span>
+<span class="kw">term</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sort.html">sort</a></span>(<span class="kw">term</span>)
+<span class="kw">term</span>
 <span class="co">#&gt; &lt;term[5]&gt;</span>
 <span class="co">#&gt; [1] a      b[1]   b[2]   b[4]   b[2,2]</span>
 
 <span class="co"># an inconsistent term removed</span>
-<span class="no">term</span> <span class="kw">&lt;-</span> <span class="no">term</span>[<span class="no">term</span> <span class="kw">!=</span> <span class="st">"b[2,2]"</span>]
-<span class="no">term</span>
+<span class="kw">term</span> <span class="op">&lt;-</span> <span class="kw">term</span>[<span class="kw">term</span> != <span class="st">"b[2,2]"</span>]
+<span class="kw">term</span>
 <span class="co">#&gt; &lt;term[4]&gt;</span>
 <span class="co">#&gt; [1] a    b[1] b[2] b[4]</span>
 
 <span class="co"># and incomplete terms completed</span>
-<span class="no">term</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sort.html">sort</a></span>(<span class="fu"><a href="reference/complete_terms.html">complete_terms</a></span>(<span class="no">term</span>))
-<span class="no">term</span>
+<span class="kw">term</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sort.html">sort</a></span>(<span class="fu"><a href="reference/complete_terms.html">complete_terms</a></span>(<span class="kw">term</span>))
+<span class="kw">term</span>
 <span class="co">#&gt; &lt;term[5]&gt;</span>
-<span class="co">#&gt; [1] a    b[1] b[2] b[3] b[4]</span></pre></div>
+<span class="co">#&gt; [1] a    b[1] b[2] b[3] b[4]</span>
+</pre></div>
 </div>
 </div>
 <div id="contribution" class="section level2">

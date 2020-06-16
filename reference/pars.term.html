@@ -121,7 +121,7 @@
     </div>
 
     <pre class="usage"><span class='co'># S3 method for term</span>
-<span class='fu'><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars</a></span>(<span class='no'>x</span>, <span class='kw'>scalar</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>terms</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
+<span class='fu'><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars</a></span>(<span class='kw'>x</span>, scalar = <span class='kw'>NULL</span>, terms = <span class='fl'>FALSE</span>, <span class='kw'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -151,14 +151,14 @@ for each term element.</p></td>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other parameters: 
-<code><a href='pars_terms.html'>pars_terms</a>()</code></p></div>
+<code><a href='https://rdrr.io/pkg/term/man/pars_terms.html'>pars_terms</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>term</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='term.html'>term</a></span>(
+    <pre class="examples"><div class='input'><span class='kw'>term</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/term/man/term.html'>term</a></span>(
   <span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[2]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span>,
   <span class='st'>"beta[1,2]"</span>, <span class='st'>"beta[2,2]"</span>, <span class='st'>"sigma"</span>, <span class='fl'>NA</span>
 )
-<span class='fu'><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars</a></span>(<span class='no'>term</span>)</div><div class='output co'>#&gt; [1] "alpha" "beta"  "sigma" NA     </div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars</a></span>(<span class='no'>term</span>, <span class='kw'>scalar</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; [1] "sigma" NA     </div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars</a></span>(<span class='no'>term</span>, <span class='kw'>scalar</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; [1] "alpha" "beta"  NA     </div></pre>
+<span class='fu'><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars</a></span>(<span class='kw'>term</span>)</div><div class='output co'>#&gt; [1] "alpha" "beta"  "sigma" NA     </div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars</a></span>(<span class='kw'>term</span>, scalar = <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; [1] "sigma" NA     </div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars</a></span>(<span class='kw'>term</span>, scalar = <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; [1] "alpha" "beta"  NA     </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
