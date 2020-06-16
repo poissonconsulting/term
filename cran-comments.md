@@ -1,17 +1,19 @@
-## Test environments
+term 0.2.0
 
-release 3.6.2
+## Cran Repository Policy
 
-* OS X (local) - release
-
-* Ubuntu (travis) - oldrelease, release and devel
-* Ubuntu (rhub) - release
-* Fedora (rhub) - devel
-
-* Windows (appveyor) - release
-* Windows (win-builder) - release and devel
-* Windows (rhub) - devel
+- [x] Reviewed CRP last edited 2020-05-21.
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 note
+- [x] Checked locally, R 4.0.1
+- [ ] Checked on CI system, R 4.0.1
+- [ ] Checked on win-builder, R devel
+
+OK
+
+- [ ] Explain R CMD check failures or remove this line.
+
+## CRAN failures
+
+- [x] Checked on 2020-06-16, no errors found.
