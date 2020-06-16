@@ -21,8 +21,8 @@ foundation of type coercions in vctrs.
 \code{vec_ptype2()} is relevant when you are implementing vctrs methods
 for your class, but it should not usually be called directly. If
 you need to find the common type of a set of inputs, call
-\code{\link[vctrs:vec_ptype_common]{vec_ptype_common()}} instead. This function supports multiple
-inputs and \link[vctrs:vec_ptype_finalise]{finalises} the common type.
+\code{\link[vctrs:vec_ptype]{vec_ptype_common()}} instead. This function supports multiple
+inputs and \link[vctrs:new_partial]{finalises} the common type.
 }
 \seealso{
 \code{\link[vctrs:vec_ptype2]{vctrs::vec_ptype2()}}
