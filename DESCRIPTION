@@ -29,7 +29,7 @@ Depends:
     R (>= 3.4)
 Imports:
     chk,
-    extras,
+    extras (>= 0.0.1),
     lifecycle,
     rlang,
     universals,
@@ -39,8 +39,6 @@ Suggests:
     testthat
 RdMacros:
     lifecycle
-Remotes:
-    poissonconsulting/extras
 Encoding: UTF-8
 Language: en-US
 LazyData: true
