@@ -26,7 +26,7 @@
 ## Internal
 
 - Use extras from CRAN.
-- `ndims()` and `dims()` imported from universals.
+- `ndims()` and `dims()` imported from universals and reexported.
 - New implementation for `repair_terms()`.
 
 
