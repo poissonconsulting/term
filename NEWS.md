@@ -1,3 +1,7 @@
+# term 0.1.0.9007
+
+- Use extras from CRAN.
+
 # term 0.1.0.9006
 
 - Replace `pars_scalar()` and `npars_scalar()` with `pars(scalar = TRUE)` and `npars(scalar = TRUE)`.
