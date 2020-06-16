@@ -37,8 +37,6 @@ Imports:
 Suggests:
     covr,
     testthat
-RdMacros:
-    lifecycle
 Encoding: UTF-8
 Language: en-US
 LazyData: true

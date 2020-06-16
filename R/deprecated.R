@@ -7,7 +7,7 @@ NULL
 
 #' @describeIn deprecated Is Term
 #'
-#' \lifecycle{soft-deprecated}
+#' `r lifecycle::badge("soft-deprecated")`
 #'
 #' Replace by [is_term()]
 #' @export
@@ -21,7 +21,7 @@ is.term <- function(x) {
 
 #' @describeIn deprecated Is Incomplete Terms
 #'
-#' \lifecycle{soft-deprecated}
+#' `r lifecycle::badge("soft-deprecated")`
 #'
 #' Replace by [is_incomplete_terms()]
 #' @export
@@ -35,7 +35,7 @@ is.incomplete_terms <- function(x) {
 
 #' @describeIn deprecated Is Inconsistent Terms
 #'
-#' \lifecycle{soft-deprecated}
+#' `r lifecycle::badge("soft-deprecated")`
 #'
 #' Replace by [is_inconsistent_terms()]
 #' @export
@@ -49,7 +49,7 @@ is.inconsistent_terms <- function(x) {
 
 #' @describeIn deprecated Get Parameters
 #'
-#' \lifecycle{soft-deprecated}
+#' `r lifecycle::badge("soft-deprecated")`
 #'
 #' Replace by [pars()]
 #' @export
@@ -64,7 +64,7 @@ parameters <- function(x, ...) {
 
 #' @describeIn deprecated Setting Parameters
 #'
-#' \lifecycle{soft-deprecated}
+#' `r lifecycle::badge("soft-deprecated")`
 #'
 #' Replace by pars<-
 #' @export
@@ -79,7 +79,7 @@ parameters <- function(x, ...) {
 
 #' @describeIn deprecated Set Parameters
 #'
-#' \lifecycle{soft-deprecated}
+#' `r lifecycle::badge("soft-deprecated")`
 #'
 #' Replace by [set_pars()]
 #' @export
@@ -93,7 +93,7 @@ set_parameters <- function(x, pars) {
 
 #' @describeIn deprecated Term Index
 #'
-#' \lifecycle{soft-deprecated}
+#' `r lifecycle::badge("soft-deprecated")`
 #'
 #' Replace by [tindex()]
 #' @export

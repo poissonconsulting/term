@@ -41,43 +41,43 @@ Deprecated Functions
 \itemize{
 \item \code{is.term}: Is Term
 
-\lifecycle{soft-deprecated}
+\ifelse{html}{\figure{lifecycle-soft-deprecated.svg}{options: alt='Soft-deprecated lifecycle'}}{\strong{Soft-deprecated}}
 
 Replace by \code{\link[=is_term]{is_term()}}
 
 \item \code{is.incomplete_terms}: Is Incomplete Terms
 
-\lifecycle{soft-deprecated}
+\ifelse{html}{\figure{lifecycle-soft-deprecated.svg}{options: alt='Soft-deprecated lifecycle'}}{\strong{Soft-deprecated}}
 
 Replace by \code{\link[=is_incomplete_terms]{is_incomplete_terms()}}
 
 \item \code{is.inconsistent_terms}: Is Inconsistent Terms
 
-\lifecycle{soft-deprecated}
+\ifelse{html}{\figure{lifecycle-soft-deprecated.svg}{options: alt='Soft-deprecated lifecycle'}}{\strong{Soft-deprecated}}
 
 Replace by \code{\link[=is_inconsistent_terms]{is_inconsistent_terms()}}
 
 \item \code{parameters}: Get Parameters
 
-\lifecycle{soft-deprecated}
+\ifelse{html}{\figure{lifecycle-soft-deprecated.svg}{options: alt='Soft-deprecated lifecycle'}}{\strong{Soft-deprecated}}
 
 Replace by \code{\link[=pars]{pars()}}
 
 \item \code{parameters<-}: Setting Parameters
 
-\lifecycle{soft-deprecated}
+\ifelse{html}{\figure{lifecycle-soft-deprecated.svg}{options: alt='Soft-deprecated lifecycle'}}{\strong{Soft-deprecated}}
 
 Replace by pars<-
 
 \item \code{set_parameters}: Set Parameters
 
-\lifecycle{soft-deprecated}
+\ifelse{html}{\figure{lifecycle-soft-deprecated.svg}{options: alt='Soft-deprecated lifecycle'}}{\strong{Soft-deprecated}}
 
 Replace by \code{\link[=set_pars]{set_pars()}}
 
 \item \code{tdims}: Term Index
 
-\lifecycle{soft-deprecated}
+\ifelse{html}{\figure{lifecycle-soft-deprecated.svg}{options: alt='Soft-deprecated lifecycle'}}{\strong{Soft-deprecated}}
 
 Replace by \code{\link[=tindex]{tindex()}}
 }}
