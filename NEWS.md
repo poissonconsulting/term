@@ -1,3 +1,8 @@
+# term 0.2.0
+
+- Same as previous version.
+
+
 # term 0.1.0.9007
 
 - Use extras from CRAN.
