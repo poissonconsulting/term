@@ -32,7 +32,7 @@ pars(term, scalar = TRUE)
 pars(term, scalar = FALSE)
 }
 \seealso{
-Other {parameters}: 
+Other parameters: 
 \code{\link{pars_terms}()}
 }
-\concept{{parameters}}
+\concept{parameters}

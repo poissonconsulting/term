@@ -23,4 +23,4 @@ It is useful for extracting the values of individual terms.
 \examples{
 tindex(term("alpha", "alpha[2]", "beta[1,1]", "beta[2 ,1  ]"))
 }
-\concept{{dimensions}}
+\concept{dimensions}

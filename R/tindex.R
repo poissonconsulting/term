@@ -8,7 +8,7 @@
 #'
 #' @inheritParams params
 #' @return A named list of integer vectors of the index for each term.
-#' @family {dimensions}
+#' @family dimensions
 #' @export
 #'
 #' @examples

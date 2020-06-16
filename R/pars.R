@@ -28,7 +28,7 @@ pars.character <- function(x, scalar = NULL, ...) {
 #' @inheritParams params
 #' @param terms A flag specifying whether to return the parameter name
 #' for each term element.
-#' @family {parameters}
+#' @family parameters
 #' @export
 #'
 #' @examples
