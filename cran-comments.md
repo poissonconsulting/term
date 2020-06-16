@@ -7,12 +7,10 @@ term 0.2.0
 ## R CMD check results
 
 - [x] Checked locally, R 4.0.1
-- [ ] Checked on CI system, R 4.0.1
+- [x] Checked on CI system, R 4.0.1
 - [ ] Checked on win-builder, R devel
 
 OK
-
-- [ ] Explain R CMD check failures or remove this line.
 
 ## CRAN failures
 
