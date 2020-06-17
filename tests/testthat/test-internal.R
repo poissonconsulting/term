@@ -1,0 +1,11 @@
+test_that("multiplication works", {
+  expect_true("a[1]" < "a[2]")
+  expect_true("a" < "a[2]")
+  expect_false("a" < "a")
+  expect_false("a[1,1]" < "a[1,1]")
+  expect_false("a[1,2]" < "a[1,1]")
+  expect_false("a[2,1]" < "a[1,1]")
+  expect_false("a[2,1]" < "a[1,2]")
+  expect_true("a[1,2]" < "a[2,1]")
+  expect_true("a[2,1]" > "a[1,2]")
+})
