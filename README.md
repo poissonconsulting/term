@@ -44,39 +44,77 @@ remotes::install_github("poissonconsulting/term")
 
 ## Demonstration
 
-### Creating Term Vectors
+### Term Vectors
 
 ``` r
 library(term)
 
-# term vectors can be constructed from character vectors
+# term vectors are the labels used to reference values in 
+# vectors, matrices and arrays
 term <- term(
   "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
   "beta[1,2]", "beta[2,2]", "sigma"
 )
 
-# term vectors print like character vectors
+# they print like character vectors
 term
 #> <term[7]>
 #> [1] alpha[1]  alpha[2]  beta[1,1] beta[2,1] beta[1,2] beta[2,2] sigma
 
-# they are S3 class objects that also inherit from character
-str(term)
-#>  term [1:7] alpha[1], alpha[2], beta[1,1], beta[2,1], beta[1,2], beta[2,2],...
+# but are S3 class objects that also inherit from vctrs_vctr
+class(term)
+#> [1] "term"       "vctrs_vctr"
+```
 
-# term vectors can also be created from numeric atomic objects
-as.term(matrix(1:4, 2), "theta")
+``` r
+# consider a matrix of term values
+set.seed(101)
+estimate <- matrix(rnorm(4), nrow = 2)
+estimate
+#>            [,1]       [,2]
+#> [1,] -0.3260365 -0.6749438
+#> [2,]  0.5524619  0.2143595
+
+# the term labels can be created using as_term()
+term <- as_term(estimate, name = "b0")
+term
 #> <term[4]>
-#> [1] theta[1,1] theta[2,1] theta[1,2] theta[2,2]
+#> [1] b0[1,1] b0[2,1] b0[1,2] b0[2,2]
+
+# and combined with the term values to create a coef table
+library(tibble)
+coef <- tibble(term = term, estimate = as.vector(estimate))
+coef
+#> # A tibble: 4 x 2
+#>   term    estimate
+#>   <term>     <dbl>
+#> 1 b0[1,1]   -0.326
+#> 2 b0[2,1]    0.552
+#> 3 b0[1,2]   -0.675
+#> 4 b0[2,2]    0.214
 ```
 
 ### Querying Term Vectors
 
 ``` r
-# get the parameter names
+# the term vectors are readily sorted
+coef[rev(order(coef$term)),]
+#> # A tibble: 4 x 2
+#>   term    estimate
+#>   <term>     <dbl>
+#> 1 b0[2,2]    0.214
+#> 2 b0[1,2]   -0.675
+#> 3 b0[2,1]    0.552
+#> 4 b0[1,1]   -0.326
+
+# and the parameter names or parameter dimensions extracted
+term <- term(
+  "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
+  "beta[1,2]", "beta[2,2]", "sigma"
+)
+
 pars(term)
 #> [1] "alpha" "beta"  "sigma"
-# and parameter dimensions
 pdims(term)
 #> $alpha
 #> [1] 2
@@ -87,10 +125,9 @@ pdims(term)
 #> $sigma
 #> [1] 1
 
-# get the parameter names by term
+# this can also be done for each term
 pars_terms(term)
 #> [1] "alpha" "alpha" "beta"  "beta"  "beta"  "beta"  "sigma"
-# and the term indices
 tindex(term)
 #> $`alpha[1]`
 #> [1] 1
@@ -148,9 +185,10 @@ is_incomplete_terms(term("a", "a[3]", "b[1,1]", "b[2,2]"))
 ### Checking Term Vectors
 
 ``` r
+# term vectors can be checked using functions styled on those in the chk package
 x <- term("a[1]", "a[3]")
-chk::chk_s3_class(x, "term")
-chk_term(x, validate = "valid")
+vld_term(x, validate = "valid")
+#> [1] TRUE
 chk_term(x, validate = "complete")
 #> Error: All elements of term vector `x` must be complete.
 ```
