@@ -6,7 +6,7 @@ universals::pars
 #' @export
 pars.default <- function(x, scalar = NULL, ...) {
   chk_unused(...)
-  x <- as.term(x)
+  x <- as_term(x)
   pars(x, scalar = scalar)
 }
 
