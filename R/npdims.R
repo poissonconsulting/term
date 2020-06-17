@@ -14,7 +14,7 @@ npdims.term <- function(x, terms = FALSE, ...) {
   chk_unused(...)
 
   if(terms) {
-    deprecate_soft("0.1.0.9003", "term::npdims(terms =)", details = "If `terms = TRUE` use `npdims_terms() otherwise replace `npdims(terms = FALSE)` with `npdims()`.")
+    deprecate_soft("0.2.0", "term::npdims(terms =)", details = "If `terms = TRUE` use `npdims_terms() otherwise replace `npdims(terms = FALSE)` with `npdims()`.")
   }
 
   if (terms) {

@@ -19,7 +19,7 @@ subset.term <- function(x, pars = NULL, select = NULL, ...) {
   chk_unused(...)
 
   if(!missing(select)) {
-    deprecate_soft("0.1.0.9003", "term::subset(select =)",
+    deprecate_soft("0.2.0", "term::subset(select =)",
                    "term::subset(pars =)")
   }
   if(!is.null(select)) {
