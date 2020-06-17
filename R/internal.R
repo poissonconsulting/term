@@ -38,8 +38,3 @@ scalar_term <- function(x) {
   is.na(scalar[is.na(x)]) <- TRUE
   scalar
 }
-
-set_class <- function(x, class) {
-  class(x) <- class
-  x
-}
