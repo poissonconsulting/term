@@ -58,8 +58,7 @@ term_impl <- function(args) {
   nas <- vapply(args, anyNA, logical(1))
   chk_true(all(numbers | strings | nas))
 
-  # FIXME: Replace with as_term()
-  string_args <- lapply(unname(args[strings]), vec_cast, new_term())
+  string_args <- lapply(unname(args[strings]), as_term)
   string_args_term <- new_term(unlist_chr(string_args))
   chk_term(string_args_term, "valid")
 
