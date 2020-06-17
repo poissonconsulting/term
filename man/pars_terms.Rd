@@ -19,6 +19,9 @@ A character vector of the term parameter names.
 \description{
 Gets the name of each parameter for each term.
 }
+\details{
+The scalar argument has been \ifelse{html}{\figure{lifecycle-soft-deprecated.svg}{options: alt='Soft-deprecated lifecycle'}}{\strong{Soft-deprecated}}.
+}
 \examples{
 term <- term(
   "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",

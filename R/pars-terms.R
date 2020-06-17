@@ -2,6 +2,8 @@
 #'
 #' Gets the name of each parameter for each term.
 #'
+#' The scalar argument has been `r lifecycle::badge("soft-deprecated")`.
+#'
 #' @inheritParams params
 #' @param x A term vector.
 #' @return A character vector of the term parameter names.
@@ -20,7 +22,8 @@ pars_terms <- function(x, scalar = NULL, ...) {
   chk_unused(...)
 
   if(!is.null(scalar)) {
-    deprecate_soft("0.2.0", "term::pars_terms(scalar =)")
+    deprecate_soft("0.2.0", "term::pars_terms(scalar =)",
+                   details = "More specifically the scalar argument has been soft-deprecated.")
   }
 
   scalar_term <- scalar_term(x)

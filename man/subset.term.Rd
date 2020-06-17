@@ -21,6 +21,10 @@ The modified term vector.
 \description{
 Subsets a term vector.
 }
+\details{
+The \code{select} argument has been \ifelse{html}{\figure{lifecycle-soft-deprecated.svg}{options: alt='Soft-deprecated lifecycle'}}{\strong{Soft-deprecated}}
+for \code{pars}.
+}
 \examples{
 term <- term(
   "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",

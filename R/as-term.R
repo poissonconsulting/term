@@ -2,7 +2,7 @@
 #'
 #' Coerces an R object to a [term-vector()].
 #'
-#' `as.term` has been soft-deprecated for `as_term`.
+#' `as.term` has been `r lifecycle::badge("soft-deprecated")` for `as_term`.
 #'
 #' @inheritParams params
 #'
@@ -24,7 +24,7 @@ as.term <- function(x, ...) {
 
 #' @export
 as.term.default <- function(x, ..., from_as_term = FALSE) {
-  if(isFALSE(from_as_term)) return(as_term(x, ...))
+  if(vld_false(from_as_term)) return(as_term(x, ...))
   stop("no applicable method")
 }
 
