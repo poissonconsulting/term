@@ -18,7 +18,7 @@ tindex <- function(x) {
     lifecycle::deprecate_soft(
       "0.2.0", "term::tindex(x = 'must be a term object')"
     )
-    x <- vec_cast(x, new_term())
+    x <- as.term(x)
   }
 
   names <- x
