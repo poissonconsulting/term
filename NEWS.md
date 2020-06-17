@@ -3,32 +3,31 @@
 ## Breaking changes
 
 - `is_complete_terms()` now requires same number of duplicate copies.
-- `chk_term()` and `vld_term()` argument `validate` now defaults to `"complete"`.
+- `chk_term()` and `vld_term()` argument `validate` now defaults to `"complete"` and `class` value is soft-deprecated.
 - Soft deprecated
-    - `pars(x, terms = TRUE)` for `pars_terms(x)`.
-    - `terms` argument of `npdims()`.
-    - `subset(select = )` for `subset(pars = )`.
+    - `as.term()` for `as_term()`.
     - `is.term()` for `is_term()`.
-    - `is.inconsistent_terms()` for `is_inconsistent_terms()`.
     - `is.incomplete_terms()` for `is_incomplete_terms()`.
+    - `is.inconsistent_terms()` for `is_inconsistent_terms()`.
+    - `pars(x, terms = TRUE)` for `pars_terms(x)`.
+    - `subset(select = )` for `subset(pars = )`.
+    - `terms` argument of `npdims()`.
 
 ## Features
 
-- Added `pars(scalar = TRUE)` and `npars(scalar = TRUE)`.
-- Added `vld_pars()` to validate parameter names.
-- Added `scalar_term()` to test if each term element is scalar.
-- Added `pars_terms()`.
 - Redefined `term` as a `vtcr` class with
   - `term()` constructor which treats unnamed arguments as term values and named values as parameters with their associated dimensions.
   - `new_term()` to create term vector from character vector without any check.
   - `vec_cast()` to safely cast character.
+- Added `pars(scalar = TRUE)` and `npars(scalar = TRUE)`.
+- Added `pars_terms()`.
+- Added `scalar_term()` to test if each term element is scalar.
 
 ## Internal
 
 - Use extras from CRAN.
 - `ndims()` and `dims()` imported from universals and reexported.
 - New implementation for `repair_terms()`.
-
 
 # term 0.1.0
 
