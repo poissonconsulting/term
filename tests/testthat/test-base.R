@@ -1,5 +1,3 @@
-context("base")
-
 test_that("anyDuplicated", {
   expect_true(anyDuplicated(new_term(c("alpha[1]", "alpha[1]"))), TRUE)
 })

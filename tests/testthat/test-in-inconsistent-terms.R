@@ -1,5 +1,3 @@
-context("is-inconsistent-terms")
-
 test_that("is_inconsistent_terms", {
   expect_false(is_inconsistent_terms(new_term()))
   expect_false(is_inconsistent_terms(new_term("b")))

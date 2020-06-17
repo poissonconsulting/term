@@ -1,5 +1,3 @@
-context("set-pars")
-
 test_that("set_pars", {
   expect_identical(set_pars(new_term("a"), "b"), new_term("b"))
   expect_error(

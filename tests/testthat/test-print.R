@@ -1,5 +1,3 @@
-context("print")
-
 test_that("print", {
   verify_output("out/print.txt", {
     term()

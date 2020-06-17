@@ -1,5 +1,3 @@
-context("repair-terms")
-
 test_that("repair_terms", {
   expect_error(repair_terms(NA_character_), "`x` must inherit from S3 class 'term'.",
     class = "chk_error"

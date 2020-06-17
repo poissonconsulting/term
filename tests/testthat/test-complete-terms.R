@@ -1,5 +1,3 @@
-context("complete-terms")
-
 test_that("complete_terms", {
   expect_error(complete_terms(NA_term_), "^`x` must not have any missing values[.]$",
     class = "chk_error"

@@ -1,5 +1,3 @@
-context("nterms")
-
 test_that("nterms.term", {
   expect_identical(nterms(NA_term_), NA_integer_)
   expect_identical(nterms(c(NA_term_, new_term("a"))), NA_integer_)

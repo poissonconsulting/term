@@ -1,5 +1,3 @@
-context("npdims")
-
 test_that("npdims.term", {
   expect_identical(
     npdims(new_term(character(0))),

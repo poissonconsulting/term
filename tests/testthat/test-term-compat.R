@@ -1,5 +1,3 @@
-context("term")
-
 test_that("term", {
   rlang::scoped_options(lifecycle_verbosity = "quiet")
 

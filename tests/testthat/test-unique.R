@@ -1,5 +1,3 @@
-context("unique")
-
 test_that("unique incomparables", {
   skip("https://github.com/r-lib/vctrs/issues/568")
   expect_error(unique(NA_term_, incomparables = TRUE), "^`incomparables` must be FALSE[.]$",

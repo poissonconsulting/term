@@ -1,5 +1,3 @@
-context("term")
-
 test_that("term", {
   expect_identical(term(par = 0L), new_term())
   expect_identical(term(), new_term())

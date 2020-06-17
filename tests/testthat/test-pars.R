@@ -1,5 +1,3 @@
-context("pars")
-
 test_that("pars", {
   expect_identical(pars(new_term(character(0))), character(0))
   expect_identical(pars(new_term("a")), "a")

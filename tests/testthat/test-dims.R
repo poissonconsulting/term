@@ -1,5 +1,3 @@
-context("dims")
-
 test_that("dims.term", {
   expect_identical(dims(new_term()), 0L)
   expect_identical(dims(new_term("beta0")), 1L)

@@ -1,5 +1,3 @@
-context("tindex")
-
 test_that("tindex", {
   term <- new_term(c(
     "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",

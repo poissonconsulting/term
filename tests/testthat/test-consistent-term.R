@@ -1,5 +1,3 @@
-context("consistent-term")
-
 test_that("consistent_term", {
   expect_error(consistent_term(1), "`x` must inherit from S3 class 'term'.",
     class = "chk_error"

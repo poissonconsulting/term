@@ -1,5 +1,3 @@
-context("utils")
-
 test_that("c.term", {
   expect_error(c(NA_term_, recursive = TRUE))
   expect_identical(

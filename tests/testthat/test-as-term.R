@@ -1,5 +1,3 @@
-context("as-term")
-
 test_that("as_term.integer", {
   expect_identical(as_term(1L, name = "par"), new_term("par"))
   expect_identical(

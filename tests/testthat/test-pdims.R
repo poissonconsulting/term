@@ -1,5 +1,3 @@
-context("pdims")
-
 test_that("pdims", {
   expect_identical(
     pdims(new_term(c(

@@ -1,5 +1,3 @@
-context("npars")
-
 test_that("npars.term", {
   expect_identical(
     npars(new_term(c(

@@ -1,5 +1,3 @@
-context("subset")
-
 test_that("subset.term", {
   term <- new_term(c("alpha[1]", "alpha[2]", "sigma"))
   expect_identical(subset(term, character(0)), new_term())

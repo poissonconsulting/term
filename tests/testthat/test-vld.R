@@ -1,5 +1,3 @@
-context("vld")
-
 test_that("vld_term", {
   expect_false(vld_term(c("x[2]", "x[1]")))
   expect_true(vld_term(new_term(c("x[2]", "x[1]"))))
