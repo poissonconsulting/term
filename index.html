@@ -95,41 +95,78 @@
 <div id="demonstration" class="section level2">
 <h2 class="hasAnchor">
 <a href="#demonstration" class="anchor"></a>Demonstration</h2>
-<div id="creating-term-vectors" class="section level3">
+<div id="term-vectors" class="section level3">
 <h3 class="hasAnchor">
-<a href="#creating-term-vectors" class="anchor"></a>Creating Term Vectors</h3>
+<a href="#term-vectors" class="anchor"></a>Term Vectors</h3>
 <div class="sourceCode" id="cb3"><pre class="downlit">
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://github.com/poissonconsulting/term">term</a></span>)
 
-<span class="co"># term vectors can be constructed from character vectors</span>
+<span class="co"># term vectors are the labels used to reference values in </span>
+<span class="co"># vectors, matrices and arrays</span>
 <span class="kw">term</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/term.html">term</a></span>(
   <span class="st">"alpha[1]"</span>, <span class="st">"alpha[2]"</span>, <span class="st">"beta[1,1]"</span>, <span class="st">"beta[2,1]"</span>,
   <span class="st">"beta[1,2]"</span>, <span class="st">"beta[2,2]"</span>, <span class="st">"sigma"</span>
 )
 
-<span class="co"># term vectors print like character vectors</span>
+<span class="co"># they print like character vectors</span>
 <span class="kw">term</span>
 <span class="co">#&gt; &lt;term[7]&gt;</span>
 <span class="co">#&gt; [1] alpha[1]  alpha[2]  beta[1,1] beta[2,1] beta[1,2] beta[2,2] sigma</span>
 
-<span class="co"># they are S3 class objects that also inherit from character</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(<span class="kw">term</span>)
-<span class="co">#&gt;  term [1:7] alpha[1], alpha[2], beta[1,1], beta[2,1], beta[1,2], beta[2,2],...</span>
+<span class="co"># but are S3 class objects that also inherit from vctrs_vctr</span>
+<span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span>(<span class="kw">term</span>)
+<span class="co">#&gt; [1] "term"       "vctrs_vctr"</span>
+</pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="co"># consider a matrix of term values</span>
+<span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span>(<span class="fl">101</span>)
+<span class="kw">estimate</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span>(<span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span>(<span class="fl">4</span>), nrow = <span class="fl">2</span>)
+<span class="kw">estimate</span>
+<span class="co">#&gt;            [,1]       [,2]</span>
+<span class="co">#&gt; [1,] -0.3260365 -0.6749438</span>
+<span class="co">#&gt; [2,]  0.5524619  0.2143595</span>
 
-<span class="co"># term vectors can also be created from numeric atomic objects</span>
-<span class="fu"><a href="reference/as_term.html">as.term</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span>(<span class="fl">1</span><span class="op">:</span><span class="fl">4</span>, <span class="fl">2</span>), <span class="st">"theta"</span>)
+<span class="co"># the term labels can be created using as_term()</span>
+<span class="kw">term</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/as_term.html">as_term</a></span>(<span class="kw">estimate</span>, name = <span class="st">"b0"</span>)
+<span class="kw">term</span>
 <span class="co">#&gt; &lt;term[4]&gt;</span>
-<span class="co">#&gt; [1] theta[1,1] theta[2,1] theta[1,2] theta[2,2]</span>
+<span class="co">#&gt; [1] b0[1,1] b0[2,1] b0[1,2] b0[2,2]</span>
+
+<span class="co"># and combined with the term values to create a coef table</span>
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="kw"><a href="https://tibble.tidyverse.org">tibble</a></span>)
+<span class="kw">coef</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span>(term = <span class="kw">term</span>, estimate = <span class="fu"><a href="https://rdrr.io/r/base/vector.html">as.vector</a></span>(<span class="kw">estimate</span>))
+<span class="kw">coef</span>
+<span class="co">#&gt; # A tibble: 4 x 2</span>
+<span class="co">#&gt;   term    estimate</span>
+<span class="co">#&gt;   &lt;term&gt;     &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 b0[1,1]   -0.326</span>
+<span class="co">#&gt; 2 b0[2,1]    0.552</span>
+<span class="co">#&gt; 3 b0[1,2]   -0.675</span>
+<span class="co">#&gt; 4 b0[2,2]    0.214</span>
 </pre></div>
 </div>
 <div id="querying-term-vectors" class="section level3">
 <h3 class="hasAnchor">
 <a href="#querying-term-vectors" class="anchor"></a>Querying Term Vectors</h3>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="co"># get the parameter names</span>
+<div class="sourceCode" id="cb5"><pre class="downlit">
+<span class="co"># the term vectors are readily sorted</span>
+<span class="kw">coef</span>[<span class="fu"><a href="https://rdrr.io/r/base/rev.html">rev</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/order.html">order</a></span>(<span class="kw">coef</span><span class="op">$</span><span class="kw">term</span>)),]
+<span class="co">#&gt; # A tibble: 4 x 2</span>
+<span class="co">#&gt;   term    estimate</span>
+<span class="co">#&gt;   &lt;term&gt;     &lt;dbl&gt;</span>
+<span class="co">#&gt; 1 b0[2,2]    0.214</span>
+<span class="co">#&gt; 2 b0[1,2]   -0.675</span>
+<span class="co">#&gt; 3 b0[2,1]    0.552</span>
+<span class="co">#&gt; 4 b0[1,1]   -0.326</span>
+
+<span class="co"># and the parameter names or parameter dimensions extracted</span>
+<span class="kw">term</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/term.html">term</a></span>(
+  <span class="st">"alpha[1]"</span>, <span class="st">"alpha[2]"</span>, <span class="st">"beta[1,1]"</span>, <span class="st">"beta[2,1]"</span>,
+  <span class="st">"beta[1,2]"</span>, <span class="st">"beta[2,2]"</span>, <span class="st">"sigma"</span>
+)
+
 <span class="fu"><a href="https://rdrr.io/pkg/universals/man/pars.html">pars</a></span>(<span class="kw">term</span>)
 <span class="co">#&gt; [1] "alpha" "beta"  "sigma"</span>
-<span class="co"># and parameter dimensions</span>
 <span class="fu"><a href="https://rdrr.io/pkg/universals/man/pdims.html">pdims</a></span>(<span class="kw">term</span>)
 <span class="co">#&gt; $alpha</span>
 <span class="co">#&gt; [1] 2</span>
@@ -140,10 +177,9 @@
 <span class="co">#&gt; $sigma</span>
 <span class="co">#&gt; [1] 1</span>
 
-<span class="co"># get the parameter names by term</span>
+<span class="co"># this can also be done for each term</span>
 <span class="fu"><a href="reference/pars_terms.html">pars_terms</a></span>(<span class="kw">term</span>)
 <span class="co">#&gt; [1] "alpha" "alpha" "beta"  "beta"  "beta"  "beta"  "sigma"</span>
-<span class="co"># and the term indices</span>
 <span class="fu"><a href="reference/tindex.html">tindex</a></span>(<span class="kw">term</span>)
 <span class="co">#&gt; $`alpha[1]`</span>
 <span class="co">#&gt; [1] 1</span>
@@ -170,7 +206,7 @@
 <div id="validating-term-vectors" class="section level3">
 <h3 class="hasAnchor">
 <a href="#validating-term-vectors" class="anchor"></a>Validating Term Vectors</h3>
-<div class="sourceCode" id="cb5"><pre class="downlit">
+<div class="sourceCode" id="cb6"><pre class="downlit">
 <span class="co"># term vectors can be tested for whether they have (parseably) valid,</span>
 <span class="co"># (dimensionally) consistent and complete terms.</span>
 
@@ -202,10 +238,11 @@
 <div id="checking-term-vectors" class="section level3">
 <h3 class="hasAnchor">
 <a href="#checking-term-vectors" class="anchor"></a>Checking Term Vectors</h3>
-<div class="sourceCode" id="cb6"><pre class="downlit">
+<div class="sourceCode" id="cb7"><pre class="downlit">
+<span class="co"># term vectors can be checked using functions styled on those in the chk package</span>
 <span class="kw">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/term.html">term</a></span>(<span class="st">"a[1]"</span>, <span class="st">"a[3]"</span>)
-<span class="kw">chk</span>::<span class="fu"><a href="https://rdrr.io/pkg/chk/man/chk_s3_class.html">chk_s3_class</a></span>(<span class="kw">x</span>, <span class="st">"term"</span>)
-<span class="fu"><a href="reference/chk_term.html">chk_term</a></span>(<span class="kw">x</span>, validate = <span class="st">"valid"</span>)
+<span class="fu"><a href="reference/vld_term.html">vld_term</a></span>(<span class="kw">x</span>, validate = <span class="st">"valid"</span>)
+<span class="co">#&gt; [1] TRUE</span>
 <span class="fu"><a href="reference/chk_term.html">chk_term</a></span>(<span class="kw">x</span>, validate = <span class="st">"complete"</span>)
 <span class="co">#&gt; Error: All elements of term vector `x` must be complete.</span>
 </pre></div>
@@ -213,7 +250,7 @@
 <div id="repairing-term-vectors" class="section level3">
 <h3 class="hasAnchor">
 <a href="#repairing-term-vectors" class="anchor"></a>Repairing Term Vectors</h3>
-<div class="sourceCode" id="cb7"><pre class="downlit">
+<div class="sourceCode" id="cb8"><pre class="downlit">
 <span class="kw">term</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/new_term.html">new_term</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"b[4]"</span>, <span class="st">"b   [2]"</span>, <span class="st">"b"</span>, <span class="st">"b[1"</span>, <span class="st">"b[2, 2]"</span>, <span class="st">"b"</span>, <span class="st">"a [ 1 ] "</span>, <span class="fl">NA</span>))
 <span class="kw">term</span>
 <span class="co">#&gt; &lt;term[8]&gt;</span>
