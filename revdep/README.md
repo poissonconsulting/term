@@ -10,7 +10,7 @@
 |collate  |en_CA.UTF-8                  |
 |ctype    |en_CA.UTF-8                  |
 |tz       |America/Vancouver            |
-|date     |2020-06-17                   |
+|date     |2020-06-19                   |
 
 # Dependencies
 
@@ -20,10 +20,4 @@
 |extras  |NA    |0.0.1.9000 |*  |
 
 # Revdeps
-
-## New problems (1)
-
-|package                    |version |error  |warning |note |
-|:--------------------------|:-------|:------|:-------|:----|
-|[nlist](problems.md#nlist) |0.1.0   |__+1__ |        |     |
 

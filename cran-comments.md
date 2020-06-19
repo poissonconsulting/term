@@ -1,17 +1,20 @@
-term 0.2.0
+## Test environments
 
-## Cran Repository Policy
+release 4.0.1
 
-- [x] Reviewed CRP last edited 2020-05-21.
+* OSX (local) - release
+* OSX (actions) - oldrel, release and devel
+* Ubuntu (actions) - 3.4 to release
+* Windows (winbuilder) - devel
+* Windows (actions) - release
 
 ## R CMD check results
 
-- [x] Checked locally, R 4.0.1
-- [x] Checked on CI system, R 4.0.1
-- [ ] Checked on win-builder, R devel
+0 errors | 0 warnings | 0 notes
 
-OK
+## Reverse Dependencies
 
-## CRAN failures
+nlist 0.1.1           E: 0     | W: 0     | N: 0
 
-- [x] Checked on 2020-06-16, no errors found.
+OK: 1                                                                                                                         
+BROKEN: 0
