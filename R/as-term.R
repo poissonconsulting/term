@@ -17,9 +17,8 @@ as_term <- function(x, ...) UseMethod("as_term")
 #' @rdname as_term
 #' @export
 as.term <- function(x, ...) {
-  term <- UseMethod("as.term")
   deprecate_soft("0.2.0", "as.term()", "as_term()")
-  term
+  UseMethod("as.term")
 }
 
 #' @export
