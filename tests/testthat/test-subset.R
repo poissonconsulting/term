@@ -32,17 +32,13 @@ test_that("subset.term", {
 })
 
 test_that("subset.term deprecated", {
+  rlang::scoped_options(lifecycle_verbosity = "quiet")
   term <- new_term(c("alpha[1]", "alpha[2]", "sigma"))
 
-  rlang::with_options(lifecycle_verbosity = "error", {
-    expect_error(subset(term, select = NULL), class = "defunctError")
-  })
+  lifecycle::expect_deprecated(subset(term, select = NULL))
+  lifecycle::expect_defunct(subset(term, select = "alpha", pars = "alpha"))
 
-    suppressWarnings(expect_error(subset(term, select = "alpha", pars = "alpha"), class = "defunctError"))
-
-  rlang::with_options(lifecycle_verbosity = "quiet", {
   expect_identical(subset(term, select = character(0)), new_term())
-  })
 })
 
 

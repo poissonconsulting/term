@@ -1,14 +1,11 @@
 test_that("pars_term", {
+  rlang::scoped_options(lifecycle_verbosity = "quiet")
   terms <- new_term(c(
     "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
     "beta[1,2]", "beta[2,2]", "sigma"
   ))
-  rlang::with_options(lifecycle_verbosity = "quiet", {
   expect_identical(pars_terms(terms, scalar = TRUE), "sigma")
-    })
-  rlang::with_options(lifecycle_verbosity = "quiet", {
   expect_identical(pars_terms(terms, scalar = FALSE), c("alpha", "alpha", "beta",  "beta",  "beta",  "beta"))
-    })
   expect_identical(
     pars_terms(terms),
     c("alpha", "alpha", "beta", "beta", "beta", "beta", "sigma")
