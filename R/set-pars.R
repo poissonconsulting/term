@@ -6,6 +6,9 @@ universals::set_pars
 #' @inherit universals::set_pars
 #'
 #' @export
+#' @examples
+#' term <- as_term(c("b[2]", "a[1]", "b[3,3]"))
+#' set_pars(term, c("x", "y"))
 set_pars.term <- function(x, value, ...) {
   chk_not_any_na(x)
   chk_term(x, validate = "valid")

@@ -20,10 +20,7 @@ A character vector of the names of the parameters.
 Gets the parameter names.
 }
 \examples{
-pars.foobar <- function(x, ...) {
-  NotYetImplemented()
-  # replace with code to get pars for an object of class 'foobar'
-}
+pars(matrix(1:4, nrow = 2))
 }
 \seealso{
 Other parameters: 

@@ -4,6 +4,8 @@ universals::pars
 #' @inherit universals::pars
 #' @inheritParams params
 #' @export
+#' @examples
+#' pars(matrix(1:4, nrow = 2))
 pars.default <- function(x, scalar = NULL, ...) {
   chk_unused(...)
   x <- as_term(x)
