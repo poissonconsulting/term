@@ -1,3 +1,9 @@
+# term 0.2.0.9001
+
+- Support `rbind()` for data frames with term objects (#40).
+- Fix as.term() so issues deprecated warning.
+
+
 # term 0.2.0.9000
 
 - Same as previous version.
