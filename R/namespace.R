@@ -1,5 +1,5 @@
 #' @import chk universals extras
 #' @import lifecycle
-#' @import rlang
+#' @importFrom rlang list2 exec names2 is_empty :=
 #' @import vctrs
 NULL
