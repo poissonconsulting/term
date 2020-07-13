@@ -16,6 +16,8 @@ are 'class', 'valid', 'consistent' and 'complete'.}
 
 \item{repair}{A flag specifying whether to repair terms.}
 
+\item{normalize}{A flag specifying whether to normalize terms.}
+
 \item{select}{A character vector of the names of the parameters to include in the subsetted object.}
 
 \item{value}{A character vector of the new parameter names.}

@@ -11,7 +11,7 @@ as_term(x, ...)
 
 as.term(x, ...)
 
-\method{as_term}{character}(x, repair = FALSE, ...)
+\method{as_term}{character}(x, repair = FALSE, normalize = repair, ...)
 
 \method{as_term}{numeric}(x, name = "par", ...)
 }
@@ -21,6 +21,8 @@ as.term(x, ...)
 \item{...}{Unused.}
 
 \item{repair}{A flag specifying whether to repair terms.}
+
+\item{normalize}{A flag specifying whether to normalize terms.}
 
 \item{name}{A string specifying the name of the parameter.}
 }

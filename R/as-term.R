@@ -34,12 +34,15 @@ as_term.default <- function(x, ...) {
 
 #' @describeIn as_term Coerce character vector to term vector
 #' @export
-as_term.character <- function(x, repair = FALSE, ...) {
+as_term.character <- function(x, repair = FALSE, normalize = repair, ...) {
   chk_flag(repair)
   chk_unused(...)
 
   if (repair) {
     x <- repair_terms_impl(x)
+  }
+  if(normalize) {
+    x <- normalize_terms_impl(x)
   }
 
   new_term(x)

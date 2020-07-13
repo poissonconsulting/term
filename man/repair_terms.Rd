@@ -4,10 +4,12 @@
 \alias{repair_terms}
 \title{Repair Terms}
 \usage{
-repair_terms(x)
+repair_terms(x, normalize = TRUE)
 }
 \arguments{
 \item{x}{The object.}
+
+\item{normalize}{A flag specifying whether to normalize terms.}
 }
 \value{
 The repaired term vector.

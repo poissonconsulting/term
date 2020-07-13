@@ -14,7 +14,12 @@
 #' repair_terms(new_term(c("a[3]", "b[1]")))
 #' repair_terms(new_term(c("a [3]", " b [ 1  ] ")))
 #' repair_terms(new_term(c("a", NA)))
-repair_terms <- function(x) {
+repair_terms <- function(x, normalize = TRUE) {
   chk_s3_class(x, "term")
-  new_term(repair_terms_impl(unclass(x)))
+  chk_flag(normalize)
+  x <- unclass(x)
+  x <- repair_terms_impl(x)
+  if(normalize)
+    x <- normalize_terms_impl(x)
+  new_term(x)
 }

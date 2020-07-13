@@ -8,7 +8,7 @@
 #' The possible values in order of increasing strictness
 #' are 'class', 'valid', 'consistent' and 'complete'.
 #' @param repair A flag specifying whether to repair terms.
-#'
+#' @param normalize A flag specifying whether to normalize terms.
 #' @param select A character vector of the names of the parameters to include in the subsetted object.
 #'
 #' @param value A character vector of the new parameter names.
