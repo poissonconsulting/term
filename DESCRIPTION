@@ -37,6 +37,8 @@ Imports:
 Suggests:
     covr,
     testthat
+Remotes:
+    poissonconsulting/extras
 Encoding: UTF-8
 Language: en-US
 LazyData: true
