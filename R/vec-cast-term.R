@@ -27,6 +27,10 @@ vec_cast.term.character <- function(x, to, ...) new_term(x)
 
 #' @method vec_cast.term term_rcrd
 #' @export
-vec_cast.term.term_rcrd <- function(x, to, ...) {
-  new_term(paste0(x$par, "[", vapply(x$dim, paste, collapse = ",", FUN.VALUE = "", USE.NAMES = FALSE), "]"))
+vec_cast.term.term_rcrd <- function(x, to, normalize = TRUE, ...) {
+  chk_flag(normalize)
+  x <- paste0(x$par, "[", vapply(x$dim, paste, collapse = ",", FUN.VALUE = "", USE.NAMES = FALSE), "]")
+  if(normalize)
+    x <- normalize_terms_impl(x)
+  new_term(x)
 }
