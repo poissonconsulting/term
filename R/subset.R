@@ -29,7 +29,7 @@ subset.term <- function(x, pars = NULL, select = NULL, ...) {
     chk_s3_class(select, "character")
     chk_subset(select, pars(x))
     if(!is.null(pars))
-      deprecate_stop("0.1.0.9003", "term::subset(select =)",
+      deprecate_stop("0.1.1", "term::subset(select =)",
                    "term::subset(pars =)")
     pars <- select
   }
@@ -44,4 +44,39 @@ subset.term <- function(x, pars = NULL, select = NULL, ...) {
   }
 
   x[pars_terms(x) %in% pars]
+}
+
+#' Subset Term Record
+#'
+#' Subsets a term_rcrd.
+#'
+#' @inheritParams params
+#' @return The modified term vector.
+#' @seealso [term_rcrd_object()]
+#' @export
+#'
+#' @examples
+#' term_rcrd <- term_rcrd(
+#'   "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
+#'   "beta[1,2]", "beta[2,2]", "sigma"
+#' )
+#' subset(term_rcrd, "beta")
+#' subset(term_rcrd, c("alpha", "sigma"))
+subset.term_rcrd <- function(x, pars = NULL, ...) {
+  chk_not_any_na(x)
+  chk_unused(...)
+
+  if (is.null(pars)) {
+    return(x)
+  }
+  chk_s3_class(pars, "character")
+  chk_subset(pars, pars(x))
+
+  if (!length(pars)) {
+    return(new_term_rcrd())
+  }
+
+  x <- x[pars_terms(x) %in% pars,,drop = FALSE]
+  row.names(x) <- NULL
+  x
 }
