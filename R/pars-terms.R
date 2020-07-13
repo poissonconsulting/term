@@ -27,11 +27,5 @@ pars_terms <- function(x, scalar = NULL, ...) {
     deprecate_soft("0.2.0", "term::pars_terms(scalar =)",
                    details = "More specifically the scalar argument has been soft-deprecated.")
   }
-
-  scalar_term <- scalar_term(x)
-  x <- as.character(x)
-  x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
-  if(vld_true(scalar)) x <- x[scalar_term]
-  if(vld_false(scalar)) x <- x[!scalar_term]
-  x
+  pars_terms_impl(x, scalar = scalar)
 }

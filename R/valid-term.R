@@ -18,17 +18,3 @@ valid_term <- function(x) {
   chk_s3_class(x, "term")
   valid_term_impl(x)
 }
-
-valid_term_impl <- function(x) {
-  if (!length(x)) {
-    return(logical(0))
-  }
-  pattern <- p0(
-    "^\\s*", .par_name_pattern, "\\s*(\\[\\s*",
-    .index_pattern, "(\\s*,\\s*", .index_pattern,
-    ")*\\s*\\]){0,1}\\s*$"
-  )
-  valid <- grepl(pattern, x)
-  is.na(valid[is.na(x)]) <- TRUE
-  valid
-}

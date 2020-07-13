@@ -26,7 +26,7 @@ tindex_impl <- function(x) {
   x
 }
 
-pars_impl <- function(x, scalar, terms) {
+pars_impl <- function(x, scalar = NULL, terms = FALSE) {
   x <- as.character(x)
   if(!is.null(scalar)) {
     bol <- grepl("\\[", x)
@@ -34,5 +34,67 @@ pars_impl <- function(x, scalar, terms) {
   }
   x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
   if (!terms) x <- unique(x)
+  x
+}
+
+valid_term_impl <- function(x) {
+  if (!length(x)) {
+    return(logical(0))
+  }
+  pattern <- p0(
+    "^\\s*", .par_name_pattern, "\\s*(\\[\\s*",
+    .index_pattern, "(\\s*,\\s*", .index_pattern,
+    ")*\\s*\\]){0,1}\\s*$"
+  )
+  valid <- grepl(pattern, x)
+  is.na(valid[is.na(x)]) <- TRUE
+  valid
+}
+
+pars_terms_impl <- function(x, scalar = NULL) {
+  scalar_term <- scalar_term(x)
+  x <- as.character(x)
+  x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
+  if(vld_true(scalar)) x <- x[scalar_term]
+  if(vld_false(scalar)) x <- x[!scalar_term]
+  x
+}
+
+
+term_impl <- function(args) {
+  numbers <- vapply(args, is.numeric, logical(1))
+  strings <- vapply(args, is.character, logical(1))
+  nas <- vapply(args, anyNA, logical(1))
+  chk_true(all(numbers | strings | nas))
+
+  string_args <- lapply(unname(args[strings]), as_term)
+  string_args_term <- new_term(unlist_chr(string_args))
+  chk_term(string_args_term, "valid")
+
+  number_args <- args[numbers]
+  chk_all(number_args, chk_whole_numeric)
+  chk_all(number_args, chk_gte)
+
+  args[numbers] <- mapply(
+    term_from_pdims,
+    number_args, names2(number_args),
+    SIMPLIFY = FALSE
+  )
+
+  expanded_args <- unlist_chr(unname(args))
+  new_term(expanded_args)
+}
+
+repair_terms_impl <- function(x) {
+  if (!length(x)) {
+    return(x)
+  }
+  is.na(x[is.na(x) | !valid_term_impl(x)]) <- TRUE
+  x <- gsub("\\s+", "", x)
+
+  x <- sub("\\[1\\]$", "", x)
+  non_scalar <- unique(sub("\\[.*$", "", x[grepl("\\[", x)]))
+  non_scalar <- x %in% non_scalar
+  x[non_scalar] <- p0(x[non_scalar], "[1]")
   x
 }

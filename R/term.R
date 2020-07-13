@@ -52,30 +52,6 @@ term <- function(...) {
   repair_terms_impl(term)
 }
 
-term_impl <- function(args) {
-  numbers <- vapply(args, is.numeric, logical(1))
-  strings <- vapply(args, is.character, logical(1))
-  nas <- vapply(args, anyNA, logical(1))
-  chk_true(all(numbers | strings | nas))
-
-  string_args <- lapply(unname(args[strings]), as_term)
-  string_args_term <- new_term(unlist_chr(string_args))
-  chk_term(string_args_term, "valid")
-
-  number_args <- args[numbers]
-  chk_all(number_args, chk_whole_numeric)
-  chk_all(number_args, chk_gte)
-
-  args[numbers] <- mapply(
-    term_from_pdims,
-    number_args, names2(number_args),
-    SIMPLIFY = FALSE
-  )
-
-  expanded_args <- unlist_chr(unname(args))
-  new_term(expanded_args)
-}
-
 term_compat_args <- function(`_x` = x, name = "par", ..., x = NULL) {
   list(x = if (is.null(x)) `_x` else NULL, name = name)
 }
