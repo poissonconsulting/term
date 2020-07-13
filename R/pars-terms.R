@@ -18,14 +18,12 @@
 #' pars_terms(term)
 pars_terms <- function(x, scalar = NULL, ...) {
   # FIXME hack for nlist v0.1.0 and v0.1.1
-  if(identical(scalar, NA)) scalar <- NULL
-  if(!is.null(scalar)) chk_flag(scalar)
+  chkor(is_term(x), is_term_rcrd(x))
+  if(!missing(scalar)) {
+    deprecate_stop("0.2.1", "term::pars_terms(scalar =)")
+  }
   chk_unused(...)
 
-  if(!is.null(scalar)) {
-    deprecate_soft("0.2.0", "term::pars_terms(scalar =)",
-                   details = "More specifically the scalar argument has been soft-deprecated.")
-  }
-  x <- as_term(x)
-  pars_terms_impl(x, scalar = scalar)
+  x <- as_term_rcrd(x)
+  x$par
 }

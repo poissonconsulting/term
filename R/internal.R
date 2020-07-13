@@ -60,7 +60,6 @@ pars_terms_impl <- function(x, scalar = NULL) {
   x
 }
 
-
 term_impl <- function(args) {
   numbers <- vapply(args, is.numeric, logical(1))
   strings <- vapply(args, is.character, logical(1))
