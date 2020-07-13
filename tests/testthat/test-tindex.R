@@ -35,4 +35,12 @@ test_that("tindex", {
       c("alpha", "alpha[2]", "beta[1,1]", "beta[2 ,1  ]", NA)
     )
   )
+
+  expect_identical(
+    tindex(as_term_rcrd(c("alpha", "alpha[2]", "beta[1,1]", "beta[2 ,1  ]", NA))),
+    rlang::set_names(
+      list(1L, 2L, c(1L, 1L), 2:1, NA_integer_),
+      c("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]", NA)
+    )
+  )
 })

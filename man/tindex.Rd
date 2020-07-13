@@ -13,7 +13,7 @@ tindex(x)
 A named list of integer vectors of the index for each term.
 }
 \description{
-Gets the index for each term of an object.
+Gets the index for each term of an term or term_rcrd object.
 }
 \details{
 For example the index of \code{beta[2,1]} is \code{c(2L, 1L)}
