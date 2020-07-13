@@ -8,7 +8,7 @@
 \usage{
 as_term_rcrd(x, ...)
 
-\method{as_term_rcrd}{character}(x, repair = FALSE, ...)
+\method{as_term_rcrd}{character}(x, repair = FALSE, normalize = repair, ...)
 
 \method{as_term_rcrd}{numeric}(x, name = "par", ...)
 }
@@ -18,6 +18,8 @@ as_term_rcrd(x, ...)
 \item{...}{Unused.}
 
 \item{repair}{A flag specifying whether to repair terms.}
+
+\item{normalize}{A flag specifying whether to normalize terms.}
 
 \item{name}{A string specifying the name of the parameter.}
 }

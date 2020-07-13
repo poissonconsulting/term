@@ -20,8 +20,8 @@ as_term_rcrd.term <- function(x, ...) {
 
 #' @describeIn as_term_rcrd Coerce character vector to term_rcrd
 #' @export
-as_term_rcrd.character <- function(x, repair = FALSE, ...) {
-  as_term_rcrd(as_term(x, repair = repair, ...))
+as_term_rcrd.character <- function(x, repair = FALSE, normalize = repair, ...) {
+  as_term_rcrd(as_term(x, repair = repair, normalize = normalize, ...))
 }
 
 #' @describeIn as_term_rcrd Coerce numeric vector to term_rcrd
