@@ -28,6 +28,5 @@ vec_cast.term.character <- function(x, to, ...) new_term(x)
 #' @method vec_cast.term term_rcrd
 #' @export
 vec_cast.term.term_rcrd <- function(x, to, ...) {
-  print("here")
   new_term(paste0(x$par, "[", vapply(x$dim, paste, collapse = ",", FUN.VALUE = "", USE.NAMES = FALSE), "]"))
 }

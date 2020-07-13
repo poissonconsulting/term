@@ -1,5 +1,5 @@
 test_that("print", {
-  verify_output("out/print.txt", {
+  verify_output("out/print-term.txt", {
     term()
 
     term(alpha = 2, beta = c(2, 2), "sigma")
@@ -14,5 +14,11 @@ test_that("print", {
     term("r[")
 
     term("r  [ 1  ,2  ]")
+  })
+
+  verify_output("out/print-term-rcrd.txt", {
+    new_term_rcrd()
+
+    as_term_rcrd(term(alpha = 2, beta = c(2, 2), "sigma"))
   })
 })
