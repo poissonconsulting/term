@@ -49,7 +49,9 @@ term <- function(...) {
     term <- term_impl(args)
   }
 
-  repair_terms_impl(term)
+  term <- repair_terms_impl(term)
+  term <- normalize_terms_impl(term)
+  new_term(term)
 }
 
 term_compat_args <- function(`_x` = x, name = "par", ..., x = NULL) {
