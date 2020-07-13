@@ -34,7 +34,7 @@ Coerces an R object to a \code{\link[=term-vector]{term-vector()}}.
 \itemize{
 \item \code{character}: Coerce character vector to term vector
 
-\item \code{numeric}: Coerce default object to term vector
+\item \code{numeric}: Coerce numeric object to term vector
 }}
 
 \examples{

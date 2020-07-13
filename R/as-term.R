@@ -45,7 +45,7 @@ as_term.character <- function(x, repair = FALSE, ...) {
   new_term(x)
 }
 
-#' @describeIn as_term Coerce default object to term vector
+#' @describeIn as_term Coerce numeric object to term vector
 #' @export
 as_term.numeric <- function(x, name = "par", ...) {
   chk_string(name)
@@ -57,4 +57,10 @@ as_term.numeric <- function(x, name = "par", ...) {
 as_term.term <- function(x, ...) {
   chk_unused(...)
   x
+}
+
+#' @export
+as_term.term_rcrd <- function(x, ...) {
+  chk_unused(...)
+  vec_cast(x, new_term())
 }

@@ -1,0 +1,34 @@
+#' Coerce to a Term Record
+#'
+#' Coerces an R object to a `term_rcrd`.
+#'
+#' @inheritParams params
+#'
+#' @seealso [repair_terms()]
+#' @export
+#'
+#' @examples
+#' as_term(matrix(1:4, 2))
+#' as_term(c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]"))
+as_term_rcrd <- function(x, ...) UseMethod("as_term_rcrd")
+
+#' @export
+as_term_rcrd.term <- function(x, ...) {
+  chk_unused(...)
+  vec_cast(x, new_term_rcrd())
+}
+
+#' @describeIn as_term_rcrd Coerce character vector to term_rcrd
+#' @export
+as_term_rcrd.character <- function(x, repair = FALSE, ...) {
+  as_term_rcrd(as_term(x, repair = repair, ...))
+}
+
+#' @describeIn as_term_rcrd Coerce numeric vector to term_rcrd
+#' @export
+as_term_rcrd.numeric <- function(x, name = "par", ...) {
+  as_term_rcrd(as_term(x, name = name, ...))
+}
+
+#' @export
+as_term_rcrd.term_rcrd <- function(x, ...) x

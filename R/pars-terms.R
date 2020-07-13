@@ -17,7 +17,6 @@
 #' )
 #' pars_terms(term)
 pars_terms <- function(x, scalar = NULL, ...) {
-  chk_s3_class(x, "term")
   # FIXME hack for nlist v0.1.0 and v0.1.1
   if(identical(scalar, NA)) scalar <- NULL
   if(!is.null(scalar)) chk_flag(scalar)
@@ -27,5 +26,6 @@ pars_terms <- function(x, scalar = NULL, ...) {
     deprecate_soft("0.2.0", "term::pars_terms(scalar =)",
                    details = "More specifically the scalar argument has been soft-deprecated.")
   }
+  x <- as_term(x)
   pars_terms_impl(x, scalar = scalar)
 }
