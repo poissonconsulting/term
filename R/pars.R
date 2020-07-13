@@ -52,12 +52,5 @@ pars.term <- function(x, scalar = NULL, terms = FALSE, ...) {
     deprecate_soft("0.2.0", "term::pars(terms =)", details = "If `terms = TRUE` use `pars_terms() otherwise replace `pars(terms = FALSE)` with `pars()`.")
   }
 
-  x <- as.character(x)
-  if(!is.null(scalar)) {
-    bol <- grepl("\\[", x)
-    x <- x[is.na(x) | if(scalar) !bol else bol]
-  }
-  x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
-  if (!terms) x <- unique(x)
-  x
+  pars_impl(x, scalar = scalar, terms = terms)
 }
