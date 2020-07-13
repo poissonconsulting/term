@@ -91,7 +91,10 @@ repair_terms_impl <- function(x) {
   }
   is.na(x[is.na(x) | !valid_term_impl(x)]) <- TRUE
   x <- gsub("\\s+", "", x)
+  normalize_terms_impl(x)
+}
 
+normalize_terms_impl <- function(x) {
   x <- sub("\\[1\\]$", "", x)
   non_scalar <- unique(sub("\\[.*$", "", x[grepl("\\[", x)]))
   non_scalar <- x %in% non_scalar

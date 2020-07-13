@@ -17,13 +17,6 @@ Repairs a terms vector.
 }
 \details{
 Invalid elements are replaced by missing values and spaces removed.
-
-If a parameter such as \code{b}
-is a scalar then \code{b[1]} is replaced by \code{b}
-but if higher indices are included such as \code{b[2]} then \code{b}
-is replaced by \code{b[1]}.
-Note that repairing does not necessarily establish
-consistency or completeness, see \code{\link[=vld_term]{vld_term()}} for details.
 }
 \examples{
 repair_terms(new_term(c("b[3]", "b")))
@@ -32,5 +25,5 @@ repair_terms(new_term(c("a [3]", " b [ 1  ] ")))
 repair_terms(new_term(c("a", NA)))
 }
 \seealso{
-\code{\link[=term-vector]{term-vector()}} and \code{\link[=valid_term]{valid_term()}}
+\code{\link[=term-vector]{term-vector()}}, \code{\link[=valid_term]{valid_term()}} and \code{\link[=normalize_terms]{normalize_terms()}}
 }

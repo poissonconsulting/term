@@ -4,16 +4,9 @@
 #'
 #' Invalid elements are replaced by missing values and spaces removed.
 #'
-#' If a parameter such as `b`
-#' is a scalar then `b[1]` is replaced by `b`
-#' but if higher indices are included such as `b[2]` then `b`
-#' is replaced by `b[1]`.
-#' Note that repairing does not necessarily establish
-#' consistency or completeness, see [vld_term()] for details.
-#'
 #' @inheritParams params
 #' @return The repaired term vector.
-#' @seealso [term-vector()] and [valid_term()]
+#' @seealso [term-vector()], [valid_term()] and [normalize_terms()]
 #' @export
 #'
 #' @examples
