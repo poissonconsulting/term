@@ -35,8 +35,8 @@ as_term.default <- function(x, ...) {
 #' @describeIn as_term Coerce character vector to term vector
 #' @export
 as_term.character <- function(x, repair = FALSE, ...) {
-  chk_unused(...)
   chk_flag(repair)
+  chk_unused(...)
 
   if (repair) {
     x <- repair_terms_impl(x)
@@ -50,14 +50,12 @@ as_term.character <- function(x, repair = FALSE, ...) {
 as_term.numeric <- function(x, name = "par", ...) {
   chk_string(name)
   chk_unused(...)
+
   term(!!name := dims(x))
 }
 
 #' @export
-as_term.term <- function(x, ...) {
-  chk_unused(...)
-  x
-}
+as_term.term <- function(x, ...)  x
 
 #' @export
 as_term.term_rcrd <- function(x, ...) {
