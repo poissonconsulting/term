@@ -18,3 +18,8 @@ vec_ptype2.term.character <- function(x, y, ...) character()
 #' @method vec_ptype2.character term
 #' @export
 vec_ptype2.character.term <- function(x, y, ...) character()
+
+#' @export
+vec_ptype2.term_rcrd.term_rcrd <- function(x, y, ...) {
+  x
+}
