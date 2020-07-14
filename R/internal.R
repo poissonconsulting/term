@@ -27,6 +27,8 @@ tindex_impl <- function(x) {
 }
 
 valid_term_impl <- function(x) {
+  .index_pattern <- "[1-9][0-9]*"
+
   if (!length(x)) {
     return(logical(0))
   }
@@ -85,7 +87,6 @@ npdims_terms_impl <- function(x) {
   is_na <- vapply(x$dim, identical, TRUE, y = NA_integer_)
   y <- vapply(x$dim, length, 1L)
   names(y) <- x$par
-  print(y)
   is.na(y[is_na]) <- TRUE
   y
 }
