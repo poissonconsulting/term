@@ -15,7 +15,7 @@ scalar_term_impl <- function(x) {
 
 tindex_impl <- function(x) {
   names <- x
-  x <- sub(p0("^", .par_name_pattern), "", x)
+  x <- sub(par_pattern(ht = TRUE), "", x)
   x <- sub("^$", "1", x)
   x <- gsub("\\[|\\]", "", x)
   x <- strsplit(x, ",")
@@ -33,7 +33,7 @@ valid_term_impl <- function(x) {
     return(logical(0))
   }
   pattern <- p0(
-    "^\\s*", .par_name_pattern, "\\s*(\\[\\s*",
+    "^\\s*", par_pattern(), "\\s*(\\[\\s*",
     .index_pattern, "(\\s*,\\s*", .index_pattern,
     ")*\\s*\\]){0,1}\\s*$"
   )
@@ -45,7 +45,7 @@ valid_term_impl <- function(x) {
 pars_terms_impl <- function(x, scalar = NULL) {
   scalar_term <- scalar_term_impl(x)
   x <- as.character(x)
-  x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
+  x <- sub(p0("^(", par_pattern(), ")(.*)"), "\\1", x)
   if(vld_true(scalar)) x <- x[scalar_term]
   if(vld_false(scalar)) x <- x[!scalar_term]
   x
