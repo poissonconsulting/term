@@ -22,8 +22,7 @@ The modified term vector.
 Subsets a term vector.
 }
 \details{
-The \code{select} argument has been \ifelse{html}{\figure{lifecycle-soft-deprecated.svg}{options: alt='Soft-deprecated lifecycle'}}{\strong{Soft-deprecated}}
-for \code{pars}.
+The \code{select} argument is  \lifecycle{defunct}.
 }
 \examples{
 term <- term(

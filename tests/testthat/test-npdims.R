@@ -12,16 +12,7 @@ test_that("npdims.term", {
     c(alpha = 1L, beta = 2L, sigma = 1L)
   )
 
-  lifecycle::expect_deprecated(npdims(new_term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")), terms = TRUE))
-
-  expect_identical(
-    npdims(new_term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")), terms = TRUE),
-    c(alpha = 1L, alpha = 1L, beta = 2L, beta = 2L))
-
-  expect_identical(
-    npdims(new_term(c("beta[1,1]", "alpha[1]", "alpha[3]", "beta[10]")), terms = TRUE),
-    c(beta = 2L, alpha = 1L, alpha = 1L, beta = 1L))
+  lifecycle::expect_defunct(npdims(new_term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")), terms = TRUE))
 
   expect_error(npdims(NA_term_), "^`x` must not have any missing values[.]$", class = "chk_error")
-  expect_identical(npdims(NA_term_, terms = TRUE), structure(NA_integer_, .Names = NA_character_))
 })

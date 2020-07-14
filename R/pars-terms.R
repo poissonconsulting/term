@@ -4,6 +4,8 @@
 #'
 #' The scalar argument has been `r lifecycle::badge("soft-deprecated")`.
 #'
+#' The scalar argument is  \lifecycle{defunct}
+#'
 #' @inheritParams params
 #' @param x A term vector.
 #' @return A character vector of the term parameter names.

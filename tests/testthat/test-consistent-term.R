@@ -14,3 +14,11 @@ test_that("consistent_term", {
   expect_identical(consistent_term(new_term(c("a[1,1]", "a[2,1]", "a["))), c(FALSE, FALSE, FALSE))
   expect_identical(consistent_term(new_term(c("a[1,1]", "a[2,1]", "a[", "b"))), c(FALSE, FALSE, FALSE, TRUE))
 })
+
+test_that("consistent_term term_rcrd", {
+  expect_error(consistent_term(1), "`x` must inherit from S3 class 'term_rcrd'.",
+               class = "chk_error"
+  )
+  expect_identical(consistent_term(as_term_rcrd(new_term(c("a[1,1]", "a[2,1]", "a[", "b")))), c(FALSE, FALSE, FALSE, TRUE))
+})
+

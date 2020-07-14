@@ -94,3 +94,8 @@ test_that("as_term_rcrd others", {
   expect_error(as_term_rcrd(data.frame(x = 1)), "no applicable method")
   expect_error(as_term_rcrd(TRUE), "no applicable method")
 })
+
+test_that("as_term_rcrd missing values", {
+  expect_identical(as_term_rcrd(NA_term_), structure(list(par = NA_character_, dim = list(NA_integer_)), class = c("term_rcrd",
+                                                                                                               "data.frame"), row.names = c(NA, -1L)))
+})

@@ -81,6 +81,15 @@ repair_terms_impl <- function(x) {
   x <- gsub("\\s+", "", x)
 }
 
+npdims_terms_impl <- function(x) {
+  is_na <- vapply(x$dim, identical, TRUE, y = NA_integer_)
+  y <- vapply(x$dim, length, 1L)
+  names(y) <- x$par
+  print(y)
+  is.na(y[is_na]) <- TRUE
+  y
+}
+
 normalize_terms_impl <- function(x) {
   x <- sub("\\[1\\]$", "", x)
   non_scalar <- unique(sub("\\[.*$", "", x[grepl("\\[", x)]))

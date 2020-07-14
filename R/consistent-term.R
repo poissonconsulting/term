@@ -11,9 +11,10 @@
 #' consistent_term(term("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]"))
 #' consistent_term(term("alpha[1]", NA_term_, "beta[1,1]", "beta[2]"))
 consistent_term <- function(x) {
-  chk_s3_class(x, "term")
-  names <- pars_terms(x)
-  x <- npdims_terms(x)
+  chkor(chk_s3_class(x, "term"), chk_s3_class(x, "term_rcrd"))
+  x <- as_term_rcrd(x)
+  names <- x$par
+  x <- npdims_terms_impl(x)
   names(x) <- names
   y <- x[!is.na(x)]
   for (par in unique(names(y))) {
