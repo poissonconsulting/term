@@ -28,8 +28,6 @@ pars.character <- function(x, scalar = NULL, ...) {
 #' @inherit universals::pars
 #'
 #' @inheritParams params
-#' @param terms A flag specifying whether to return the parameter name
-#' for each term element.
 #' @family parameters
 #' @export
 #'
@@ -54,8 +52,6 @@ pars.term <- function(x, scalar = NULL, terms = FALSE, ...) {
 #' @inherit universals::pars
 #'
 #' @inheritParams params
-#' @param terms A flag specifying whether to return the parameter name
-#' for each term element.
 #' @family parameters
 #' @export
 #'

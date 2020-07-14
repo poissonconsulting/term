@@ -14,6 +14,8 @@
 #' @param value A character vector of the new parameter names.
 #' @param pars A character vector of parameter names.
 #' @param scalar A flag specifying whether to by default return all parameters (NULL), or only scalar parameters (TRUE) or only non-scalar parameters (FALSE).
+#' @param terms A flag specifying whether to return the parameter name
+#' for each term element.
 #' @param incomparables Ignored.
 #'
 #' @name params

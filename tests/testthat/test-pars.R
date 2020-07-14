@@ -22,14 +22,8 @@ test_that("pars.term deprecated terms", {
     "beta[1,2]", "beta[2,2]", "sigma"
   ))
 
-  lifecycle::expect_defunct(pars(terms, scalar = TRUE, terms = TRUE))
-
-  expect_identical(pars(terms, scalar = TRUE, terms = TRUE), "sigma")
-
-  expect_identical(
-    pars(terms, terms = TRUE),
-    c("alpha", "alpha", "beta", "beta", "beta", "beta", "sigma")
-  )
+  lifecycle::expect_defunct(pars(terms, terms = TRUE))
+  lifecycle::expect_defunct(pars(terms, terms = FALSE))
 })
 
 test_that("pars.term", {
@@ -69,11 +63,11 @@ test_that("pars.term missing values", {
   )
   expect_identical(
     pars(new_term(c("a[1]", NA_character_, "a")), scalar = TRUE),
-    c(NA_character_, "a")
+    c("a", NA_character_)
   )
   expect_identical(
     pars(new_term(c("a[2]", NA_character_, "a")), scalar = TRUE),
-    c(NA_character_, "a")
+    NA_character_
   )
   expect_identical(
     pars(new_term(c("b[2]", NA_character_, "a")), scalar = TRUE),
@@ -131,10 +125,10 @@ test_that("pars.term scalar = FALSE", {
 
 test_that("pars.term scalar = TRUE", {
   expect_identical(pars(new_term("b"), scalar = TRUE), "b")
-  expect_identical(pars(new_term("b[1]"), scalar = TRUE), character(0))
+  expect_identical(pars(new_term("b[1]"), scalar = TRUE), "b")
   expect_identical(pars(new_term(c("b", "b[1]")), scalar = TRUE), "b")
   expect_identical(pars(new_term(c("b", "b[1]", "b[2]"))), "b")
-  expect_identical(pars(new_term(c("b", "b[1]", "b[2]")), scalar = TRUE), "b")
+  expect_identical(pars(new_term(c("b", "b[1]", "b[2]")), scalar = TRUE), character(0))
   expect_identical(pars(new_term(c("b[1]", "b[2]")), scalar = TRUE), character(0))
 })
 
@@ -149,11 +143,11 @@ test_that("pars.term scalar missing values", {
 
   expect_identical(
     pars(new_term(c("a[1]", NA_character_, "a")), scalar = TRUE),
-    c(NA_character_, "a")
+    c("a", NA_character_)
   )
   expect_identical(
     pars(new_term(c("a[2]", NA_character_, "a")), scalar = TRUE),
-    c(NA_character_, "a")
+    NA_character_
   )
   expect_identical(
     pars(new_term(c("b[2]", NA_character_, "a")), scalar = TRUE),

@@ -26,6 +26,9 @@ are 'class', 'valid', 'consistent' and 'complete'.}
 
 \item{scalar}{A flag specifying whether to by default return all parameters (NULL), or only scalar parameters (TRUE) or only non-scalar parameters (FALSE).}
 
+\item{terms}{A flag specifying whether to return the parameter name
+for each term element.}
+
 \item{incomparables}{Ignored.}
 }
 \description{

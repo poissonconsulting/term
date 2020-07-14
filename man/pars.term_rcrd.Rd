@@ -12,9 +12,6 @@
 \item{scalar}{A flag specifying whether to by default return all parameters (NULL), or only scalar parameters (TRUE) or only non-scalar parameters (FALSE).}
 
 \item{...}{Other arguments passed to methods.}
-
-\item{terms}{A flag specifying whether to return the parameter name
-for each term element.}
 }
 \value{
 A character vector of the names of the parameters.
