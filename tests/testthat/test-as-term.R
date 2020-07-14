@@ -92,6 +92,8 @@ test_that("as_term.character", {
 })
 
 test_that("as_term others", {
+  rlang::scoped_options(lifecycle_verbosity = "quiet")
+
   expect_error(as_term(factor(1)), "no applicable method")
   expect_error(as_term(data.frame(x = 1)), "no applicable method")
   expect_error(as_term(TRUE), "no applicable method")
