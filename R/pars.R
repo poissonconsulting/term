@@ -41,8 +41,10 @@ pars.character <- function(x, scalar = NULL, ...) {
 #' pars(term, scalar = FALSE)
 pars.term <- function(x, scalar = NULL, terms = FALSE, ...) {
   if(!missing(terms)) {
-    deprecate_stop("0.2.1", "term::pars(terms =)")
+    deprecate_warn("0.2.1", "term::pars(terms =)")
   }
+  if(isTRUE(terms))
+    return(pars_terms(x))
 
   pars(as_term_rcrd(x), scalar = scalar, ...)
 }

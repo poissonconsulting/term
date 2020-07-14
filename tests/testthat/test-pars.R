@@ -22,8 +22,8 @@ test_that("pars.term deprecated terms", {
     "beta[1,2]", "beta[2,2]", "sigma"
   ))
 
-  lifecycle::expect_defunct(pars(terms, terms = TRUE))
-  lifecycle::expect_defunct(pars(terms, terms = FALSE))
+  lifecycle::expect_deprecated(pars(terms, terms = TRUE))
+  lifecycle::expect_deprecated(pars(terms, terms = FALSE))
 })
 
 test_that("pars.term", {
