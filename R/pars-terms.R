@@ -2,8 +2,6 @@
 #'
 #' Gets the name of each parameter for each term.
 #'
-#' The scalar argument has been `r lifecycle::badge("soft-deprecated")`.
-#'
 #' The scalar argument is  \lifecycle{defunct}
 #'
 #' @inheritParams params
@@ -19,7 +17,6 @@
 #' )
 #' pars_terms(term)
 pars_terms <- function(x, scalar = NULL, ...) {
-  # FIXME hack for nlist v0.1.0 and v0.1.1
   chkor(is_term(x), is_term_rcrd(x))
   if(!missing(scalar)) {
     deprecate_stop("0.2.1", "term::pars_terms(scalar =)")

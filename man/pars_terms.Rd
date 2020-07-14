@@ -20,8 +20,6 @@ A character vector of the term parameter names.
 Gets the name of each parameter for each term.
 }
 \details{
-The scalar argument has been \ifelse{html}{\figure{lifecycle-soft-deprecated.svg}{options: alt='Soft-deprecated lifecycle'}}{\strong{Soft-deprecated}}.
-
 The scalar argument is  \lifecycle{defunct}
 }
 \examples{

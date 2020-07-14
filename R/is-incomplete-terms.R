@@ -13,6 +13,7 @@
 #' is_incomplete_terms(term("b[2]", "b[1]"))
 #' is_incomplete_terms(term("b[2]", "b[1]", "b[1]"))
 is_incomplete_terms <- function(x, ...) {
+  x <- as_term(x)
   if (!length(x)) {
     return(FALSE)
   }
