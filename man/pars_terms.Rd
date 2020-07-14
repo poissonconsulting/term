@@ -31,6 +31,7 @@ pars_terms(term)
 }
 \seealso{
 Other parameters: 
+\code{\link{pars.term_rcrd}()},
 \code{\link{pars.term}()}
 }
 \concept{parameters}

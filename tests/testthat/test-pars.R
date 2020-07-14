@@ -22,7 +22,7 @@ test_that("pars.term deprecated terms", {
     "beta[1,2]", "beta[2,2]", "sigma"
   ))
 
-  lifecycle::expect_deprecated(pars(terms, scalar = TRUE, terms = TRUE))
+  lifecycle::expect_defunct(pars(terms, scalar = TRUE, terms = TRUE))
 
   expect_identical(pars(terms, scalar = TRUE, terms = TRUE), "sigma")
 
@@ -36,11 +36,11 @@ test_that("pars.term", {
   expect_identical(pars(new_term("b")), "b")
   expect_identical(pars(new_term("b"), scalar = TRUE), "b")
   expect_identical(pars(new_term("b[1]")), "b")
-  expect_identical(pars(new_term("b[1]"), scalar = TRUE), character(0))
+  expect_identical(pars(new_term("b[1]"), scalar = TRUE), "b")
   expect_identical(pars(new_term(c("b", "b[1]"))), "b")
   expect_identical(pars(new_term(c("b", "b[1]")), scalar = TRUE), "b")
   expect_identical(pars(new_term(c("b", "b[1]", "b[2]"))), "b")
-  expect_identical(pars(new_term(c("b", "b[1]", "b[2]")), scalar = TRUE), "b")
+  expect_identical(pars(new_term(c("b", "b[1]", "b[2]")), scalar = TRUE), character(0))
   expect_identical(pars(new_term(c("b[1]", "b[2]"))), "b")
   expect_identical(pars(new_term(c("b[1]", "b[2]")), scalar = TRUE), character(0))
 })

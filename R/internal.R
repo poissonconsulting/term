@@ -26,17 +26,6 @@ tindex_impl <- function(x) {
   x
 }
 
-pars_impl <- function(x, scalar = NULL, terms = FALSE) {
-  x <- as.character(x)
-  if(!is.null(scalar)) {
-    bol <- grepl("\\[", x)
-    x <- x[is.na(x) | if(scalar) !bol else bol]
-  }
-  x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
-  if (!terms) x <- unique(x)
-  x
-}
-
 valid_term_impl <- function(x) {
   if (!length(x)) {
     return(logical(0))
