@@ -1,7 +1,7 @@
 test_that("is_inconsistent_terms", {
   expect_false(is_inconsistent_terms(new_term()))
   expect_false(is_inconsistent_terms(new_term("b")))
-  expect_error(is_inconsistent_terms(new_term(c("b", NA))), NA)
+  expect_true(is_inconsistent_terms(new_term(c("b", NA))))
   expect_false(is_inconsistent_terms(new_term(c("b", "b[2]"))))
   expect_true(is_inconsistent_terms(new_term(c("b", "b[2]", "b[4,] "))))
   expect_true(is_inconsistent_terms(new_term(c("b[1]", "b[1,1]"))))

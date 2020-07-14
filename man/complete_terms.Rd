@@ -18,8 +18,7 @@ complete_terms(x, ...)
 Completes an object's terms.
 }
 \details{
-The term vector is repaired before being completed.
-Missing values are ignored.
+It must not have any invalid or missing (NA) values.
 }
 \section{Methods (by class)}{
 \itemize{

@@ -27,9 +27,10 @@ test_that("pdims", {
     list(alpha = 3L, beta = c(2L, 1L))
   )
 
-  expect_identical(
+  expect_error(
     pdims(new_term(c("alpha[3]", "beta[2,1]", "alpha[10,]"))),
-    list(alpha = 10L, beta = 2:1)
+    "^`x` must have terms with consistent parameter dimensions[.]$",
+    class = "chk_error"
   )
 })
 

@@ -16,6 +16,7 @@ A logical scalar indicating whether the object's terms are inconsistent.
 }
 \description{
 Tests whether a term vector has inconsistent elements.
+Returns TRUE if includes missing or invalid terms.
 }
 \examples{
 is_inconsistent_terms(term("b[2]"))

@@ -10,8 +10,7 @@ complete_terms <- function(x, ...) {
 
 #' @describeIn complete_terms Complete Terms for a term Vector
 #'
-#' @details The term vector is repaired before being completed.
-#' Missing values are ignored.
+#' @details It must not have any invalid or missing (NA) values.
 #'
 #' @seealso [term-vector()], [repair_terms()] and [is_incomplete_terms()].
 #' @export
@@ -24,5 +23,8 @@ complete_terms.term <- function(x, ...) {
     return(x)
   }
   x <- repair_terms(x)
+  if(anyNA(x)) {
+    abort_chk("`x` must not have any missing values.")
+  }
   term(x, !!!setdiff(term_impl(pdims(x)), x))
 }
