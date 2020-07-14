@@ -29,7 +29,7 @@ Depends:
     R (>= 3.4)
 Imports:
     chk,
-    extras (>= 0.0.1),
+    extras (>= 0.0.1.9001),
     lifecycle,
     rlang,
     universals,

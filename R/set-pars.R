@@ -13,6 +13,8 @@ set_pars.term <- function(x, value, ...) {
   chk_not_any_na(x)
   chk_term(x, validate = "valid")
   chk_pars(value)
+  chk_not_any_na(value)
+  chk_unique(value)
   chk_unused(...)
 
   if (!identical(npars(x), length(value))) {
@@ -29,7 +31,7 @@ set_pars.term <- function(x, value, ...) {
     term_value[term_pars == pars[i]] <- value[i]
   }
 
-  x <- sub(p0("^", .par_name_pattern), "", x)
+  x <- sub(par_pattern(ht = TRUE), "", x)
   x <- p(term_value, x, sep = "")
   new_term(x)
 }
