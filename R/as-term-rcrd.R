@@ -13,15 +13,17 @@
 as_term_rcrd <- function(x, ...) UseMethod("as_term_rcrd")
 
 #' @export
-as_term_rcrd.term <- function(x, ...) {
+as_term_rcrd.term <- function(x, repair = FALSE, ...) {
+  chk_flag(repair)
   chk_unused(...)
+  if(repair) x <- repair_terms(x, normalize = FALSE)
   vec_cast(x, new_term_rcrd())
 }
 
 #' @describeIn as_term_rcrd Coerce character vector to term_rcrd
 #' @export
-as_term_rcrd.character <- function(x, repair = FALSE, normalize = repair, ...) {
-  as_term_rcrd(as_term(x, repair = repair, normalize = normalize, ...))
+as_term_rcrd.character <- function(x, repair = FALSE, ...) {
+  as_term_rcrd(as_term(x, repair = repair, normalize = FALSE, ...))
 }
 
 #' @describeIn as_term_rcrd Coerce numeric vector to term_rcrd
