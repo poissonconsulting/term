@@ -5,7 +5,7 @@ universals::npdims
 #'
 #' The terms argument is  \lifecycle{defunct}
 #'
-#' @inherit universals::npars
+#' @inherit universals::npdims
 #' @param terms A flag specifying whether to get the number of dimensions for each term element.
 #'
 #' @export
@@ -16,6 +16,7 @@ npdims.term <- function(x, terms = FALSE, ...) {
   chk_flag(terms)
   chk_unused(...)
 
+  # when archive can remove entire function as covered by default
   if(!missing(terms)) {
     deprecate_stop("0.2.1", "term::npdims(terms =)")
   }
