@@ -31,7 +31,7 @@ set_pars.term <- function(x, value, ...) {
     term_value[term_pars == pars[i]] <- value[i]
   }
 
-  x <- sub(par_pattern(ht = TRUE), "", x)
+  x <- sub(p0("^", par_pattern()), "", x)
   x <- p(term_value, x, sep = "")
   new_term(x)
 }

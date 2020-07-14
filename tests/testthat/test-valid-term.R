@@ -1,5 +1,5 @@
 test_that("valid_term", {
-  expect_error(valid_term(NA_character_), "^`x` must inherit from S3 class 'term'[.]$",
+  expect_error(valid_term(NA_character_), "`x` must inherit from S3 class 'term'[.]",
     class = "chk_error"
   )
   expect_identical(valid_term(new_term()), logical(0))

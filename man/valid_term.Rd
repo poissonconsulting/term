@@ -13,7 +13,7 @@ valid_term(x)
 A logical vector indicating whether each term is valid.
 }
 \description{
-Test whether each element in a term vector is valid.
+Test whether each element in a term or term_rcrd object is valid.
 }
 \details{
 Repairing a term vector replaces invalid terms with a missing value.

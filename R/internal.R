@@ -15,7 +15,7 @@ scalar_term_impl <- function(x) {
 
 tindex_impl <- function(x) {
   names <- x
-  x <- sub(par_pattern(ht = TRUE), "", x)
+  x <- sub(p0("^", par_pattern()), "", x)
   x <- sub("^$", "1", x)
   x <- gsub("\\[|\\]", "", x)
   x <- strsplit(x, ",")

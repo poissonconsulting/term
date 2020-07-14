@@ -15,14 +15,6 @@
 #' # invalid term elements
 #' valid_term(new_term(c("a b", "a[1]b", "a[0]", "b[1,]", "c[]", "d[1][2]")))
 valid_term <- function(x) {
-  chkor(chk_s3_class(x, "term"), chk_s3_class(x, "term_rcrd"))
-  if(is_term(x)) return (valid_term_impl(x))
-  valid <- grepl(pattern , x)
-
-  pattern <- p0("^\\s*", .par_name_pattern, "\\s*$")
-  valid_par <- grepl(pattern, x$par)
-  valid_par[is.na(x$par)] <- NA
-  valid_dim <-vapply(x$dim, is_index, TRUE)
-    valid_par[vapply(x$par, anyNA, TRUE)] <- NA
-  valid_par & valid_dim
+  chkor(chk_s3_class(x, "term"))
+  valid_term_impl(x)
 }
