@@ -4,7 +4,7 @@ max_index <- function(x) {
   apply(x, 2, max)
 }
 
-scalar_term <- function(x) {
+scalar_term_impl <- function(x) {
   if (!length(x)) {
     return(logical(0))
   }
@@ -52,7 +52,7 @@ valid_term_impl <- function(x) {
 }
 
 pars_terms_impl <- function(x, scalar = NULL) {
-  scalar_term <- scalar_term(x)
+  scalar_term <- scalar_term_impl(x)
   x <- as.character(x)
   x <- sub(p0("^(", .par_name_pattern, ")(.*)"), "\\1", x)
   if(vld_true(scalar)) x <- x[scalar_term]
