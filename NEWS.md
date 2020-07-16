@@ -1,3 +1,25 @@
+# term 0.2.0.9002
+
+- `nterms()` now returns total number of terms not just number of unique non-missing terms.
+- Added `unique()` for term and term_rcrd object.
+- Just deprecate pars(terms=).
+- Added rep.term_rcrd().
+- in_inconsistent_term() returns TRUE if includes missing or invalid terms and add pdims.term_rcrd().
+- Added nterms.term_rcrd() and anyNA.term_rcrd().
+- Defunct terms argument to npdims.term().
+- consistent-term() now also does term_rcrd objects.
+- Added pars() for term_rcrd object.
+- Added scalar_term() to identify scalar terms.
+- Added subset.term_rcrd().
+- pars_terms() now handles term_rcrd objects.
+- Deprecated scalar argument.
+- Implement tindex() for term_rcrd as well as term objects.
+- Added term_rcrd().
+- Added normalize argument to as_term()
+- Added normalize_terms().
+- Added as_term_rcrd() and is_term_rcrd().
+
+
 # term 0.2.0.9001
 
 - Support `rbind()` for data frames with term objects (#40).
