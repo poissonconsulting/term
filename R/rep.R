@@ -7,6 +7,7 @@ rep.term <- function(x, times, ...) {
 #' @export
 rep.term_rcrd <- function(x, times, ...) {
   chk_unused(...)
-  x <- data.frame(par = rep(x$par, times), dim = I(rep(x$dim, times)))
+  x <- data.frame(par = rep(x$par, times), dim = I(rep(x$dim, times)),
+                  stringsAsFactors = FALSE)
   new_term_rcrd(x)
 }
