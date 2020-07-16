@@ -40,7 +40,8 @@
 
 
 <meta property="og:title" content="Number of Terms of a term — nterms.term" />
-<meta property="og:description" content="Gets the number of unique terms." />
+<meta property="og:description" content="Gets the number of terms
+of an MCMC object." />
 
 
 
@@ -72,7 +73,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">term</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0.9001</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0.9002</span>
       </span>
     </div>
 
@@ -117,7 +118,8 @@
     </div>
 
     <div class="ref-description">
-    <p>Gets the number of unique terms.</p>
+    <p>Gets the number of terms
+of an MCMC object.</p>
     </div>
 
     <pre class="usage"><span class='co'># S3 method for term</span>
@@ -139,10 +141,6 @@
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A integer scalar of the number of terms.</p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>If the term vector includes
-missing values then it returns NA_integer.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other MCMC dimensions: 
@@ -153,7 +151,7 @@ missing values then it returns NA_integer.</p>
 <code><a href='https://rdrr.io/pkg/universals/man/nsims.html'>nsims</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/universals/man/nterms.html'>nterms</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/term/man/term.html'>term</a></span>(<span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[2]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span>))</div><div class='output co'>#&gt; [1] 4</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/universals/man/nterms.html'>nterms</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/term/man/term.html'>term</a></span>(<span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[1]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[1,1]"</span>))</div><div class='output co'>#&gt; [1] 2</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/universals/man/nterms.html'>nterms</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/term/man/term.html'>term</a></span>(<span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[2]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span>))</div><div class='output co'>#&gt; [1] 4</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/universals/man/nterms.html'>nterms</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/term/man/term.html'>term</a></span>(<span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[1]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[1,1]"</span>))</div><div class='output co'>#&gt; [1] 4</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

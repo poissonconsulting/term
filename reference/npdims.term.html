@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">term</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0.9001</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0.9002</span>
       </span>
     </div>
 
@@ -142,19 +142,13 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>An integer scalar of the number of parameters.</p>
+    <p>A named integer vector of the number of dimensions of each parameter.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars()</a></code></p>
-<p>Other MCMC dimensions: 
-<code><a href='https://rdrr.io/pkg/universals/man/nchains.html'>nchains</a>()</code>,
-<code><a href='https://rdrr.io/pkg/universals/man/niters.html'>niters</a>()</code>,
-<code><a href='https://rdrr.io/pkg/universals/man/nsams.html'>nsams</a>()</code>,
-<code><a href='https://rdrr.io/pkg/universals/man/nsims.html'>nsims</a>()</code>,
-<code><a href='https://rdrr.io/pkg/universals/man/nterms.html'>nterms</a>()</code></p>
-<p>Other parameters: 
-<code><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars</a>()</code>,
-<code><a href='https://rdrr.io/pkg/universals/man/set_pars.html'>set_pars</a>()</code></p></div>
+    <div class='dont-index'><p>Other dimensions: 
+<code><a href='https://rdrr.io/pkg/universals/man/dims.html'>dims</a>()</code>,
+<code><a href='https://rdrr.io/pkg/universals/man/ndims.html'>ndims</a>()</code>,
+<code><a href='https://rdrr.io/pkg/universals/man/pdims.html'>pdims</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/universals/man/npdims.html'>npdims</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/term/man/term.html'>term</a></span>(<span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[3]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span>))</div><div class='output co'>#&gt; alpha  beta 

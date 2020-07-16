@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Coerce to a Term Record — as_term_rcrd • term</title>
+<title>Number of Terms of a term_rcrd — nterms.term_rcrd • term</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,9 @@
 
 
 
-<meta property="og:title" content="Coerce to a Term Record — as_term_rcrd" />
-<meta property="og:description" content="Coerces an R object to a term_rcrd." />
+<meta property="og:title" content="Number of Terms of a term_rcrd — nterms.term_rcrd" />
+<meta property="og:description" content="Gets the number of terms
+of an MCMC object." />
 
 
 
@@ -111,59 +112,46 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Coerce to a Term Record</h1>
-    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/term/blob/master/R/as-term-rcrd.R'><code>R/as-term-rcrd.R</code></a></small>
-    <div class="hidden name"><code>as_term_rcrd.Rd</code></div>
+    <h1>Number of Terms of a term_rcrd</h1>
+    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/term/blob/master/R/nterms.R'><code>R/nterms.R</code></a></small>
+    <div class="hidden name"><code>nterms.term_rcrd.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Coerces an R object to a <code>term_rcrd</code>.</p>
+    <p>Gets the number of terms
+of an MCMC object.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/term/man/as_term_rcrd.html'>as_term_rcrd</a></span>(<span class='kw'>x</span>, <span class='kw'>...</span>)
-
-<span class='co'># S3 method for character</span>
-<span class='fu'><a href='https://rdrr.io/pkg/term/man/as_term_rcrd.html'>as_term_rcrd</a></span>(<span class='kw'>x</span>, repair = <span class='fl'>FALSE</span>, <span class='kw'>...</span>)
-
-<span class='co'># S3 method for numeric</span>
-<span class='fu'><a href='https://rdrr.io/pkg/term/man/as_term_rcrd.html'>as_term_rcrd</a></span>(<span class='kw'>x</span>, name = <span class='st'>"par"</span>, <span class='kw'>...</span>)</pre>
+    <pre class="usage"><span class='co'># S3 method for term_rcrd</span>
+<span class='fu'><a href='https://rdrr.io/pkg/universals/man/nterms.html'>nterms</a></span>(<span class='kw'>x</span>, <span class='kw'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>The object.</p></td>
+      <td><p>An object.</p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>Unused.</p></td>
-    </tr>
-    <tr>
-      <th>repair</th>
-      <td><p>A flag specifying whether to repair terms.</p></td>
-    </tr>
-    <tr>
-      <th>name</th>
-      <td><p>A string specifying the name of the parameter.</p></td>
+      <td><p>Other arguments passed to methods.</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="methods-by-class-"><a class="anchor" href="#methods-by-class-"></a>Methods (by class)</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    
-<ul>
-<li><p><code>character</code>: Coerce character vector to term_rcrd</p></li>
-<li><p><code>numeric</code>: Coerce numeric vector to term_rcrd</p></li>
-</ul>
+    <p>A integer scalar of the number of terms.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='https://rdrr.io/pkg/term/man/repair_terms.html'>repair_terms()</a></code></p></div>
+    <div class='dont-index'><p>Other MCMC dimensions: 
+<code><a href='https://rdrr.io/pkg/universals/man/nchains.html'>nchains</a>()</code>,
+<code><a href='https://rdrr.io/pkg/universals/man/niters.html'>niters</a>()</code>,
+<code><a href='https://rdrr.io/pkg/universals/man/npars.html'>npars</a>()</code>,
+<code><a href='https://rdrr.io/pkg/universals/man/nsams.html'>nsams</a>()</code>,
+<code><a href='https://rdrr.io/pkg/universals/man/nsims.html'>nsims</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/term/man/as_term.html'>as_term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fl'>1</span><span class='op'>:</span><span class='fl'>4</span>, <span class='fl'>2</span>))</div><div class='output co'>#&gt; &lt;term[4]&gt;
-#&gt; [1] par[1,1] par[2,1] par[1,2] par[2,2]</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/term/man/as_term.html'>as_term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"parm3[10]"</span>, <span class='st'>"parm3[2]"</span>, <span class='st'>"parm[2,2]"</span>, <span class='st'>"parm[1,1]"</span>))</div><div class='output co'>#&gt; &lt;term[4]&gt;
-#&gt; [1] parm3[10] parm3[2]  parm[2,2] parm[1,1]</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/universals/man/nterms.html'>nterms</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/term/man/as_term_rcrd.html'>as_term_rcrd</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/term/man/term.html'>term</a></span>(<span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[2]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span>)))</div><div class='output co'>#&gt; [1] 4</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/universals/man/nterms.html'>nterms</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/term/man/as_term_rcrd.html'>as_term_rcrd</a></span>(<span class='fu'><a href='https://rdrr.io/pkg/term/man/term.html'>term</a></span>(<span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[1]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[1,1]"</span>)))</div><div class='output co'>#&gt; [1] 4</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
