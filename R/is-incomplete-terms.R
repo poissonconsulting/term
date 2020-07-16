@@ -20,8 +20,6 @@ is_incomplete_terms <- function(x, ...) {
   if (anyNA(x)) {
     return(NA)
   }
-  if(length(unique(table(x))) != 1L)
-    return(TRUE)
   x <- unique(x)
   length(x) < sum(vapply(pdims(x), prod, 1))
 }

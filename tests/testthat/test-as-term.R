@@ -92,6 +92,10 @@ test_that("as_term.character", {
 })
 
 test_that("as_term others", {
+  expect_identical(as_term(new_term_rcrd()), new_term())
+})
+
+test_that("as_term others", {
   rlang::scoped_options(lifecycle_verbosity = "quiet")
 
   expect_error(as_term(factor(1)), "no applicable method")

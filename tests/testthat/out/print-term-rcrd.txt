@@ -1,6 +1,5 @@
 > new_term_rcrd()
-<term_rcrd[1]>
-[1] []
+<term_rcrd[0]>
 
 > as_term_rcrd(term(alpha = 2, beta = c(2, 2), "sigma"))
 <term_rcrd[7]>

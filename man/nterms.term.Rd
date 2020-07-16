@@ -15,11 +15,8 @@
 A integer scalar of the number of terms.
 }
 \description{
-Gets the number of unique terms.
-}
-\details{
-If the term vector includes
-missing values then it returns NA_integer.
+Gets the number of terms
+of an MCMC object.
 }
 \examples{
 nterms(term("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]"))

@@ -29,6 +29,7 @@ vec_cast.term.character <- function(x, to, ...) new_term(x)
 #' @export
 vec_cast.term.term_rcrd <- function(x, to, normalize = TRUE, ...) {
   chk_flag(normalize)
+  if(!nterms(x)) return(new_term())
   term <- paste0(x$par, "[", vapply(x$dim, paste, collapse = ",", FUN.VALUE = "", USE.NAMES = FALSE), "]")
   term[is.na(x$par) | is.na(x$dim)] <- NA_character_
   if(normalize)
