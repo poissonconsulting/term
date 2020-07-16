@@ -6,5 +6,5 @@ anyDuplicated.term <- function(x, incomparables = FALSE, ...) {
 #' @export
 anyDuplicated.term_rcrd <- function(x, incomparables = FALSE, ...) {
   chk_false(incomparables)
-  anyDuplicated(as.data.frame(x[c("par", "dim")]))
+  anyDuplicated(as.data.frame(x[c("par", "dim")], stringsAsFactors = FALSE))
 }
