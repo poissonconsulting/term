@@ -4,6 +4,14 @@ format.term_rcrd <- function(x) {
   unclass(x)
 }
 
+# this seems to work - didn't before!
+new_vctr(list(1:3, 2:1), class = "term_rcrd")
+
+inherits(list(1:3, 2:1), "list")
+vec_is(list(1:3, 2:1))
+
+new_vctr(list(1:3, 2:1), class = "term_rcrd")
+
 
 # currently using
 data <- data.frame(dim = I(list(1:3, 2:1)))
