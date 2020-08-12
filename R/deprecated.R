@@ -55,8 +55,8 @@ is.inconsistent_terms <- function(x) {
 #' @export
 parameters <- function(x, ...) {
   deprecate_soft("0.1.0",
-    what = "term::parameters()",
-    with = "term::pars()"
+    what = "parameters()",
+    with = "pars()"
   )
   pars(x, ...)
 }
