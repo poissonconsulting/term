@@ -120,7 +120,7 @@
     <p>Gets the name of each parameter for each term.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/pkg/term/man/pars_terms.html'>pars_terms</a></span>(<span class='kw'>x</span>, scalar = <span class='kw'>NULL</span>, <span class='kw'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>pars_terms</span>(<span class='kw'>x</span>, scalar = <span class='kw'>NULL</span>, <span class='kw'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -148,15 +148,15 @@
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other parameters: 
-<code><a href='https://rdrr.io/pkg/term/man/pars.term_rcrd.html'>pars.term_rcrd</a>()</code>,
-<code><a href='https://rdrr.io/pkg/term/man/pars.term.html'>pars.term</a>()</code></p></div>
+<code><a href='pars.term_rcrd.html'>pars.term_rcrd</a>()</code>,
+<code><a href='pars.term.html'>pars.term</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>term</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/term/man/term.html'>term</a></span>(
+    <pre class="examples"><div class='input'><span class='kw'>term</span> <span class='op'>&lt;-</span> <span class='fu'><a href='term.html'>term</a></span>(
   <span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[2]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span>,
   <span class='st'>"beta[1,2]"</span>, <span class='st'>"beta[2,2]"</span>, <span class='st'>"sigma"</span>, <span class='fl'>NA</span>
 )
-<span class='fu'><a href='https://rdrr.io/pkg/term/man/pars_terms.html'>pars_terms</a></span>(<span class='kw'>term</span>)</div><div class='output co'>#&gt; [1] "alpha" "alpha" "beta"  "beta"  "beta"  "beta"  "sigma" NA     </div></pre>
+<span class='fu'>pars_terms</span>(<span class='kw'>term</span>)</div><div class='output co'>#&gt; [1] "alpha" "alpha" "beta"  "beta"  "beta"  "beta"  "sigma" NA     </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
