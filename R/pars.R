@@ -73,8 +73,8 @@ pars.term_rcrd <- function(x, scalar = NULL, ...) {
 
   if(!is.null(scalar)) {
     bol <- scalar_term(x)
-    x <- x[is.na(bol) | if(scalar) bol else !bol,,drop = FALSE]
+    x <- x[is.na(bol) | if(scalar) bol else !bol]
   }
-  unique(x$par)
+  unique(field(x, "par"))
 }
 

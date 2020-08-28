@@ -14,7 +14,16 @@ vec_cast.term_rcrd.default <- function(x, to, ...) {
   vec_default_cast(x, to)
 }
 
-#' @method vec_cast.term_rcrd term
+#' @method vec_cast.term_rcrd term_rcrd
+#' @export
+vec_cast.term_rcrd.term_rcrd <- function(x, to, ...) x
+
+#' @method vec_cast.term_rcrd character
+#' @export
+vec_cast.term_rcrd.character <- function(x, to, ...) {
+  vec_cast(vec_cast(x, term()), term_rcrd())
+}
+
 #' @export
 vec_cast.term_rcrd.term <- function(x, to, ...) {
   par <- pars_terms_impl(x)

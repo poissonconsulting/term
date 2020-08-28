@@ -7,12 +7,14 @@
 #' @export
 #' @examples
 #' new_term_rcrd()
+#' \dontrun{
 #' new_term_rcrd(data.frame(par = c("x", "x", "y"), dim = I(list(1, 2, c(2,2))),
-#' stringsAsFactors = FALSE))
+#'  stringsAsFactors = FALSE))
+#'  }
 #' @export
 new_term_rcrd <- function(x = data.frame(par = character(), dim = I(list()), stringsAsFactors = FALSE)) {
   chk_data(x)
   check_names(x, c("par", "dim"))
   x$dim <- as_list(x$dim)
-  vctrs::new_data_frame(x, class = "term_rcrd")
+  vctrs::new_rcrd(fields = x[c("par", "dim")], class = "term_rcrd")
 }

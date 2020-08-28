@@ -4,7 +4,7 @@ format.term <- function(x, ...) {
 }
 
 #' @export
-format.term_rcrd2 <- function(x, ...) {
+format.term_rcrd <- function(x, ...) {
   format(vec_cast(x, new_term()))
 }
 

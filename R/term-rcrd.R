@@ -16,8 +16,10 @@
 #'
 #' @examples
 #' term_rcrd()
+#' \dontrun{
 #' term_rcrd("p", "q[1]", "q[2]", "q[3]")
 #' term_rcrd("q[1]", "q[2]", "q[3]")
+#' }
 term_rcrd <- function(...) {
   as_term_rcrd(term(...))
 }

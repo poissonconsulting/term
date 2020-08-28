@@ -13,7 +13,7 @@
 consistent_term <- function(x) {
   chkor(chk_s3_class(x, "term"), chk_s3_class(x, "term_rcrd"))
   x <- as_term_rcrd(x, repair = TRUE)
-  names <- x$par
+  names <- field(x, "par")
   x <- npdims_terms_impl(x)
   names(x) <- names
   y <- x[!is.na(x)]

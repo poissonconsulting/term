@@ -36,5 +36,5 @@ nterms.term <- function(x, ...) {
 #' nterms(as_term_rcrd(term("alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]")))
 #' nterms(as_term_rcrd(term("alpha[1]", "alpha[1]", "beta[1,1]", "beta[1,1]")))
 nterms.term_rcrd <- function(x, ...) {
-  nrow(x)
+  length(x)
 }

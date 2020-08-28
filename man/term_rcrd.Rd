@@ -24,8 +24,10 @@ see \code{chk_valid()} for details.
 }
 \examples{
 term_rcrd()
+\dontrun{
 term_rcrd("p", "q[1]", "q[2]", "q[3]")
 term_rcrd("q[1]", "q[2]", "q[3]")
+}
 }
 \seealso{
 \code{\link[=dims]{dims()}} and \code{\link[=pdims]{pdims()}}

@@ -97,5 +97,5 @@ test_that("as_term_rcrd others", {
 
 test_that("as_term_rcrd missing values", {
   expect_identical(as_term_rcrd(NA_term_), structure(list(par = NA_character_, dim = list(NA_integer_)), class = c("term_rcrd",
-                                                                                                               "data.frame"), row.names = c(NA, -1L)))
+                                                                                                                   "vctrs_rcrd", "vctrs_vctr")))
 })

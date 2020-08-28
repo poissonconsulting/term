@@ -16,6 +16,8 @@ Use this function to quickly construct a term_rcrd object.
 }
 \examples{
 new_term_rcrd()
+\dontrun{
 new_term_rcrd(data.frame(par = c("x", "x", "y"), dim = I(list(1, 2, c(2,2))),
-stringsAsFactors = FALSE))
+ stringsAsFactors = FALSE))
+ }
 }

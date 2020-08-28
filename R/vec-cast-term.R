@@ -27,25 +27,15 @@ vec_cast.term.character <- function(x, to, ...) new_term(x)
 
 #' @method vec_cast.term term_rcrd
 #' @export
-vec_cast.term.term_rcrd <- function(x, to, normalize = TRUE, ...) {
-  chk_flag(normalize)
-  if(!nterms(x)) return(new_term())
-  term <- paste0(x$par, "[", vapply(x$dim, paste, collapse = ",", FUN.VALUE = "", USE.NAMES = FALSE), "]")
-  term[is.na(x$par) | is.na(x$dim)] <- NA_character_
-  if(normalize)
-    term <- normalize_terms_impl(term)
-  new_term(term)
-}
-
-#' @method vec_cast.term term_rcrd2
-#' @export
-vec_cast.term.term_rcrd2 <- function(x, to, ...) {
+vec_cast.term.term_rcrd <- function(x, to, ...) {
+  if(!length(x)) return(new_term())
   chr <- paste0(
     field(x, "par"),
     "[",
     purrr::map_chr(field(x, "dim"), paste, collapse = ","),
     "]"
   )
-  chr[is.na(x)] <- NA_character_
-  new_term(chr)
+  chr[is.na(field(x, "par"))] <- NA_character_
+  chr <- new_term(chr)
+  normalize_terms(chr)
 }

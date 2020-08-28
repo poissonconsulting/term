@@ -6,7 +6,6 @@ unique.term <- function(x, incomparables = FALSE, ...) {
 #' @export
 unique.term_rcrd <- function(x, incomparables = FALSE, ...) {
   chk_false(incomparables)
-  x <- x[!duplicated(x[c("par", "dim")]),,drop = FALSE]
-  row.names(x) <- NULL
-  x
+  chk_unused(...)
+  x[!duplicated(as.data.frame(x))]
 }

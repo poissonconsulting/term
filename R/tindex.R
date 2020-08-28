@@ -20,7 +20,7 @@ tindex <- function(x) {
     )
     x <- as_term(x)
   }
-  tindex <- as_term_rcrd(x)$dim
+  tindex <- field(as_term_rcrd(x), "dim")
   names(tindex) <- as.character(as_term(x))
   tindex
 }

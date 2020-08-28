@@ -24,8 +24,10 @@ term_rcrd <- term_rcrd(
   "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
   "beta[1,2]", "beta[2,2]", "sigma"
 )
+\dontrun{
 subset(term_rcrd, "beta")
 subset(term_rcrd, c("alpha", "sigma"))
+}
 }
 \seealso{
 \code{\link[=term_rcrd_object]{term_rcrd_object()}}

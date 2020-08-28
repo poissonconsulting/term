@@ -34,21 +34,3 @@ is_term <- function(x) {
 is_term_rcrd <- function(x) {
   vld_s3_class(x, "term_rcrd")
 }
-
-#' Is Term Record
-#'
-#' Tests whether an R object inherits from S3 class `term_rcrd2`.
-#'
-#' It does not test the validity of consistency of the term elements.
-#'
-#' @inheritParams params
-#' @return A flag indicating whether the test was positive.
-#' @seealso [valid_term()]
-#' and [consistent_term()]
-#' @export
-#'
-#' @examples
-#' is_term_rcrd2(new_term_rcrd2())
-is_term_rcrd2 <- function(x) {
-  vld_s3_class(x, "term_rcrd2")
-}

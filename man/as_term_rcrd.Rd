@@ -4,6 +4,7 @@
 \alias{as_term_rcrd}
 \alias{as_term_rcrd.character}
 \alias{as_term_rcrd.numeric}
+\alias{as_term_rcrd.term}
 \title{Coerce to a Term Record}
 \usage{
 as_term_rcrd(x, ...)
@@ -11,6 +12,8 @@ as_term_rcrd(x, ...)
 \method{as_term_rcrd}{character}(x, repair = FALSE, ...)
 
 \method{as_term_rcrd}{numeric}(x, name = "par", ...)
+
+\method{as_term_rcrd}{term}(x, repair = FALSE, ...)
 }
 \arguments{
 \item{x}{The object.}
@@ -29,6 +32,8 @@ Coerces an R object to a \code{term_rcrd}.
 \item \code{character}: Coerce character vector to term_rcrd
 
 \item \code{numeric}: Coerce numeric vector to term_rcrd
+
+\item \code{term}: Coerce term vector to term_rcrd
 }}
 
 \examples{

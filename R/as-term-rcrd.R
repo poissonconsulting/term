@@ -12,14 +12,6 @@
 #' as_term(c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]"))
 as_term_rcrd <- function(x, ...) UseMethod("as_term_rcrd")
 
-#' @export
-as_term_rcrd.term <- function(x, repair = FALSE, ...) {
-  chk_flag(repair)
-  chk_unused(...)
-  if(repair) x <- repair_terms(x, normalize = FALSE)
-  vec_cast(x, new_term_rcrd())
-}
-
 #' @describeIn as_term_rcrd Coerce character vector to term_rcrd
 #' @export
 as_term_rcrd.character <- function(x, repair = FALSE, ...) {
@@ -32,10 +24,15 @@ as_term_rcrd.numeric <- function(x, name = "par", ...) {
   as_term_rcrd(as_term(x, name = name, ...))
 }
 
+#' @describeIn as_term_rcrd Coerce term vector to term_rcrd
+#' @export
+as_term_rcrd.term <- function(x, repair = FALSE, ...) {
+  chk_flag(repair)
+  chk_unused(...)
+  if(repair) x <- repair_terms(x, normalize = FALSE)
+  vec_cast(x, new_term_rcrd())
+}
+
 #' @export
 as_term_rcrd.term_rcrd <- function(x, ...) x
 
-#' @export
-as_term_rcrd.term_rcrd2 <- function(x, ...) {
-  as_term_rcrd(as_term(x), ...)
-}

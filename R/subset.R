@@ -59,8 +59,10 @@ subset.term <- function(x, pars = NULL, select = NULL, ...) {
 #'   "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
 #'   "beta[1,2]", "beta[2,2]", "sigma"
 #' )
+#' \dontrun{
 #' subset(term_rcrd, "beta")
 #' subset(term_rcrd, c("alpha", "sigma"))
+#' }
 subset.term_rcrd <- function(x, pars = NULL, ...) {
   chk_not_any_na(x)
   chk_unused(...)
@@ -75,7 +77,5 @@ subset.term_rcrd <- function(x, pars = NULL, ...) {
     return(new_term_rcrd())
   }
 
-  x <- x[pars_terms(x) %in% pars,,drop = FALSE]
-  row.names(x) <- NULL
-  x
+  x[pars_terms(x) %in% pars]
 }

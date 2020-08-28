@@ -12,8 +12,8 @@
 scalar_term <- function(x) {
   chkor(chk_s3_class(x, "term"), chk_s3_class(x, "term_rcrd"))
   x <- as_term_rcrd(x)
-  dim1 <- vapply(x$dim, function(x) identical(x, 1L), TRUE)
-  pars_terms <- x$par
+  dim1 <- vapply(field(x, "dim"), function(x) identical(x, 1L), TRUE)
+  pars_terms <- field(x, "par")
   scalar_term <- dim1 & !pars_terms %in% unique(pars_terms[!dim1])
   scalar_term[is.na(pars_terms)] <- NA
   scalar_term
