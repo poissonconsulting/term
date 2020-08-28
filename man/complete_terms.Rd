@@ -3,11 +3,14 @@
 \name{complete_terms}
 \alias{complete_terms}
 \alias{complete_terms.term}
+\alias{complete_terms.term_rcrd}
 \title{Complete Terms}
 \usage{
 complete_terms(x, ...)
 
 \method{complete_terms}{term}(x, ...)
+
+\method{complete_terms}{term_rcrd}(x, ...)
 }
 \arguments{
 \item{x}{The object.}
@@ -23,11 +26,17 @@ It must not have any invalid or missing (NA) values.
 \section{Methods (by class)}{
 \itemize{
 \item \code{term}: Complete Terms for a term Vector
+
+\item \code{term_rcrd}: Complete Terms for a term_rcrd vector
 }}
 
 \examples{
 complete_terms(term("b[3]", "b[1]", "b[2]"))
 complete_terms(term("z[2,2]", "z[1,1]"))
+\dontrun{
+complete_terms(term_rcrd("b[3]", "b[1]", "b[2]"))
+complete_terms(term_rcrd("z[2,2]", "z[1,1]"))
+}
 }
 \seealso{
 \code{\link[=term-vector]{term-vector()}}, \code{\link[=repair_terms]{repair_terms()}} and \code{\link[=is_incomplete_terms]{is_incomplete_terms()}}.
