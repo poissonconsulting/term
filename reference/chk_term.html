@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Check Term — chk_term • term</title>
+<title>Check Term or Term Record — chk_term • term</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Check Term — chk_term" />
-<meta property="og:description" content="Checks if term using vld_term()." />
+<meta property="og:title" content="Check Term or Term Record — chk_term" />
+<meta property="og:description" content="Checks if term using vld_term() or vld_term_rcrd()." />
 
 
 
@@ -111,16 +111,18 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Check Term</h1>
+    <h1>Check Term or Term Record</h1>
     <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/term/blob/master/R/chk.R'><code>R/chk.R</code></a></small>
     <div class="hidden name"><code>chk_term.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Checks if term using <code><a href='vld_term.html'>vld_term()</a></code>.</p>
+    <p>Checks if term using <code><a href='vld_term.html'>vld_term()</a></code> or <code><a href='vld_term.html'>vld_term_rcrd()</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>chk_term</span>(<span class='kw'>x</span>, validate = <span class='st'>"complete"</span>, x_name = <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>chk_term</span>(<span class='kw'>x</span>, validate = <span class='st'>"complete"</span>, x_name = <span class='kw'>NULL</span>)
+
+<span class='fu'>chk_term_rcrd</span>(<span class='kw'>x</span>, validate = <span class='st'>"complete"</span>, x_name = <span class='kw'>NULL</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -145,12 +147,25 @@ are 'class', 'valid', 'consistent' and 'complete'.</p></td>
 
     <p><code>NULL</code>, invisibly. Called for the side effect of throwing an error
 if the condition is not met.</p>
+    <h2 class="hasAnchor" id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
+
+    
+<ul>
+<li><p><code>chk_term_rcrd</code>: Check Term Record</p></li>
+</ul>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='term.html'>term</a></span>(<span class='st'>"x[2]"</span>, <span class='st'>"x[1]"</span>)
+    <pre class="examples"><div class='input'><span class='co'># chk_term</span>
+<span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='term.html'>term</a></span>(<span class='st'>"x[2]"</span>, <span class='st'>"x[1]"</span>)
 <span class='fu'>chk_term</span>(<span class='kw'>x</span>)
 <span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"x[2]"</span>, <span class='st'>"x[1]"</span>)
 <span class='fu'><a href='https://rdrr.io/r/base/try.html'>try</a></span>(<span class='fu'>chk_term</span>(<span class='kw'>x</span>, validate = <span class='st'>"sorted"</span>))
+</div><div class='output co'>#&gt; Error : `validate` must match 'class', 'complete', 'consistent' or 'valid', not 'sorted'.</div><div class='input'>
+<span class='co'># chk_term_rcrd</span>
+<span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='term_rcrd.html'>term_rcrd</a></span>(<span class='st'>"x[2]"</span>, <span class='st'>"x[1]"</span>)
+<span class='fu'>chk_term_rcrd</span>(<span class='kw'>x</span>)
+<span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"x[2]"</span>, <span class='st'>"x[1]"</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/try.html'>try</a></span>(<span class='fu'>chk_term_rcrd</span>(<span class='kw'>x</span>, validate = <span class='st'>"sorted"</span>))
 </div><div class='output co'>#&gt; Error : `validate` must match 'class', 'complete', 'consistent' or 'valid', not 'sorted'.</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
