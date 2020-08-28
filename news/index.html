@@ -71,7 +71,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">term</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0.9002</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0.9003</span>
       </span>
     </div>
 
@@ -114,6 +114,19 @@
       <small>Source: <a href='https://github.com/poissonconsulting/term/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
+    <div id="term-0209003" class="section level1">
+<h1 class="page-header" data-toc-text="0.2.0.9003">
+<a href="#term-0209003" class="anchor"></a>term 0.2.0.9003<small> Unreleased </small>
+</h1>
+<ul>
+<li>Added <code><a href="../reference/complete_terms.html">complete_terms.term_rcrd()</a></code>.</li>
+<li>Added <code><a href="../reference/dims.term_rcrd.html">dims.term_rcrd()</a></code>
+</li>
+<li>Added <code>term_rcrd</code> class.</li>
+<li>Added <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> for term object.</li>
+<li>Added <code><a href="https://rdrr.io/r/base/duplicated.html">anyDuplicated()</a></code> for term and term_rcrd objects.</li>
+</ul>
+</div>
     <div id="term-0209002" class="section level1">
 <h1 class="page-header" data-toc-text="0.2.0.9002">
 <a href="#term-0209002" class="anchor"></a>term 0.2.0.9002<small> Unreleased </small>
@@ -122,22 +135,25 @@
 <li>
 <code><a href="https://rdrr.io/pkg/universals/man/nterms.html">nterms()</a></code> now returns total number of terms not just number of unique non-missing terms.</li>
 <li>Added <code><a href="https://rdrr.io/r/base/unique.html">unique()</a></code> for term and term_rcrd object.</li>
-<li>Just deprecate pars(terms=).</li>
-<li>Added rep.term_rcrd().</li>
-<li>in_inconsistent_term() returns TRUE if includes missing or invalid terms and add pdims.term_rcrd().</li>
-<li>Added nterms.term_rcrd() and anyNA.term_rcrd().</li>
-<li>Defunct terms argument to npdims.term().</li>
-<li>consistent-term() now also does term_rcrd objects.</li>
-<li>Added pars() for term_rcrd object.</li>
-<li>Added scalar_term() to identify scalar terms.</li>
-<li>Added subset.term_rcrd().</li>
-<li>pars_terms() now handles term_rcrd objects.</li>
+<li>Just deprecate <code><a href="https://rdrr.io/pkg/universals/man/pars.html">pars(terms=)</a></code>.</li>
+<li>Added <code>rep.term_rcrd()</code>.</li>
+<li>
+<code>is_inconsistent_term()</code> returns TRUE if includes missing or invalid terms and add pdims.term_rcrd().</li>
+<li>Added <code><a href="../reference/nterms.term_rcrd.html">nterms.term_rcrd()</a></code> and <code>anyNA.term_rcrd()</code>.</li>
+<li>Defunct terms argument to <code><a href="../reference/npdims.term.html">npdims.term()</a></code>.</li>
+<li>
+<code><a href="../reference/consistent_term.html">consistent_term()</a></code> now also does <code>term_rcrd</code> objects.</li>
+<li>Added <code><a href="https://rdrr.io/pkg/universals/man/pars.html">pars()</a></code> for <code>term_rcrd</code> object.</li>
+<li>Added <code><a href="../reference/scalar_term.html">scalar_term()</a></code> to identify scalar terms.</li>
+<li>Added <code><a href="../reference/subset.term_rcrd.html">subset.term_rcrd()</a></code>.</li>
+<li>
+<code><a href="../reference/pars_terms.html">pars_terms()</a></code> now handles <code>term_rcrd</code> objects.</li>
 <li>Deprecated scalar argument.</li>
-<li>Implement tindex() for term_rcrd as well as term objects.</li>
-<li>Added term_rcrd().</li>
-<li>Added normalize argument to as_term()</li>
-<li>Added normalize_terms().</li>
-<li>Added as_term_rcrd() and is_term_rcrd().</li>
+<li>Implement <code><a href="../reference/tindex.html">tindex()</a></code> for <code>term_rcrd</code> as well as <code>term</code> objects.</li>
+<li>Added <code><a href="../reference/term_rcrd.html">term_rcrd()</a></code>.</li>
+<li>Added normalize argument to <code><a href="../reference/as_term.html">as_term()</a></code>.</li>
+<li>Added <code><a href="../reference/normalize_terms.html">normalize_terms()</a></code>.</li>
+<li>Added <code><a href="../reference/as_term_rcrd.html">as_term_rcrd()</a></code> and <code><a href="../reference/is_term_rcrd.html">is_term_rcrd()</a></code>.</li>
 </ul>
 </div>
     <div id="term-0209001" class="section level1">
@@ -146,7 +162,7 @@
 </h1>
 <ul>
 <li>Support <code><a href="https://rdrr.io/r/base/cbind.html">rbind()</a></code> for data frames with term objects (<a href='https://github.com/poissonconsulting/term/issues/40'>#40</a>).</li>
-<li>Fix as.term() so issues deprecated warning.</li>
+<li>Fix <code><a href="../reference/as_term.html">as.term()</a></code> so issues deprecated warning.</li>
 </ul>
 </div>
     <div id="term-0209000" class="section level1">
