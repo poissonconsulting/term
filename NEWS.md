@@ -1,3 +1,8 @@
+# term 0.2.0.9004
+
+- Added `is.na.term_rcrd()`.
+
+
 # term 0.2.0.9003
 
 - Added `complete_terms.term_rcrd()`.
