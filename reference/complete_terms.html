@@ -123,6 +123,9 @@
     <pre class="usage"><span class='fu'>complete_terms</span>(<span class='kw'>x</span>, <span class='kw'>...</span>)
 
 <span class='co'># S3 method for term</span>
+<span class='fu'>complete_terms</span>(<span class='kw'>x</span>, <span class='kw'>...</span>)
+
+<span class='co'># S3 method for term_rcrd</span>
 <span class='fu'>complete_terms</span>(<span class='kw'>x</span>, <span class='kw'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -146,6 +149,7 @@
     
 <ul>
 <li><p><code>term</code>: Complete Terms for a term Vector</p></li>
+<li><p><code>term_rcrd</code>: Complete Terms for a term_rcrd vector</p></li>
 </ul>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
@@ -156,7 +160,11 @@
 </div><div class='output co'>#&gt; &lt;term[3]&gt;
 #&gt; [1] b[3] b[1] b[2]</div><div class='input'><span class='fu'>complete_terms</span>(<span class='fu'><a href='term.html'>term</a></span>(<span class='st'>"z[2,2]"</span>, <span class='st'>"z[1,1]"</span>))
 </div><div class='output co'>#&gt; &lt;term[4]&gt;
-#&gt; [1] z[2,2] z[1,1] z[2,1] z[1,2]</div></pre>
+#&gt; [1] z[2,2] z[1,1] z[2,1] z[1,2]</div><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>complete_terms</span>(<span class='fu'><a href='term_rcrd.html'>term_rcrd</a></span>(<span class='st'>"b[3]"</span>, <span class='st'>"b[1]"</span>, <span class='st'>"b[2]"</span>))
+<span class='fu'>complete_terms</span>(<span class='fu'><a href='term_rcrd.html'>term_rcrd</a></span>(<span class='st'>"z[2,2]"</span>, <span class='st'>"z[1,1]"</span>))
+}
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
