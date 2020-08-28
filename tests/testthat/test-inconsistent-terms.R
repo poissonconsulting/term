@@ -1,4 +1,4 @@
-test_that("is_inconsistent_terms", {
+test_that("is_inconsistent_terms term", {
   expect_false(is_inconsistent_terms(new_term()))
   expect_false(is_inconsistent_terms(new_term("b")))
   expect_true(is_inconsistent_terms(new_term(c("b", NA))))
@@ -10,4 +10,17 @@ test_that("is_inconsistent_terms", {
   expect_false(is_inconsistent_terms(new_term(c("b[2]", "b"))))
   expect_false(is_inconsistent_terms(new_term(c("a[1,1]", "a[1,2]", "a[2,1]", "a[2,2]"))))
   expect_false(is_inconsistent_terms(new_term(c("a[1,1]", "a[1,2]", "a[2,1]"))))
+})
+
+test_that("is_inconsistent_terms term_rcrd", {
+  expect_false(is_inconsistent_terms(new_term_rcrd()))
+  expect_false(is_inconsistent_terms(term_rcrd("b")))
+  expect_true(is_inconsistent_terms(term_rcrd(c("b", NA))))
+  expect_false(is_inconsistent_terms(term_rcrd(c("b", "b[2]"))))
+  expect_true(is_inconsistent_terms(term_rcrd(c("b[1]", "b[1,1]"))))
+  expect_false(is_inconsistent_terms(term_rcrd("b[1]")))
+  expect_false(is_inconsistent_terms(term_rcrd("b[2]")))
+  expect_false(is_inconsistent_terms(term_rcrd(c("b[2]", "b"))))
+  expect_false(is_inconsistent_terms(term_rcrd(c("a[1,1]", "a[1,2]", "a[2,1]", "a[2,2]"))))
+  expect_false(is_inconsistent_terms(term_rcrd(c("a[1,1]", "a[1,2]", "a[2,1]"))))
 })

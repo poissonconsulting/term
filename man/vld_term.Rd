@@ -2,9 +2,12 @@
 % Please edit documentation in R/vld.R
 \name{vld_term}
 \alias{vld_term}
-\title{Validate Term}
+\alias{vld_term_rcrd}
+\title{Validate Term or Term Record}
 \usage{
 vld_term(x, validate = "complete")
+
+vld_term_rcrd(x, validate = "complete")
 }
 \arguments{
 \item{x}{The object.}
@@ -17,8 +20,8 @@ are 'class', 'valid', 'consistent' and 'complete'.}
 A flag indicating whether the condition was met.
 }
 \description{
-Validates the elements of a term vector.
-Use \code{\link[=chk_s3_class]{chk_s3_class()}} to check if an object is a term.
+Validates the elements of a term or term_rcrd vector.
+Use \code{\link[=chk_s3_class]{chk_s3_class()}} to check if an object is a term or term_rcrd.
 }
 \details{
 Internal validity of a term can be checked on three levels:
@@ -38,9 +41,19 @@ contain at least 11 more terms to be consistent
 
 Missing values are ignored as are duplicates and order.
 }
+\section{Functions}{
+\itemize{
+\item \code{vld_term_rcrd}: Validate Term Record
+}}
+
 \examples{
+# vld_term
 vld_term(c("x[2]", "x[1]"))
 vld_term(term("x[2]", "x[1]"))
+
+# vld_term_rcrd
+vld_term_rcrd(c("x[2]", "x[1]"))
+vld_term_rcrd(term_rcrd("x[2]", "x[1]"))
 }
 \seealso{
 \code{\link[=chk_term]{chk_term()}}

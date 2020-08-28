@@ -35,4 +35,3 @@ as_term_rcrd.term <- function(x, repair = FALSE, ...) {
 
 #' @export
 as_term_rcrd.term_rcrd <- function(x, ...) x
-
