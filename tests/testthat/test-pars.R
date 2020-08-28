@@ -1,4 +1,8 @@
-test_that("pars", {
+test_that("pars.default", {
+  expect_identical(pars(matrix(1:4, nrow = 2)), "par")
+})
+
+test_that("pars.character", {
   expect_identical(pars(new_term(character(0))), character(0))
   expect_identical(pars(new_term("a")), "a")
   expect_identical(pars(new_term(NA_character_)), NA_character_)
