@@ -145,8 +145,10 @@ is replaced by <code>b[1]</code>.</p>
     <div class='dont-index'><p><code><a href='term.html'>term-vector()</a></code> and <code><a href='repair_terms.html'>repair_terms()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>normalize_terms</span>(<span class='fu'><a href='new_term.html'>new_term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"b"</span>, <span class='st'>"b[3]"</span>)))</div><div class='output co'>#&gt; &lt;term[2]&gt;
-#&gt; [1] b[1] b[3]</div><div class='input'><span class='fu'>normalize_terms</span>(<span class='fu'><a href='new_term.html'>new_term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"b[1]"</span>, <span class='st'>"a[3]"</span>)))</div><div class='output co'>#&gt; &lt;term[2]&gt;
+    <pre class="examples"><div class='input'><span class='fu'>normalize_terms</span>(<span class='fu'><a href='new_term.html'>new_term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"b"</span>, <span class='st'>"b[3]"</span>)))
+</div><div class='output co'>#&gt; &lt;term[2]&gt;
+#&gt; [1] b[1] b[3]</div><div class='input'><span class='fu'>normalize_terms</span>(<span class='fu'><a href='new_term.html'>new_term</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"b[1]"</span>, <span class='st'>"a[3]"</span>)))
+</div><div class='output co'>#&gt; &lt;term[2]&gt;
 #&gt; [1] b    a[3]</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

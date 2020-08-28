@@ -137,11 +137,15 @@ Use <code><a href='term.html'>term()</a></code> to repair the input.</p>
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>new_term</span>()</div><div class='output co'>#&gt; &lt;term[0]&gt;</div><div class='input'><span class='fu'>new_term</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"a"</span>, <span class='st'>"b[1]"</span>, <span class='st'>"b[2]"</span>))</div><div class='output co'>#&gt; &lt;term[3]&gt;
+    <pre class="examples"><div class='input'><span class='fu'>new_term</span>()
+</div><div class='output co'>#&gt; &lt;term[0]&gt;</div><div class='input'><span class='fu'>new_term</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"a"</span>, <span class='st'>"b[1]"</span>, <span class='st'>"b[2]"</span>))
+</div><div class='output co'>#&gt; &lt;term[3]&gt;
 #&gt; [1] a    b[1] b[2]</div><div class='input'>
 <span class='co'># Terms are not checked for validity:</span>
-<span class='fu'>new_term</span>(<span class='st'>"r["</span>)</div><div class='output co'>#&gt; &lt;term[1]&gt;
-#&gt; [1] r[</div><div class='input'><span class='fu'><a href='repair_terms.html'>repair_terms</a></span>(<span class='fu'>new_term</span>(<span class='st'>"r["</span>))</div><div class='output co'>#&gt; &lt;term[1]&gt;
+<span class='fu'>new_term</span>(<span class='st'>"r["</span>)
+</div><div class='output co'>#&gt; &lt;term[1]&gt;
+#&gt; [1] r[</div><div class='input'><span class='fu'><a href='repair_terms.html'>repair_terms</a></span>(<span class='fu'>new_term</span>(<span class='st'>"r["</span>))
+</div><div class='output co'>#&gt; &lt;term[1]&gt;
 #&gt; [1] &lt;NA&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
