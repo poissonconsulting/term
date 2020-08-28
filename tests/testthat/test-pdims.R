@@ -49,3 +49,13 @@ test_that("pdims inconsistent", {
     "^`x` must have terms with consistent parameter dimensions[.]$", class = "chk_error"
   )
 })
+
+test_that("pdims.term_rcrd", {
+  expect_identical(
+    pdims(term_rcrd(c(
+      "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
+      "beta[1,2]", "beta[2,2]", "sigma"
+    ))),
+    list(alpha = 2L, beta = c(2L, 2L), sigma = 1L)
+  )
+})

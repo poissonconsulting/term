@@ -79,9 +79,6 @@ vld_term_rcrd <- function(x, validate = "complete") {
   if (!length(x)) {
     return(TRUE)
   }
-  if (validate == "class") {
-    return(TRUE)
-  }
   if (!all(valid_term(x))) {
     return(FALSE)
   }
