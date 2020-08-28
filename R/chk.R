@@ -43,7 +43,7 @@ chk_term_rcrd <- function(x, validate = "complete", x_name = NULL) {
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
 
-  if (!is_term_rcrd(x)) abort_chk(x_name, " must be a term vector")
+  if (!is_term_rcrd(x)) abort_chk(x_name, " must be a term_rcrd vector")
   x <- x[!is.na(x)]
   if (!all(valid_term(x))) {
     abort_chk("All elements of term_rcrd vector ", x_name, " must be valid")
