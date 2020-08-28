@@ -36,3 +36,16 @@ vec_cast.term.term_rcrd <- function(x, to, normalize = TRUE, ...) {
     term <- normalize_terms_impl(term)
   new_term(term)
 }
+
+#' @method vec_cast.term term_rcrd2
+#' @export
+vec_cast.term.term_rcrd2 <- function(x, to, ...) {
+  chr <- paste0(
+    field(x, "par"),
+    "[",
+    purrr::map_chr(field(x, "dim"), paste, collapse = ","),
+    "]"
+  )
+  chr[is.na(x)] <- NA_character_
+  new_term(chr)
+}

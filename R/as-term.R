@@ -65,3 +65,9 @@ as_term.term_rcrd <- function(x, ...) {
   chk_unused(...)
   vec_cast(x, new_term())
 }
+
+#' @export
+as_term.term_rcrd2 <- function(x, ...) {
+  chk_unused(...)
+  vec_cast(x, new_term())
+}

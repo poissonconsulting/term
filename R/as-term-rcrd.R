@@ -34,3 +34,8 @@ as_term_rcrd.numeric <- function(x, name = "par", ...) {
 
 #' @export
 as_term_rcrd.term_rcrd <- function(x, ...) x
+
+#' @export
+as_term_rcrd.term_rcrd2 <- function(x, ...) {
+  as_term_rcrd(as_term(x), ...)
+}

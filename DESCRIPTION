@@ -32,6 +32,7 @@ Imports:
     extras (>= 0.0.1.9001),
     lifecycle,
     rlang,
+    purrr,
     universals,
     vctrs
 Suggests:
