@@ -1,4 +1,4 @@
-test_that("vld_term", {
+test_that("vld_term term", {
   expect_false(vld_term(c("x[2]", "x[1]")))
   expect_true(vld_term(new_term(c("x[2]", "x[1]"))))
   expect_true(vld_term(new_term(character(0))))
@@ -17,5 +17,21 @@ test_that("vld_term", {
   expect_true(vld_term(new_term(c("x[2,1]", "x[1,1]", "x[1,1]", "x[2,1]", NA)), validate = "complete"))
   rlang::scoped_options(lifecycle_verbosity = "quiet")
   expect_true(vld_term(new_term(c("x[2]", "x[1")), validate = "class"))
+})
 
+test_that("vld_term term_rcrd", {
+  expect_false(vld_term_rcrd(c("x[2]", "x[1]")))
+  expect_true(vld_term_rcrd(term_rcrd(c("x[2]", "x[1]"))))
+  expect_true(vld_term_rcrd(term_rcrd(character(0))))
+  expect_true(vld_term_rcrd(term_rcrd(NA_character_)))
+
+  expect_true(vld_term_rcrd(term_rcrd(c("x[2]", "x[1]")), validate = "valid"))
+  expect_true(vld_term_rcrd(term_rcrd(c("x[2]", "x[1,1]")), validate = "valid"))
+  expect_false(vld_term_rcrd(term_rcrd(c("x[2]", "x[1,1]")), validate = "consistent"))
+  expect_true(vld_term_rcrd(term_rcrd(c("x[2,2]", "x[1,1]")), validate = "consistent"))
+  expect_false(vld_term_rcrd(term_rcrd(c("x[2,2]", "x[1,1]")), validate = "complete"))
+  expect_true(vld_term_rcrd(term_rcrd(c("x[2,1]", "x[1,1]")), validate = "complete"))
+  expect_true(vld_term_rcrd(term_rcrd(c("x[2,1]", "x[1,1]", "x[1,1]")), validate = "complete"))
+  expect_true(vld_term_rcrd(term_rcrd(c("x[2,1]", "x[1,1]", "x[1,1]", "x[2,1]")), validate = "complete"))
+  expect_true(vld_term_rcrd(term_rcrd(c("x[2,1]", "x[1,1]", "x[1,1]", "x[2,1]", NA)), validate = "complete"))
 })

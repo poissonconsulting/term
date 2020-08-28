@@ -6,6 +6,7 @@ test_that("valid_term character", {
 
 test_that("valid_term term", {
   expect_identical(valid_term(new_term()), logical(0))
+  expect_identical(valid_term(new_term(NA_character_)), NA)
   expect_identical(valid_term(new_term(c("a", NA_character_))), c(TRUE, NA))
   expect_identical(
     valid_term(new_term(c("a", "a [3]", " b [ 1  ] ", "c[1]"))),
@@ -27,6 +28,7 @@ test_that("valid_term term", {
 
 test_that("valid_term term_rcrd", {
   expect_identical(valid_term(new_term_rcrd()), logical(0))
+  expect_identical(valid_term(as_term_rcrd(new_term(NA_character_))), NA)
   expect_identical(valid_term(as_term_rcrd(new_term(c("a", NA_character_)))), c(TRUE, NA))
   expect_identical(
     valid_term(as_term_rcrd(new_term(c("a", "a [3]", " b [ 1  ] ", "c[1]")))),
