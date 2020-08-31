@@ -3,6 +3,5 @@
 
 > as_term_rcrd(term(alpha = 2, beta = c(2, 2), "sigma"))
 <term_rcrd[7]>
-
-Error: Corrupt rcrd: not a list
+[1] alpha[1]  alpha[2]  beta[1,1] beta[2,1] beta[1,2] beta[2,2] sigma    
 
