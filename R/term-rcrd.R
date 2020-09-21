@@ -21,5 +21,5 @@
 #' term_rcrd("q[1]", "q[2]", "q[3]")
 #' }
 term_rcrd <- function(...) {
-  as_term_rcrd(term(...))
+  vec_cast(term(...), new_term_rcrd())
 }

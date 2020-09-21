@@ -90,9 +90,9 @@ test_that("as_term_rcrd.character", {
 })
 
 test_that("as_term_rcrd others", {
-  expect_error(as_term_rcrd(factor(1)), "no applicable method")
-  expect_error(as_term_rcrd(data.frame(x = 1)), "no applicable method")
-  expect_error(as_term_rcrd(TRUE), "no applicable method")
+  expect_error(as_term_rcrd(factor(1)), class = "vctrs_error")
+  expect_error(as_term_rcrd(data.frame(x = 1)), class = "vctrs_error")
+  expect_error(as_term_rcrd(TRUE), class = "vctrs_error")
 })
 
 test_that("as_term_rcrd missing values", {

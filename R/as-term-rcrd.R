@@ -35,3 +35,6 @@ as_term_rcrd.term <- function(x, repair = FALSE, ...) {
 
 #' @export
 as_term_rcrd.term_rcrd <- function(x, ...) x
+
+#' @export
+as_term_rcrd.default <- function(x, ...) vec_cast(x, new_term_rcrd())
