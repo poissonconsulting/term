@@ -15,7 +15,10 @@ vec_proxy_compare.term <- function(x, ...) {
   # with one column per value
   tindex_expanded <- lapply(tindex, expand_zeros, max_ntindex)
   # Reverse column order of resulting data frame
-  # to obtain column-major ordering
+  # to obtain column-major ordering.
+  # This is for consistency with R's way of storing arrays internally.
+  # It means that a complete term is arranged in exactly the same way
+  # as the cells in an array.
   indexes <- rev(transpose_df(as.data.frame(tindex_expanded)))
 
   # Return a data frame with the three items computed.

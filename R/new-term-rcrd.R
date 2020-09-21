@@ -8,9 +8,11 @@
 #' @examples
 #' new_term_rcrd()
 #' \dontrun{
-#' new_term_rcrd(data.frame(par = c("x", "x", "y"), dim = I(list(1, 2, c(2,2))),
-#'  stringsAsFactors = FALSE))
-#'  }
+#' new_term_rcrd(data.frame(
+#'   par = c("x", "x", "y"), dim = I(list(1, 2, c(2,2))),
+#'   stringsAsFactors = FALSE
+#' ))
+#' }
 #' @export
 new_term_rcrd <- function(x = data.frame(par = character(), dim = I(list()), stringsAsFactors = FALSE)) {
   chk_data(x)
@@ -18,3 +20,16 @@ new_term_rcrd <- function(x = data.frame(par = character(), dim = I(list()), str
   x$dim <- as_list(x$dim)
   vctrs::new_rcrd(fields = x[c("par", "dim")], class = "term_rcrd")
 }
+
+
+#' Missing Term
+#'
+#' A missing term element of `term_rcrd` type.
+#'
+#' @seealso [term-vector()]
+#' @export
+#'
+#' @examples
+#' is_term_rcrd(NA_term_)
+#' is.na(NA_term_)
+NA_term_rcrd_ <- new_term_rcrd()[NA_integer_]
