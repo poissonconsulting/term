@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Construct a new term_rcrd object — new_term_rcrd • term</title>
+<title>Missing Term — NA_term_rcrd_ • term</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Construct a new term_rcrd object — new_term_rcrd" />
-<meta property="og:description" content="Use this function to quickly construct a term_rcrd object." />
+<meta property="og:title" content="Missing Term — NA_term_rcrd_" />
+<meta property="og:description" content="A missing term element of term_rcrd type." />
 
 
 
@@ -105,38 +105,29 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Construct a new term_rcrd object</h1>
+    <h1>Missing Term</h1>
     <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/term/blob/master/R/new-term-rcrd.R'><code>R/new-term-rcrd.R</code></a></small>
-    <div class="hidden name"><code>new_term_rcrd.Rd</code></div>
+    <div class="hidden name"><code>NA_term_rcrd_.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Use this function to quickly construct a term_rcrd object.</p>
+    <p>A missing term element of <code>term_rcrd</code> type.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>new_term_rcrd</span>(
-  x = <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(par = <span class='fu'><a href='https://rdrr.io/r/base/character.html'>character</a></span>(), dim = <span class='fu'><a href='https://rdrr.io/r/base/AsIs.html'>I</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>()), stringsAsFactors = <span class='fl'>FALSE</span>)
-)</pre>
+    <pre class="usage"><span class='kw'>NA_term_rcrd_</span></pre>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>x</th>
-      <td><p>A data frame with columns par and dim.</p></td>
-    </tr>
-    </table>
 
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>An object of class <code>term_rcrd</code> (inherits from <code>vctrs_rcrd</code>, <code>vctrs_vctr</code>) of length 1.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='term.html'>term-vector()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>new_term_rcrd</span>()
-</div><div class='output co'>#&gt; &lt;term_rcrd[0]&gt;</div><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'>new_term_rcrd</span>(<span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(
-  par = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"x"</span>, <span class='st'>"x"</span>, <span class='st'>"y"</span>), dim = <span class='fu'><a href='https://rdrr.io/r/base/AsIs.html'>I</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='fl'>1</span>, <span class='fl'>2</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2</span>,<span class='fl'>2</span>))),
-  stringsAsFactors = <span class='fl'>FALSE</span>
-))
-}
-</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='is_term_rcrd.html'>is_term_rcrd</a></span>(<span class='kw'>NA_term_</span>)
+</div><div class='output co'>#&gt; [1] FALSE</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='kw'>NA_term_</span>)
+</div><div class='output co'>#&gt; [1] TRUE</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
