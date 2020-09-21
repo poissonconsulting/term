@@ -35,3 +35,5 @@ set_pars.term <- function(x, value, ...) {
   x <- p(term_value, x, sep = "")
   new_term(x)
 }
+
+# FIXME: set_pars.term_rcrd()

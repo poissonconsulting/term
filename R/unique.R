@@ -1,5 +1,6 @@
 #' @export
 unique.term <- function(x, incomparables = FALSE, ...) {
+  # Custom implementation necessary for normalization
   as_term(unique(as_term_rcrd(x), incomparables = incomparables, ...))
 }
 

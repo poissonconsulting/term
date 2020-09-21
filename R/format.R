@@ -9,6 +9,7 @@ format.term_rcrd <- function(x, ...) {
 }
 
 tick_if_spaces <- function(x) {
+  # FIXME: What about backticks in identifiers?
   bad <- grep("^$| ", x)
   x[bad] <- paste0("`", x[bad], "`")
   x
