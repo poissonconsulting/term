@@ -17,19 +17,30 @@ as_term <- function(x, ...) UseMethod("as_term")
 #' @rdname as_term
 #' @export
 as.term <- function(x, ...) {
+  out <- UseMethod("as.term")
   deprecate_soft("0.2.0", "as.term()", "as_term()")
-  UseMethod("as.term")
+  out
 }
 
 #' @export
 as.term.default <- function(x, ..., from_as_term = FALSE) {
   if(vld_false(from_as_term)) return(as_term(x, ...))
-  stop("no applicable method")
+  vec_cast(x, new_term())
 }
 
 #' @export
 as_term.default <- function(x, ...) {
-  as.term(x, ..., from_as_term = TRUE)
+  tryCatch(
+    vec_cast(x, new_term()),
+    error = function(e_cast) {
+      tryCatch(
+        as.term(x, ..., from_as_term = TRUE),
+        error = function(e) {
+          rlang::cnd_signal(e_cast)
+        }
+      )
+    }
+  )
 }
 
 #' @describeIn as_term Coerce character vector to term vector
