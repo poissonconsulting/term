@@ -34,7 +34,7 @@ Imports:
     rlang,
     purrr,
     universals,
-    vctrs
+    vctrs (>= 0.3.0)
 Suggests:
     covr,
     testthat

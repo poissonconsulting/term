@@ -42,6 +42,6 @@ complete_terms.term <- function(x, ...) {
 #' }
 complete_terms.term_rcrd <- function(x, ...) {
   if(!dims(x)) return(x)
+  # FIXME: Can this be implemented easier operating directly on a term_rcrd?
   as_term_rcrd(complete_terms(as_term(x), ...))
-
 }
