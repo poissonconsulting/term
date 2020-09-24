@@ -1,3 +1,8 @@
+# term 0.3.0
+
+- Implement printing via `obj_print_data()` (#47).
+
+
 # term 0.2.0.9004
 
 - Added `is.na.term_rcrd()`.
