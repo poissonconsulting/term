@@ -3,8 +3,8 @@ test_that("pars_term term", {
     "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
     "beta[1,2]", "beta[2,2]", "sigma"
   ))
-  lifecycle::expect_defunct(pars_terms(terms, scalar = TRUE))
-  lifecycle::expect_defunct(pars_terms(terms, scalar = FALSE))
+  lifecycle::expect_deprecated(pars_terms(terms, scalar = TRUE))
+  lifecycle::expect_deprecated(pars_terms(terms, scalar = FALSE))
   expect_identical(
     pars_terms(terms),
     c("alpha", "alpha", "beta", "beta", "beta", "beta", "sigma")
@@ -16,8 +16,8 @@ test_that("pars_term term_rcrd", {
     "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
     "beta[1,2]", "beta[2,2]", "sigma"
   )))
-  lifecycle::expect_defunct(pars_terms(terms, scalar = TRUE))
-  lifecycle::expect_defunct(pars_terms(terms, scalar = FALSE))
+  lifecycle::expect_deprecated(pars_terms(terms, scalar = TRUE))
+  lifecycle::expect_deprecated(pars_terms(terms, scalar = FALSE))
   expect_identical(
     pars_terms(terms),
     c("alpha", "alpha", "beta", "beta", "beta", "beta", "sigma")

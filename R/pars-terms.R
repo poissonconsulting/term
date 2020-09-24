@@ -19,10 +19,13 @@
 pars_terms <- function(x, scalar = NULL, ...) {
   chkor(is_term(x), is_term_rcrd(x))
   if(!missing(scalar)) {
-    deprecate_stop("0.2.1", "term::pars_terms(scalar =)")
+    deprecate_soft("0.2.1", "term::pars_terms(scalar =)")
   }
   chk_unused(...)
-
   x <- as_term_rcrd(x)
+
+  if(!is.null(scalar)) {
+    x <- x[scalar_term(x) == scalar]
+  }
   field(x, "par")
 }
