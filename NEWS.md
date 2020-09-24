@@ -1,54 +1,31 @@
 # term 0.3.0
 
-- Implement printing via `obj_print_data()` (#47).
+## Breaking changes
 
-
-# term 0.2.0.9004
-
-- Added `is.na.term_rcrd()`.
-
-
-# term 0.2.0.9003
-
-- Added `complete_terms.term_rcrd()`.
-- Added `dims.term_rcrd()`
-- Added `term_rcrd` class.
-- Added `summary()` for term object.
-- Added `anyDuplicated()` for term and term_rcrd objects.
-
-
-# term 0.2.0.9002
-
+- Stop deprecated `terms` argument to `npdims.term()`.
+- Warn deprecated `terms` argument to `pars.terms()`.
 - `nterms()` now returns total number of terms not just number of unique non-missing terms.
-- Added `unique()` for term and term_rcrd object.
-- Just deprecate `pars(terms=)`.
-- Added `rep.term_rcrd()`.
-- `is_inconsistent_term()` returns TRUE if includes missing or invalid terms and add pdims.term_rcrd().
-- Added `nterms.term_rcrd()` and `anyNA.term_rcrd()`.
-- Defunct terms argument to `npdims.term()`.
-- `consistent_term()` now also does `term_rcrd` objects.
-- Added `pars()` for `term_rcrd` object.
-- Added `scalar_term()` to identify scalar terms.
-- Added `subset.term_rcrd()`.
-- `pars_terms()` now handles `term_rcrd` objects.
-- Deprecated scalar argument.
-- Implement `tindex()` for `term_rcrd` as well as `term` objects.
-- Added `term_rcrd()`.
-- Added normalize argument to `as_term()`.
-- Added `normalize_terms()`.
-- Added `as_term_rcrd()` and `is_term_rcrd()`.
+- `is_inconsistent_term()` now returns TRUE if includes missing or invalid terms.
 
+## Features
 
-# term 0.2.0.9001
+### Major
 
-- Support `rbind()` for data frames with term objects (#40).
-- Fix `as.term()` so issues deprecated warning.
+- Added `term_rcrd` class to store vector as underlying data frame and implemented some functions.
 
+### Minor 
 
-# term 0.2.0.9000
+- Added
+  - `unique()`.
+  - `summary()`.
+  - `anyDuplicated()`.
+  - `scalar_term()` to test whether each element in a term vector is scalar.
+  - `normalize_terms()`.
+  - `normalize` argument to `as_term.character()`.
 
-- Same as previous version.
+## Bug Fixes
 
+- Fix `as.term()` so issues deprecation warning.
 
 # term 0.2.0
 
