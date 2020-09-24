@@ -29,7 +29,7 @@ Depends:
     R (>= 3.4)
 Imports:
     chk,
-    extras (>= 0.0.1.9001),
+    extras,
     lifecycle,
     rlang,
     purrr,
@@ -38,11 +38,9 @@ Imports:
 Suggests:
     covr,
     testthat
-Remotes:
-    poissonconsulting/extras
 Encoding: UTF-8
 Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1.9000
+RoxygenNote: 7.1.1
 RdMacros: lifecycle
