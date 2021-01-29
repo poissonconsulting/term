@@ -70,8 +70,8 @@ parameters <- function(x, ...) {
 #' @export
 `parameters<-` <- function(x, value) {
   deprecate_soft("0.1.0",
-    what = "parameters<-",
-    with = "pars<-"
+    what = "`parameters<-`()",
+    with = "`pars<-`()"
   )
   pars(x) <- value
   x
