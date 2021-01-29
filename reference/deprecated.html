@@ -45,6 +45,8 @@
 
 
 
+
+
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script>
@@ -88,7 +90,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/poissonconsulting/term/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -114,19 +116,19 @@
     <p>Deprecated Functions</p>
     </div>
 
-    <pre class="usage"><span class='fu'>is.term</span>(<span class='kw'>x</span>)
+    <pre class="usage"><span class='fu'>is.term</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
 
-<span class='fu'>is.incomplete_terms</span>(<span class='kw'>x</span>)
+<span class='fu'>is.incomplete_terms</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
 
-<span class='fu'>is.inconsistent_terms</span>(<span class='kw'>x</span>)
+<span class='fu'>is.inconsistent_terms</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
 
-<span class='fu'>parameters</span>(<span class='kw'>x</span>, <span class='kw'>...</span>)
+<span class='fu'>parameters</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>parameters</span>(<span class='kw'>x</span>) <span class='op'>&lt;-</span> <span class='kw'>value</span>
+<span class='fu'>parameters</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='va'>value</span>
 
-<span class='fu'>set_parameters</span>(<span class='kw'>x</span>, <span class='kw'>pars</span>)
+<span class='fu'>set_parameters</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>pars</span><span class='op'>)</span>
 
-<span class='fu'>tdims</span>(<span class='kw'>x</span>)</pre>
+<span class='fu'>tdims</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -164,13 +166,13 @@
 <p>Replace by <code><a href='is_inconsistent_terms.html'>is_inconsistent_terms()</a></code></p></li>
 <li><p><code>parameters</code>: Get Parameters</p>
 <p><img src='figures/lifecycle-soft-deprecated.svg' alt='Soft-deprecated lifecycle' /></p>
-<p>Replace by <code><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars()</a></code></p></li>
+<p>Replace by <code><a href='https://poissonconsulting.github.io/universals/reference/pars.html'>pars()</a></code></p></li>
 <li><p><code>parameters&lt;-</code>: Setting Parameters</p>
 <p><img src='figures/lifecycle-soft-deprecated.svg' alt='Soft-deprecated lifecycle' /></p>
 <p>Replace by pars&lt;-</p></li>
 <li><p><code>set_parameters</code>: Set Parameters</p>
 <p><img src='figures/lifecycle-soft-deprecated.svg' alt='Soft-deprecated lifecycle' /></p>
-<p>Replace by <code><a href='https://rdrr.io/pkg/universals/man/set_pars.html'>set_pars()</a></code></p></li>
+<p>Replace by <code><a href='https://poissonconsulting.github.io/universals/reference/set_pars.html'>set_pars()</a></code></p></li>
 <li><p><code>tdims</code>: Term Index</p>
 <p><img src='figures/lifecycle-soft-deprecated.svg' alt='Soft-deprecated lifecycle' /></p>
 <p>Replace by <code><a href='tindex.html'>tindex()</a></code></p></li>

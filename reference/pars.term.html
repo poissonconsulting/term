@@ -45,6 +45,8 @@
 
 
 
+
+
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script>
@@ -88,7 +90,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/poissonconsulting/term/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -115,7 +117,7 @@
     </div>
 
     <pre class="usage"><span class='co'># S3 method for term</span>
-<span class='fu'><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars</a></span>(<span class='kw'>x</span>, scalar = <span class='kw'>NULL</span>, terms = <span class='fl'>FALSE</span>, <span class='kw'>...</span>)</pre>
+<span class='fu'><a href='https://poissonconsulting.github.io/universals/reference/pars.html'>pars</a></span><span class='op'>(</span><span class='va'>x</span>, scalar <span class='op'>=</span> <span class='cn'>NULL</span>, terms <span class='op'>=</span> <span class='cn'>FALSE</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -149,13 +151,13 @@ for each term element.</p></td>
 <code><a href='pars_terms.html'>pars_terms</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>term</span> <span class='op'>&lt;-</span> <span class='fu'><a href='term.html'>term</a></span>(
+    <pre class="examples"><div class='input'><span class='va'>term</span> <span class='op'>&lt;-</span> <span class='fu'><a href='term.html'>term</a></span><span class='op'>(</span>
   <span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[2]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span>,
-  <span class='st'>"beta[1,2]"</span>, <span class='st'>"beta[2,2]"</span>, <span class='st'>"sigma"</span>, <span class='fl'>NA</span>
-)
-<span class='fu'><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars</a></span>(<span class='kw'>term</span>)
-</div><div class='output co'>#&gt; [1] "alpha" "beta"  "sigma" NA     </div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars</a></span>(<span class='kw'>term</span>, scalar = <span class='fl'>TRUE</span>)
-</div><div class='output co'>#&gt; [1] "sigma" NA     </div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars</a></span>(<span class='kw'>term</span>, scalar = <span class='fl'>FALSE</span>)
+  <span class='st'>"beta[1,2]"</span>, <span class='st'>"beta[2,2]"</span>, <span class='st'>"sigma"</span>, <span class='cn'>NA</span>
+<span class='op'>)</span>
+<span class='fu'><a href='https://poissonconsulting.github.io/universals/reference/pars.html'>pars</a></span><span class='op'>(</span><span class='va'>term</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "alpha" "beta"  "sigma" NA     </div><div class='input'><span class='fu'><a href='https://poissonconsulting.github.io/universals/reference/pars.html'>pars</a></span><span class='op'>(</span><span class='va'>term</span>, scalar <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "sigma" NA     </div><div class='input'><span class='fu'><a href='https://poissonconsulting.github.io/universals/reference/pars.html'>pars</a></span><span class='op'>(</span><span class='va'>term</span>, scalar <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "alpha" "beta"  NA     </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

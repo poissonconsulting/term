@@ -45,6 +45,8 @@
 
 
 
+
+
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script>
@@ -88,7 +90,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/poissonconsulting/term/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -114,7 +116,7 @@
     <p>Test whether the number of dimensions of terms in the same parameter are consistent.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>consistent_term</span>(<span class='kw'>x</span>)</pre>
+    <pre class="usage"><span class='fu'>consistent_term</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -130,11 +132,11 @@
     <p>A logical vector indicating whether the number of dimensions is consistent.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='term.html'>term-vector()</a></code> and <code><a href='https://rdrr.io/pkg/universals/man/npdims.html'>npdims()</a></code></p></div>
+    <div class='dont-index'><p><code><a href='term.html'>term-vector()</a></code> and <code><a href='https://poissonconsulting.github.io/universals/reference/npdims.html'>npdims()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>consistent_term</span>(<span class='fu'><a href='term.html'>term</a></span>(<span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[3]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span>))
-</div><div class='output co'>#&gt; [1] TRUE TRUE TRUE TRUE</div><div class='input'><span class='fu'>consistent_term</span>(<span class='fu'><a href='term.html'>term</a></span>(<span class='st'>"alpha[1]"</span>, <span class='kw'>NA_term_</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2]"</span>))
+    <pre class="examples"><div class='input'><span class='fu'>consistent_term</span><span class='op'>(</span><span class='fu'><a href='term.html'>term</a></span><span class='op'>(</span><span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[3]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] TRUE TRUE TRUE TRUE</div><div class='input'><span class='fu'>consistent_term</span><span class='op'>(</span><span class='fu'><a href='term.html'>term</a></span><span class='op'>(</span><span class='st'>"alpha[1]"</span>, <span class='va'>NA_term_</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2]"</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1]  TRUE    NA FALSE FALSE</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

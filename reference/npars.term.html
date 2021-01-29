@@ -47,6 +47,8 @@ NA, otherwise it returns NA." />
 
 
 
+
+
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script>
@@ -90,7 +92,7 @@ NA, otherwise it returns NA." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/poissonconsulting/term/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -114,12 +116,12 @@ NA, otherwise it returns NA." />
 
     <div class="ref-description">
     <p>Gets the number of parameters of an object.</p>
-<p>The default methods returns the length of <code><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars()</a></code> if none are
+<p>The default methods returns the length of <code><a href='https://poissonconsulting.github.io/universals/reference/pars.html'>pars()</a></code> if none are
 <code>NA</code>, otherwise it returns <code>NA</code>.</p>
     </div>
 
     <pre class="usage"><span class='co'># S3 method for term</span>
-<span class='fu'><a href='https://rdrr.io/pkg/universals/man/npars.html'>npars</a></span>(<span class='kw'>x</span>, scalar = <span class='kw'>NULL</span>, <span class='kw'>...</span>)</pre>
+<span class='fu'><a href='https://poissonconsulting.github.io/universals/reference/npars.html'>npars</a></span><span class='op'>(</span><span class='va'>x</span>, scalar <span class='op'>=</span> <span class='cn'>NULL</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -143,19 +145,19 @@ NA, otherwise it returns NA." />
     <p>An integer scalar of the number of parameters.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars()</a></code></p>
+    <div class='dont-index'><p><code><a href='https://poissonconsulting.github.io/universals/reference/pars.html'>pars()</a></code></p>
 <p>Other MCMC dimensions: 
-<code><a href='https://rdrr.io/pkg/universals/man/nchains.html'>nchains</a>()</code>,
-<code><a href='https://rdrr.io/pkg/universals/man/niters.html'>niters</a>()</code>,
-<code><a href='https://rdrr.io/pkg/universals/man/nsams.html'>nsams</a>()</code>,
-<code><a href='https://rdrr.io/pkg/universals/man/nsims.html'>nsims</a>()</code>,
-<code><a href='https://rdrr.io/pkg/universals/man/nterms.html'>nterms</a>()</code></p>
+<code><a href='https://poissonconsulting.github.io/universals/reference/nchains.html'>nchains</a>()</code>,
+<code><a href='https://poissonconsulting.github.io/universals/reference/niters.html'>niters</a>()</code>,
+<code><a href='https://poissonconsulting.github.io/universals/reference/nsams.html'>nsams</a>()</code>,
+<code><a href='https://poissonconsulting.github.io/universals/reference/nsims.html'>nsims</a>()</code>,
+<code><a href='https://poissonconsulting.github.io/universals/reference/nterms.html'>nterms</a>()</code></p>
 <p>Other parameters: 
-<code><a href='https://rdrr.io/pkg/universals/man/pars.html'>pars</a>()</code>,
-<code><a href='https://rdrr.io/pkg/universals/man/set_pars.html'>set_pars</a>()</code></p></div>
+<code><a href='https://poissonconsulting.github.io/universals/reference/pars.html'>pars</a>()</code>,
+<code><a href='https://poissonconsulting.github.io/universals/reference/set_pars.html'>set_pars</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/universals/man/npars.html'>npars</a></span>(<span class='fu'><a href='term.html'>term</a></span>(<span class='st'>"sigma"</span>, <span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[2]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span>))
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://poissonconsulting.github.io/universals/reference/npars.html'>npars</a></span><span class='op'>(</span><span class='fu'><a href='term.html'>term</a></span><span class='op'>(</span><span class='st'>"sigma"</span>, <span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[2]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 3</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
