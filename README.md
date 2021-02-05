@@ -7,8 +7,7 @@
 
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[![R build
-status](https://github.com/poissonconsulting/term/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/term/actions)
+[![R-CMD-check](https://github.com/poissonconsulting/term/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/term/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/poissonconsulting/term/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/term?branch=master)
 [![License:
