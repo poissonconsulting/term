@@ -23,7 +23,8 @@ Description: Creates, manipulates, queries and repairs vectors
     coefficient tables and the column names in 'mcmc' and 'mcmc.list'
     objects.
 License: MIT + file LICENSE
-URL: https://poissonconsulting.github.io/term/, https://github.com/poissonconsulting/term
+URL: https://poissonconsulting.github.io/term/,
+    https://github.com/poissonconsulting/term
 BugReports: https://github.com/poissonconsulting/term/issues
 Depends: 
     R (>= 3.4)
@@ -31,16 +32,17 @@ Imports:
     chk,
     extras,
     lifecycle,
-    rlang,
     purrr,
+    rlang,
     universals,
-    vctrs (>= 0.3.0)
+    vctrs
 Suggests:
     covr,
     testthat
+RdMacros: 
+    lifecycle
 Encoding: UTF-8
 Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
-RdMacros: lifecycle
