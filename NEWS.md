@@ -1,12 +1,6 @@
-# term 0.3.0.9001
+# term 0.3.1
 
-- Internal changes only.
-
-
-# term 0.3.0.9000
-
-- Same as previous version.
-
+- Updated internals for lifecycle 1.0.0.
 
 # term 0.3.0
 
