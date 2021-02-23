@@ -14,8 +14,8 @@ reference:
    - '`NA_term_`'
    - '`NA_term_rcrd_`'
    - '`scalar_term`'
-- title: Dimensionality
-  desc: Object Dimensions
+- title: Query
+  desc: Query Object's Dimensions/Parameters
   contents:
   - '`dims`'
   - '`npars`'
