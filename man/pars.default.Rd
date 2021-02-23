@@ -23,7 +23,12 @@ Gets the parameter names.
 pars(matrix(1:4, nrow = 2))
 }
 \seealso{
+\link[universals:pars]{universals::pars}
+
 Other parameters: 
-\code{\link[universals]{npars}()},
-\code{\link[universals]{set_pars}()}
+\code{\link{pars.character}()},
+\code{\link{pars.term_rcrd}()},
+\code{\link{pars.term}()},
+\code{\link{pars_terms}()}
 }
+\concept{parameters}

@@ -41,5 +41,5 @@ as_term(matrix(1:4, 2))
 as_term(c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]"))
 }
 \seealso{
-\code{\link[=repair_terms]{repair_terms()}}
+\code{\link[=as_term]{as_term()}} and \code{\link[=repair_terms]{repair_terms()}}
 }

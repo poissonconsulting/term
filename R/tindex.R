@@ -8,7 +8,8 @@
 #'
 #' @inheritParams params
 #' @return A named list of integer vectors of the index for each term.
-#' @family dimensions
+#' @seealso [dims()], [ndims()], [npdims()] and [pdims()]
+#' @family term
 #' @export
 #'
 #' @examples

@@ -4,7 +4,7 @@
 #'
 #' @inheritParams params
 #'
-#' @seealso [repair_terms()]
+#' @seealso [as_term()] and [repair_terms()]
 #' @export
 #'
 #' @examples

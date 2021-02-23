@@ -1,9 +1,9 @@
-#' Construct a new term_rcrd object
+#' Construct a New Term Record Object
 #'
 #' Use this function to quickly construct a term_rcrd object.
 #'
 #' @param x A data frame with columns par and dim.
-#'
+#' @seealso [new_term()]
 #' @export
 #' @examples
 #' new_term_rcrd()

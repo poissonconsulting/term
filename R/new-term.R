@@ -1,11 +1,11 @@
-#' Construct a new term object
+#' Construct a New Term Object
 #'
 #' Use this function to quickly construct a [term] object
 #' from a character vector, without checking the input.
 #' Use [term()] to repair the input.
 #'
 #' @param x A character vector.
-#'
+#' @seealso [new_term_rcrd()]
 #' @export
 #' @examples
 #' new_term()

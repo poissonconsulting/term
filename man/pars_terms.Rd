@@ -31,6 +31,8 @@ pars_terms(term)
 }
 \seealso{
 Other parameters: 
+\code{\link{pars.character}()},
+\code{\link{pars.default}()},
 \code{\link{pars.term_rcrd}()},
 \code{\link{pars.term}()}
 }

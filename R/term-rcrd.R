@@ -1,4 +1,4 @@
-#' Term Record
+#' Create Term Record
 #'
 #' Creates a term_rcrd from values.
 #' This function checks that all terms are valid
@@ -11,7 +11,8 @@
 #'
 #' @return A term_rcrd vector.
 #' @aliases term_rcrd-object term_rcrd_object
-#' @seealso [dims()] and [pdims()]
+#' @seealso [dims()], [ndims()], [npdims()] and [pdims()]
+#' @family term
 #' @export
 #'
 #' @examples

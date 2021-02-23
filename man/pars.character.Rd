@@ -23,7 +23,12 @@ Gets the parameter names.
 pars(c("a", "b[1]", "a[3]"))
 }
 \seealso{
+\link[universals:pars]{universals::pars}
+
 Other parameters: 
-\code{\link[universals]{npars}()},
-\code{\link[universals]{set_pars}()}
+\code{\link{pars.default}()},
+\code{\link{pars.term_rcrd}()},
+\code{\link{pars.term}()},
+\code{\link{pars_terms}()}
 }
+\concept{parameters}

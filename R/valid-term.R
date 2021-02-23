@@ -1,4 +1,4 @@
-#' Valid Terms
+#' Test Valid Terms
 #'
 #' Test whether each element in a term or term_rcrd object is valid.
 #'
@@ -7,6 +7,7 @@
 #' @inheritParams params
 #' @return A logical vector indicating whether each term is valid.
 #' @seealso [term-vector()] and [repair_terms()]
+#' @family valid
 #' @export
 #'
 #' @examples

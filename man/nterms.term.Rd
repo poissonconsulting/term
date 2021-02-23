@@ -2,7 +2,7 @@
 % Please edit documentation in R/nterms.R
 \name{nterms.term}
 \alias{nterms.term}
-\title{Number of Terms of a term}
+\title{Number of Terms of a Term}
 \usage{
 \method{nterms}{term}(x, ...)
 }
