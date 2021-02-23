@@ -23,6 +23,7 @@
 #' @inheritParams chk::chk_flag
 #' @return A flag indicating whether the condition was met.
 #' @seealso [chk_term()]
+#' @family valid
 #' @export
 #' @examples
 #' # vld_term
@@ -62,6 +63,7 @@ vld_term <- function(x, validate = "complete") {
 }
 
 #' @describeIn vld_term Validate Term Record
+#' @family valid
 #' @export
 #' @examples
 #'

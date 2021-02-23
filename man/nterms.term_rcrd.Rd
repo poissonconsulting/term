@@ -2,7 +2,7 @@
 % Please edit documentation in R/nterms.R
 \name{nterms.term_rcrd}
 \alias{nterms.term_rcrd}
-\title{Number of Terms of a term_rcrd}
+\title{Number of Terms of a Term Record}
 \usage{
 \method{nterms}{term_rcrd}(x, ...)
 }

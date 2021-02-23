@@ -3,6 +3,8 @@ universals::pars
 
 #' @inherit universals::pars
 #' @inheritParams params
+#' @seealso [universals::pars]
+#' @family parameters
 #' @export
 #' @examples
 #' pars(matrix(1:4, nrow = 2))
@@ -14,6 +16,8 @@ pars.default <- function(x, scalar = NULL, ...) {
 
 #' @inherit universals::pars
 #' @inheritParams params
+#' @seealso [universals::pars]
+#' @family parameters
 #' @export
 #' @examples
 #' pars(c("a", "b[1]", "a[3]"))
@@ -29,6 +33,7 @@ pars.character <- function(x, scalar = NULL, ...) {
 #'
 #' @inheritParams params
 #' @family parameters
+#' @seealso [universals::pars]
 #' @export
 #'
 #' @examples
@@ -55,6 +60,7 @@ pars.term <- function(x, scalar = NULL, terms = FALSE, ...) {
 #'
 #' @inheritParams params
 #' @family parameters
+#' @seealso [universals::pars]
 #' @export
 #'
 #' @examples

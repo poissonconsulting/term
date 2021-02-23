@@ -4,7 +4,7 @@
 \alias{term_rcrd}
 \alias{term_rcrd-object}
 \alias{term_rcrd_object}
-\title{Term Record}
+\title{Create Term Record}
 \usage{
 term_rcrd(...)
 }
@@ -30,5 +30,10 @@ term_rcrd("q[1]", "q[2]", "q[3]")
 }
 }
 \seealso{
-\code{\link[=dims]{dims()}} and \code{\link[=pdims]{pdims()}}
+\code{\link[=dims]{dims()}}, \code{\link[=ndims]{ndims()}}, \code{\link[=npdims]{npdims()}} and \code{\link[=pdims]{pdims()}}
+
+Other term: 
+\code{\link{term}()},
+\code{\link{tindex}()}
 }
+\concept{term}

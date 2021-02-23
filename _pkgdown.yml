@@ -1,1 +1,50 @@
 destination: docs
+
+reference:
+- title: Check or Test
+  desc: Check or Test Objects
+  contents:
+   - '`chk_term`'
+   - '`chk_term_rcrd`'
+   - '`consistent_term`'
+   - '`is_incomplete_terms`'
+   - '`is_inconsistent_terms`'
+   - '`is_term`'
+   - '`is_term_rcrd`'
+   - '`NA_term_`'
+   - '`NA_term_rcrd_`'
+   - '`scalar_term`'
+- title: Query
+  desc: Query Object's Dimensions/Parameters
+  contents:
+  - '`dims`'
+  - '`npars`'
+  - '`npdims`'
+  - '`nterms`'
+  - '`pars`'
+  - '`pars_terms`'
+  - '`pdims`'
+  - '`tindex`'
+- title: Manipulate
+  desc: Manipulate Objects
+  contents:
+  - '`as_term`'
+  - '`as.term`'
+  - '`as_term_rcrd`'
+  - '`complete_terms`'
+  - '`new_term`'
+  - '`new_term_rcrd`'
+  - '`normalize_terms`'
+  - '`repair_terms`'
+  - '`set_pars`'
+  - '`subset.term`'
+  - '`subset.term_rcrd`'
+  - '`term`'
+  - '`term_rcrd`'
+  - '`vec_cast`'
+- title: Validate
+  desc: Validate Objects
+  contents:
+  - '`valid_term`'
+  - '`vld_term`'
+  - '`vld_term_rcrd`'

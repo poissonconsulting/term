@@ -1,4 +1,4 @@
-#' Term Vector
+#' Create Term Vector
 #'
 #' Creates a term vector from values.
 #' A `term` vector is an S3 vector of parameter terms
@@ -14,7 +14,8 @@
 #'
 #' @return A term vector.
 #' @aliases term-object term_object term-vector term_vector
-#' @seealso [dims()] and [pdims()]
+#' @seealso [dims()], [ndims()], [npdims()] and [pdims()]
+#' @family term
 #' @export
 #'
 #' @examples

@@ -2,7 +2,7 @@
 % Please edit documentation in R/new-term-rcrd.R
 \name{new_term_rcrd}
 \alias{new_term_rcrd}
-\title{Construct a new term_rcrd object}
+\title{Construct a New Term Record Object}
 \usage{
 new_term_rcrd(
   x = data.frame(par = character(), dim = I(list()), stringsAsFactors = FALSE)
@@ -22,4 +22,7 @@ new_term_rcrd(data.frame(
   stringsAsFactors = FALSE
 ))
 }
+}
+\seealso{
+\code{\link[=new_term]{new_term()}}
 }

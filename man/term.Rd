@@ -6,7 +6,7 @@
 \alias{term_object}
 \alias{term-vector}
 \alias{term_vector}
-\title{Term Vector}
+\title{Create Term Vector}
 \usage{
 term(...)
 }
@@ -42,5 +42,10 @@ try(term("r["))
 term("r  [ 1  ,2  ]")
 }
 \seealso{
-\code{\link[=dims]{dims()}} and \code{\link[=pdims]{pdims()}}
+\code{\link[=dims]{dims()}}, \code{\link[=ndims]{ndims()}}, \code{\link[=npdims]{npdims()}} and \code{\link[=pdims]{pdims()}}
+
+Other term: 
+\code{\link{term_rcrd}()},
+\code{\link{tindex}()}
 }
+\concept{term}

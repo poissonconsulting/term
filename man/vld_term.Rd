@@ -57,4 +57,11 @@ vld_term_rcrd(term_rcrd("x[2]", "x[1]"))
 }
 \seealso{
 \code{\link[=chk_term]{chk_term()}}
+
+Other valid: 
+\code{\link{valid_term}()}
+
+Other valid: 
+\code{\link{valid_term}()}
 }
+\concept{valid}

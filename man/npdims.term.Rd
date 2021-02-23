@@ -2,7 +2,7 @@
 % Please edit documentation in R/npdims.R
 \name{npdims.term}
 \alias{npdims.term}
-\title{Number of Dimensions of each Parameter}
+\title{Number of Dimensions of Each Parameter}
 \usage{
 \method{npdims}{term}(x, terms = FALSE, ...)
 }

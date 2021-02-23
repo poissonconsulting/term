@@ -2,7 +2,7 @@
 % Please edit documentation in R/new-term.R
 \name{new_term}
 \alias{new_term}
-\title{Construct a new term object}
+\title{Construct a New Term Object}
 \usage{
 new_term(x = character())
 }
@@ -21,4 +21,7 @@ new_term(c("a", "b[1]", "b[2]"))
 # Terms are not checked for validity:
 new_term("r[")
 repair_terms(new_term("r["))
+}
+\seealso{
+\code{\link[=new_term_rcrd]{new_term_rcrd()}}
 }

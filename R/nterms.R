@@ -15,7 +15,7 @@ nterms.default <- function(x, ...) {
   nterms(as_term(x, ...))
 }
 
-#' Number of Terms of a term
+#' Number of Terms of a Term
 #'
 #' @inherit universals::nterms
 #' @export
@@ -27,7 +27,7 @@ nterms.term <- function(x, ...) {
   length(x)
 }
 
-#' Number of Terms of a term_rcrd
+#' Number of Terms of a Term Record
 #'
 #' @inherit universals::nterms
 #' @export

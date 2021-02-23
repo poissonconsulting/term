@@ -1,7 +1,7 @@
 #' @export
 universals::npdims
 
-#' Number of Dimensions of each Parameter
+#' Number of Dimensions of Each Parameter
 #'
 #' The terms argument is  \lifecycle{defunct}
 #'
