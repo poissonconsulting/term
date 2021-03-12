@@ -30,7 +30,7 @@ as.term(x, ...)
 Coerces an R object to a \code{\link[=term-vector]{term-vector()}}.
 }
 \details{
-\code{as.term} has been \ifelse{html}{\figure{lifecycle-soft-deprecated.svg}{options: alt='Soft-deprecated lifecycle'}}{\strong{Soft-deprecated}} for \code{as_term}.
+\code{as.term} has been \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#soft-deprecated}{\figure{lifecycle-soft-deprecated.svg}{options: alt='[Soft-deprecated]'}}}{\strong{[Soft-deprecated]}} for \code{as_term}.
 }
 \section{Methods (by class)}{
 \itemize{
