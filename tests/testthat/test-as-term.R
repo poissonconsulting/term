@@ -55,6 +55,9 @@ test_that("as_term.character", {
   expect_error(as_term("a", "b"), "^`repair` must be a flag [(]TRUE or FALSE[)][.]$", class = "chk_error")
   x <- c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]", "parm[2,1]", "parm[1,2]", "parm[10]", "parm3")
 
+  expect_identical(as_term("1"), new_term("1"))
+  expect_identical(as_term("1", repair = TRUE), new_term(NA_character_))
+
   expect_identical(
     as_term(c("a", "a[", NA, "a[1]")),
     new_term(c("a", "a[", NA, "a[1]"))
