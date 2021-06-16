@@ -18,12 +18,25 @@ reference:
   desc: Query Object's Dimensions/Parameters
   contents:
   - '`dims`'
+  - '`dims.term`'
+  - '`dims.term_rcrd`'
   - '`npars`'
+  - '`npars.term`'
   - '`npdims`'
+  - '`npdims.term`'
   - '`nterms`'
+  - '`nterms.default`'
+  - '`nterms.term`'
+  - '`nterms.term_rcrd`'
   - '`pars`'
+  - '`pars.character`'
+  - '`pars.default`'
+  - '`pars.term`'
+  - '`pars.term_rcrd`'
   - '`pars_terms`'
   - '`pdims`'
+  - '`pdims.term`'
+  - '`pdims.term_rcrd`'
   - '`tindex`'
 - title: Manipulate
   desc: Manipulate Objects
@@ -37,6 +50,7 @@ reference:
   - '`normalize_terms`'
   - '`repair_terms`'
   - '`set_pars`'
+  - '`set_pars.term`'
   - '`subset.term`'
   - '`subset.term_rcrd`'
   - '`term`'
