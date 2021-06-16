@@ -58,9 +58,15 @@
 
 
 
+  
+
+  
+
   </head>
 
   <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -116,8 +122,8 @@
     <p>Gets the parameter names.</p>
     </div>
 
-    <pre class="usage"><span class='co'># S3 method for term</span>
-<span class='fu'><a href='https://poissonconsulting.github.io/universals/reference/pars.html'>pars</a></span><span class='op'>(</span><span class='va'>x</span>, scalar <span class='op'>=</span> <span class='cn'>NULL</span>, terms <span class='op'>=</span> <span class='cn'>FALSE</span>, <span class='va'>...</span><span class='op'>)</span></pre>
+    <div class="ref-usage sourceCode"><pre class='sourceCode r'><code><span class='co'># S3 method for term</span>
+<span class='fu'><a href='https://poissonconsulting.github.io/universals/reference/pars.html'>pars</a></span><span class='op'>(</span><span class='va'>x</span>, scalar <span class='op'>=</span> <span class='cn'>NULL</span>, terms <span class='op'>=</span> <span class='cn'>FALSE</span>, <span class='va'>...</span><span class='op'>)</span></code></pre></div>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -146,19 +152,25 @@ for each term element.</p></td>
     <p>A character vector of the names of the parameters.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other parameters: 
+    <div class='dont-index'><p><a href='https://poissonconsulting.github.io/universals/reference/pars.html'>universals::pars</a></p>
+<p>Other parameters: 
+<code><a href='pars.character.html'>pars.character</a>()</code>,
+<code><a href='pars.default.html'>pars.default</a>()</code>,
 <code><a href='pars.term_rcrd.html'>pars.term_rcrd</a>()</code>,
 <code><a href='pars_terms.html'>pars_terms</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='va'>term</span> <span class='op'>&lt;-</span> <span class='fu'><a href='term.html'>term</a></span><span class='op'>(</span>
-  <span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[2]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span>,
-  <span class='st'>"beta[1,2]"</span>, <span class='st'>"beta[2,2]"</span>, <span class='st'>"sigma"</span>, <span class='cn'>NA</span>
-<span class='op'>)</span>
-<span class='fu'><a href='https://poissonconsulting.github.io/universals/reference/pars.html'>pars</a></span><span class='op'>(</span><span class='va'>term</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "alpha" "beta"  "sigma" NA     </div><div class='input'><span class='fu'><a href='https://poissonconsulting.github.io/universals/reference/pars.html'>pars</a></span><span class='op'>(</span><span class='va'>term</span>, scalar <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "sigma" NA     </div><div class='input'><span class='fu'><a href='https://poissonconsulting.github.io/universals/reference/pars.html'>pars</a></span><span class='op'>(</span><span class='va'>term</span>, scalar <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "alpha" "beta"  NA     </div></pre>
+    <div class="ref-examples sourceCode"><pre class='sourceCode r'><code><span class='r-in'><span class='va'>term</span> <span class='op'>&lt;-</span> <span class='fu'><a href='term.html'>term</a></span><span class='op'>(</span></span>
+<span class='r-in'>  <span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[2]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span>,</span>
+<span class='r-in'>  <span class='st'>"beta[1,2]"</span>, <span class='st'>"beta[2,2]"</span>, <span class='st'>"sigma"</span>, <span class='cn'>NA</span></span>
+<span class='r-in'><span class='op'>)</span></span>
+<span class='r-in'><span class='fu'><a href='https://poissonconsulting.github.io/universals/reference/pars.html'>pars</a></span><span class='op'>(</span><span class='va'>term</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "alpha" "beta"  "sigma" NA     </span>
+<span class='r-in'><span class='fu'><a href='https://poissonconsulting.github.io/universals/reference/pars.html'>pars</a></span><span class='op'>(</span><span class='va'>term</span>, scalar <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "sigma" NA     </span>
+<span class='r-in'><span class='fu'><a href='https://poissonconsulting.github.io/universals/reference/pars.html'>pars</a></span><span class='op'>(</span><span class='va'>term</span>, scalar <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "alpha" "beta"  NA     </span>
+</code></pre></div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -170,11 +182,11 @@ for each term element.</p></td>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Joe Thorley, Kirill Müller, Poisson Consulting.</p>
+  <p><p>Developed by Joe Thorley, Kirill Müller, Poisson Consulting.</p></p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
+  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p></p>
 </div>
 
       </footer>
@@ -182,6 +194,8 @@ for each term element.</p></td>
 
   
 
+
+  
 
   </body>
 </html>

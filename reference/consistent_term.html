@@ -58,9 +58,15 @@
 
 
 
+  
+
+  
+
   </head>
 
   <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -116,7 +122,7 @@
     <p>Test whether the number of dimensions of terms in the same parameter are consistent.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>consistent_term</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span></pre>
+    <div class="ref-usage sourceCode"><pre class='sourceCode r'><code><span class='fu'>consistent_term</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span></code></pre></div>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -135,9 +141,11 @@
     <div class='dont-index'><p><code><a href='term.html'>term-vector()</a></code> and <code><a href='https://poissonconsulting.github.io/universals/reference/npdims.html'>npdims()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>consistent_term</span><span class='op'>(</span><span class='fu'><a href='term.html'>term</a></span><span class='op'>(</span><span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[3]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] TRUE TRUE TRUE TRUE</div><div class='input'><span class='fu'>consistent_term</span><span class='op'>(</span><span class='fu'><a href='term.html'>term</a></span><span class='op'>(</span><span class='st'>"alpha[1]"</span>, <span class='va'>NA_term_</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2]"</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1]  TRUE    NA FALSE FALSE</div></pre>
+    <div class="ref-examples sourceCode"><pre class='sourceCode r'><code><span class='r-in'><span class='fu'>consistent_term</span><span class='op'>(</span><span class='fu'><a href='term.html'>term</a></span><span class='op'>(</span><span class='st'>"alpha[1]"</span>, <span class='st'>"alpha[3]"</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2,1]"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] TRUE TRUE TRUE TRUE</span>
+<span class='r-in'><span class='fu'>consistent_term</span><span class='op'>(</span><span class='fu'><a href='term.html'>term</a></span><span class='op'>(</span><span class='st'>"alpha[1]"</span>, <span class='va'>NA_term_</span>, <span class='st'>"beta[1,1]"</span>, <span class='st'>"beta[2]"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1]  TRUE    NA FALSE FALSE</span>
+</code></pre></div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -149,11 +157,11 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Joe Thorley, Kirill Müller, Poisson Consulting.</p>
+  <p><p>Developed by Joe Thorley, Kirill Müller, Poisson Consulting.</p></p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
+  <p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p></p>
 </div>
 
       </footer>
@@ -161,6 +169,8 @@
 
   
 
+
+  
 
   </body>
 </html>
