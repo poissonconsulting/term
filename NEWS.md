@@ -4,12 +4,6 @@
 
 - Replace `chk::chkor()` with `chk::chkor_vld()`.
 
-
-# term 0.3.1.9000
-
-- Internal changes only.
-
-
 # term 0.3.1
 
 - Updated internals for lifecycle 1.0.0.
