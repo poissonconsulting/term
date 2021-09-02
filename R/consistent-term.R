@@ -11,7 +11,9 @@
 #' consistent_term(term("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]"))
 #' consistent_term(term("alpha[1]", NA_term_, "beta[1,1]", "beta[2]"))
 consistent_term <- function(x) {
-  chkor(chk_s3_class(x, "term"), chk_s3_class(x, "term_rcrd"))
+  if(!vld_s3_class(x, "term") && !vld_s3_class(x, "term_rcrd")) {
+    chkor_vld(vld_s3_class(x, "term"), vld_s3_class(x, "term_rcrd"))
+  }
   x <- as_term_rcrd(x, repair = TRUE)
   names <- field(x, "par")
   x <- npdims_terms_impl(x)

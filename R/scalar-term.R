@@ -10,7 +10,9 @@
 #' scalar_term(term("alpha[1]", "alpha[3]", "beta[1]", "sigma[3]"))
 #' scalar_term(term("alpha[1]", NA_term_, "beta[1]", "beta[3]"))
 scalar_term <- function(x) {
-  chkor(chk_s3_class(x, "term"), chk_s3_class(x, "term_rcrd"))
+  if(!vld_s3_class(x, "term") && !vld_s3_class(x, "term_rcrd")) {
+    chkor_vld(vld_s3_class(x, "term"), vld_s3_class(x, "term_rcrd"))
+  }
   x <- as_term_rcrd(x)
   dim1 <- vapply(field(x, "dim"), function(x) identical(x, 1L), TRUE)
   pars_terms <- field(x, "par")

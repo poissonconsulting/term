@@ -39,6 +39,8 @@ Imports:
 Suggests:
     covr,
     testthat
+Remotes:
+    poissonconsulting/chk
 RdMacros: 
     lifecycle
 Encoding: UTF-8
