@@ -73,7 +73,7 @@ test_that("as_term_rcrd.character", {
   )
 
   x2 <- as_term_rcrd(x)
-  expect_is(x2, "term_rcrd")
+  expect_s3_class(x2, "term_rcrd")
   expect_true(is_term_rcrd(x2))
   x3 <- as.character(x2)
   expect_identical(x3, c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]", "parm[2,1]", "parm[1,2]", "parm[10]", "parm3[1]"))

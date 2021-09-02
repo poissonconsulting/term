@@ -17,8 +17,8 @@ Authors@R:
              comment = c(ORCID = "0000-0001-7388-1222")),
       person(given = "Poisson Consulting",
              role = c("cph", "fnd")))
-Description: Creates, manipulates, queries and repairs vectors
-    of parameter terms.  Parameter terms are the labels used to reference
+Description: Creates, manipulates, queries and repairs vectors of
+    parameter terms.  Parameter terms are the labels used to reference
     values in vectors, matrices and arrays. They represent the names in
     coefficient tables and the column names in 'mcmc' and 'mcmc.list'
     objects.
@@ -38,11 +38,12 @@ Imports:
     vctrs
 Suggests:
     covr,
-    testthat
-Remotes:
-    poissonconsulting/chk
+    testthat (>= 3.0.0)
 RdMacros: 
     lifecycle
+Remotes:
+    poissonconsulting/chk
+Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
 LazyData: true

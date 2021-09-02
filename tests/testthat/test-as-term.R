@@ -69,7 +69,7 @@ test_that("as_term.character", {
   )
 
   x2 <- as_term(x)
-  expect_is(x2, "term")
+  expect_s3_class(x2, "term")
   expect_true(is_term(x2))
   x3 <- as.character(x2)
   expect_identical(x, x3)
