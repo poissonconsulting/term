@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# term 0.3.2.9000
+
+- Same as previous version.
+
+
 # term 0.3.2
 
 - Internally replaced `chk::chkor()` with `chk::chkor_vld()`.

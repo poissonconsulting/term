@@ -1,6 +1,6 @@
 Package: term
 Title: Create, Manipulate and Query Parameter Terms
-Version: 0.3.2
+Version: 0.3.2.9000
 Authors@R: 
     c(person(given = "Joe",
              family = "Thorley",
