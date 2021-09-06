@@ -2,7 +2,7 @@
 
 # term 0.3.2
 
-- Replace `chk::chkor()` with `chk::chkor_vld()`.
+- Internally replaced `chk::chkor()` with `chk::chkor_vld()`.
 
 # term 0.3.1
 
