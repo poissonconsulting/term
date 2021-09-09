@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# term
+# term <img src="man/figures/logo.png" align="right" />
 
 <!-- badges: start -->
 
@@ -82,7 +82,7 @@ term
 library(tibble)
 coef <- tibble(term = term, estimate = as.vector(estimate))
 coef
-#> # A tibble: 4 x 2
+#> # A tibble: 4 × 2
 #>   term    estimate
 #>   <term>     <dbl>
 #> 1 b0[1,1]   -0.326
@@ -96,7 +96,7 @@ coef
 ``` r
 # the term vectors are readily sorted
 coef[rev(order(coef$term)),]
-#> # A tibble: 4 x 2
+#> # A tibble: 4 × 2
 #>   term    estimate
 #>   <term>     <dbl>
 #> 1 b0[2,2]    0.214
