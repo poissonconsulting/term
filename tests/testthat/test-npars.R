@@ -28,7 +28,7 @@ test_that("npars.term scalar = FALSE", {
 })
 
 test_that("npars.term invalid elements", {
-  expect_identical(expect_warning(npars(new_term(c("a[2]", "b c")))), 2L)
+  expect_warning(expect_identical(npars(new_term(c("a[2]", "b c"))), 2L))
 })
 
 test_that("npars.term missing values", {
@@ -42,7 +42,7 @@ test_that("npars.term scalar", {
 })
 
 test_that("npars.term scalar invalid elements", {
-  expect_identical(expect_warning(npars(new_term(c("a[2]", "b c")), scalar = TRUE)), 1L)
+  expect_warning(expect_identical(npars(new_term(c("a[2]", "b c")), scalar = TRUE), 1L))
 })
 
 test_that("npars scalar missing values", {
