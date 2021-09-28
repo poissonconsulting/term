@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# term 0.3.3.9000
+
+- Same as previous version.
+
+
 # term 0.3.3
 
 - Switched order of equality and condition expectations in internal tests.
