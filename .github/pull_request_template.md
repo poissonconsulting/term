@@ -1,3 +1,5 @@
+Thank you for taking the time to submit a pull request!
+
 To maximize the chances of acceptance:
 
 * The title of your PR should briefly describe the change.
