@@ -59,7 +59,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/poissonconsulting/term/">
+  <a href="https://github.com/poissonconsulting/term/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -76,16 +76,15 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="term-" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#term-" class="anchor" aria-hidden="true"></a>term <img src="reference/figures/logo.png" align="right">
+<div class="section level1">
+<div class="page-header"><h1 id="term-">term <img src="reference/figures/logo.png" align="right"><a class="anchor" aria-label="anchor" href="#term-"></a>
 </h1></div>
 <!-- badges: start -->
 
 <p><code>term</code> is an R package to create, manipulate, query and repair vectors of parameter terms. Parameter terms are the labels used to reference values in vectors, matrices and arrays. They represent the names in coefficient tables and the column names in <code>mcmc</code> and <code>mcmc.list</code> objects.</p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor" aria-hidden="true"></a>Installation</h2>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
 <p>To install the latest release from <a href="https://cran.r-project.org" class="external-link">CRAN</a></p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"term"</span><span class="op">)</span></code></pre></div>
@@ -94,12 +93,12 @@
 <code class="sourceCode R"><span class="co"># install.packages("remotes")</span>
 <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"poissonconsulting/term"</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="demonstration" class="section level2">
-<h2 class="hasAnchor">
-<a href="#demonstration" class="anchor" aria-hidden="true"></a>Demonstration</h2>
-<div id="term-vectors" class="section level3">
-<h3 class="hasAnchor">
-<a href="#term-vectors" class="anchor" aria-hidden="true"></a>Term Vectors</h3>
+<div class="section level2">
+<h2 id="demonstration">Demonstration<a class="anchor" aria-label="anchor" href="#demonstration"></a>
+</h2>
+<div class="section level3">
+<h3 id="term-vectors">Term Vectors<a class="anchor" aria-label="anchor" href="#term-vectors"></a>
+</h3>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://poissonconsulting.github.io/term/" class="external-link">term</a></span><span class="op">)</span>
 
@@ -145,9 +144,9 @@
 <span class="co">#&gt; 3 b0[1,2]   -0.675</span>
 <span class="co">#&gt; 4 b0[2,2]    0.214</span></code></pre></div>
 </div>
-<div id="querying-term-vectors" class="section level3">
-<h3 class="hasAnchor">
-<a href="#querying-term-vectors" class="anchor" aria-hidden="true"></a>Querying Term Vectors</h3>
+<div class="section level3">
+<h3 id="querying-term-vectors">Querying Term Vectors<a class="anchor" aria-label="anchor" href="#querying-term-vectors"></a>
+</h3>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># the term vectors are readily sorted</span>
 <span class="va">coef</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/rev.html" class="external-link">rev</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span><span class="va">coef</span><span class="op">$</span><span class="va">term</span><span class="op">)</span><span class="op">)</span>,<span class="op">]</span>
@@ -202,9 +201,9 @@
 <span class="co">#&gt; $sigma</span>
 <span class="co">#&gt; [1] 1</span></code></pre></div>
 </div>
-<div id="validating-term-vectors" class="section level3">
-<h3 class="hasAnchor">
-<a href="#validating-term-vectors" class="anchor" aria-hidden="true"></a>Validating Term Vectors</h3>
+<div class="section level3">
+<h3 id="validating-term-vectors">Validating Term Vectors<a class="anchor" aria-label="anchor" href="#validating-term-vectors"></a>
+</h3>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># term vectors can be tested for whether they have (parseably) valid,</span>
 <span class="co"># (dimensionally) consistent and complete terms.</span>
@@ -233,9 +232,9 @@
 <span class="fu"><a href="reference/is_incomplete_terms.html">is_incomplete_terms</a></span><span class="op">(</span><span class="fu"><a href="reference/term.html">term</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"a[3]"</span>, <span class="st">"b[1,1]"</span>, <span class="st">"b[2,2]"</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; [1] TRUE</span></code></pre></div>
 </div>
-<div id="checking-term-vectors" class="section level3">
-<h3 class="hasAnchor">
-<a href="#checking-term-vectors" class="anchor" aria-hidden="true"></a>Checking Term Vectors</h3>
+<div class="section level3">
+<h3 id="checking-term-vectors">Checking Term Vectors<a class="anchor" aria-label="anchor" href="#checking-term-vectors"></a>
+</h3>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># term vectors can be checked using functions styled on those in the chk package</span>
 <span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/term.html">term</a></span><span class="op">(</span><span class="st">"a[1]"</span>, <span class="st">"a[3]"</span><span class="op">)</span>
@@ -244,9 +243,9 @@
 <span class="fu"><a href="reference/chk_term.html">chk_term</a></span><span class="op">(</span><span class="va">x</span>, validate <span class="op">=</span> <span class="st">"complete"</span><span class="op">)</span>
 <span class="co">#&gt; Error: All elements of term vector `x` must be complete.</span></code></pre></div>
 </div>
-<div id="repairing-term-vectors" class="section level3">
-<h3 class="hasAnchor">
-<a href="#repairing-term-vectors" class="anchor" aria-hidden="true"></a>Repairing Term Vectors</h3>
+<div class="section level3">
+<h3 id="repairing-term-vectors">Repairing Term Vectors<a class="anchor" aria-label="anchor" href="#repairing-term-vectors"></a>
+</h3>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">term</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/new_term.html">new_term</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"b[4]"</span>, <span class="st">"b   [2]"</span>, <span class="st">"b"</span>, <span class="st">"b[1"</span>, <span class="st">"b[2, 2]"</span>, <span class="st">"b"</span>, <span class="st">"a [ 1 ] "</span>, <span class="cn">NA</span><span class="op">)</span><span class="op">)</span>
 <span class="va">term</span>
@@ -295,15 +294,15 @@
 <span class="co">#&gt; [1] a    b[1] b[2] b[3] b[4]</span></code></pre></div>
 </div>
 </div>
-<div id="contribution" class="section level2">
-<h2 class="hasAnchor">
-<a href="#contribution" class="anchor" aria-hidden="true"></a>Contribution</h2>
+<div class="section level2">
+<h2 id="contribution">Contribution<a class="anchor" aria-label="anchor" href="#contribution"></a>
+</h2>
 <p>Please report any <a href="https://github.com/poissonconsulting/term/issues" class="external-link">issues</a>.</p>
 <p><a href="https://github.com/poissonconsulting/term/pulls" class="external-link">Pull requests</a> are always welcome.</p>
 </div>
-<div id="code-of-conduct" class="section level2">
-<h2 class="hasAnchor">
-<a href="#code-of-conduct" class="anchor" aria-hidden="true"></a>Code of Conduct</h2>
+<div class="section level2">
+<h2 id="code-of-conduct">Code of Conduct<a class="anchor" aria-label="anchor" href="#code-of-conduct"></a>
+</h2>
 <p>Please note that the term project is released with a <a href="https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html" class="external-link">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
 </div>
@@ -313,12 +312,9 @@
     <div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=term">https://​cloud.r-project.org/​package=term</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/poissonconsulting/term/">https://​github.com/​poissonconsulting/​term/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/poissonconsulting/term/issues">https://​github.com/​poissonconsulting/​term/​issues</a>
-</li>
+<li><a href="https://cloud.r-project.org/package=term" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/poissonconsulting/term/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/poissonconsulting/term/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
@@ -326,7 +322,7 @@
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
+<li><small><a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
 
@@ -341,10 +337,10 @@
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>Joe Thorley <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-7683-4592" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li>Kirill Müller <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-1416-3412" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Joe Thorley <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-7683-4592" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Kirill Müller <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-1416-3412" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li>Poisson Consulting <br><small class="roles"> Copyright holder, funder </small>  </li>
-<li><a href="authors.html">More on authors...</a></li>
+<li><a href="authors.html">More about authors...</a></li>
 </ul>
 </div>
 
@@ -370,7 +366,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.6.1.9001.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
 </div>
 
       </footer>
