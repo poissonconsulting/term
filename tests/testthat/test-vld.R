@@ -15,7 +15,7 @@ test_that("vld_term term", {
   expect_true(vld_term(new_term(c("x[2,1]", "x[1,1]", "x[1,1]")), validate = "complete"))
   expect_true(vld_term(new_term(c("x[2,1]", "x[1,1]", "x[1,1]", "x[2,1]")), validate = "complete"))
   expect_true(vld_term(new_term(c("x[2,1]", "x[1,1]", "x[1,1]", "x[2,1]", NA)), validate = "complete"))
-  rlang::scoped_options(lifecycle_verbosity = "quiet")
+  rlang::local_options(lifecycle_verbosity = "quiet")
   expect_true(vld_term(new_term(c("x[2]", "x[1")), validate = "class"))
 })
 

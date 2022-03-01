@@ -1,5 +1,5 @@
 test_that("npdims.term", {
-  rlang::scoped_options(lifecycle_verbosity = "quiet")
+  rlang::local_options(lifecycle_verbosity = "quiet")
   expect_identical(
     npdims(new_term(character(0))),
     rlang::set_names(integer(0), character(0))

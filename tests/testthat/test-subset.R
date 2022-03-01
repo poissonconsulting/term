@@ -65,7 +65,7 @@ test_that("subset.term_rcrd", {
 })
 
 test_that("subset.term deprecated", {
-  rlang::scoped_options(lifecycle_verbosity = "quiet")
+  rlang::local_options(lifecycle_verbosity = "quiet")
   term <- new_term(c("alpha[1]", "alpha[2]", "sigma"))
 
   lifecycle::expect_deprecated(subset(term, select = NULL))

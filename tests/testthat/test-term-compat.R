@@ -1,5 +1,5 @@
 test_that("term", {
-  rlang::scoped_options(lifecycle_verbosity = "quiet")
+  rlang::local_options(lifecycle_verbosity = "quiet")
 
   expect_identical(term(0L), new_term())
   expect_identical(term(), new_term())
@@ -33,7 +33,7 @@ test_that("term", {
 })
 
 test_that("term.list", {
-  rlang::scoped_options(lifecycle_verbosity = "quiet")
+  rlang::local_options(lifecycle_verbosity = "quiet")
 
   expect_identical(term(list()), new_term())
   expect_chk_error(term(list(1L)))

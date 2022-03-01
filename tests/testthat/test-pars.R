@@ -19,7 +19,7 @@ test_that("pars.term", {
 })
 
 test_that("pars.term deprecated terms", {
-  rlang::scoped_options(lifecycle_verbosity = "quiet")
+  rlang::local_options(lifecycle_verbosity = "quiet")
 
   terms <- new_term(c(
     "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
