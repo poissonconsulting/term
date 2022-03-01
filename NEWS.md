@@ -2,28 +2,10 @@
 
 # term 0.4.0
 
-- Same as previous version.
-
-
-# term 0.3.3.9000
-
-- Same as previous version.
-
-
-# term 0.3.3
-
+- Removed deprecated `default.stringsAsFactors()` from `as.data.frame.term_rcrd`
 - Switched order of equality and condition expectations in internal tests.
-
-
-# term 0.3.2
-
 - Internally replaced `chk::chkor()` with `chk::chkor_vld()`.
-
-
-# term 0.3.1
-
 - Updated internals for lifecycle 1.0.0.
-
 
 # term 0.3.0
 
