@@ -16,6 +16,7 @@ test_that("print", {
     term("r  [ 1  ,2  ]")
   })
 
+
   verify_output("out/print-term-rcrd.txt", {
     new_term_rcrd()
 
