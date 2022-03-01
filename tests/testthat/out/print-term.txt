@@ -15,7 +15,7 @@
 [1] `with space` ``          
 
 > term("r[")
-Error: All elements of term vector `string_args_term` must be valid.
+Error in err(..., n = n, tidy = tidy, .subclass = "chk_error"): All elements of term vector `string_args_term` must be valid.
 
 > term("r  [ 1  ,2  ]")
 <term[1]>
