@@ -9,7 +9,7 @@
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![R-CMD-check](https://github.com/poissonconsulting/term/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/term/actions)
 [![Codecov test
-coverage](https://codecov.io/gh/poissonconsulting/term/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/term?branch=master)
+coverage](https://codecov.io/gh/poissonconsulting/term/branch/master/graph/badge.svg)](https://app.codecov.io/gh/poissonconsulting/term?branch=master)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![CRAN
@@ -187,7 +187,8 @@ x <- term("a[1]", "a[3]")
 vld_term(x, validate = "valid")
 #> [1] TRUE
 chk_term(x, validate = "complete")
-#> Error: All elements of term vector `x` must be complete.
+#> Error in `err()` at chk/R/utils.R:18:2:
+#> ! All elements of term vector `x` must be complete.
 ```
 
 ### Repairing Term Vectors
@@ -207,7 +208,8 @@ term
 
 # the `term()` constructor rejects invalid terms
 term("b[4]", "b   [2]", "b", "b[1", "b[2, 2]", "b", "a [ 1 ] ", NA)
-#> Error: All elements of term vector `string_args_term` must be valid.
+#> Error in `err()` at chk/R/utils.R:18:2:
+#> ! All elements of term vector `string_args_term` must be valid.
 
 # missing values can easily removed
 term <- term[!is.na(term)]
