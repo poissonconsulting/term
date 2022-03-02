@@ -241,7 +241,8 @@
 <span class="fu"><a href="reference/vld_term.html">vld_term</a></span><span class="op">(</span><span class="va">x</span>, validate <span class="op">=</span> <span class="st">"valid"</span><span class="op">)</span>
 <span class="co">#&gt; [1] TRUE</span>
 <span class="fu"><a href="reference/chk_term.html">chk_term</a></span><span class="op">(</span><span class="va">x</span>, validate <span class="op">=</span> <span class="st">"complete"</span><span class="op">)</span>
-<span class="co">#&gt; Error: All elements of term vector `x` must be complete.</span></code></pre></div>
+<span class="co">#&gt; Error in `err()` at chk/R/utils.R:18:2:</span>
+<span class="co">#&gt; ! All elements of term vector `x` must be complete.</span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="repairing-term-vectors">Repairing Term Vectors<a class="anchor" aria-label="anchor" href="#repairing-term-vectors"></a>
@@ -261,7 +262,8 @@
 
 <span class="co"># the `term()` constructor rejects invalid terms</span>
 <span class="fu"><a href="reference/term.html">term</a></span><span class="op">(</span><span class="st">"b[4]"</span>, <span class="st">"b   [2]"</span>, <span class="st">"b"</span>, <span class="st">"b[1"</span>, <span class="st">"b[2, 2]"</span>, <span class="st">"b"</span>, <span class="st">"a [ 1 ] "</span>, <span class="cn">NA</span><span class="op">)</span>
-<span class="co">#&gt; Error: All elements of term vector `string_args_term` must be valid.</span>
+<span class="co">#&gt; Error in `err()` at chk/R/utils.R:18:2:</span>
+<span class="co">#&gt; ! All elements of term vector `string_args_term` must be valid.</span>
 
 <span class="co"># missing values can easily removed</span>
 <span class="va">term</span> <span class="op">&lt;-</span> <span class="va">term</span><span class="op">[</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">term</span><span class="op">)</span><span class="op">]</span>
@@ -356,7 +358,7 @@
 <ul class="list-unstyled">
 <li><a href="https://lifecycle.r-lib.org/articles/stages.html#stable" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
 <li><a href="https://github.com/poissonconsulting/term/actions" class="external-link"><img src="https://github.com/poissonconsulting/term/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
-<li><a href="https://codecov.io/gh/poissonconsulting/term?branch=master" class="external-link"><img src="https://codecov.io/gh/poissonconsulting/term/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://app.codecov.io/gh/poissonconsulting/term?branch=master" class="external-link"><img src="https://codecov.io/gh/poissonconsulting/term/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 <li><a href="https://opensource.org/licenses/MIT" class="external-link"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a></li>
 <li><a href="https://cran.r-project.org/package=term" class="external-link"><img src="https://www.r-pkg.org/badges/version/term" alt="CRAN status"></a></li>
 </ul>
