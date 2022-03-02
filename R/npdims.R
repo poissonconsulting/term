@@ -3,7 +3,7 @@ universals::npdims
 
 #' Number of Dimensions of Each Parameter
 #'
-#' The terms argument is  \lifecycle{defunct}
+#' The terms argument is  `r lifecycle::badge("defunct")`.
 #'
 #' @inherit universals::npdims
 #' @param terms A flag specifying whether to get the number of dimensions for each term element.

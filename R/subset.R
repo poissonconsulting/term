@@ -2,7 +2,7 @@
 #'
 #' Subsets a term vector.
 #'
-#' The `select` argument is  \lifecycle{defunct}.
+#' The `select` argument is  `r lifecycle::badge("defunct")`.
 #'
 #' @inheritParams params
 #' @return The modified term vector.

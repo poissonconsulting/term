@@ -22,7 +22,7 @@ The modified term vector.
 Subsets a term vector.
 }
 \details{
-The \code{select} argument is  \lifecycle{defunct}.
+The \code{select} argument is  \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#defunct}{\figure{lifecycle-defunct.svg}{options: alt='[Defunct]'}}}{\strong{[Defunct]}}.
 }
 \examples{
 term <- term(

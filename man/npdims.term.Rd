@@ -17,7 +17,7 @@
 A named integer vector of the number of dimensions of each parameter.
 }
 \description{
-The terms argument is  \lifecycle{defunct}
+The terms argument is  \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#defunct}{\figure{lifecycle-defunct.svg}{options: alt='[Defunct]'}}}{\strong{[Defunct]}}.
 }
 \examples{
 npdims(term("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]"))
