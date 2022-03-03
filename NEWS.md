@@ -1,13 +1,25 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
-# term 0.4.0
 
-## Internal changes only
+# term 0.3.4
 
 - Removed deprecated `default.stringsAsFactors()` from `as.data.frame.term_rcrd`
+
+
+# term 0.3.3
+
 - Switched order of equality and condition expectations in internal tests.
+
+
+# term 0.3.2
+
 - Internally replaced `chk::chkor()` with `chk::chkor_vld()`.
+
+
+# term 0.3.1
+
 - Updated internals for `lifecycle` 1.0.0.
+
 
 # term 0.3.0
 
