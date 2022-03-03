@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# term 0.3.4.9000
+
+- Same as previous version.
+
+
 # term 0.3.4
 
 - Removed deprecated `default.stringsAsFactors()` from `as.data.frame.term_rcrd`
