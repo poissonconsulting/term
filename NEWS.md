@@ -2,13 +2,7 @@
 
 # term 0.3.5
 
-- R (>= 3.5)
-
-
-# term 0.3.4.9000
-
-- Same as previous version.
-
+- Requires R (>= 3.5)
 
 # term 0.3.4
 
