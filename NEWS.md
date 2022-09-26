@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# term 0.3.5
+
+- R (>= 3.5)
+
+
 # term 0.3.4.9000
 
 - Same as previous version.
