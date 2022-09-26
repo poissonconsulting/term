@@ -53,21 +53,28 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">pars_terms</span><span class="op">(</span><span class="va">x</span>, scalar <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">pars_terms</span><span class="op">(</span><span class="va">x</span>, scalar <span class="op">=</span> <span class="cn">NULL</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>x</dt>
 <dd><p>A term vector.</p></dd>
+
+
 <dt>scalar</dt>
 <dd><p>A flag specifying whether to by default return all parameters (NULL), or only scalar parameters (TRUE) or only non-scalar parameters (FALSE).</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Unused.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A character vector of the term parameter names.</p>
+    
+
+<p>A character vector of the term parameter names.</p>
     </div>
     <div id="details">
     <h2>Details</h2>
@@ -84,11 +91,11 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">term</span> <span class="op">&lt;-</span> <span class="fu"><a href="term.html">term</a></span><span class="op">(</span></span>
-<span class="r-in">  <span class="st">"alpha[1]"</span>, <span class="st">"alpha[2]"</span>, <span class="st">"beta[1,1]"</span>, <span class="st">"beta[2,1]"</span>,</span>
-<span class="r-in">  <span class="st">"beta[1,2]"</span>, <span class="st">"beta[2,2]"</span>, <span class="st">"sigma"</span>, <span class="cn">NA</span></span>
-<span class="r-in"><span class="op">)</span></span>
-<span class="r-in"><span class="fu">pars_terms</span><span class="op">(</span><span class="va">term</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">term</span> <span class="op">&lt;-</span> <span class="fu"><a href="term.html">term</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>  <span class="st">"alpha[1]"</span>, <span class="st">"alpha[2]"</span>, <span class="st">"beta[1,1]"</span>, <span class="st">"beta[2,1]"</span>,</span></span>
+<span class="r-in"><span>  <span class="st">"beta[1,2]"</span>, <span class="st">"beta[2,2]"</span>, <span class="st">"sigma"</span>, <span class="cn">NA</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">pars_terms</span><span class="op">(</span><span class="va">term</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "alpha" "alpha" "beta"  "beta"  "beta"  "beta"  "sigma" NA     </span>
 </code></pre></div>
     </div>
@@ -104,7 +111,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>

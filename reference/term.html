@@ -65,7 +65,7 @@ see <code>chk_valid()</code> for details.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">term</span><span class="op">(</span><span class="va">...</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">term</span><span class="op">(</span><span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -74,10 +74,13 @@ see <code>chk_valid()</code> for details.</p>
 <dd><p>Unnamed values are term values,
 named values describe the parameter in the name
 and the dimensionality in the value.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A term vector.</p>
+    
+
+<p>A term vector.</p>
     </div>
     <div id="see-also">
     <h2>See also</h2>
@@ -89,37 +92,37 @@ and the dimensionality in the value.</p></dd>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">term</span><span class="op">(</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">term</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;term[0]&gt;</span>
-<span class="r-in"><span class="fu">term</span><span class="op">(</span><span class="st">"p"</span>, <span class="st">"q[1]"</span>, <span class="st">"q[2]"</span>, <span class="st">"q[3]"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">term</span><span class="op">(</span><span class="st">"p"</span>, <span class="st">"q[1]"</span>, <span class="st">"q[2]"</span>, <span class="st">"q[3]"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;term[4]&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] p    q[1] q[2] q[3]</span>
-<span class="r-in"><span class="fu">term</span><span class="op">(</span><span class="st">"q[1]"</span>, <span class="st">"q[2]"</span>, <span class="st">"q[3]"</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">term</span><span class="op">(</span><span class="st">"q[1]"</span>, <span class="st">"q[2]"</span>, <span class="st">"q[3]"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;term[3]&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] q[1] q[2] q[3]</span>
-<span class="r-in"><span class="va">combined</span> <span class="op">&lt;-</span> <span class="fu">term</span><span class="op">(</span>par <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">4</span>, <span class="st">"alpha"</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://poissonconsulting.github.io/universals/reference/pdims.html" class="external-link">pdims</a></span><span class="op">(</span><span class="va">combined</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="va">combined</span> <span class="op">&lt;-</span> <span class="fu">term</span><span class="op">(</span>par <span class="op">=</span> <span class="fl">2</span><span class="op">:</span><span class="fl">4</span>, <span class="st">"alpha"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://poissonconsulting.github.io/universals/reference/pdims.html" class="external-link">pdims</a></span><span class="op">(</span><span class="va">combined</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $alpha</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $par</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2 3 4</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span class="fu">term</span><span class="op">(</span><span class="op">!</span><span class="op">!</span><span class="op">!</span><span class="fu"><a href="https://poissonconsulting.github.io/universals/reference/pdims.html" class="external-link">pdims</a></span><span class="op">(</span><span class="va">combined</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">term</span><span class="op">(</span><span class="op">!</span><span class="op">!</span><span class="op">!</span><span class="fu"><a href="https://poissonconsulting.github.io/universals/reference/pdims.html" class="external-link">pdims</a></span><span class="op">(</span><span class="va">combined</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;term[25]&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [1] alpha      par[1,1,1] par[2,1,1] par[1,2,1] par[2,2,1] par[1,3,1]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  [7] par[2,3,1] par[1,1,2] par[2,1,2] par[1,2,2] par[2,2,2] par[1,3,2]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [13] par[2,3,2] par[1,1,3] par[2,1,3] par[1,2,3] par[2,2,3] par[1,3,3]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [19] par[2,3,3] par[1,1,4] par[2,1,4] par[1,2,4] par[2,2,4] par[1,3,4]</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [25] par[2,3,4]</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># Invalid terms are rejected:</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/try.html" class="external-link">try</a></span><span class="op">(</span><span class="fu">term</span><span class="op">(</span><span class="st">"r["</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Error in err(..., n = n, tidy = tidy, .subclass = "chk_error") : </span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Invalid terms are rejected:</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/try.html" class="external-link">try</a></span><span class="op">(</span><span class="fu">term</span><span class="op">(</span><span class="st">"r["</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Error in term_impl(args) : </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   All elements of term vector `string_args_term` must be valid.</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># Valid terms are repaired</span></span>
-<span class="r-in"><span class="fu">term</span><span class="op">(</span><span class="st">"r  [ 1  ,2  ]"</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Valid terms are repaired</span></span></span>
+<span class="r-in"><span><span class="fu">term</span><span class="op">(</span><span class="st">"r  [ 1  ,2  ]"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;term[1]&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] r[1,2]</span>
 </code></pre></div>
@@ -136,7 +139,7 @@ and the dimensionality in the value.</p></dd>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>

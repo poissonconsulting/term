@@ -49,25 +49,20 @@
 
     <div class="section level2">
 <h2 class="page-header" data-toc-text="0.3.4.9000" id="term-0349000">term 0.3.4.9000<a class="anchor" aria-label="anchor" href="#term-0349000"></a></h2>
-<ul><li>Same as previous version.</li>
-</ul></div>
+<ul><li>Same as previous version.</li></ul></div>
     <div class="section level2">
-<h2 class="page-header" data-toc-text="0.3.4" id="term-034">term 0.3.4<a class="anchor" aria-label="anchor" href="#term-034"></a></h2>
-<ul><li>Removed deprecated <code><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">default.stringsAsFactors()</a></code> from <code>as.data.frame.term_rcrd</code>
-</li>
-</ul></div>
+<h2 class="page-header" data-toc-text="0.3.4" id="term-034">term 0.3.4<small>2022-03-03</small><a class="anchor" aria-label="anchor" href="#term-034"></a></h2>
+<ul><li>Removed deprecated <code><a href="https://rdrr.io/r/base/base-deprecated.html" class="external-link">default.stringsAsFactors()</a></code> from <code>as.data.frame.term_rcrd</code>
+</li></ul></div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="0.3.3" id="term-033">term 0.3.3<small>2021-09-28</small><a class="anchor" aria-label="anchor" href="#term-033"></a></h2>
-<ul><li>Switched order of equality and condition expectations in internal tests.</li>
-</ul></div>
+<ul><li>Switched order of equality and condition expectations in internal tests.</li></ul></div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="0.3.2" id="term-032">term 0.3.2<small>2021-09-06</small><a class="anchor" aria-label="anchor" href="#term-032"></a></h2>
-<ul><li>Internally replaced <code><a href="https://rdrr.io/pkg/chk/man/chkor.html" class="external-link">chk::chkor()</a></code> with <code><a href="https://rdrr.io/pkg/chk/man/chkor_vld.html" class="external-link">chk::chkor_vld()</a></code>.</li>
-</ul></div>
+<ul><li>Internally replaced <code><a href="https://rdrr.io/pkg/chk/man/chkor.html" class="external-link">chk::chkor()</a></code> with <code><a href="https://rdrr.io/pkg/chk/man/chkor_vld.html" class="external-link">chk::chkor_vld()</a></code>.</li></ul></div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="0.3.1" id="term-031">term 0.3.1<small>2021-02-06</small><a class="anchor" aria-label="anchor" href="#term-031"></a></h2>
-<ul><li>Updated internals for <code>lifecycle</code> 1.0.0.</li>
-</ul></div>
+<ul><li>Updated internals for <code>lifecycle</code> 1.0.0.</li></ul></div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="0.3.0" id="term-030">term 0.3.0<small>2020-09-25</small><a class="anchor" aria-label="anchor" href="#term-030"></a></h2>
 <div class="section level3">
@@ -83,12 +78,10 @@
 <h3 id="features-0-3-0">Features<a class="anchor" aria-label="anchor" href="#features-0-3-0"></a></h3>
 <div class="section level4">
 <h4 id="major-0-3-0">Major<a class="anchor" aria-label="anchor" href="#major-0-3-0"></a></h4>
-<ul><li>Added <code>term_rcrd</code> class to store vector as underlying data frame and implemented some functions.</li>
-</ul></div>
+<ul><li>Added <code>term_rcrd</code> class to store vector as underlying data frame and implemented some functions.</li></ul></div>
 <div class="section level4">
 <h4 id="minor-0-3-0">Minor<a class="anchor" aria-label="anchor" href="#minor-0-3-0"></a></h4>
-<ul><li>Added
-<ul><li>
+<ul><li>Added<ul><li>
 <code><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique()</a></code>.</li>
 <li>
 <code><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary()</a></code>.</li>
@@ -100,13 +93,11 @@
 <code><a href="../reference/normalize_terms.html">normalize_terms()</a></code>.</li>
 <li>
 <code>normalize</code> argument to <code><a href="../reference/as_term.html">as_term.character()</a></code>.</li>
-</ul></li>
-</ul></div>
+</ul></li></ul></div>
 </div>
 <div class="section level3">
 <h3 id="bug-fixes-0-3-0">Bug Fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-0-3-0"></a></h3>
-<ul><li>Fix <code><a href="../reference/as_term.html">as.term()</a></code> so issues deprecation warning.</li>
-</ul></div>
+<ul><li>Fix <code><a href="../reference/as_term.html">as.term()</a></code> so issues deprecation warning.</li></ul></div>
 </div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="0.2.0" id="term-020">term 0.2.0<small>2020-06-20</small><a class="anchor" aria-label="anchor" href="#term-020"></a></h2>
@@ -116,8 +107,7 @@
 <code>is_complete_terms()</code> now requires same number of duplicate copies.</li>
 <li>
 <code><a href="../reference/chk_term.html">chk_term()</a></code> and <code><a href="../reference/vld_term.html">vld_term()</a></code> argument <code>validate</code> now defaults to <code>"complete"</code> and <code>class</code> value is soft-deprecated.</li>
-<li>Soft deprecated
-<ul><li>
+<li>Soft deprecated<ul><li>
 <code><a href="../reference/as_term.html">as.term()</a></code> for <code><a href="../reference/as_term.html">as_term()</a></code>.</li>
 <li>
 <code><a href="../reference/deprecated.html">is.term()</a></code> for <code><a href="../reference/is_term.html">is_term()</a></code>.</li>
@@ -135,8 +125,7 @@
 </ul></div>
 <div class="section level3">
 <h3 id="features-0-2-0">Features<a class="anchor" aria-label="anchor" href="#features-0-2-0"></a></h3>
-<ul><li>Redefined <code>term</code> as a <code>vtcr</code> class with
-<ul><li>
+<ul><li>Redefined <code>term</code> as a <code>vtcr</code> class with<ul><li>
 <code><a href="../reference/term.html">term()</a></code> constructor which treats unnamed arguments as term values and named values as parameters with their associated dimensions.</li>
 <li>
 <code><a href="../reference/new_term.html">new_term()</a></code> to create term vector from character vector without any check.</li>
@@ -157,12 +146,10 @@
 </div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="0.1.0" id="term-010">term 0.1.0<small>2020-01-15</small><a class="anchor" aria-label="anchor" href="#term-010"></a></h2>
-<ul><li>Added <code><a href="../reference/chk_term.html">chk_term()</a></code> and <code><a href="../reference/vld_term.html">vld_term()</a></code>.</li>
-</ul></div>
+<ul><li>Added <code><a href="../reference/chk_term.html">chk_term()</a></code> and <code><a href="../reference/vld_term.html">vld_term()</a></code>.</li></ul></div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="0.0.1" id="term-001">term 0.0.1<small>2019-12-15</small><a class="anchor" aria-label="anchor" href="#term-001"></a></h2>
-<ul><li>Initial release.</li>
-</ul></div>
+<ul><li>Initial release.</li></ul></div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -177,7 +164,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>

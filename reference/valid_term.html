@@ -53,17 +53,20 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">valid_term</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">valid_term</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>x</dt>
 <dd><p>The object.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A logical vector indicating whether each term is valid.</p>
+    
+
+<p>A logical vector indicating whether each term is valid.</p>
     </div>
     <div id="details">
     <h2>Details</h2>
@@ -78,11 +81,11 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># valid term elements</span></span>
-<span class="r-in"><span class="fu">valid_term</span><span class="op">(</span><span class="fu"><a href="term.html">term</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"a [3]"</span>, <span class="st">" b [ 1  ] "</span>, <span class="st">"c[1,300,10]"</span><span class="op">)</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># valid term elements</span></span></span>
+<span class="r-in"><span><span class="fu">valid_term</span><span class="op">(</span><span class="fu"><a href="term.html">term</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"a [3]"</span>, <span class="st">" b [ 1  ] "</span>, <span class="st">"c[1,300,10]"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE TRUE TRUE TRUE</span>
-<span class="r-in"><span class="co"># invalid term elements</span></span>
-<span class="r-in"><span class="fu">valid_term</span><span class="op">(</span><span class="fu"><a href="new_term.html">new_term</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"a b"</span>, <span class="st">"a[1]b"</span>, <span class="st">"a[0]"</span>, <span class="st">"b[1,]"</span>, <span class="st">"c[]"</span>, <span class="st">"d[1][2]"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="co"># invalid term elements</span></span></span>
+<span class="r-in"><span><span class="fu">valid_term</span><span class="op">(</span><span class="fu"><a href="new_term.html">new_term</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"a b"</span>, <span class="st">"a[1]b"</span>, <span class="st">"a[0]"</span>, <span class="st">"b[1,]"</span>, <span class="st">"c[]"</span>, <span class="st">"d[1][2]"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE FALSE FALSE FALSE FALSE FALSE</span>
 </code></pre></div>
     </div>
@@ -98,7 +101,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>

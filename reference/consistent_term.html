@@ -53,17 +53,20 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">consistent_term</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">consistent_term</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>x</dt>
 <dd><p>The object.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A logical vector indicating whether the number of dimensions is consistent.</p>
+    
+
+<p>A logical vector indicating whether the number of dimensions is consistent.</p>
     </div>
     <div id="see-also">
     <h2>See also</h2>
@@ -72,9 +75,9 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">consistent_term</span><span class="op">(</span><span class="fu"><a href="term.html">term</a></span><span class="op">(</span><span class="st">"alpha[1]"</span>, <span class="st">"alpha[3]"</span>, <span class="st">"beta[1,1]"</span>, <span class="st">"beta[2,1]"</span><span class="op">)</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">consistent_term</span><span class="op">(</span><span class="fu"><a href="term.html">term</a></span><span class="op">(</span><span class="st">"alpha[1]"</span>, <span class="st">"alpha[3]"</span>, <span class="st">"beta[1,1]"</span>, <span class="st">"beta[2,1]"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE TRUE TRUE TRUE</span>
-<span class="r-in"><span class="fu">consistent_term</span><span class="op">(</span><span class="fu"><a href="term.html">term</a></span><span class="op">(</span><span class="st">"alpha[1]"</span>, <span class="va">NA_term_</span>, <span class="st">"beta[1,1]"</span>, <span class="st">"beta[2]"</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">consistent_term</span><span class="op">(</span><span class="fu"><a href="term.html">term</a></span><span class="op">(</span><span class="st">"alpha[1]"</span>, <span class="va">NA_term_</span>, <span class="st">"beta[1,1]"</span>, <span class="st">"beta[2]"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1]  TRUE    NA FALSE FALSE</span>
 </code></pre></div>
     </div>
@@ -90,7 +93,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>
