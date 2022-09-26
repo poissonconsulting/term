@@ -25,11 +25,11 @@ It must not have any invalid or missing (NA) values.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{term}: Complete Terms for a term Vector
+\item \code{complete_terms(term)}: Complete Terms for a term Vector
 
-\item \code{term_rcrd}: Complete Terms for a term_rcrd vector
+\item \code{complete_terms(term_rcrd)}: Complete Terms for a term_rcrd vector
+
 }}
-
 \examples{
 complete_terms(term("b[3]", "b[1]", "b[2]"))
 complete_terms(term("z[2,2]", "z[1,1]"))

@@ -34,11 +34,11 @@ Coerces an R object to a \code{\link[=term-vector]{term-vector()}}.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{character}: Coerce character vector to term vector
+\item \code{as_term(character)}: Coerce character vector to term vector
 
-\item \code{numeric}: Coerce numeric object to term vector
+\item \code{as_term(numeric)}: Coerce numeric object to term vector
+
 }}
-
 \examples{
 as_term(matrix(1:4, 2))
 as_term(c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]"))

@@ -29,13 +29,13 @@ Coerces an R object to a \code{term_rcrd}.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{character}: Coerce character vector to term_rcrd
+\item \code{as_term_rcrd(character)}: Coerce character vector to term_rcrd
 
-\item \code{numeric}: Coerce numeric vector to term_rcrd
+\item \code{as_term_rcrd(numeric)}: Coerce numeric vector to term_rcrd
 
-\item \code{term}: Coerce term vector to term_rcrd
+\item \code{as_term_rcrd(term)}: Coerce term vector to term_rcrd
+
 }}
-
 \examples{
 as_term(matrix(1:4, 2))
 as_term(c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]"))

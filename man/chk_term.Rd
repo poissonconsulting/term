@@ -27,9 +27,9 @@ Checks if term using \code{\link[=vld_term]{vld_term()}} or \code{\link[=vld_ter
 }
 \section{Functions}{
 \itemize{
-\item \code{chk_term_rcrd}: Check Term Record
-}}
+\item \code{chk_term_rcrd()}: Check Term Record
 
+}}
 \examples{
 # chk_term
 x <- term("x[2]", "x[1]")

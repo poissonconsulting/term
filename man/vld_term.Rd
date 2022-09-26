@@ -43,9 +43,9 @@ Missing values are ignored as are duplicates and order.
 }
 \section{Functions}{
 \itemize{
-\item \code{vld_term_rcrd}: Validate Term Record
-}}
+\item \code{vld_term_rcrd()}: Validate Term Record
 
+}}
 \examples{
 # vld_term
 vld_term(c("x[2]", "x[1]"))

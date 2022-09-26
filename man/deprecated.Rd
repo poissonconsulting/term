@@ -39,47 +39,47 @@ Deprecated Functions
 }
 \section{Functions}{
 \itemize{
-\item \code{is.term}: Is Term
+\item \code{is.term()}: Is Term
 
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#soft-deprecated}{\figure{lifecycle-soft-deprecated.svg}{options: alt='[Soft-deprecated]'}}}{\strong{[Soft-deprecated]}}
 
 Replace by \code{\link[=is_term]{is_term()}}
 
-\item \code{is.incomplete_terms}: Is Incomplete Terms
+\item \code{is.incomplete_terms()}: Is Incomplete Terms
 
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#soft-deprecated}{\figure{lifecycle-soft-deprecated.svg}{options: alt='[Soft-deprecated]'}}}{\strong{[Soft-deprecated]}}
 
 Replace by \code{\link[=is_incomplete_terms]{is_incomplete_terms()}}
 
-\item \code{is.inconsistent_terms}: Is Inconsistent Terms
+\item \code{is.inconsistent_terms()}: Is Inconsistent Terms
 
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#soft-deprecated}{\figure{lifecycle-soft-deprecated.svg}{options: alt='[Soft-deprecated]'}}}{\strong{[Soft-deprecated]}}
 
 Replace by \code{\link[=is_inconsistent_terms]{is_inconsistent_terms()}}
 
-\item \code{parameters}: Get Parameters
+\item \code{parameters()}: Get Parameters
 
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#soft-deprecated}{\figure{lifecycle-soft-deprecated.svg}{options: alt='[Soft-deprecated]'}}}{\strong{[Soft-deprecated]}}
 
 Replace by \code{\link[=pars]{pars()}}
 
-\item \code{parameters<-}: Setting Parameters
+\item \code{parameters(x) <- value}: Setting Parameters
 
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#soft-deprecated}{\figure{lifecycle-soft-deprecated.svg}{options: alt='[Soft-deprecated]'}}}{\strong{[Soft-deprecated]}}
 
 Replace by pars<-
 
-\item \code{set_parameters}: Set Parameters
+\item \code{set_parameters()}: Set Parameters
 
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#soft-deprecated}{\figure{lifecycle-soft-deprecated.svg}{options: alt='[Soft-deprecated]'}}}{\strong{[Soft-deprecated]}}
 
 Replace by \code{\link[=set_pars]{set_pars()}}
 
-\item \code{tdims}: Term Index
+\item \code{tdims()}: Term Index
 
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#soft-deprecated}{\figure{lifecycle-soft-deprecated.svg}{options: alt='[Soft-deprecated]'}}}{\strong{[Soft-deprecated]}}
 
 Replace by \code{\link[=tindex]{tindex()}}
-}}
 
+}}
 \keyword{internal}
