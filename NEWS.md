@@ -4,6 +4,15 @@
 
 - Requires R (>= 3.5)
 
+- Moved following from soft to warn deprecated
+ - `is.term()`
+ - `is.incomplete_terms()`
+ - `is.inconsistent_terms()`
+ - `parameters()`
+ - `parameters<-()`
+ - `set_parameters()`
+ - `tdims()`
+
 # term 0.3.4
 
 - Removed deprecated `default.stringsAsFactors()` from `as.data.frame.term_rcrd`
