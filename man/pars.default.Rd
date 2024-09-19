@@ -27,8 +27,8 @@ pars(matrix(1:4, nrow = 2))
 
 Other parameters: 
 \code{\link{pars.character}()},
-\code{\link{pars.term_rcrd}()},
 \code{\link{pars.term}()},
+\code{\link{pars.term_rcrd}()},
 \code{\link{pars_terms}()}
 }
 \concept{parameters}
