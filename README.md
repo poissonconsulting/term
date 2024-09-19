@@ -9,7 +9,7 @@
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![R-CMD-check](https://github.com/poissonconsulting/term/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/poissonconsulting/term/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/poissonconsulting/term/branch/master/graph/badge.svg)](https://app.codecov.io/gh/poissonconsulting/term?branch=master)
+coverage](https://codecov.io/gh/poissonconsulting/term/graph/badge.svg)](https://app.codecov.io/gh/poissonconsulting/term)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![CRAN
@@ -208,7 +208,7 @@ term
 
 # the `term()` constructor rejects invalid terms
 term("b[4]", "b   [2]", "b", "b[1", "b[2, 2]", "b", "a [ 1 ] ", NA)
-#> Error in `term_impl()` at ]8;line = 50:col = 4;file:///Users/joe/Code/poissonconsulting/term/term/R/term.Rterm/R/term.R:50:4]8;;:
+#> Error in `term_impl()`:
 #> ! All elements of term vector `string_args_term` must be valid.
 
 # missing values can easily removed
