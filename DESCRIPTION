@@ -22,7 +22,7 @@ URL: https://poissonconsulting.github.io/term/,
     https://github.com/poissonconsulting/term
 BugReports: https://github.com/poissonconsulting/term/issues
 Depends: 
-    R (>= 4.3)
+    R (>= 4.0)
 Imports:
     chk (>= 0.8.1),
     extras,
