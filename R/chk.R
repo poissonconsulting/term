@@ -51,5 +51,3 @@ chk_term_rcrd <- function(x, validate = "complete", x_name = NULL) {
   if (is_inconsistent_terms(x)) abort_chk("All elements of term_rcrd vector ", x_name, " must be consistent")
   abort_chk("All elements of term_rcrd vector ", x_name, " must be complete")
 }
-
-

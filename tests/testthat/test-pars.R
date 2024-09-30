@@ -160,10 +160,12 @@ test_that("pars.term scalar missing values", {
 })
 
 test_that("pars.term_rcrd", {
-  expect_identical(pars(as_term_rcrd(as_term(c("a[1]", "b[2]")))),
-                   c("a", "b"))
-  expect_identical(pars(as_term_rcrd(as_term(c("b[1]", "a[2]")))),
-                   c("b", "a"))
+  expect_identical(
+    pars(as_term_rcrd(as_term(c("a[1]", "b[2]")))),
+    c("a", "b")
+  )
+  expect_identical(
+    pars(as_term_rcrd(as_term(c("b[1]", "a[2]")))),
+    c("b", "a")
+  )
 })
-
-

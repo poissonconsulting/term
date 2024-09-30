@@ -1,7 +1,8 @@
 test_that("as_term_rcrd.term", {
-  expect_identical(as_term_rcrd(as_term("x[1]")), new_term_rcrd(data.frame(par = "x", dim = I(list(1L)),
-                                                                       stringsAsFactors = FALSE)))
-
+  expect_identical(as_term_rcrd(as_term("x[1]")), new_term_rcrd(data.frame(
+    par = "x", dim = I(list(1L)),
+    stringsAsFactors = FALSE
+  )))
 })
 
 test_that("as_term_rcrd.integer", {
@@ -79,7 +80,7 @@ test_that("as_term_rcrd.character", {
   expect_identical(x3, c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]", "parm[2,1]", "parm[1,2]", "parm[10]", "parm3[1]"))
 
   expect_identical(pars_terms(x2), c(rep("parm3", 2), rep("parm", 5), "parm3"))
-#  expect_identical(x2 > x2, rep(FALSE, length(x2)))
+  #  expect_identical(x2 > x2, rep(FALSE, length(x2)))
 
   # expect_identical(sort(x2), new_term(c(
   #   "parm[10]", "parm[1,1]", "parm[2,1]", "parm[1,2]",
@@ -96,6 +97,8 @@ test_that("as_term_rcrd others", {
 })
 
 test_that("as_term_rcrd missing values", {
-  expect_identical(as_term_rcrd(NA_term_), structure(list(par = NA_character_, dim = list(NA_integer_)), class = c("term_rcrd",
-                                                                                                                   "vctrs_rcrd", "vctrs_vctr")))
+  expect_identical(as_term_rcrd(NA_term_), structure(list(par = NA_character_, dim = list(NA_integer_)), class = c(
+    "term_rcrd",
+    "vctrs_rcrd", "vctrs_vctr"
+  )))
 })

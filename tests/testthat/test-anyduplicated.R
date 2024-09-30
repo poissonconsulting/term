@@ -14,4 +14,3 @@ test_that("anyDuplicated term_rcrd", {
   expect_identical(anyDuplicated(as_term_rcrd(new_term(c("alpha[1]", "alpha")))), 2L)
   expect_identical(anyDuplicated(as_term_rcrd(new_term(c("alpha[1]", NA_term_, NA_term_)))), 3L)
 })
-

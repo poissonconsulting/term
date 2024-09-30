@@ -12,8 +12,7 @@ universals::pdims
 #' @examples
 #' pdims(term("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]"))
 pdims.term <- function(x, ...) {
-
-  if(anyNA(x)) abort_chk("`x` must not have any missing values")
+  if (anyNA(x)) abort_chk("`x` must not have any missing values")
   if (is_inconsistent_terms(x)) {
     abort_chk("`x` must have terms with consistent parameter dimensions")
   }

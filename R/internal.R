@@ -46,8 +46,8 @@ pars_terms_impl <- function(x, scalar = NULL) {
   scalar_term <- scalar_term_impl(x)
   x <- as.character(x)
   x <- sub(p0("^(", par_pattern(), ")(.*)"), "\\1", x)
-  if(vld_true(scalar)) x <- x[scalar_term]
-  if(vld_false(scalar)) x <- x[!scalar_term]
+  if (vld_true(scalar)) x <- x[scalar_term]
+  if (vld_false(scalar)) x <- x[!scalar_term]
   x
 }
 

@@ -16,7 +16,7 @@
 #' # invalid term elements
 #' valid_term(new_term(c("a b", "a[1]b", "a[0]", "b[1,]", "c[]", "d[1][2]")))
 valid_term <- function(x) {
-  if(!vld_s3_class(x, "term") && !vld_s3_class(x, "term_rcrd")) {
+  if (!vld_s3_class(x, "term") && !vld_s3_class(x, "term_rcrd")) {
     chkor_vld(vld_s3_class(x, "term"), vld_s3_class(x, "term_rcrd"))
   }
   valid_term_impl(as_term(x))

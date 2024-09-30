@@ -10,7 +10,7 @@
 #' scalar_term(term("alpha[1]", "alpha[3]", "beta[1]", "sigma[3]"))
 #' scalar_term(term("alpha[1]", NA_term_, "beta[1]", "beta[3]"))
 scalar_term <- function(x) {
-  if(!vld_s3_class(x, "term") && !vld_s3_class(x, "term_rcrd")) {
+  if (!vld_s3_class(x, "term") && !vld_s3_class(x, "term_rcrd")) {
     chkor_vld(vld_s3_class(x, "term"), vld_s3_class(x, "term_rcrd"))
   }
   x <- as_term_rcrd(x)

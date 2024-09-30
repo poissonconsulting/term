@@ -19,7 +19,8 @@ repair_terms <- function(x, normalize = TRUE) {
   chk_flag(normalize)
   x <- unclass(x)
   x <- repair_terms_impl(x)
-  if(normalize)
+  if (normalize) {
     x <- normalize_terms_impl(x)
+  }
   new_term(x)
 }

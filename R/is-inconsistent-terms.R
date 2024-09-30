@@ -16,10 +16,12 @@ is_inconsistent_terms <- function(x, ...) {
   if (is_term(x) && !length(x)) {
     return(FALSE)
   }
-  if(is_term_rcrd(x) && !length(x)) {
+  if (is_term_rcrd(x) && !length(x)) {
     return(FALSE)
   }
   x <- !consistent_term(x)
-  if(anyNA(x)) return(TRUE)
+  if (anyNA(x)) {
+    return(TRUE)
+  }
   any(x)
 }

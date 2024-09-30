@@ -9,4 +9,3 @@ test_that("dims.term_rcrd", {
   expect_identical(dims(term_rcrd("beta0")), 1L)
   expect_identical(dims(term_rcrd(c("beta[1,1]", "beta[2,1]"))), 2L)
 })
-

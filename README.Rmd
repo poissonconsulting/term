@@ -47,7 +47,7 @@ remotes::install_github("poissonconsulting/term")
 ```{r}
 library(term)
 
-# term vectors are the labels used to reference values in 
+# term vectors are the labels used to reference values in
 # vectors, matrices and arrays
 term <- term(
   "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
@@ -80,7 +80,7 @@ coef
 ### Querying Term Vectors
 ```{r}
 # the term vectors are readily sorted
-coef[rev(order(coef$term)),]
+coef[rev(order(coef$term)), ]
 
 # and the parameter names or parameter dimensions extracted
 term <- term(
