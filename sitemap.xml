@@ -1,159 +1,54 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/CODE_OF_CONDUCT.html</loc>
-  </url>
-  <url>
-    <loc>/CONTRIBUTING.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>/SUPPORT.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/news/index.html</loc>
-  </url>
-  <url>
-    <loc>/pull_request_template.html</loc>
-  </url>
-  <url>
-    <loc>/reference/NA_term_.html</loc>
-  </url>
-  <url>
-    <loc>/reference/NA_term_rcrd_.html</loc>
-  </url>
-  <url>
-    <loc>/reference/as_term.html</loc>
-  </url>
-  <url>
-    <loc>/reference/as_term_rcrd.html</loc>
-  </url>
-  <url>
-    <loc>/reference/chk_term.html</loc>
-  </url>
-  <url>
-    <loc>/reference/complete_terms.html</loc>
-  </url>
-  <url>
-    <loc>/reference/consistent_term.html</loc>
-  </url>
-  <url>
-    <loc>/reference/deprecated.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dims.term.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dims.term_rcrd.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/is_incomplete_terms.html</loc>
-  </url>
-  <url>
-    <loc>/reference/is_inconsistent_terms.html</loc>
-  </url>
-  <url>
-    <loc>/reference/is_term.html</loc>
-  </url>
-  <url>
-    <loc>/reference/is_term_rcrd.html</loc>
-  </url>
-  <url>
-    <loc>/reference/new_term.html</loc>
-  </url>
-  <url>
-    <loc>/reference/new_term_rcrd.html</loc>
-  </url>
-  <url>
-    <loc>/reference/normalize_terms.html</loc>
-  </url>
-  <url>
-    <loc>/reference/npars.term.html</loc>
-  </url>
-  <url>
-    <loc>/reference/npdims.term.html</loc>
-  </url>
-  <url>
-    <loc>/reference/nterms.default.html</loc>
-  </url>
-  <url>
-    <loc>/reference/nterms.term.html</loc>
-  </url>
-  <url>
-    <loc>/reference/nterms.term_rcrd.html</loc>
-  </url>
-  <url>
-    <loc>/reference/params.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pars.character.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pars.default.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pars.term.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pars.term_rcrd.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pars_terms.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pdims.term.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pdims.term_rcrd.html</loc>
-  </url>
-  <url>
-    <loc>/reference/reexports.html</loc>
-  </url>
-  <url>
-    <loc>/reference/repair_terms.html</loc>
-  </url>
-  <url>
-    <loc>/reference/scalar_term.html</loc>
-  </url>
-  <url>
-    <loc>/reference/set_pars.term.html</loc>
-  </url>
-  <url>
-    <loc>/reference/subset.term.html</loc>
-  </url>
-  <url>
-    <loc>/reference/subset.term_rcrd.html</loc>
-  </url>
-  <url>
-    <loc>/reference/term.html</loc>
-  </url>
-  <url>
-    <loc>/reference/term_rcrd.html</loc>
-  </url>
-  <url>
-    <loc>/reference/tindex.html</loc>
-  </url>
-  <url>
-    <loc>/reference/valid_term.html</loc>
-  </url>
-  <url>
-    <loc>/reference/vld_term.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>/CONTRIBUTING.html</loc></url>
+<url><loc>/LICENSE-text.html</loc></url>
+<url><loc>/LICENSE.html</loc></url>
+<url><loc>/SUPPORT.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/news/index.html</loc></url>
+<url><loc>/reference/NA_term_.html</loc></url>
+<url><loc>/reference/NA_term_rcrd_.html</loc></url>
+<url><loc>/reference/as_term.html</loc></url>
+<url><loc>/reference/as_term_rcrd.html</loc></url>
+<url><loc>/reference/chk_term.html</loc></url>
+<url><loc>/reference/complete_terms.html</loc></url>
+<url><loc>/reference/consistent_term.html</loc></url>
+<url><loc>/reference/deprecated.html</loc></url>
+<url><loc>/reference/dims.term.html</loc></url>
+<url><loc>/reference/dims.term_rcrd.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/is_incomplete_terms.html</loc></url>
+<url><loc>/reference/is_inconsistent_terms.html</loc></url>
+<url><loc>/reference/is_term.html</loc></url>
+<url><loc>/reference/is_term_rcrd.html</loc></url>
+<url><loc>/reference/new_term.html</loc></url>
+<url><loc>/reference/new_term_rcrd.html</loc></url>
+<url><loc>/reference/normalize_terms.html</loc></url>
+<url><loc>/reference/npars.term.html</loc></url>
+<url><loc>/reference/npdims.term.html</loc></url>
+<url><loc>/reference/nterms.default.html</loc></url>
+<url><loc>/reference/nterms.term.html</loc></url>
+<url><loc>/reference/nterms.term_rcrd.html</loc></url>
+<url><loc>/reference/params.html</loc></url>
+<url><loc>/reference/pars.character.html</loc></url>
+<url><loc>/reference/pars.default.html</loc></url>
+<url><loc>/reference/pars.term.html</loc></url>
+<url><loc>/reference/pars.term_rcrd.html</loc></url>
+<url><loc>/reference/pars_terms.html</loc></url>
+<url><loc>/reference/pdims.term.html</loc></url>
+<url><loc>/reference/pdims.term_rcrd.html</loc></url>
+<url><loc>/reference/reexports.html</loc></url>
+<url><loc>/reference/repair_terms.html</loc></url>
+<url><loc>/reference/scalar_term.html</loc></url>
+<url><loc>/reference/set_pars.term.html</loc></url>
+<url><loc>/reference/subset.term.html</loc></url>
+<url><loc>/reference/subset.term_rcrd.html</loc></url>
+<url><loc>/reference/term.html</loc></url>
+<url><loc>/reference/term_rcrd.html</loc></url>
+<url><loc>/reference/tindex.html</loc></url>
+<url><loc>/reference/valid_term.html</loc></url>
+<url><loc>/reference/vld_term.html</loc></url>
 </urlset>
+
