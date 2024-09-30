@@ -29,7 +29,7 @@ as_term_rcrd.numeric <- function(x, name = "par", ...) {
 as_term_rcrd.term <- function(x, repair = FALSE, ...) {
   chk_flag(repair)
   chk_unused(...)
-  if(repair) x <- repair_terms(x, normalize = FALSE)
+  if (repair) x <- repair_terms(x, normalize = FALSE)
   vec_cast(x, new_term_rcrd())
 }
 

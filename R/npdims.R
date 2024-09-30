@@ -17,7 +17,7 @@ npdims.term <- function(x, terms = FALSE, ...) {
   chk_unused(...)
 
   # when archive can remove entire function as covered by default
-  if(!missing(terms)) {
+  if (!missing(terms)) {
     deprecate_stop("0.2.1", "term::npdims(terms =)")
   }
   vapply(pdims(x), length, 1L)

@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![R-CMD-check](https://github.com/poissonconsulting/term/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/poissonconsulting/term/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/poissonconsulting/term/branch/master/graph/badge.svg)](https://app.codecov.io/gh/poissonconsulting/term?branch=master)
+[![Codecov test coverage](https://codecov.io/gh/poissonconsulting/term/graph/badge.svg)](https://app.codecov.io/gh/poissonconsulting/term)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![CRAN status](https://www.r-pkg.org/badges/version/term)](https://cran.r-project.org/package=term)
 ![CRAN downloads](http://cranlogs.r-pkg.org/badges/term)
@@ -47,7 +47,7 @@ remotes::install_github("poissonconsulting/term")
 ```{r}
 library(term)
 
-# term vectors are the labels used to reference values in 
+# term vectors are the labels used to reference values in
 # vectors, matrices and arrays
 term <- term(
   "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
@@ -80,7 +80,7 @@ coef
 ### Querying Term Vectors
 ```{r}
 # the term vectors are readily sorted
-coef[rev(order(coef$term)),]
+coef[rev(order(coef$term)), ]
 
 # and the parameter names or parameter dimensions extracted
 term <- term(

@@ -14,7 +14,9 @@ vec_cast.term.character <- function(x, to, ...) new_term(x)
 
 #' @export
 vec_cast.term.term_rcrd <- function(x, to, ...) {
-  if(!length(x)) return(new_term())
+  if (!length(x)) {
+    return(new_term())
+  }
   chr <- paste0(
     field(x, "par"),
     "[",

@@ -24,7 +24,9 @@ as.term <- function(x, ...) {
 
 #' @export
 as.term.default <- function(x, ..., from_as_term = FALSE) {
-  if(vld_false(from_as_term)) return(as_term(x, ...))
+  if (vld_false(from_as_term)) {
+    return(as_term(x, ...))
+  }
   vec_cast(x, new_term())
 }
 
@@ -52,7 +54,7 @@ as_term.character <- function(x, repair = FALSE, normalize = repair, ...) {
   if (repair) {
     x <- repair_terms_impl(x)
   }
-  if(normalize) {
+  if (normalize) {
     x <- normalize_terms_impl(x)
   }
 
@@ -69,7 +71,7 @@ as_term.numeric <- function(x, name = "par", ...) {
 }
 
 #' @export
-as_term.term <- function(x, ...)  x
+as_term.term <- function(x, ...) x
 
 #' @export
 as_term.term_rcrd <- function(x, ...) {

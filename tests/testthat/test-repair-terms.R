@@ -43,20 +43,36 @@ test_that("repair_terms missing values", {
 })
 
 test_that("repair_terms normalize = FALSE", {
-  expect_identical(repair_terms(as_term(c("a", "a[2]"))),
-                   as_term(c("a[1]", "a[2]")))
-  expect_identical(repair_terms(as_term(c("a", "a[2]")), normalize = FALSE),
-                   as_term(c("a", "a[2]")))
-  expect_identical(repair_terms(as_term(c("a", "b[2]"))),
-                   as_term(c("a", "b[2]")))
-  expect_identical(repair_terms(as_term(c("a", "b[2]")), normalize = FALSE),
-                   as_term(c("a", "b[2]")))
-  expect_identical(repair_terms(as_term(c("a[1]", "b[2]"))),
-                   as_term(c("a", "b[2]")))
-  expect_identical(repair_terms(as_term(c("a[1]", "b[2]")), normalize = FALSE),
-                   as_term(c("a[1]", "b[2]")))
-  expect_identical(repair_terms(as_term(c("a", "b[2]"))),
-                   as_term(c("a", "b[2]")))
-  expect_identical(repair_terms(as_term(c("a", "b[2]")), normalize = FALSE),
-                   as_term(c("a", "b[2]")))
+  expect_identical(
+    repair_terms(as_term(c("a", "a[2]"))),
+    as_term(c("a[1]", "a[2]"))
+  )
+  expect_identical(
+    repair_terms(as_term(c("a", "a[2]")), normalize = FALSE),
+    as_term(c("a", "a[2]"))
+  )
+  expect_identical(
+    repair_terms(as_term(c("a", "b[2]"))),
+    as_term(c("a", "b[2]"))
+  )
+  expect_identical(
+    repair_terms(as_term(c("a", "b[2]")), normalize = FALSE),
+    as_term(c("a", "b[2]"))
+  )
+  expect_identical(
+    repair_terms(as_term(c("a[1]", "b[2]"))),
+    as_term(c("a", "b[2]"))
+  )
+  expect_identical(
+    repair_terms(as_term(c("a[1]", "b[2]")), normalize = FALSE),
+    as_term(c("a[1]", "b[2]"))
+  )
+  expect_identical(
+    repair_terms(as_term(c("a", "b[2]"))),
+    as_term(c("a", "b[2]"))
+  )
+  expect_identical(
+    repair_terms(as_term(c("a", "b[2]")), normalize = FALSE),
+    as_term(c("a", "b[2]"))
+  )
 })

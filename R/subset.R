@@ -20,16 +20,21 @@ subset.term <- function(x, pars = NULL, select = NULL, ...) {
   chk_not_any_na(x)
   chk_unused(...)
 
-  if(!missing(select)) {
-    deprecate_soft("0.2.0", "term::subset(select =)",
-                   "term::subset(pars =)")
+  if (!missing(select)) {
+    deprecate_soft(
+      "0.2.0", "term::subset(select =)",
+      "term::subset(pars =)"
+    )
   }
-  if(!is.null(select)) {
+  if (!is.null(select)) {
     chk_s3_class(select, "character")
     chk_subset(select, pars(x))
-    if(!is.null(pars))
-      deprecate_stop("0.1.1", "term::subset(select =)",
-                   "term::subset(pars =)")
+    if (!is.null(pars)) {
+      deprecate_stop(
+        "0.1.1", "term::subset(select =)",
+        "term::subset(pars =)"
+      )
+    }
     pars <- select
   }
   if (is.null(pars)) {

@@ -22,8 +22,9 @@ test_that("complete_terms term", {
     new_term(c("z[2,2]", "z[2,1]", "z[1,1]", "z[1,2]"))
   )
   expect_error(complete_terms(new_term(c("b", "b[2,2]"))),
-                   "`x` must have terms with consistent parameter dimensions.",
-               class = "chk_error")
+    "`x` must have terms with consistent parameter dimensions.",
+    class = "chk_error"
+  )
 })
 
 test_that("complete_terms term_rcrd", {
@@ -47,6 +48,7 @@ test_that("complete_terms term_rcrd", {
     term_rcrd(c("z[2,2]", "z[2,1]", "z[1,1]", "z[1,2]"))
   )
   expect_error(complete_terms(term_rcrd(c("b", "b[2,2]"))),
-               "`x` must have terms with consistent parameter dimensions.",
-               class = "chk_error")
+    "`x` must have terms with consistent parameter dimensions.",
+    class = "chk_error"
+  )
 })

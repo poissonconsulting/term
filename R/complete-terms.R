@@ -24,7 +24,7 @@ complete_terms.term <- function(x, ...) {
     return(x)
   }
   x <- repair_terms(x)
-  if(anyNA(x)) {
+  if (anyNA(x)) {
     abort_chk("`x` must not have any missing values.")
   }
   term(x, !!!setdiff(term_impl(pdims(x)), x))
@@ -41,7 +41,9 @@ complete_terms.term <- function(x, ...) {
 #' complete_terms(term_rcrd("z[2,2]", "z[1,1]"))
 #' }
 complete_terms.term_rcrd <- function(x, ...) {
-  if(!dims(x)) return(x)
+  if (!dims(x)) {
+    return(x)
+  }
   # FIXME: Can this be implemented easier operating directly on a term_rcrd?
   as_term_rcrd(complete_terms(as_term(x), ...))
 }

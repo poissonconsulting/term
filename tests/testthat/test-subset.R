@@ -35,8 +35,8 @@ test_that("subset.term_rcrd", {
   term_rcrd <- as_term_rcrd(new_term(c("alpha[1]", "alpha[2]", "sigma")))
   expect_identical(subset(term_rcrd, character(0)), new_term_rcrd())
   expect_error(subset(term_rcrd, "beta"),
-               "^`pars` must match 'alpha' or 'sigma', not 'beta'[.]$",
-               class = "chk_error"
+    "^`pars` must match 'alpha' or 'sigma', not 'beta'[.]$",
+    class = "chk_error"
   )
   term_rcrd <- as_term_rcrd(new_term(c(
     "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
@@ -59,8 +59,8 @@ test_that("subset.term_rcrd", {
     )))
   )
   expect_error(subset(term_rcrd, "tt"),
-               "^`pars` must match 'alpha', 'beta' or 'sigma', not 'tt'[.]$",
-               class = "chk_error"
+    "^`pars` must match 'alpha', 'beta' or 'sigma', not 'tt'[.]$",
+    class = "chk_error"
   )
 })
 

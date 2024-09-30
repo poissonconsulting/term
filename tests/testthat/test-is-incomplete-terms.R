@@ -5,7 +5,8 @@ test_that("is_incomplete_terms", {
   expect_false(is_incomplete_terms(new_term(c("b", "b[2]"))))
   expect_error(
     is_incomplete_terms(new_term(c("b", "b[2]", "b[4,] "))),
-    "^`x` must have terms with consistent parameter dimensions[.]$", class = "chk_error"
+    "^`x` must have terms with consistent parameter dimensions[.]$",
+    class = "chk_error"
   )
   expect_false(is_incomplete_terms(new_term("b[1]")))
   expect_true(is_incomplete_terms(new_term("b[2]")))
