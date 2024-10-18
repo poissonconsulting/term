@@ -62,3 +62,6 @@ reference:
   - '`valid_term`'
   - '`vld_term`'
   - '`vld_term_rcrd`'
+
+development:
+  mode: auto
