@@ -1,4 +1,17 @@
-<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+<!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
+
+# term 0.3.5.9001
+
+## Continuous integration
+
+- Overwrite from actions-sync (#59).
+
+## Uncategorized
+
+- Merge pull request #58 from poissonconsulting/upkeep.
+
+  Upkeep
+
 
 # term 0.3.5.9000
 
