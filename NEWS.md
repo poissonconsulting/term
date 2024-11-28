@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# term 0.3.5.9002
+
+## Continuous integration
+
+- Ignore errors when removing pkg-config on macOS (#60).
+
+
 # term 0.3.5.9001
 
 ## Continuous integration
