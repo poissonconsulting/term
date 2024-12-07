@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# term 0.3.5.9003
+
+## Continuous integration
+
+- Use larger retry count for lock-threads workflow (#61).
+
+
 # term 0.3.5.9002
 
 ## Continuous integration
