@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# term 0.3.5.9005
+
+## Continuous integration
+
+- Avoid failure in fledge workflow if no changes (#63).
+
+
 # term 0.3.5.9004
 
 ## Continuous integration
