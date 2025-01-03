@@ -24,7 +24,7 @@ BugReports: https://github.com/poissonconsulting/term/issues
 Depends: 
     R (>= 4.0)
 Imports:
-    chk (>= 0.8.1),
+    chk,
     extras,
     lifecycle,
     purrr,

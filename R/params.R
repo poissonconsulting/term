@@ -1,9 +1,15 @@
-#' Parameter Descriptions for term Functions
+#' Parameter Descriptions for term Package
 #'
+#' Default parameter descriptions which may be overridden in individual
+#' functions.
+#'
+#' A flag is a non-missing logical scalar.
+#'
+#' A string is a non-missing character scalar.
+#'
+#' @inheritParams rlang::args_dots_empty
 #' @param x The object.
 #' @param name A string specifying the name of the parameter.
-#' @param ... Unused.
-#'
 #' @param validate A string specifying the level of the validation.
 #' The possible values in order of increasing strictness
 #' are 'class', 'valid', 'consistent' and 'complete'.
@@ -18,6 +24,9 @@
 #' for each term element.
 #' @param incomparables Ignored.
 #'
-#' @name params
 #' @keywords internal
-NULL
+#' @usage NULL
+# nocov start
+params <- function(...) NULL
+# nocov end
+

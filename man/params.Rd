@@ -2,13 +2,13 @@
 % Please edit documentation in R/params.R
 \name{params}
 \alias{params}
-\title{Parameter Descriptions for term Functions}
+\title{Parameter Descriptions for term Package}
 \arguments{
+\item{...}{These dots are for future extensions and must be empty.}
+
 \item{x}{The object.}
 
 \item{name}{A string specifying the name of the parameter.}
-
-\item{...}{Unused.}
 
 \item{validate}{A string specifying the level of the validation.
 The possible values in order of increasing strictness
@@ -32,6 +32,12 @@ for each term element.}
 \item{incomparables}{Ignored.}
 }
 \description{
-Parameter Descriptions for term Functions
+Default parameter descriptions which may be overridden in individual
+functions.
+}
+\details{
+A flag is a non-missing logical scalar.
+
+A string is a non-missing character scalar.
 }
 \keyword{internal}

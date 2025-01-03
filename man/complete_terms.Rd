@@ -15,7 +15,7 @@ complete_terms(x, ...)
 \arguments{
 \item{x}{The object.}
 
-\item{...}{Unused.}
+\item{...}{These dots are for future extensions and must be empty.}
 }
 \description{
 Completes an object's terms.

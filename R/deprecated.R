@@ -2,8 +2,11 @@
 #'
 #' @inheritParams params
 #' @keywords internal
-#' @name deprecated
-NULL
+#' @usage NULL
+# nocov start
+deprecated <- function(...) NULL
+# nocov end
+
 
 #' @describeIn deprecated Is Term
 #'

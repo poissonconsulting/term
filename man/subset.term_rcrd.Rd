@@ -11,7 +11,7 @@
 
 \item{pars}{A character vector of parameter names.}
 
-\item{...}{Unused.}
+\item{...}{These dots are for future extensions and must be empty.}
 }
 \value{
 The modified term vector.

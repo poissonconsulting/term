@@ -13,7 +13,7 @@
 
 \item{select}{A character vector of the names of the parameters to include in the subsetted object.}
 
-\item{...}{Unused.}
+\item{...}{These dots are for future extensions and must be empty.}
 }
 \value{
 The modified term vector.

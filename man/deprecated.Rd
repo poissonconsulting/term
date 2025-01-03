@@ -26,9 +26,9 @@ set_parameters(x, pars)
 tdims(x)
 }
 \arguments{
-\item{x}{The object.}
+\item{...}{These dots are for future extensions and must be empty.}
 
-\item{...}{Unused.}
+\item{x}{The object.}
 
 \item{value}{A character vector of the new parameter names.}
 

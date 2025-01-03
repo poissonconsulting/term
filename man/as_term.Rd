@@ -18,7 +18,7 @@ as.term(x, ...)
 \arguments{
 \item{x}{The object.}
 
-\item{...}{Unused.}
+\item{...}{These dots are for future extensions and must be empty.}
 
 \item{repair}{A flag specifying whether to repair terms.}
 

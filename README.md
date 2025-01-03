@@ -243,7 +243,7 @@ The website for the release version is at
 ### Development
 
 To install the development version from
-[r-universe](https://bcgov.r-universe.dev/ssdtools).
+[r-universe](https://poissonconsulting.r-universe.dev/term).
 
 ``` r
 install.packages("term", repos = c("https://poissonconsulting.r-universe.dev", "https://cloud.r-project.org"))
