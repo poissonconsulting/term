@@ -1,4 +1,7 @@
-destination: docs
+url: https://poissonconsulting.github.io/term/
+template:
+  bootstrap: 5
+  package: poissontemplate
 
 reference:
 - title: Check or Test

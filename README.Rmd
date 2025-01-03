@@ -20,26 +20,13 @@ knitr::opts_chunk$set(
 [![Codecov test coverage](https://codecov.io/gh/poissonconsulting/term/graph/badge.svg)](https://app.codecov.io/gh/poissonconsulting/term)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/license/mit/)
 [![CRAN status](https://www.r-pkg.org/badges/version/term)](https://cran.r-project.org/package=term)
-![CRAN downloads](http://cranlogs.r-pkg.org/badges/term)
+![CRAN downloads](https://cranlogs.r-pkg.org/badges/term)
 <!-- badges: end -->
 
 `term` is an R package to create, manipulate, query and repair vectors of parameter terms.
 Parameter terms are the labels used to reference values in vectors, matrices and arrays.
 They represent the names in coefficient tables and the column names in 
 `mcmc` and `mcmc.list` objects.
-
-## Installation 
-
-To install the latest release from [CRAN](https://cran.r-project.org)
-```{r, eval=FALSE}
-install.packages("term")
-```
-
-To install the developmental version from [GitHub](https://github.com/poissonconsulting/term)
-```{r, eval=FALSE}
-# install.packages("remotes")
-remotes::install_github("poissonconsulting/term")
-```
 
 ## Demonstration
 
@@ -161,6 +148,31 @@ term
 # and incomplete terms completed
 term <- sort(complete_terms(term))
 term
+```
+
+
+## Installation
+
+### Release
+
+To install the release version from [CRAN](https://CRAN.R-project.org/package=term).
+```r
+install.packages("term")
+```
+
+The website for the release version is at <https://poissonconsulting.github.io/term/>.
+
+### Development
+
+To install the development version from [r-universe](https://poissonconsulting.r-universe.dev/term).
+```r
+install.packages("term", repos = c("https://poissonconsulting.r-universe.dev", "https://cloud.r-project.org"))
+```
+
+or from [GitHub](https://github.com/poissonconsulting/term)
+```r
+# install.packages("remotes")
+remotes::install_github("poissonconsulting/term")
 ```
 
 ## Contribution
