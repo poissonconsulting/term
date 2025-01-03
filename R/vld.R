@@ -1,7 +1,6 @@
 #' Validate Term or Term Record
 #'
 #' Validates the elements of a term or term_rcrd vector.
-#' Use [chk_s3_class()] to check if an object is a term or term_rcrd.
 #'
 #' Internal validity of a term can be checked on three levels:
 #'

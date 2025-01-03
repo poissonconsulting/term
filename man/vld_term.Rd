@@ -21,7 +21,6 @@ A flag indicating whether the condition was met.
 }
 \description{
 Validates the elements of a term or term_rcrd vector.
-Use \code{\link[=chk_s3_class]{chk_s3_class()}} to check if an object is a term or term_rcrd.
 }
 \details{
 Internal validity of a term can be checked on three levels:
