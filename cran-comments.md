@@ -1,20 +1,24 @@
-## Test environments
+term 0.3.5.9900
 
-release 4.2.1
+## Cran Repository Policy
 
-* OSX (local) - release
-* OSX (actions) - release
-* Ubuntu (actions) - 3.5 to 4.1, oldrel, release and devel
-* Windows (actions) - release
-* Windows (winbuilder) - devel
+- [x] Reviewed CRP last edited 2024-08-27.
 
-## R CMD check results
+## CRAN check results
 
-0 errors | 0 warnings | 0 notes
+> Result: NOTE 
+  Found the following Rd file(s) with Rd \link{} targets missing package
+  anchors:
+    vld_term.Rd: chk_s3_class
+  Please provide package anchors for all Rd \link{} targets not in the
+  package itself and the base packages.
+Flavors: r-devel-linux-x86_64-debian-clang, r-devel-linux-x86_64-debian-gcc, r-devel-windows-x86_64
+
+Fixed.
 
 ## revdepcheck results
 
-We checked 2 reverse dependencies, comparing R CMD check results across CRAN and dev versions of this package.
+We checked all 2 reverse dependencies from CRAN, comparing R CMD check results across CRAN and dev versions of this package.
 
  * We saw 0 new problems
  * We failed to check 0 packages
