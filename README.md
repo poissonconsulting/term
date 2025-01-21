@@ -11,7 +11,7 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![Codecov test
 coverage](https://codecov.io/gh/poissonconsulting/term/graph/badge.svg)](https://app.codecov.io/gh/poissonconsulting/term)
 [![License:
-MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/license/mit/)
+MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/license/mit)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/term)](https://cran.r-project.org/package=term)
 ![CRAN downloads](https://cranlogs.r-pkg.org/badges/term)
@@ -192,7 +192,7 @@ term
 
 # the `term()` constructor rejects invalid terms
 term("b[4]", "b   [2]", "b", "b[1", "b[2, 2]", "b", "a [ 1 ] ", NA)
-#> Error in `term_impl()` at term/R/term.R:50:5:
+#> Error in `term_impl()`:
 #> ! All elements of term vector `string_args_term` must be valid.
 
 # missing values can easily removed
