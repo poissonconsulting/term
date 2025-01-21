@@ -2,35 +2,12 @@
 
 # term 0.3.5.9900
 
-## Continuous integration
-
-- Avoid failure in fledge workflow if no changes (#63).
-
-- Fetch tags for fledge workflow to avoid unnecessary NEWS entries (#62).
-
-- Use larger retry count for lock-threads workflow (#61).
-
-- Ignore errors when removing pkg-config on macOS (#60).
-
-- Overwrite from actions-sync (#59).
-
-## Uncategorized
-
-- Merge branch 'main' of github.com:poissonconsulting/term.
-
-- Drop chk_s3_class() from documentation.
-
-- Merge pull request #58 from poissonconsulting/upkeep.
-
-  Upkeep
-
-- Same as previous version.
-
+- Require R (>= 4.0).
+- Fixed `chk_s3_class()` reference in documentation that causing CRAN NOTE.
 
 # term 0.3.5
 
-- Requires R (>= 3.5)
-
+- Require R (>= 3.5).
 - Moved following from soft to warn deprecated
  - `is.term()`
  - `is.incomplete_terms()`
