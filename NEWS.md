@@ -1,57 +1,28 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
-# term 0.3.5.9007
-
-- Merge branch 'main' of github.com:poissonconsulting/term.
-
-
-# term 0.3.5.9006
-
-- Drop chk_s3_class() from documentation.
-
-
-# term 0.3.5.9005
+# term 0.3.5.9900
 
 ## Continuous integration
 
 - Avoid failure in fledge workflow if no changes (#63).
 
-
-# term 0.3.5.9004
-
-## Continuous integration
-
 - Fetch tags for fledge workflow to avoid unnecessary NEWS entries (#62).
-
-
-# term 0.3.5.9003
-
-## Continuous integration
 
 - Use larger retry count for lock-threads workflow (#61).
 
-
-# term 0.3.5.9002
-
-## Continuous integration
-
 - Ignore errors when removing pkg-config on macOS (#60).
-
-
-# term 0.3.5.9001
-
-## Continuous integration
 
 - Overwrite from actions-sync (#59).
 
 ## Uncategorized
 
+- Merge branch 'main' of github.com:poissonconsulting/term.
+
+- Drop chk_s3_class() from documentation.
+
 - Merge pull request #58 from poissonconsulting/upkeep.
 
   Upkeep
-
-
-# term 0.3.5.9000
 
 - Same as previous version.
 
