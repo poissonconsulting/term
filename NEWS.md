@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# term 0.3.5.9006
+
+- Drop chk_s3_class() from documentation.
+
+
 # term 0.3.5.9005
 
 ## Continuous integration
