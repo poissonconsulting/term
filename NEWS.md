@@ -1,16 +1,16 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
-# term 0.3.5.9901
+# term 0.3.6
 
 ## fledge
 
 - CRAN pre-release v0.3.5.9900 (#67).
 
+## Uncategorized
 
-# term 0.3.5.9900
-
-- Require R (>= 4.0).
+- Require R (\>= 4.0).
 - Fixed `chk_s3_class()` reference in documentation that causing CRAN NOTE.
+
 
 # term 0.3.5
 
