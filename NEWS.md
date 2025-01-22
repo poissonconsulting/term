@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# term 0.3.6.9000
+
+## fledge
+
+- CRAN release v0.3.6 (#68).
+
+
 # term 0.3.6
 
 - Require R (\>= 4.0).
