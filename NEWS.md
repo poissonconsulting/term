@@ -1,5 +1,44 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# term 0.3.6.9001
+
+## Chore
+
+- Auto-update from GitHub Actions.
+
+  Run: https://github.com/poissonconsulting/term/actions/runs/17450799800
+
+## Continuous integration
+
+- Use workflows for fledge (#82).
+
+- Sync (#81).
+
+- Use reviewdog for external PRs (#80).
+
+- Cleanup and fix macOS (#79).
+
+- Format with air, check detritus, better handling of `extra-packages` (#78).
+
+- Enhance permissions for workflow (#77).
+
+- Permissions, better tests for missing suggests, lints (#76).
+
+- Only fail covr builds if token is given (#75).
+
+- Always use `_R_CHECK_FORCE_SUGGESTS_=false` (#74).
+
+- Correct installation of xml2 (#73).
+
+- Explain (#72).
+
+- Add xml2 for covr, print testthat results (#71).
+
+- Fix (#70).
+
+- Sync (#69).
+
+
 # term 0.3.6.9000
 
 ## fledge
