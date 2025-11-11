@@ -1,5 +1,54 @@
 # Changelog
 
+## term 0.3.6.9001
+
+### Chore
+
+- Auto-update from GitHub Actions.
+
+  Run:
+  <https://github.com/poissonconsulting/term/actions/runs/17450799800>
+
+### Continuous integration
+
+- Use workflows for fledge
+  ([\#82](https://github.com/poissonconsulting/term/issues/82)).
+
+- Sync ([\#81](https://github.com/poissonconsulting/term/issues/81)).
+
+- Use reviewdog for external PRs
+  ([\#80](https://github.com/poissonconsulting/term/issues/80)).
+
+- Cleanup and fix macOS
+  ([\#79](https://github.com/poissonconsulting/term/issues/79)).
+
+- Format with air, check detritus, better handling of `extra-packages`
+  ([\#78](https://github.com/poissonconsulting/term/issues/78)).
+
+- Enhance permissions for workflow
+  ([\#77](https://github.com/poissonconsulting/term/issues/77)).
+
+- Permissions, better tests for missing suggests, lints
+  ([\#76](https://github.com/poissonconsulting/term/issues/76)).
+
+- Only fail covr builds if token is given
+  ([\#75](https://github.com/poissonconsulting/term/issues/75)).
+
+- Always use `_R_CHECK_FORCE_SUGGESTS_=false`
+  ([\#74](https://github.com/poissonconsulting/term/issues/74)).
+
+- Correct installation of xml2
+  ([\#73](https://github.com/poissonconsulting/term/issues/73)).
+
+- Explain ([\#72](https://github.com/poissonconsulting/term/issues/72)).
+
+- Add xml2 for covr, print testthat results
+  ([\#71](https://github.com/poissonconsulting/term/issues/71)).
+
+- Fix ([\#70](https://github.com/poissonconsulting/term/issues/70)).
+
+- Sync ([\#69](https://github.com/poissonconsulting/term/issues/69)).
+
 ## term 0.3.6.9000
 
 ### fledge

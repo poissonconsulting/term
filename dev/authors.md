@@ -26,13 +26,13 @@ Source:
 [`DESCRIPTION`](https://github.com/poissonconsulting/term/blob/main/DESCRIPTION)
 
 Thorley J, Müller K (2025). *term: Create, Manipulate and Query
-Parameter Terms*. R package version 0.3.6.9000,
+Parameter Terms*. R package version 0.3.6.9001,
 <https://poissonconsulting.github.io/term/>.
 
     @Manual{,
       title = {term: Create, Manipulate and Query Parameter Terms},
       author = {Joe Thorley and Kirill Müller},
       year = {2025},
-      note = {R package version 0.3.6.9000},
+      note = {R package version 0.3.6.9001},
       url = {https://poissonconsulting.github.io/term/},
     }
