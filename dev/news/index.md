@@ -1,5 +1,12 @@
 # Changelog
 
+## term 0.3.6.9002
+
+### Continuous integration
+
+- Fix reviewdog and add commenting workflow
+  ([\#83](https://github.com/poissonconsulting/term/issues/83)).
+
 ## term 0.3.6.9001
 
 ### Chore
