@@ -1,5 +1,12 @@
 # Changelog
 
+## term 0.3.6.9003
+
+### Continuous integration
+
+- Install binaries from r-universe for dev workflow
+  ([\#84](https://github.com/poissonconsulting/term/issues/84)).
+
 ## term 0.3.6.9002
 
 ### Continuous integration
