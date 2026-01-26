@@ -16,8 +16,8 @@
 #' tindex(term("alpha", "alpha[2]", "beta[1,1]", "beta[2 ,1  ]"))
 tindex <- function(x) {
   if (!is_term(x) && !is_term_rcrd(x)) {
-    lifecycle::deprecate_soft(
-      "0.2.1", "term::tindex(x = 'must be a term or term_rcrd object')"
+    lifecycle::deprecate_warn(
+      "0.3.7", "term::tindex(x = 'must be a term or term_rcrd object')"
     )
     x <- as_term(x)
   }

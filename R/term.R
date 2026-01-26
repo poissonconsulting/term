@@ -35,14 +35,14 @@ term <- function(...) {
   args <- list2(...)
   compat_args <- exec(term_compat_args, !!!args)
   if (is.numeric(compat_args$x) && all(compat_args$x != 0)) {
-    lifecycle::deprecate_soft(
-      "0.2.0", "term::term(x =)",
+    lifecycle::deprecate_warn(
+      "0.3.7", "term::term(x =)",
       details = "Use named arguments to pass integer dimensions."
     )
     term <- term_impl(list2(!!compat_args$name := compat_args$x))
   } else if (is.list(compat_args$x)) {
-    lifecycle::deprecate_soft(
-      "0.2.0", "term::term(x =)",
+    lifecycle::deprecate_warn(
+      "0.3.7", "term::term(x =)",
       details = "Use named arguments directly, or splice a list as in `term(!!!x)`."
     )
     term <- term_impl(compat_args$x)
