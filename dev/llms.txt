@@ -302,7 +302,7 @@ Query Object’s Dimensions/Parameters
 - [`npars(`*`<term>`*`)`](https://poissonconsulting.github.io/term/dev/reference/npars.term.md)
   : Number of Parameters
 - [`npdims(`*`<term>`*`)`](https://poissonconsulting.github.io/term/dev/reference/npdims.term.md)
-  **\[defunct\]** : Number of Dimensions of Each Parameter
+  : Number of Dimensions of Each Parameter
 - [`nterms(`*`<default>`*`)`](https://poissonconsulting.github.io/term/dev/reference/nterms.default.md)
   : Number of Terms
 - [`nterms(`*`<term>`*`)`](https://poissonconsulting.github.io/term/dev/reference/nterms.term.md)

@@ -1,12 +1,16 @@
 # Number of Dimensions of Each Parameter
 
-The terms argument is **\[defunct\]**.
+Gets the number of the dimensions of each parameter of an object.
+
+The default methods returns the length of each element of
+[`pdims()`](https://poissonconsulting.github.io/universals/reference/pdims.html)
+as an integer vector.
 
 ## Usage
 
 ``` r
 # S3 method for class 'term'
-npdims(x, terms = FALSE, ...)
+npdims(x, ...)
 ```
 
 ## Arguments
@@ -14,11 +18,6 @@ npdims(x, terms = FALSE, ...)
 - x:
 
   An object.
-
-- terms:
-
-  A flag specifying whether to get the number of dimensions for each
-  term element.
 
 - ...:
 

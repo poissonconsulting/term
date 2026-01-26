@@ -30,7 +30,7 @@ A character vector of the term parameter names.
 
 ## Details
 
-The scalar argument is **\[defunct\]**.
+The scalar argument is **\[deprecated\]**.
 
 ## See also
 
