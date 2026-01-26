@@ -29,7 +29,7 @@ Other contributors:
 - Ayla Pearson ([ORCID](https://orcid.org/0000-0001-7388-1222))
   \[contributor\]
 
-- Evan Amies-Galonski <evan@poissonconsulting.ca>
-  ([ORCID](https://orcid.org/0000-0003-1096-2089)) \[contributor\]
+- Evan Amies-Galonski ([ORCID](https://orcid.org/0000-0003-1096-2089))
+  \[contributor\]
 
 - Poisson Consulting \[copyright holder, funder\]
