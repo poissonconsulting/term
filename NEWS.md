@@ -1,5 +1,15 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# term 0.3.6.9005
+
+- R (\>= 4.1).
+- Removed defunct `terms` argument from `npdims()`.
+- Moved following from soft to warn deprecated.
+  - `as.term()`
+  - `term::pars_terms(scalar =)`
+  - `term::subset(select =)`
+  - `term::term(x =)`
+
 # term 0.3.6.9004
 
 ## Continuous integration
