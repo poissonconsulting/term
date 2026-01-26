@@ -1,5 +1,17 @@
 # Changelog
 
+## term 0.3.6.9004
+
+### Continuous integration
+
+- Fix comment
+  ([\#87](https://github.com/poissonconsulting/term/issues/87)).
+
+- Tweaks ([\#86](https://github.com/poissonconsulting/term/issues/86)).
+
+- Test all R versions on branches that start with cran-
+  ([\#85](https://github.com/poissonconsulting/term/issues/85)).
+
 ## term 0.3.6.9003
 
 ### Continuous integration
