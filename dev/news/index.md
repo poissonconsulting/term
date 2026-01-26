@@ -1,5 +1,16 @@
 # Changelog
 
+## term 0.3.6.9005
+
+- R (\>= 4.1).
+- Removed defunct `terms` argument from
+  [`npdims()`](https://poissonconsulting.github.io/universals/reference/npdims.html).
+- Moved following from soft to warn deprecated.
+  - [`as.term()`](https://poissonconsulting.github.io/term/dev/reference/as_term.md)
+  - `term::pars_terms(scalar =)`
+  - `term::subset(select =)`
+  - `term::term(x =)`
+
 ## term 0.3.6.9004
 
 ### Continuous integration
