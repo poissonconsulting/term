@@ -41,7 +41,7 @@ as_term(x, name = "par", ...)
 
 ## Details
 
-`as.term` has been **\[soft-deprecated\]** for `as_term`.
+`as.term` has been **\[deprecated\]** for `as_term`.
 
 ## Methods (by class)
 

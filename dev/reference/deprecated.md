@@ -42,48 +42,48 @@ tdims(x)
 
 - `is.term()`: Is Term
 
-  **\[soft-deprecated\]**
+  **\[deprecated\]**
 
   Replace by
   [`is_term()`](https://poissonconsulting.github.io/term/dev/reference/is_term.md)
 
 - `is.incomplete_terms()`: Is Incomplete Terms
 
-  **\[soft-deprecated\]**
+  **\[deprecated\]**
 
   Replace by
   [`is_incomplete_terms()`](https://poissonconsulting.github.io/term/dev/reference/is_incomplete_terms.md)
 
 - `is.inconsistent_terms()`: Is Inconsistent Terms
 
-  **\[soft-deprecated\]**
+  **\[deprecated\]**
 
   Replace by
   [`is_inconsistent_terms()`](https://poissonconsulting.github.io/term/dev/reference/is_inconsistent_terms.md)
 
 - `parameters()`: Get Parameters
 
-  **\[soft-deprecated\]**
+  **\[deprecated\]**
 
   Replace by
   [`pars()`](https://poissonconsulting.github.io/universals/reference/pars.html)
 
 - `parameters(x) <- value`: Setting Parameters
 
-  **\[soft-deprecated\]**
+  **\[deprecated\]**
 
   Replace by pars\<-
 
 - `set_parameters()`: Set Parameters
 
-  **\[soft-deprecated\]**
+  **\[deprecated\]**
 
   Replace by
   [`set_pars()`](https://poissonconsulting.github.io/universals/reference/set_pars.html)
 
 - `tdims()`: Term Index
 
-  **\[soft-deprecated\]**
+  **\[deprecated\]**
 
   Replace by
   [`tindex()`](https://poissonconsulting.github.io/term/dev/reference/tindex.md)
