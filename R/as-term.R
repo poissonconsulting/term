@@ -2,7 +2,7 @@
 #'
 #' Coerces an R object to a [term-vector()].
 #'
-#' `as.term` has been `r lifecycle::badge("soft-deprecated")` for `as_term`.
+#' `as.term` has been `r lifecycle::badge("deprecated")` for `as_term`.
 #'
 #' @inheritParams params
 #'
