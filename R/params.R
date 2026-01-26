@@ -23,7 +23,6 @@
 #' @param terms A flag specifying whether to return the parameter name
 #' for each term element.
 #' @param incomparables Ignored.
-#'
 #' @keywords internal
 #' @usage NULL
 # nocov start

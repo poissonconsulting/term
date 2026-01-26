@@ -2,7 +2,7 @@
 #'
 #' Gets the name of each parameter for each term.
 #'
-#' The scalar argument is `r lifecycle::badge("defunct")`.
+#' The scalar argument is `r lifecycle::badge("deprecated")`.
 #'
 #' @inheritParams params
 #' @param x A term vector.

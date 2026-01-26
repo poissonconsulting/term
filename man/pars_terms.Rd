@@ -20,7 +20,7 @@ A character vector of the term parameter names.
 Gets the name of each parameter for each term.
 }
 \details{
-The scalar argument is \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#defunct}{\figure{lifecycle-defunct.svg}{options: alt='[Defunct]'}}}{\strong{[Defunct]}}.
+The scalar argument is \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}.
 }
 \examples{
 term <- term(
