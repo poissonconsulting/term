@@ -2,6 +2,8 @@
 % Please edit documentation in R/params.R
 \name{params}
 \alias{params}
+\alias{arguments}
+\alias{args}
 \title{Parameter Descriptions for term Package}
 \arguments{
 \item{...}{These dots are for future extensions and must be empty.}
