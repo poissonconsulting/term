@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# term 0.3.6.9006
+
+## Chore
+
+- Fix overly zealous check that now fails on R-devel (#91, #92).
+
+
 # term 0.3.6.9005
 
 - R (\>= 4.1).
