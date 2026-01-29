@@ -1,5 +1,0 @@
-# summary.term
-
-    Code
-      # Dummy
-
