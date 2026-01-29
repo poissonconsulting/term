@@ -1,4 +1,4 @@
-term 0.3.6.9900
+term 0.3.7
 
 ## Cran Repository Policy
 
