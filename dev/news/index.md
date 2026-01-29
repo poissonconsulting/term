@@ -1,17 +1,22 @@
 # Changelog
 
-## term 0.3.6.9005
+## term 0.3.6.9900
 
-- R (\>= 4.1).
-- Removed defunct `terms` argument from
-  [`npdims()`](https://poissonconsulting.github.io/universals/reference/npdims.html).
-- Moved following from soft to warn deprecated.
-  - [`as.term()`](https://poissonconsulting.github.io/term/dev/reference/as_term.md)
-  - `term::pars_terms(scalar =)`
-  - `term::subset(select =)`
-  - `term::term(x =)`
+### fledge
 
-## term 0.3.6.9004
+- CRAN release v0.3.6
+  ([\#68](https://github.com/poissonconsulting/term/issues/68)).
+
+### Chore
+
+- Fix overly zealous check that now fails on R-devel
+  ([\#91](https://github.com/poissonconsulting/term/issues/91),
+  [\#92](https://github.com/poissonconsulting/term/issues/92)).
+
+- Auto-update from GitHub Actions.
+
+  Run:
+  <https://github.com/poissonconsulting/term/actions/runs/17450799800>
 
 ### Continuous integration
 
@@ -23,30 +28,11 @@
 - Test all R versions on branches that start with cran-
   ([\#85](https://github.com/poissonconsulting/term/issues/85)).
 
-## term 0.3.6.9003
-
-### Continuous integration
-
 - Install binaries from r-universe for dev workflow
   ([\#84](https://github.com/poissonconsulting/term/issues/84)).
 
-## term 0.3.6.9002
-
-### Continuous integration
-
 - Fix reviewdog and add commenting workflow
   ([\#83](https://github.com/poissonconsulting/term/issues/83)).
-
-## term 0.3.6.9001
-
-### Chore
-
-- Auto-update from GitHub Actions.
-
-  Run:
-  <https://github.com/poissonconsulting/term/actions/runs/17450799800>
-
-### Continuous integration
 
 - Use workflows for fledge
   ([\#82](https://github.com/poissonconsulting/term/issues/82)).
@@ -86,12 +72,16 @@
 
 - Sync ([\#69](https://github.com/poissonconsulting/term/issues/69)).
 
-## term 0.3.6.9000
+### Uncategorized
 
-### fledge
-
-- CRAN release v0.3.6
-  ([\#68](https://github.com/poissonconsulting/term/issues/68)).
+- R (\>= 4.1).
+- Removed defunct `terms` argument from
+  [`npdims()`](https://poissonconsulting.github.io/universals/reference/npdims.html).
+- Moved following from soft to warn deprecated.
+  - [`as.term()`](https://poissonconsulting.github.io/term/dev/reference/as_term.md)
+  - `term::pars_terms(scalar =)`
+  - `term::subset(select =)`
+  - `term::term(x =)`
 
 ## term 0.3.6
 
