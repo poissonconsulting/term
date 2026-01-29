@@ -1,23 +1,18 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
-# term 0.3.6.9006
+# term 0.3.6.9900
+
+## fledge
+
+- CRAN release v0.3.6 (#68).
 
 ## Chore
 
 - Fix overly zealous check that now fails on R-devel (#91, #92).
 
+- Auto-update from GitHub Actions.
 
-# term 0.3.6.9005
-
-- R (\>= 4.1).
-- Removed defunct `terms` argument from `npdims()`.
-- Moved following from soft to warn deprecated.
-  - `as.term()`
-  - `term::pars_terms(scalar =)`
-  - `term::subset(select =)`
-  - `term::term(x =)`
-
-# term 0.3.6.9004
+  Run: https://github.com/poissonconsulting/term/actions/runs/17450799800
 
 ## Continuous integration
 
@@ -27,30 +22,9 @@
 
 - Test all R versions on branches that start with cran- (#85).
 
-
-# term 0.3.6.9003
-
-## Continuous integration
-
 - Install binaries from r-universe for dev workflow (#84).
 
-
-# term 0.3.6.9002
-
-## Continuous integration
-
 - Fix reviewdog and add commenting workflow (#83).
-
-
-# term 0.3.6.9001
-
-## Chore
-
-- Auto-update from GitHub Actions.
-
-  Run: https://github.com/poissonconsulting/term/actions/runs/17450799800
-
-## Continuous integration
 
 - Use workflows for fledge (#82).
 
@@ -80,12 +54,15 @@
 
 - Sync (#69).
 
+## Uncategorized
 
-# term 0.3.6.9000
-
-## fledge
-
-- CRAN release v0.3.6 (#68).
+- R (\>= 4.1).
+- Removed defunct `terms` argument from `npdims()`.
+- Moved following from soft to warn deprecated.
+  - `as.term()`
+  - `term::pars_terms(scalar =)`
+  - `term::subset(select =)`
+  - `term::term(x =)`
 
 
 # term 0.3.6
