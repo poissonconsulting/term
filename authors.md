@@ -23,7 +23,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/poissonconsulting/term/blob/cran-0.3.6.9900/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/poissonconsulting/term/blob/main/DESCRIPTION)
 
 Thorley J, Müller K (2026). *term: Create, Manipulate and Query
 Parameter Terms*. R package version 0.3.7,

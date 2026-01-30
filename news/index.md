@@ -2,6 +2,8 @@
 
 ## term 0.3.7
 
+CRAN release: 2026-01-30
+
 - Fix overly zealous check that now fails on R-devel
   ([\#91](https://github.com/poissonconsulting/term/issues/91),
   [\#92](https://github.com/poissonconsulting/term/issues/92)).
