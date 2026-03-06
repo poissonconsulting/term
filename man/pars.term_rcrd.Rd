@@ -31,7 +31,7 @@ pars(term, scalar = FALSE)
 \seealso{
 \link[universals:pars]{universals::pars}
 
-Other parameters: 
+Other parameters:
 \code{\link{pars.character}()},
 \code{\link{pars.default}()},
 \code{\link{pars.term}()},

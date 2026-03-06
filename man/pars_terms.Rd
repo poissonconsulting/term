@@ -30,7 +30,7 @@ term <- term(
 pars_terms(term)
 }
 \seealso{
-Other parameters: 
+Other parameters:
 \code{\link{pars.character}()},
 \code{\link{pars.default}()},
 \code{\link{pars.term}()},

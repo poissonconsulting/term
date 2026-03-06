@@ -32,7 +32,7 @@ term_rcrd("q[1]", "q[2]", "q[3]")
 \seealso{
 \code{\link[=dims]{dims()}}, \code{\link[=ndims]{ndims()}}, \code{\link[=npdims]{npdims()}} and \code{\link[=pdims]{pdims()}}
 
-Other term: 
+Other term:
 \code{\link{term}()},
 \code{\link{tindex}()}
 }

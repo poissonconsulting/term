@@ -25,7 +25,7 @@ pars(c("a", "b[1]", "a[3]"))
 \seealso{
 \link[universals:pars]{universals::pars}
 
-Other parameters: 
+Other parameters:
 \code{\link{pars.default}()},
 \code{\link{pars.term}()},
 \code{\link{pars.term_rcrd}()},

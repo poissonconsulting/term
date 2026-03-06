@@ -26,7 +26,7 @@ tindex(term("alpha", "alpha[2]", "beta[1,1]", "beta[2 ,1  ]"))
 \seealso{
 \code{\link[=dims]{dims()}}, \code{\link[=ndims]{ndims()}}, \code{\link[=npdims]{npdims()}} and \code{\link[=pdims]{pdims()}}
 
-Other term: 
+Other term:
 \code{\link{term}()},
 \code{\link{term_rcrd}()}
 }

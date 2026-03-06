@@ -25,7 +25,7 @@ pars(matrix(1:4, nrow = 2))
 \seealso{
 \link[universals:pars]{universals::pars}
 
-Other parameters: 
+Other parameters:
 \code{\link{pars.character}()},
 \code{\link{pars.term}()},
 \code{\link{pars.term_rcrd}()},
