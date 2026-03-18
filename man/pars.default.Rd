@@ -26,9 +26,9 @@ pars(matrix(1:4, nrow = 2))
 \link[universals:pars]{universals::pars}
 
 Other parameters:
-\code{\link{pars.character}()},
-\code{\link{pars.term}()},
-\code{\link{pars.term_rcrd}()},
-\code{\link{pars_terms}()}
+\code{\link[=pars.character]{pars.character()}},
+\code{\link[=pars.term]{pars.term()}},
+\code{\link[=pars.term_rcrd]{pars.term_rcrd()}},
+\code{\link[=pars_terms]{pars_terms()}}
 }
 \concept{parameters}

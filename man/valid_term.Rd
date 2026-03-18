@@ -28,6 +28,6 @@ valid_term(new_term(c("a b", "a[1]b", "a[0]", "b[1,]", "c[]", "d[1][2]")))
 \code{\link[=term-vector]{term-vector()}} and \code{\link[=repair_terms]{repair_terms()}}
 
 Other valid:
-\code{\link{vld_term}()}
+\code{\link[=vld_term]{vld_term()}}
 }
 \concept{valid}

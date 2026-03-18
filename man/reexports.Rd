@@ -20,8 +20,8 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
-  \item{universals}{\code{\link[universals]{dims}}, \code{\link[universals]{ndims}}, \code{\link[universals]{npars}}, \code{\link[universals]{npdims}}, \code{\link[universals]{nterms}}, \code{\link[universals]{pars}}, \code{\link[universals]{pdims}}, \code{\link[universals]{set_pars}}}
+  \item{universals}{\code{\link[universals:dims]{dims()}}, \code{\link[universals:ndims]{ndims()}}, \code{\link[universals:npars]{npars()}}, \code{\link[universals:npdims]{npdims()}}, \code{\link[universals:nterms]{nterms()}}, \code{\link[universals:pars]{pars()}}, \code{\link[universals:pdims]{pdims()}}, \code{\link[universals:set_pars]{set_pars()}}}
 
-  \item{vctrs}{\code{\link[vctrs]{vec_cast}}}
+  \item{vctrs}{\code{\link[vctrs:vec_cast]{vec_cast()}}}
 }}
 

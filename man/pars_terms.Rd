@@ -31,9 +31,9 @@ pars_terms(term)
 }
 \seealso{
 Other parameters:
-\code{\link{pars.character}()},
-\code{\link{pars.default}()},
-\code{\link{pars.term}()},
-\code{\link{pars.term_rcrd}()}
+\code{\link[=pars.character]{pars.character()}},
+\code{\link[=pars.default]{pars.default()}},
+\code{\link[=pars.term]{pars.term()}},
+\code{\link[=pars.term_rcrd]{pars.term_rcrd()}}
 }
 \concept{parameters}

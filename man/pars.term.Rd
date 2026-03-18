@@ -35,9 +35,9 @@ pars(term, scalar = FALSE)
 \link[universals:pars]{universals::pars}
 
 Other parameters:
-\code{\link{pars.character}()},
-\code{\link{pars.default}()},
-\code{\link{pars.term_rcrd}()},
-\code{\link{pars_terms}()}
+\code{\link[=pars.character]{pars.character()}},
+\code{\link[=pars.default]{pars.default()}},
+\code{\link[=pars.term_rcrd]{pars.term_rcrd()}},
+\code{\link[=pars_terms]{pars_terms()}}
 }
 \concept{parameters}

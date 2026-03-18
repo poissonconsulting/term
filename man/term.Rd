@@ -45,7 +45,7 @@ term("r  [ 1  ,2  ]")
 \code{\link[=dims]{dims()}}, \code{\link[=ndims]{ndims()}}, \code{\link[=npdims]{npdims()}} and \code{\link[=pdims]{pdims()}}
 
 Other term:
-\code{\link{term_rcrd}()},
-\code{\link{tindex}()}
+\code{\link[=term_rcrd]{term_rcrd()}},
+\code{\link[=tindex]{tindex()}}
 }
 \concept{term}
