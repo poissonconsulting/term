@@ -1,5 +1,14 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# term 0.3.7.9007
+
+## Chore
+
+- Auto-update from GitHub Actions.
+
+  Run: https://github.com/poissonconsulting/term/actions/runs/25267008732
+
+
 # term 0.3.7.9006
 
 ## Chore
