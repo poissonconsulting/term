@@ -23,16 +23,16 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/poissonconsulting/term/blob/cran-0.3.6.9900/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/poissonconsulting/term/blob/main/DESCRIPTION)
 
 Thorley J, Müller K (2026). *term: Create, Manipulate and Query
-Parameter Terms*. R package version 0.3.6.9900,
+Parameter Terms*. R package version 0.3.7.9007,
 <https://poissonconsulting.github.io/term/>.
 
     @Manual{,
       title = {term: Create, Manipulate and Query Parameter Terms},
       author = {Joe Thorley and Kirill Müller},
       year = {2026},
-      note = {R package version 0.3.6.9900},
+      note = {R package version 0.3.7.9007},
       url = {https://poissonconsulting.github.io/term/},
     }

@@ -8,10 +8,6 @@ A missing term element.
 NA_term_
 ```
 
-## Format
-
-An object of class `term` (inherits from `vctrs_vctr`) of length 1.
-
 ## See also
 
 [`term-vector()`](https://poissonconsulting.github.io/term/dev/reference/term.md)

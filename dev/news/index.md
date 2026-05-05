@@ -1,8 +1,75 @@
 # Changelog
 
-## term 0.3.6.9900
+## term 0.3.7.9007
 
-### fledge
+### Chore
+
+- Auto-update from GitHub Actions.
+
+  Run:
+  <https://github.com/poissonconsulting/term/actions/runs/25267008732>
+
+## term 0.3.7.9006
+
+### Chore
+
+- Auto-update from GitHub Actions.
+
+  Run:
+  <https://github.com/poissonconsulting/term/actions/runs/23325550228>
+
+## term 0.3.7.9005
+
+### Chore
+
+- Auto-update from GitHub Actions.
+
+  Run:
+  <https://github.com/poissonconsulting/term/actions/runs/23225145713>
+
+## term 0.3.7.9004
+
+### Chore
+
+- Auto-update from GitHub Actions.
+
+  Run:
+  <https://github.com/poissonconsulting/term/actions/runs/22932661022>
+
+## term 0.3.7.9003
+
+### Chore
+
+- Auto-update from GitHub Actions.
+
+  Run:
+  <https://github.com/poissonconsulting/term/actions/runs/22883214878>
+
+## term 0.3.7.9002
+
+### Chore
+
+- Auto-update from GitHub Actions.
+
+  Run:
+  <https://github.com/poissonconsulting/term/actions/runs/22789272614>
+
+## term 0.3.7.9001
+
+### Chore
+
+- Auto-update from GitHub Actions.
+
+  Run:
+  <https://github.com/poissonconsulting/term/actions/runs/22745237609>
+
+## term 0.3.7.9000
+
+- Switching to development version.
+
+## term 0.3.7
+
+CRAN release: 2026-01-30
 
 - Fix overly zealous check that now fails on R-devel
   ([\#91](https://github.com/poissonconsulting/term/issues/91),

@@ -40,6 +40,7 @@ Other dimensions:
 ## Examples
 
 ``` r
+
 dims(term_rcrd("beta[1,1]"))
 #> [1] 1
 dims(term_rcrd("beta[1,1]", "beta[1,2]"))

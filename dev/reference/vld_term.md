@@ -54,9 +54,6 @@ Missing values are ignored as are duplicates and order.
 Other valid:
 [`valid_term()`](https://poissonconsulting.github.io/term/dev/reference/valid_term.md)
 
-Other valid:
-[`valid_term()`](https://poissonconsulting.github.io/term/dev/reference/valid_term.md)
-
 ## Examples
 
 ``` r

@@ -11,6 +11,7 @@ objects.
 ### Term Vectors
 
 ``` r
+
 library(term)
 
 # term vectors are the labels used to reference values in
@@ -31,6 +32,7 @@ class(term)
 ```
 
 ``` r
+
 # consider a matrix of term values
 set.seed(101)
 estimate <- matrix(rnorm(4), nrow = 2)
@@ -61,6 +63,7 @@ coef
 ### Querying Term Vectors
 
 ``` r
+
 # the term vectors are readily sorted
 coef[rev(order(coef$term)), ]
 #> # A tibble: 4 × 2
@@ -118,6 +121,7 @@ tindex(term)
 ### Validating Term Vectors
 
 ``` r
+
 # term vectors can be tested for whether they have (parseably) valid,
 # (dimensionally) consistent and complete terms.
 
@@ -149,6 +153,7 @@ is_incomplete_terms(term("a", "a[3]", "b[1,1]", "b[2,2]"))
 ### Checking Term Vectors
 
 ``` r
+
 # term vectors can be checked using functions styled on those in the chk package
 x <- term("a[1]", "a[3]")
 vld_term(x, validate = "valid")
@@ -161,6 +166,7 @@ chk_term(x, validate = "complete")
 ### Repairing Term Vectors
 
 ``` r
+
 term <- new_term(c("b[4]", "b   [2]", "b", "b[1", "b[2, 2]", "b", "a [ 1 ] ", NA))
 term
 #> <term[8]>
@@ -217,6 +223,7 @@ To install the release version from
 [CRAN](https://CRAN.R-project.org/package=term).
 
 ``` r
+
 install.packages("term")
 ```
 
@@ -229,12 +236,14 @@ To install the development version from
 [r-universe](https://poissonconsulting.r-universe.dev/term).
 
 ``` r
+
 install.packages("term", repos = c("https://poissonconsulting.r-universe.dev", "https://cloud.r-project.org"))
 ```
 
 or from [GitHub](https://github.com/poissonconsulting/term)
 
 ``` r
+
 # install.packages("remotes")
 remotes::install_github("poissonconsulting/term")
 ```

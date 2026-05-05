@@ -8,11 +8,6 @@ A missing term element of `term_rcrd` type.
 NA_term_rcrd_
 ```
 
-## Format
-
-An object of class `term_rcrd` (inherits from `vctrs_rcrd`,
-`vctrs_vctr`) of length 1.
-
 ## See also
 
 [`term-vector()`](https://poissonconsulting.github.io/term/dev/reference/term.md)
