@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# term 0.3.7.9010
+
+## Continuous integration
+
+- Only run fledge on pushes to main.
+
+
 # term 0.3.7.9009
 
 ## Continuous integration
