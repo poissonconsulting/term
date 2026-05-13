@@ -1,5 +1,31 @@
 # Changelog
 
+## term 0.3.7.9010
+
+### Continuous integration
+
+- Only run fledge on pushes to main.
+
+## term 0.3.7.9009
+
+### Continuous integration
+
+- Tweak fledge workflow and ccache action.
+
+## term 0.3.7.9008
+
+### Continuous integration
+
+- Cosmetics.
+
+- Bump action versions.
+
+- Install clang-format-21.
+
+- Align fledge workflow.
+
+- Harmonize.
+
 ## term 0.3.7.9007
 
 ### Chore
