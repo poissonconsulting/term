@@ -16,3 +16,4 @@
 ^\.gitignore$
 ^revdep$
 ^CRAN-SUBMISSION$
+^\.ccache$
