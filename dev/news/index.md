@@ -1,5 +1,11 @@
 # Changelog
 
+## term 0.3.7.9012
+
+### Continuous integration
+
+- Tweaks ([\#86](https://github.com/poissonconsulting/term/issues/86)).
+
 ## term 0.3.7.9011
 
 ### Chore
