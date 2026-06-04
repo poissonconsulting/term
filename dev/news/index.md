@@ -1,5 +1,13 @@
 # Changelog
 
+## term 0.3.7.9013
+
+### Continuous integration
+
+- Update ccache-action reference.
+
+- Bump action version.
+
 ## term 0.3.7.9012
 
 ### Continuous integration
