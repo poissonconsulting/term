@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# term 0.3.7.9014
+
+- Merge pull request #96 from poissonconsulting/codeowners-joethorley.
+
+  Add CODEOWNERS assigning @joethorley
+
+
 # term 0.3.7.9013
 
 ## Continuous integration
