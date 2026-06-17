@@ -1,5 +1,13 @@
 # Changelog
 
+## term 0.3.7.9014
+
+- Merge pull request
+  [\#96](https://github.com/poissonconsulting/term/issues/96) from
+  poissonconsulting/codeowners-joethorley.
+
+  Add CODEOWNERS assigning [@joethorley](https://github.com/joethorley)
+
 ## term 0.3.7.9013
 
 ### Continuous integration
