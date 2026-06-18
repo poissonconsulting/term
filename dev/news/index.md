@@ -1,5 +1,10 @@
 # Changelog
 
+## term 0.3.7.9015
+
+- Add fledge-bump workflow
+- Add fledge-tag-on-merge workflow
+
 ## term 0.3.7.9014
 
 - Merge pull request
