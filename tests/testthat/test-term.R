@@ -15,8 +15,16 @@ test_that("term", {
   expect_identical(
     term(par = 10L),
     new_term(c(
-      "par[1]", "par[2]", "par[3]", "par[4]", "par[5]",
-      "par[6]", "par[7]", "par[8]", "par[9]", "par[10]"
+      "par[1]",
+      "par[2]",
+      "par[3]",
+      "par[4]",
+      "par[5]",
+      "par[6]",
+      "par[7]",
+      "par[8]",
+      "par[9]",
+      "par[10]"
     ))
   )
   expect_identical(term(par = c(1L, 1L)), new_term("par[1,1]"))
@@ -28,8 +36,14 @@ test_that("term", {
   expect_identical(
     term(par2 = c(2L, 2L, 2L)),
     new_term(c(
-      "par2[1,1,1]", "par2[2,1,1]", "par2[1,2,1]", "par2[2,2,1]",
-      "par2[1,1,2]", "par2[2,1,2]", "par2[1,2,2]", "par2[2,2,2]"
+      "par2[1,1,1]",
+      "par2[2,1,1]",
+      "par2[1,2,1]",
+      "par2[2,2,1]",
+      "par2[1,1,2]",
+      "par2[2,1,2]",
+      "par2[1,2,2]",
+      "par2[2,2,2]"
     ))
   )
 
@@ -48,7 +62,10 @@ test_that("term.list", {
   expect_identical(term(x = 1), new_term("x"))
   expect_identical(term(y = 3), new_term(c("y[1]", "y[2]", "y[3]")))
   expect_identical(term(y = 1, x = 1), new_term(c("y", "x")))
-  expect_identical(term(!!!list(y = 1, x = 2)), new_term(c("y", "x[1]", "x[2]")))
+  expect_identical(
+    term(!!!list(y = 1, x = 2)),
+    new_term(c("y", "x[1]", "x[2]"))
+  )
   expect_identical(
     term(!!!list(y = c(2L, 2L), x = 2)),
     new_term(c("y[1,1]", "y[2,1]", "y[1,2]", "y[2,2]", "x[1]", "x[2]"))

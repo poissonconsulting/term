@@ -18,7 +18,12 @@ set_pars.term <- function(x, value, ...) {
   chk_unused(...)
 
   if (!identical(npars(x), length(value))) {
-    abort_chk("`value` must be length ", npars(x), ", not %n.", n = length(value))
+    abort_chk(
+      "`value` must be length ",
+      npars(x),
+      ", not %n.",
+      n = length(value)
+    )
   }
 
   if (!length(x)) {

@@ -2,11 +2,11 @@
 
 # term vectors can be readily created from a numeric object
 library(term)
-as_term(matrix(c(1,5,6,10), nrow = 2))
+as_term(matrix(c(1, 5, 6, 10), nrow = 2))
 
 # or from multiple numeric objects
 library(nlist)
-nlist <- nlist(x = c(3,6,9), zz = matrix(c(1, 5, 6, 11), nrow = 2))
+nlist <- nlist(x = c(3, 6, 9), zz = matrix(c(1, 5, 6, 11), nrow = 2))
 nlist
 as_term(nlist)
 
@@ -23,7 +23,7 @@ as_nlist(mcmc)
 
 # its important to note that elements can be missing, duplicated, inconsistent
 
-mcmc <- mcmc[,-c(2,7),drop = FALSE]
+mcmc <- mcmc[, -c(2, 7), drop = FALSE]
 
 mcmc
 
@@ -35,5 +35,3 @@ as_nlist(mcmc)
 #
 # the question is whether its worth defining each element in a term vector as a composite of scalars of other class (possibly vctr_vctrs) one class is the parameter
 # name and the other is the index which must be a 1 or more positive integers?
-
-

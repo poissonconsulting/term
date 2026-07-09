@@ -30,8 +30,18 @@ test_that("as_term.matrix", {
   expect_identical(
     as_term(matrix(1:12, c(3, 4)), "t"),
     new_term(c(
-      "t[1,1]", "t[2,1]", "t[3,1]", "t[1,2]", "t[2,2]",
-      "t[3,2]", "t[1,3]", "t[2,3]", "t[3,3]", "t[1,4]", "t[2,4]", "t[3,4]"
+      "t[1,1]",
+      "t[2,1]",
+      "t[3,1]",
+      "t[1,2]",
+      "t[2,2]",
+      "t[3,2]",
+      "t[1,3]",
+      "t[2,3]",
+      "t[3,3]",
+      "t[1,4]",
+      "t[2,4]",
+      "t[3,4]"
     ))
   )
 })
@@ -44,16 +54,38 @@ test_that("as_term.array", {
   expect_identical(
     as_term(array(1:12, c(2, 3, 2)), "t"),
     new_term(c(
-      "t[1,1,1]", "t[2,1,1]", "t[1,2,1]", "t[2,2,1]", "t[1,3,1]",
-      "t[2,3,1]", "t[1,1,2]", "t[2,1,2]", "t[1,2,2]", "t[2,2,2]", "t[1,3,2]",
+      "t[1,1,1]",
+      "t[2,1,1]",
+      "t[1,2,1]",
+      "t[2,2,1]",
+      "t[1,3,1]",
+      "t[2,3,1]",
+      "t[1,1,2]",
+      "t[2,1,2]",
+      "t[1,2,2]",
+      "t[2,2,2]",
+      "t[1,3,2]",
       "t[2,3,2]"
     ))
   )
 })
 
 test_that("as_term.character", {
-  expect_error(as_term("a", "b"), "^`repair` must be a flag [(]TRUE or FALSE[)][.]$", class = "chk_error")
-  x <- c("parm3[10]", "parm3[2]", "parm[2,2]", "parm[1,1]", "parm[2,1]", "parm[1,2]", "parm[10]", "parm3")
+  expect_error(
+    as_term("a", "b"),
+    "^`repair` must be a flag [(]TRUE or FALSE[)][.]$",
+    class = "chk_error"
+  )
+  x <- c(
+    "parm3[10]",
+    "parm3[2]",
+    "parm[2,2]",
+    "parm[1,1]",
+    "parm[2,1]",
+    "parm[1,2]",
+    "parm[10]",
+    "parm3"
+  )
 
   expect_identical(as_term("1"), new_term("1"))
   expect_identical(as_term("1", repair = TRUE), new_term(NA_character_))
@@ -78,18 +110,31 @@ test_that("as_term.character", {
   expect_identical(
     tindex(x2),
     list(
-      `parm3[10]` = 10L, `parm3[2]` = 2L,
-      `parm[2,2]` = c(2L, 2L), `parm[1,1]` = c(1L, 1L),
-      `parm[2,1]` = 2:1, `parm[1,2]` = 1:2,
-      `parm[10]` = 10L, `parm3` = 1L
+      `parm3[10]` = 10L,
+      `parm3[2]` = 2L,
+      `parm[2,2]` = c(2L, 2L),
+      `parm[1,1]` = c(1L, 1L),
+      `parm[2,1]` = 2:1,
+      `parm[1,2]` = 1:2,
+      `parm[10]` = 10L,
+      `parm3` = 1L
     )
   )
   expect_identical(x2 > x2, rep(FALSE, length(x2)))
 
-  expect_identical(sort(x2), new_term(c(
-    "parm[10]", "parm[1,1]", "parm[2,1]", "parm[1,2]",
-    "parm[2,2]", "parm3", "parm3[2]", "parm3[10]"
-  )))
+  expect_identical(
+    sort(x2),
+    new_term(c(
+      "parm[10]",
+      "parm[1,1]",
+      "parm[2,1]",
+      "parm[1,2]",
+      "parm[2,2]",
+      "parm3",
+      "parm3[2]",
+      "parm3[10]"
+    ))
+  )
 
   expect_identical(as_term(x2), x2)
 })

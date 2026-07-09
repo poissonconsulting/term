@@ -19,7 +19,10 @@ test_that("term_rcrd.list", {
   expect_identical(term_rcrd(x = 1), as_term_rcrd("x"))
   expect_identical(term_rcrd(y = 3), as_term_rcrd(c("y[1]", "y[2]", "y[3]")))
   expect_identical(term_rcrd(y = 1, x = 1), as_term_rcrd(c("y", "x")))
-  expect_identical(term_rcrd(!!!list(y = 1, x = 2)), as_term_rcrd(c("y", "x[1]", "x[2]")))
+  expect_identical(
+    term_rcrd(!!!list(y = 1, x = 2)),
+    as_term_rcrd(c("y", "x[1]", "x[2]"))
+  )
   expect_identical(
     term_rcrd(!!!list(y = c(2L, 2L), x = 2)),
     as_term_rcrd(c("y[1,1]", "y[2,1]", "y[1,2]", "y[2,2]", "x[1]", "x[2]"))

@@ -22,7 +22,8 @@ subset.term <- function(x, pars = NULL, select = NULL, ...) {
 
   if (!missing(select)) {
     deprecate_warn(
-      "0.3.7", "term::subset(select =)",
+      "0.3.7",
+      "term::subset(select =)",
       "term::subset(pars =)"
     )
   }
@@ -31,7 +32,8 @@ subset.term <- function(x, pars = NULL, select = NULL, ...) {
     chk_subset(select, pars(x))
     if (!is.null(pars)) {
       deprecate_stop(
-        "0.1.1", "term::subset(select =)",
+        "0.1.1",
+        "term::subset(select =)",
         "term::subset(pars =)"
       )
     }

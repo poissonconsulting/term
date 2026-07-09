@@ -3,5 +3,9 @@
 as.data.frame.term_rcrd <- function(x, ..., stringsAsFactors = FALSE) {
   chk_flag(stringsAsFactors)
   # FIXME: Need stringsAsFactors? Use vctrs::new_data_frame()?
-  data.frame(par = field(x, "par"), dim = I(field(x, "dim")), stringsAsFactors = stringsAsFactors)
+  data.frame(
+    par = field(x, "par"),
+    dim = I(field(x, "dim")),
+    stringsAsFactors = stringsAsFactors
+  )
 }

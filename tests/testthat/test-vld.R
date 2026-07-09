@@ -4,17 +4,32 @@ test_that("vld_term term", {
   expect_true(vld_term(new_term(character(0))))
   expect_true(vld_term(new_term(NA_character_)))
 
-  lifecycle::expect_deprecated(vld_term(new_term(c("x[2]", "x[1")), validate = "class"))
+  lifecycle::expect_deprecated(vld_term(
+    new_term(c("x[2]", "x[1")),
+    validate = "class"
+  ))
   expect_false(vld_term(new_term(c("x[2]", "x[1")), validate = "valid"))
   expect_true(vld_term(new_term(c("x[2]", "x[1]")), validate = "valid"))
   expect_true(vld_term(new_term(c("x[2]", "x[1,1]")), validate = "valid"))
   expect_false(vld_term(new_term(c("x[2]", "x[1,1]")), validate = "consistent"))
-  expect_true(vld_term(new_term(c("x[2,2]", "x[1,1]")), validate = "consistent"))
+  expect_true(vld_term(
+    new_term(c("x[2,2]", "x[1,1]")),
+    validate = "consistent"
+  ))
   expect_false(vld_term(new_term(c("x[2,2]", "x[1,1]")), validate = "complete"))
   expect_true(vld_term(new_term(c("x[2,1]", "x[1,1]")), validate = "complete"))
-  expect_true(vld_term(new_term(c("x[2,1]", "x[1,1]", "x[1,1]")), validate = "complete"))
-  expect_true(vld_term(new_term(c("x[2,1]", "x[1,1]", "x[1,1]", "x[2,1]")), validate = "complete"))
-  expect_true(vld_term(new_term(c("x[2,1]", "x[1,1]", "x[1,1]", "x[2,1]", NA)), validate = "complete"))
+  expect_true(vld_term(
+    new_term(c("x[2,1]", "x[1,1]", "x[1,1]")),
+    validate = "complete"
+  ))
+  expect_true(vld_term(
+    new_term(c("x[2,1]", "x[1,1]", "x[1,1]", "x[2,1]")),
+    validate = "complete"
+  ))
+  expect_true(vld_term(
+    new_term(c("x[2,1]", "x[1,1]", "x[1,1]", "x[2,1]", NA)),
+    validate = "complete"
+  ))
   rlang::local_options(lifecycle_verbosity = "quiet")
   expect_true(vld_term(new_term(c("x[2]", "x[1")), validate = "class"))
 })
@@ -27,11 +42,32 @@ test_that("vld_term term_rcrd", {
 
   expect_true(vld_term_rcrd(term_rcrd(c("x[2]", "x[1]")), validate = "valid"))
   expect_true(vld_term_rcrd(term_rcrd(c("x[2]", "x[1,1]")), validate = "valid"))
-  expect_false(vld_term_rcrd(term_rcrd(c("x[2]", "x[1,1]")), validate = "consistent"))
-  expect_true(vld_term_rcrd(term_rcrd(c("x[2,2]", "x[1,1]")), validate = "consistent"))
-  expect_false(vld_term_rcrd(term_rcrd(c("x[2,2]", "x[1,1]")), validate = "complete"))
-  expect_true(vld_term_rcrd(term_rcrd(c("x[2,1]", "x[1,1]")), validate = "complete"))
-  expect_true(vld_term_rcrd(term_rcrd(c("x[2,1]", "x[1,1]", "x[1,1]")), validate = "complete"))
-  expect_true(vld_term_rcrd(term_rcrd(c("x[2,1]", "x[1,1]", "x[1,1]", "x[2,1]")), validate = "complete"))
-  expect_true(vld_term_rcrd(term_rcrd(c("x[2,1]", "x[1,1]", "x[1,1]", "x[2,1]", NA)), validate = "complete"))
+  expect_false(vld_term_rcrd(
+    term_rcrd(c("x[2]", "x[1,1]")),
+    validate = "consistent"
+  ))
+  expect_true(vld_term_rcrd(
+    term_rcrd(c("x[2,2]", "x[1,1]")),
+    validate = "consistent"
+  ))
+  expect_false(vld_term_rcrd(
+    term_rcrd(c("x[2,2]", "x[1,1]")),
+    validate = "complete"
+  ))
+  expect_true(vld_term_rcrd(
+    term_rcrd(c("x[2,1]", "x[1,1]")),
+    validate = "complete"
+  ))
+  expect_true(vld_term_rcrd(
+    term_rcrd(c("x[2,1]", "x[1,1]", "x[1,1]")),
+    validate = "complete"
+  ))
+  expect_true(vld_term_rcrd(
+    term_rcrd(c("x[2,1]", "x[1,1]", "x[1,1]", "x[2,1]")),
+    validate = "complete"
+  ))
+  expect_true(vld_term_rcrd(
+    term_rcrd(c("x[2,1]", "x[1,1]", "x[1,1]", "x[2,1]", NA)),
+    validate = "complete"
+  ))
 })

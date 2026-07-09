@@ -1,8 +1,13 @@
 test_that("pdims", {
   expect_identical(
     pdims(new_term(c(
-      "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
-      "beta[1,2]", "beta[2,2]", "sigma"
+      "alpha[1]",
+      "alpha[2]",
+      "beta[1,1]",
+      "beta[2,1]",
+      "beta[1,2]",
+      "beta[2,2]",
+      "sigma"
     ))),
     list(alpha = 2L, beta = c(2L, 2L), sigma = 1L)
   )
@@ -35,9 +40,14 @@ test_that("pdims", {
 })
 
 test_that("pdims missing value", {
-  expect_error(pdims(NA_term_), "^`x` must not have any missing values[.]$", class = "chk_error")
+  expect_error(
+    pdims(NA_term_),
+    "^`x` must not have any missing values[.]$",
+    class = "chk_error"
+  )
 
-  expect_error(pdims(new_term(c("alpha[3]", "beta[2,1]", NA))),
+  expect_error(
+    pdims(new_term(c("alpha[3]", "beta[2,1]", NA))),
     "^`x` must not have any missing values[.]$",
     class = "chk_error"
   )
@@ -54,8 +64,13 @@ test_that("pdims inconsistent", {
 test_that("pdims.term_rcrd", {
   expect_identical(
     pdims(term_rcrd(c(
-      "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
-      "beta[1,2]", "beta[2,2]", "sigma"
+      "alpha[1]",
+      "alpha[2]",
+      "beta[1,1]",
+      "beta[2,1]",
+      "beta[1,2]",
+      "beta[2,2]",
+      "sigma"
     ))),
     list(alpha = 2L, beta = c(2L, 2L), sigma = 1L)
   )
