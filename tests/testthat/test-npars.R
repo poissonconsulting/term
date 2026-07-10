@@ -1,8 +1,13 @@
 test_that("npars.term", {
   expect_identical(
     npars(new_term(c(
-      "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
-      "beta[1,2]", "beta[2,2]", "sigma"
+      "alpha[1]",
+      "alpha[2]",
+      "beta[1,1]",
+      "beta[2,1]",
+      "beta[1,2]",
+      "beta[2,2]",
+      "sigma"
     ))),
     3L
   )
@@ -42,7 +47,10 @@ test_that("npars.term scalar", {
 })
 
 test_that("npars.term scalar invalid elements", {
-  expect_warning(expect_identical(npars(new_term(c("a[2]", "b c")), scalar = TRUE), 1L))
+  expect_warning(expect_identical(
+    npars(new_term(c("a[2]", "b c")), scalar = TRUE),
+    1L
+  ))
 })
 
 test_that("npars scalar missing values", {

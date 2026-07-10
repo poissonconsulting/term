@@ -21,9 +21,18 @@ test_that("set_pars", {
     class = "chk_error"
   )
 
-  expect_identical(set_pars(new_term(c("a", "b")), c("b", "a")), new_term(c("b", "a")))
-  expect_identical(set_pars(new_term(c("a", "b")), c("b", "d")), new_term(c("b", "d")))
-  expect_identical(set_pars(new_term(c("a [ 1]", "b")), c("b", "d")), new_term(c("b [ 1]", "d")))
+  expect_identical(
+    set_pars(new_term(c("a", "b")), c("b", "a")),
+    new_term(c("b", "a"))
+  )
+  expect_identical(
+    set_pars(new_term(c("a", "b")), c("b", "d")),
+    new_term(c("b", "d"))
+  )
+  expect_identical(
+    set_pars(new_term(c("a [ 1]", "b")), c("b", "d")),
+    new_term(c("b [ 1]", "d"))
+  )
   expect_error(
     set_pars(new_term(rep("a", 7)), value = c("gamma", "theta", "rho")),
     "^`value` must be length 1, not 3[.]$",
@@ -32,11 +41,14 @@ test_that("set_pars", {
 })
 
 test_that("set_pars missing values", {
-  expect_error(set_pars(new_term(c("a [ 1]", "b")), c("b", NA)),
+  expect_error(
+    set_pars(new_term(c("a [ 1]", "b")), c("b", NA)),
     "^`value` must not have any missing values[.]$",
     class = "chk_error"
   )
-  expect_error(set_pars(NA_term_, "a"), "^`x` must not have any missing values[.]$",
+  expect_error(
+    set_pars(NA_term_, "a"),
+    "^`x` must not have any missing values[.]$",
     class = "chk_error"
   )
   expect_error(
@@ -49,7 +61,8 @@ test_that("set_pars missing values", {
 test_that("set_pars no values", {
   term <- new_term(character(0))
   expect_identical(set_pars(term, character(0)), term)
-  expect_error(set_pars(term, "c"),
+  expect_error(
+    set_pars(term, "c"),
     "^`value` must be length 0, not 1[.]$",
     class = "chk_error"
   )

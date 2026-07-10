@@ -13,8 +13,16 @@ test_that("term", {
   expect_identical(
     term(10L, "par"),
     new_term(c(
-      "par[1]", "par[2]", "par[3]", "par[4]", "par[5]",
-      "par[6]", "par[7]", "par[8]", "par[9]", "par[10]"
+      "par[1]",
+      "par[2]",
+      "par[3]",
+      "par[4]",
+      "par[5]",
+      "par[6]",
+      "par[7]",
+      "par[8]",
+      "par[9]",
+      "par[10]"
     ))
   )
   expect_identical(term(c(1L, 1L), "par"), new_term("par[1,1]"))
@@ -26,8 +34,14 @@ test_that("term", {
   expect_identical(
     term(c(2L, 2L, 2L), "par2"),
     new_term(c(
-      "par2[1,1,1]", "par2[2,1,1]", "par2[1,2,1]", "par2[2,2,1]",
-      "par2[1,1,2]", "par2[2,1,2]", "par2[1,2,2]", "par2[2,2,2]"
+      "par2[1,1,1]",
+      "par2[2,1,1]",
+      "par2[1,2,1]",
+      "par2[2,2,1]",
+      "par2[1,1,2]",
+      "par2[2,1,2]",
+      "par2[1,2,2]",
+      "par2[2,2,2]"
     ))
   )
 })

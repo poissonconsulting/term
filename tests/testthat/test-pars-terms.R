@@ -1,7 +1,12 @@
 test_that("pars_term term", {
   terms <- new_term(c(
-    "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
-    "beta[1,2]", "beta[2,2]", "sigma"
+    "alpha[1]",
+    "alpha[2]",
+    "beta[1,1]",
+    "beta[2,1]",
+    "beta[1,2]",
+    "beta[2,2]",
+    "sigma"
   ))
   lifecycle::expect_deprecated(pars_terms(terms, scalar = TRUE))
   lifecycle::expect_deprecated(pars_terms(terms, scalar = FALSE))
@@ -13,8 +18,13 @@ test_that("pars_term term", {
 
 test_that("pars_term term_rcrd", {
   terms <- as_term_rcrd(new_term(c(
-    "alpha[1]", "alpha[2]", "beta[1,1]", "beta[2,1]",
-    "beta[1,2]", "beta[2,2]", "sigma"
+    "alpha[1]",
+    "alpha[2]",
+    "beta[1,1]",
+    "beta[2,1]",
+    "beta[1,2]",
+    "beta[2,2]",
+    "sigma"
   )))
   lifecycle::expect_deprecated(pars_terms(terms, scalar = TRUE))
   lifecycle::expect_deprecated(pars_terms(terms, scalar = FALSE))

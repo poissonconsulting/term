@@ -74,8 +74,12 @@ pars.term <- function(x, scalar = NULL, terms = FALSE, ...) {
 #' pars(term, scalar = FALSE)
 pars.term_rcrd <- function(x, scalar = NULL, ...) {
   # FIXME hack for nlist v0.1.0 and v0.1.1
-  if (identical(scalar, NA)) scalar <- NULL
-  if (!is.null(scalar)) chk_flag(scalar)
+  if (identical(scalar, NA)) {
+    scalar <- NULL
+  }
+  if (!is.null(scalar)) {
+    chk_flag(scalar)
+  }
   chk_unused(...)
 
   if (!is.null(scalar)) {

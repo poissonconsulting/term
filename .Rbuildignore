@@ -17,3 +17,5 @@
 ^revdep$
 ^CRAN-SUBMISSION$
 ^\.ccache$
+^[.]?air[.]toml$
+^\.vscode$

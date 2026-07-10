@@ -30,7 +30,10 @@ x <- new_list_of(list(1:3, 2:1), integer(), class = "term_dim")
 inherits(x, "list")
 vec_is(x)
 
-xx <- new_rcrd(fields = list(name = letters[1:2], dim = x), class = "term_rcrd2")
+xx <- new_rcrd(
+  fields = list(name = letters[1:2], dim = x),
+  class = "term_rcrd2"
+)
 vec_is(xx)
 term::term(!!!set_names(field(xx, "dim"), field(xx, "name")))
 xx
@@ -48,4 +51,3 @@ vec_cast(xx, new_term())
 x <- structure(list(1:3, 2:1), class = c("term_rcrd", "list"))
 inherits(x, "list")
 vec_is(x)
-
