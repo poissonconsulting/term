@@ -17,14 +17,13 @@ test_that("npdims.term", {
     c(alpha = 1L, beta = 2L, sigma = 1L)
   )
 
-  testthat::expect_error(npdims(
-    new_term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")),
-    terms = TRUE
-  ))
-
-  expect_error(
-    npdims(NA_term_),
-    "^`x` must not have any missing values[.]$",
-    class = "chk_error"
+  expect_snapshot(
+    error = TRUE,
+    npdims(
+      new_term(c("alpha[1]", "alpha[3]", "beta[1,1]", "beta[2,1]")),
+      terms = TRUE
+    )
   )
+
+  expect_snapshot(error = TRUE, npdims(NA_term_))
 })

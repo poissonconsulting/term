@@ -1,5 +1,5 @@
-test_that("print", {
-  verify_output("out/print-term.txt", {
+test_that("print term", {
+  expect_snapshot({
     term()
 
     term(alpha = 2, beta = c(2, 2), "sigma")
@@ -16,12 +16,14 @@ test_that("print", {
 
     new_term(c("with space", ""))
 
-    term("r[")
-
     term("r  [ 1  ,2  ]")
   })
 
-  verify_output("out/print-term-rcrd.txt", {
+  expect_snapshot(error = TRUE, term("r["))
+})
+
+test_that("print term_rcrd", {
+  expect_snapshot({
     new_term_rcrd()
 
     as_term_rcrd(term(alpha = 2, beta = c(2, 2), "sigma"))

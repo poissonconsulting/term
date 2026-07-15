@@ -1,4 +1,5 @@
 test_that("valid_term character", {
+  # not a snapshot as message detail varies with chk version
   expect_error(
     valid_term(NA_character_),
     "`x` must inherit from S3 class 'term'",
