@@ -1,5 +1,10 @@
 test_that("repair_terms", {
-  expect_snapshot(error = TRUE, repair_terms(NA_character_))
+  # not a snapshot as message detail varies with chk version
+  expect_error(
+    repair_terms(NA_character_),
+    "`x` must inherit from S3 class 'term'",
+    class = "chk_error"
+  )
   expect_identical(repair_terms(new_term()), new_term())
   expect_identical(repair_terms(NA_term_), NA_term_)
   expect_identical(repair_terms(new_term("")), NA_term_)

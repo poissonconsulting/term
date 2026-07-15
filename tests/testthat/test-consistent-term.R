@@ -1,5 +1,10 @@
 test_that("consistent_term", {
-  expect_snapshot(error = TRUE, consistent_term(1))
+  # not a snapshot as message detail varies with chk version
+  expect_error(
+    consistent_term(1),
+    "`x` must inherit from S3 class 'term'",
+    class = "chk_error"
+  )
   expect_identical(consistent_term(new_term()), logical(0))
   expect_identical(consistent_term(NA_term_), NA)
   expect_identical(consistent_term(new_term("a")), TRUE)
@@ -27,7 +32,12 @@ test_that("consistent_term", {
 })
 
 test_that("consistent_term term_rcrd", {
-  expect_snapshot(error = TRUE, consistent_term(1))
+  # not a snapshot as message detail varies with chk version
+  expect_error(
+    consistent_term(1),
+    "`x` must inherit from S3 class 'term_rcrd'",
+    class = "chk_error"
+  )
   expect_identical(consistent_term(term_rcrd()), logical(0))
   expect_identical(consistent_term(NA_term_), NA)
   expect_identical(consistent_term(term_rcrd("a")), TRUE)
