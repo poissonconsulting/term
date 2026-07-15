@@ -103,20 +103,26 @@ import(chk)
 import(lifecycle)
 import(universals)
 import(vctrs)
-importFrom(extras,chk_pars)
-importFrom(extras,fill_na)
+importFrom(extras,
+  chk_pars,
+  fill_na
+)
 importFrom(lifecycle,deprecated)
-importFrom(rlang,":=")
-importFrom(rlang,exec)
-importFrom(rlang,is_empty)
-importFrom(rlang,list2)
-importFrom(rlang,names2)
-importFrom(universals,dims)
-importFrom(universals,ndims)
-importFrom(universals,npars)
-importFrom(universals,npdims)
-importFrom(universals,nterms)
-importFrom(universals,pars)
-importFrom(universals,pdims)
-importFrom(universals,set_pars)
+importFrom(rlang,
+  ":=",
+  exec,
+  is_empty,
+  list2,
+  names2
+)
+importFrom(universals,
+  dims,
+  ndims,
+  npars,
+  npdims,
+  nterms,
+  pars,
+  pdims,
+  set_pars
+)
 importFrom(vctrs,vec_cast)
