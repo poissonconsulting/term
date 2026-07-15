@@ -33,10 +33,8 @@ It must not have any invalid or missing (NA) values.
 \examples{
 complete_terms(term("b[3]", "b[1]", "b[2]"))
 complete_terms(term("z[2,2]", "z[1,1]"))
-\dontrun{
 complete_terms(term_rcrd("b[3]", "b[1]", "b[2]"))
 complete_terms(term_rcrd("z[2,2]", "z[1,1]"))
-}
 }
 \seealso{
 \code{\link[=term-vector]{term-vector()}}, \code{\link[=repair_terms]{repair_terms()}} and \code{\link[=is_incomplete_terms]{is_incomplete_terms()}}.
