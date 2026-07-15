@@ -1,11 +1,7 @@
 test_that("subset.term", {
   term <- new_term(c("alpha[1]", "alpha[2]", "sigma"))
   expect_identical(subset(term, character(0)), new_term())
-  expect_error(
-    subset(term, "beta"),
-    "^`pars` must match 'alpha' or 'sigma', not 'beta'[.]$",
-    class = "chk_error"
-  )
+  expect_snapshot(error = TRUE, subset(term, "beta"))
   term <- new_term(c(
     "alpha[1]",
     "alpha[2]",
@@ -37,21 +33,13 @@ test_that("subset.term", {
       "sigma"
     ))
   )
-  expect_error(
-    subset(term, "tt"),
-    "^`pars` must match 'alpha', 'beta' or 'sigma', not 'tt'[.]$",
-    class = "chk_error"
-  )
+  expect_snapshot(error = TRUE, subset(term, "tt"))
 })
 
 test_that("subset.term_rcrd", {
   term_rcrd <- as_term_rcrd(new_term(c("alpha[1]", "alpha[2]", "sigma")))
   expect_identical(subset(term_rcrd, character(0)), new_term_rcrd())
-  expect_error(
-    subset(term_rcrd, "beta"),
-    "^`pars` must match 'alpha' or 'sigma', not 'beta'[.]$",
-    class = "chk_error"
-  )
+  expect_snapshot(error = TRUE, subset(term_rcrd, "beta"))
   term_rcrd <- as_term_rcrd(new_term(c(
     "alpha[1]",
     "alpha[2]",
@@ -83,11 +71,7 @@ test_that("subset.term_rcrd", {
       "sigma"
     )))
   )
-  expect_error(
-    subset(term_rcrd, "tt"),
-    "^`pars` must match 'alpha', 'beta' or 'sigma', not 'tt'[.]$",
-    class = "chk_error"
-  )
+  expect_snapshot(error = TRUE, subset(term_rcrd, "tt"))
 })
 
 test_that("subset.term deprecated", {
@@ -102,14 +86,6 @@ test_that("subset.term deprecated", {
 
 
 test_that("subset.term missing values", {
-  expect_error(
-    subset(NA_term_),
-    "^`x` must not have any missing values[.]$",
-    class = "chk_error"
-  )
-  expect_error(
-    subset(c(NA_term_, new_term("a"))),
-    "^`x` must not have any missing values[.]$",
-    class = "chk_error"
-  )
+  expect_snapshot(error = TRUE, subset(NA_term_))
+  expect_snapshot(error = TRUE, subset(c(NA_term_, new_term("a"))))
 })

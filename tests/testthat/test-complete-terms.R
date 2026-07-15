@@ -1,15 +1,7 @@
 test_that("complete_terms term", {
-  expect_error(
-    complete_terms(NA_term_),
-    "^`x` must not have any missing values[.]$",
-    class = "chk_error"
-  )
+  expect_snapshot(error = TRUE, complete_terms(NA_term_))
   expect_identical(complete_terms(new_term()), new_term())
-  expect_error(
-    complete_terms(new_term(c(NA_term_, "b[2]"))),
-    "^`x` must not have any missing values[.]$",
-    class = "chk_error"
-  )
+  expect_snapshot(error = TRUE, complete_terms(new_term(c(NA_term_, "b[2]"))))
   expect_identical(complete_terms(new_term("b")), new_term("b"))
   expect_identical(complete_terms(new_term(c("b", "b"))), new_term(c("b", "b")))
   expect_identical(complete_terms(new_term("b")), new_term("b"))
@@ -26,20 +18,12 @@ test_that("complete_terms term", {
     complete_terms(new_term(c("z[2,2]", "z[2,1]"))),
     new_term(c("z[2,2]", "z[2,1]", "z[1,1]", "z[1,2]"))
   )
-  expect_error(
-    complete_terms(new_term(c("b", "b[2,2]"))),
-    "`x` must have terms with consistent parameter dimensions.",
-    class = "chk_error"
-  )
+  expect_snapshot(error = TRUE, complete_terms(new_term(c("b", "b[2,2]"))))
 })
 
 test_that("complete_terms term_rcrd", {
   expect_identical(complete_terms(new_term_rcrd()), new_term_rcrd())
-  expect_error(
-    complete_terms(term_rcrd(c(NA_term_, "b[2]"))),
-    "^`x` must not have any missing values[.]$",
-    class = "chk_error"
-  )
+  expect_snapshot(error = TRUE, complete_terms(term_rcrd(c(NA_term_, "b[2]"))))
   expect_identical(complete_terms(term_rcrd("b")), term_rcrd("b"))
   expect_identical(
     complete_terms(term_rcrd(c("b", "b"))),
@@ -59,9 +43,5 @@ test_that("complete_terms term_rcrd", {
     complete_terms(term_rcrd(c("z[2,2]", "z[2,1]"))),
     term_rcrd(c("z[2,2]", "z[2,1]", "z[1,1]", "z[1,2]"))
   )
-  expect_error(
-    complete_terms(term_rcrd(c("b", "b[2,2]"))),
-    "`x` must have terms with consistent parameter dimensions.",
-    class = "chk_error"
-  )
+  expect_snapshot(error = TRUE, complete_terms(term_rcrd(c("b", "b[2,2]"))))
 })

@@ -71,11 +71,7 @@ test_that("as_term.array", {
 })
 
 test_that("as_term.character", {
-  expect_error(
-    as_term("a", "b"),
-    "^`repair` must be a flag [(]TRUE or FALSE[)][.]$",
-    class = "chk_error"
-  )
+  expect_snapshot(error = TRUE, as_term("a", "b"))
   x <- c(
     "parm3[10]",
     "parm3[2]",
@@ -146,7 +142,7 @@ test_that("as_term others", {
 test_that("as_term others", {
   rlang::local_options(lifecycle_verbosity = "quiet")
 
-  expect_error(as_term(factor(1)), class = "vctrs_error")
-  expect_error(as_term(data.frame(x = 1)), class = "vctrs_error")
-  expect_error(as_term(TRUE), class = "vctrs_error")
+  expect_snapshot(error = TRUE, as_term(factor(1)))
+  expect_snapshot(error = TRUE, as_term(data.frame(x = 1)))
+  expect_snapshot(error = TRUE, as_term(TRUE))
 })

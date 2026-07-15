@@ -85,11 +85,7 @@ test_that("as_term_rcrd.array", {
 })
 
 test_that("as_term_rcrd.character", {
-  expect_error(
-    as_term_rcrd("a", "b"),
-    "^`repair` must be a flag [(]TRUE or FALSE[)][.]$",
-    class = "chk_error"
-  )
+  expect_snapshot(error = TRUE, as_term_rcrd("a", "b"))
   x <- c(
     "parm3[10]",
     "parm3[2]",
@@ -141,9 +137,9 @@ test_that("as_term_rcrd.character", {
 })
 
 test_that("as_term_rcrd others", {
-  expect_error(as_term_rcrd(factor(1)), class = "vctrs_error")
-  expect_error(as_term_rcrd(data.frame(x = 1)), class = "vctrs_error")
-  expect_error(as_term_rcrd(TRUE), class = "vctrs_error")
+  expect_snapshot(error = TRUE, as_term_rcrd(factor(1)))
+  expect_snapshot(error = TRUE, as_term_rcrd(data.frame(x = 1)))
+  expect_snapshot(error = TRUE, as_term_rcrd(TRUE))
 })
 
 test_that("as_term_rcrd missing values", {

@@ -1,9 +1,5 @@
 test_that("unique incomparables", {
-  expect_error(
-    unique(NA_term_, incomparables = TRUE),
-    "^`incomparables` must be FALSE[.]$",
-    class = "chk_error"
-  )
+  expect_snapshot(error = TRUE, unique(NA_term_, incomparables = TRUE))
 })
 
 test_that("unique term", {
