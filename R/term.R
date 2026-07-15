@@ -62,8 +62,8 @@ term_compat_args <- function(`_x` = x, name = "par", ..., x = NULL) {
 }
 
 term_from_pdims <- function(x, name) {
+  # zero-length dims yield no terms, consistent with any zero dimension
   if (is_empty(x)) {
-    # FIXME: Return new_term(name) instead?
     return(new_term())
   }
   if (any(x == 0)) {

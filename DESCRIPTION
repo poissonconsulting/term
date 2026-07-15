@@ -29,7 +29,7 @@ Imports:
     lifecycle,
     rlang,
     universals,
-    vctrs
+    vctrs (>= 0.4.0)
 Suggests:
     covr,
     testthat (>= 3.0.0)

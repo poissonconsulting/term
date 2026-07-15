@@ -57,6 +57,7 @@ reference:
   - '`repair_terms`'
   - '`set_pars`'
   - '`set_pars.term`'
+  - '`set_pars.term_rcrd`'
   - '`subset.term`'
   - '`subset.term_rcrd`'
   - '`term`'

@@ -36,14 +36,11 @@ complete_terms.term <- function(x, ...) {
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' complete_terms(term_rcrd("b[3]", "b[1]", "b[2]"))
 #' complete_terms(term_rcrd("z[2,2]", "z[1,1]"))
-#' }
 complete_terms.term_rcrd <- function(x, ...) {
   if (!dims(x)) {
     return(x)
   }
-  # FIXME: Can this be implemented easier operating directly on a term_rcrd?
   as_term_rcrd(complete_terms(as_term(x), ...))
 }

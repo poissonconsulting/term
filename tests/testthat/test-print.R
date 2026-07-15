@@ -29,3 +29,9 @@ test_that("print term_rcrd", {
     as_term_rcrd(term(alpha = 2, beta = c(2, 2), "sigma"))
   })
 })
+
+test_that("format ticks empty, spaced and backticked terms", {
+  expect_identical(format(new_term("with space")), "`with space`")
+  expect_identical(format(new_term("")), "``")
+  expect_identical(format(new_term("a`b")), "`a\\`b`")
+})

@@ -71,3 +71,8 @@ test_that("term.list", {
     new_term(c("y[1,1]", "y[2,1]", "y[1,2]", "y[2,2]", "x[1]", "x[2]"))
   )
 })
+
+test_that("term with empty dims drops parameter", {
+  expect_identical(term(x = integer(0)), new_term())
+  expect_identical(term(x = 0), new_term())
+})

@@ -1,3 +1,7 @@
+par_pattern <- function() {
+  "[[:alpha:]][[:alnum:]._]*"
+}
+
 max_index <- function(x) {
   x <- tindex(x)
   x <- matrix(unlist(x), ncol = length(x[[1]]), byrow = TRUE)
