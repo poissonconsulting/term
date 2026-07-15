@@ -49,3 +49,23 @@ test_that("set_pars missing values", {
     new_term(c("c [1]", "c[3,2]", "d", "cd"))
   )
 })
+
+test_that("set_pars.term_rcrd", {
+  expect_identical(
+    set_pars(term_rcrd("a"), "b"),
+    term_rcrd("b")
+  )
+  expect_identical(
+    set_pars(term_rcrd("b[2]", "a[1]", "b[3,3]"), c("x", "y")),
+    term_rcrd("x[2]", "y[1]", "x[3,3]")
+  )
+  expect_identical(
+    set_pars(term_rcrd("a[1]", "b[1]"), c("b", "a")),
+    term_rcrd("b[1]", "a[1]")
+  )
+  expect_identical(set_pars(new_term_rcrd(), character(0)), new_term_rcrd())
+  expect_snapshot(error = TRUE, set_pars(term_rcrd("a"), c("b", "a")))
+  expect_error(set_pars(term_rcrd("a"), "1"), class = "chk_error")
+  expect_error(set_pars(NA_term_rcrd_, "a"), class = "chk_error")
+  expect_error(set_pars(term_rcrd("a"), NA_character_), class = "chk_error")
+})

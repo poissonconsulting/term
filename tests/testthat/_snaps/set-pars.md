@@ -70,3 +70,11 @@
       Error:
       ! `value` must be length 0, not 1.
 
+# set_pars.term_rcrd
+
+    Code
+      set_pars(term_rcrd("a"), c("b", "a"))
+    Condition
+      Error:
+      ! `value` must be length 1, not 2.
+

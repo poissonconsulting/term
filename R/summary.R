@@ -3,4 +3,7 @@ summary.term <- function(object, ...) {
   summary(as.character(object), ...)
 }
 
-# FIXME: summary.term_rcrd()?
+#' @export
+summary.term_rcrd <- function(object, ...) {
+  summary(as.character(object), ...)
+}
