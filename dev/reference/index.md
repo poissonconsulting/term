@@ -102,6 +102,8 @@ Manipulate Objects
   : Objects exported from other packages
 - [`set_pars(`*`<term>`*`)`](https://poissonconsulting.github.io/term/dev/reference/set_pars.term.md)
   : Set Parameter Names
+- [`set_pars(`*`<term_rcrd>`*`)`](https://poissonconsulting.github.io/term/dev/reference/set_pars.term_rcrd.md)
+  : Set Parameter Names
 - [`subset(`*`<term>`*`)`](https://poissonconsulting.github.io/term/dev/reference/subset.term.md)
   : Subset Term Vector
 - [`subset(`*`<term_rcrd>`*`)`](https://poissonconsulting.github.io/term/dev/reference/subset.term_rcrd.md)
