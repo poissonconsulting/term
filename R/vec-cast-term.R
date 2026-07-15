@@ -20,7 +20,7 @@ vec_cast.term.term_rcrd <- function(x, to, ...) {
   chr <- paste0(
     field(x, "par"),
     "[",
-    purrr::map_chr(field(x, "dim"), paste, collapse = ","),
+    vapply(field(x, "dim"), paste, character(1), collapse = ","),
     "]"
   )
   chr[is.na(field(x, "par"))] <- NA_character_

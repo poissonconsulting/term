@@ -27,7 +27,6 @@ Imports:
     chk,
     extras,
     lifecycle,
-    purrr,
     rlang,
     universals,
     vctrs
@@ -37,8 +36,8 @@ Suggests:
 RdMacros: 
     lifecycle
 Config/Needs/website: poissonconsulting/poissontemplate
+Config/roxygen2/version: 8.0.0.9000
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
 Roxygen: list(markdown = TRUE)
-Config/roxygen2/version: 8.0.0.9000
