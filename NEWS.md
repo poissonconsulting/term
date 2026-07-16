@@ -1,5 +1,17 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# term 0.3.7.9019
+
+* feat: add `set_pars.term_rcrd()` and `summary.term_rcrd()` methods
+* fix: escape embedded backticks when formatting terms
+* chore: resolve remaining FIXMEs (#90)
+- Remove `levels.term()` and `levels.term_rcrd()` workarounds now that
+- Remove the `pars(scalar = NA)` compatibility hack for nlist 0.1.0/0.1.1.
+- Import `as_list()` from extras instead of a local copy; move
+- Run `complete_terms()` term_rcrd examples (no longer \dontrun).
+- Lock in that zero-length dims yield no terms in `term()`.
+
+
 # term 0.3.7.9018
 
 - Same as previous version.
