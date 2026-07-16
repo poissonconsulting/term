@@ -1,5 +1,23 @@
 # Changelog
 
+## term 0.3.7.9019
+
+- feat: add
+  [`set_pars.term_rcrd()`](https://poissonconsulting.github.io/term/dev/reference/set_pars.term_rcrd.md)
+  and `summary.term_rcrd()` methods
+- fix: escape embedded backticks when formatting terms
+- chore: resolve remaining FIXMEs
+  ([\#90](https://github.com/poissonconsulting/term/issues/90))
+- Remove `levels.term()` and `levels.term_rcrd()` workarounds now that
+- Remove the `pars(scalar = NA)` compatibility hack for nlist
+  0.1.0/0.1.1.
+- Import `as_list()` from extras instead of a local copy; move
+- Run
+  [`complete_terms()`](https://poissonconsulting.github.io/term/dev/reference/complete_terms.md)
+  term_rcrd examples (no longer ).
+- Lock in that zero-length dims yield no terms in
+  [`term()`](https://poissonconsulting.github.io/term/dev/reference/term.md).
+
 ## term 0.3.7.9018
 
 - Same as previous version.
