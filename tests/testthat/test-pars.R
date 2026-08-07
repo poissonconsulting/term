@@ -24,20 +24,8 @@ test_that("pars.term", {
 })
 
 test_that("pars.term deprecated terms", {
-  rlang::local_options(lifecycle_verbosity = "quiet")
-
-  terms <- new_term(c(
-    "alpha[1]",
-    "alpha[2]",
-    "beta[1,1]",
-    "beta[2,1]",
-    "beta[1,2]",
-    "beta[2,2]",
-    "sigma"
-  ))
-
-  lifecycle::expect_deprecated(pars(terms, terms = TRUE))
-  lifecycle::expect_deprecated(pars(terms, terms = FALSE))
+  expect_snapshot(error = TRUE, pars(term("a[1]"), terms = TRUE))
+  expect_snapshot(error = TRUE, pars(term("a[1]"), terms = FALSE))
 })
 
 test_that("pars.term", {
