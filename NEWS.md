@@ -1,173 +1,47 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
-# term 0.3.7.9019
+# term 0.4.0
 
-* feat: add `set_pars.term_rcrd()` and `summary.term_rcrd()` methods
-* fix: escape embedded backticks when formatting terms
-* chore: resolve remaining FIXMEs (#90)
-- Remove `levels.term()` and `levels.term_rcrd()` workarounds now that
-- Remove the `pars(scalar = NA)` compatibility hack for nlist 0.1.0/0.1.1.
-- Import `as_list()` from extras instead of a local copy; move
-- Run `complete_terms()` term_rcrd examples (no longer \dontrun).
-- Lock in that zero-length dims yield no terms in `term()`.
+## Breaking changes
 
+* The following functions, deprecated since 0.1.0, are now defunct and error
+  when called (#103).
 
-# term 0.3.7.9018
+  * `is.term()`, replaced by `is_term()`.
+  * `is.incomplete_terms()`, replaced by `is_incomplete_terms()`.
+  * `is.inconsistent_terms()`, replaced by `is_inconsistent_terms()`.
+  * `parameters()` and `` `parameters<-`() ``, replaced by `pars()` and
+    `` `pars<-`() ``.
+  * `set_parameters()`, replaced by `set_pars()`.
+  * `tdims()`, replaced by `tindex()`.
 
-- Same as previous version.
+* The `terms` argument of `pars()`, deprecated since 0.2.1, is now defunct
+  (#106). Use `pars_terms(as_term(x))` in place of `pars(x, terms = TRUE)` and
+  `pars(x)` in place of `pars(x, terms = FALSE)`.
 
+## New features
 
-# term 0.3.7.9017
+* `set_pars()` and `summary()` gain `term_rcrd` methods (#90).
 
-- Same as previous version.
+## Bug fixes
 
+* `format()` now escapes backticks embedded in term names so that printed terms
+  are unambiguous (#90).
 
-# term 0.3.7.9016
+## Minor improvements
 
-- Same as previous version.
+* vctrs (>= 0.4.0) is now the declared minimum, as `levels()` is implemented for
+  vctrs vectors and the `levels.term()` and `levels.term_rcrd()` workarounds are
+  no longer required (#90).
 
+* The purrr dependency is dropped (#103).
 
-# term 0.3.7.9015
+* The `pars(scalar = NA)` compatibility hack for nlist 0.1.0 and 0.1.1 is
+  removed (#90).
 
-* Add fledge-bump workflow
-* Add fledge-tag-on-merge workflow
+* `as_list()` is imported from extras instead of being copied locally (#90).
 
-
-<!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
-
-# term 0.3.7.9014
-
-- Merge pull request #96 from poissonconsulting/codeowners-joethorley.
-
-  Add CODEOWNERS assigning @joethorley
-
-
-# term 0.3.7.9013
-
-## Continuous integration
-
-- Update ccache-action reference.
-
-- Bump action version.
-
-
-# term 0.3.7.9012
-
-## Continuous integration
-
-- Tweaks (#86).
-
-
-# term 0.3.7.9011
-
-## Chore
-
-- Add ccache to `.gitignore` and `.Rbuildignore`.
-
-## Continuous integration
-
-- Create snapshot update PR against correct branch.
-
-- Add reference to `/apply-patch` workflow in commit message.
-
-- Clarify rationale for not deploying on schedule.
-
-
-# term 0.3.7.9010
-
-## Continuous integration
-
-- Only run fledge on pushes to main.
-
-
-# term 0.3.7.9009
-
-## Continuous integration
-
-- Tweak fledge workflow and ccache action.
-
-
-# term 0.3.7.9008
-
-## Continuous integration
-
-- Cosmetics.
-
-- Bump action versions.
-
-- Install clang-format-21.
-
-- Align fledge workflow.
-
-- Harmonize.
-
-
-# term 0.3.7.9007
-
-## Chore
-
-- Auto-update from GitHub Actions.
-
-  Run: https://github.com/poissonconsulting/term/actions/runs/25267008732
-
-
-# term 0.3.7.9006
-
-## Chore
-
-- Auto-update from GitHub Actions.
-
-  Run: https://github.com/poissonconsulting/term/actions/runs/23325550228
-
-
-# term 0.3.7.9005
-
-## Chore
-
-- Auto-update from GitHub Actions.
-
-  Run: https://github.com/poissonconsulting/term/actions/runs/23225145713
-
-
-# term 0.3.7.9004
-
-## Chore
-
-- Auto-update from GitHub Actions.
-
-  Run: https://github.com/poissonconsulting/term/actions/runs/22932661022
-
-
-# term 0.3.7.9003
-
-## Chore
-
-- Auto-update from GitHub Actions.
-
-  Run: https://github.com/poissonconsulting/term/actions/runs/22883214878
-
-
-# term 0.3.7.9002
-
-## Chore
-
-- Auto-update from GitHub Actions.
-
-  Run: https://github.com/poissonconsulting/term/actions/runs/22789272614
-
-
-# term 0.3.7.9001
-
-## Chore
-
-- Auto-update from GitHub Actions.
-
-  Run: https://github.com/poissonconsulting/term/actions/runs/22745237609
-
-
-# term 0.3.7.9000
-
-- Switching to development version.
+* The `complete_terms()` examples for `term_rcrd` objects now run (#90).
 
 
 # term 0.3.7
