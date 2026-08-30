@@ -50,8 +50,10 @@ complete_terms(term("b[3]", "b[1]", "b[2]"))
 complete_terms(term("z[2,2]", "z[1,1]"))
 #> <term[4]>
 #> [1] z[2,2] z[1,1] z[2,1] z[1,2]
-if (FALSE) { # \dontrun{
 complete_terms(term_rcrd("b[3]", "b[1]", "b[2]"))
+#> <term_rcrd[3]>
+#> [1] b[3] b[1] b[2]
 complete_terms(term_rcrd("z[2,2]", "z[1,1]"))
-} # }
+#> <term_rcrd[4]>
+#> [1] z[2,2] z[1,1] z[2,1] z[1,2]
 ```

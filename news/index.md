@@ -1,5 +1,78 @@
 # Changelog
 
+## term 0.4.0
+
+### Breaking changes
+
+- The following functions, deprecated since 0.1.0, are now defunct and
+  error when called
+  ([\#103](https://github.com/poissonconsulting/term/issues/103)).
+
+  - [`is.term()`](https://poissonconsulting.github.io/term/reference/deprecated.md),
+    replaced by
+    [`is_term()`](https://poissonconsulting.github.io/term/reference/is_term.md).
+  - [`is.incomplete_terms()`](https://poissonconsulting.github.io/term/reference/deprecated.md),
+    replaced by
+    [`is_incomplete_terms()`](https://poissonconsulting.github.io/term/reference/is_incomplete_terms.md).
+  - [`is.inconsistent_terms()`](https://poissonconsulting.github.io/term/reference/deprecated.md),
+    replaced by
+    [`is_inconsistent_terms()`](https://poissonconsulting.github.io/term/reference/is_inconsistent_terms.md).
+  - [`parameters()`](https://poissonconsulting.github.io/term/reference/deprecated.md)
+    and
+    [`` `parameters<-`() ``](https://poissonconsulting.github.io/term/reference/deprecated.md),
+    replaced by
+    [`pars()`](https://poissonconsulting.github.io/universals/reference/pars.html)
+    and `` `pars<-`() ``.
+  - [`set_parameters()`](https://poissonconsulting.github.io/term/reference/deprecated.md),
+    replaced by
+    [`set_pars()`](https://poissonconsulting.github.io/universals/reference/set_pars.html).
+  - [`tdims()`](https://poissonconsulting.github.io/term/reference/deprecated.md),
+    replaced by
+    [`tindex()`](https://poissonconsulting.github.io/term/reference/tindex.md).
+
+- The `terms` argument of
+  [`pars()`](https://poissonconsulting.github.io/universals/reference/pars.html),
+  deprecated since 0.2.0, is now defunct
+  ([\#106](https://github.com/poissonconsulting/term/issues/106)). Use
+  `pars_terms(as_term(x))` in place of `pars(x, terms = TRUE)` and
+  `pars(x)` in place of `pars(x, terms = FALSE)`.
+
+### New features
+
+- [`set_pars()`](https://poissonconsulting.github.io/universals/reference/set_pars.html)
+  and [`summary()`](https://rdrr.io/r/base/summary.html) gain
+  `term_rcrd` methods
+  ([\#90](https://github.com/poissonconsulting/term/issues/90)).
+
+### Bug fixes
+
+- [`format()`](https://rdrr.io/r/base/format.html) now escapes backticks
+  embedded in term names so that printed terms are unambiguous
+  ([\#90](https://github.com/poissonconsulting/term/issues/90)).
+
+### Minor improvements
+
+- vctrs (\>= 0.4.0) is now the declared minimum, as
+  [`levels()`](https://rdrr.io/r/base/levels.html) is implemented for
+  vctrs vectors and the `levels.term()` and `levels.term_rcrd()`
+  workarounds are no longer required
+  ([\#90](https://github.com/poissonconsulting/term/issues/90)).
+
+- The purrr dependency is dropped
+  ([\#103](https://github.com/poissonconsulting/term/issues/103)).
+
+- The `pars(scalar = NA)` compatibility hack for nlist 0.1.0 and 0.1.1
+  is removed
+  ([\#90](https://github.com/poissonconsulting/term/issues/90)).
+
+- `as_list()` is imported from extras instead of being copied locally
+  ([\#90](https://github.com/poissonconsulting/term/issues/90)).
+
+- The
+  [`complete_terms()`](https://poissonconsulting.github.io/term/reference/complete_terms.md)
+  examples for `term_rcrd` objects now run
+  ([\#90](https://github.com/poissonconsulting/term/issues/90)).
+
 ## term 0.3.7
 
 CRAN release: 2026-01-30

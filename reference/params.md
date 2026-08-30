@@ -52,8 +52,10 @@ functions.
 
 - terms:
 
-  A flag specifying whether to return the parameter name for each term
-  element.
+  **\[defunct\]** A flag specifying whether to return the parameter name
+  for each term element. Use
+  [`pars_terms()`](https://poissonconsulting.github.io/term/reference/pars_terms.md)
+  instead.
 
 - incomparables:
 

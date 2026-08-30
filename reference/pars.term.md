@@ -23,8 +23,10 @@ pars(x, scalar = NULL, terms = FALSE, ...)
 
 - terms:
 
-  A flag specifying whether to return the parameter name for each term
-  element.
+  **\[defunct\]** A flag specifying whether to return the parameter name
+  for each term element. Use
+  [`pars_terms()`](https://poissonconsulting.github.io/term/reference/pars_terms.md)
+  instead.
 
 - ...:
 
@@ -33,6 +35,12 @@ pars(x, scalar = NULL, terms = FALSE, ...)
 ## Value
 
 A character vector of the names of the parameters.
+
+## Details
+
+The `terms` argument is **\[defunct\]**. Use
+[`pars_terms()`](https://poissonconsulting.github.io/term/reference/pars_terms.md)
+to get the parameter name for each term element.
 
 ## See also
 
