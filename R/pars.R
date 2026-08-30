@@ -31,6 +31,10 @@ pars.character <- function(x, scalar = NULL, ...) {
 #'
 #' @inherit universals::pars
 #'
+#' @details
+#' The `terms` argument is `r lifecycle::badge("defunct")`.
+#' Use [pars_terms()] to get the parameter name for each term element.
+#'
 #' @inheritParams params
 #' @family parameters
 #' @seealso [universals::pars]
@@ -46,7 +50,7 @@ pars.character <- function(x, scalar = NULL, ...) {
 #' pars(term, scalar = FALSE)
 pars.term <- function(x, scalar = NULL, terms = FALSE, ...) {
   if (!missing(terms)) {
-    deprecate_stop("0.2.1", "term::pars(terms =)")
+    deprecate_stop("0.2.0", "term::pars(terms =)")
   }
   pars(as_term_rcrd(x), scalar = scalar, ...)
 }

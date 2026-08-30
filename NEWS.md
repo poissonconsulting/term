@@ -15,7 +15,7 @@
   * `set_parameters()`, replaced by `set_pars()`.
   * `tdims()`, replaced by `tindex()`.
 
-* The `terms` argument of `pars()`, deprecated since 0.2.1, is now defunct
+* The `terms` argument of `pars()`, deprecated since 0.2.0, is now defunct
   (#106). Use `pars_terms(as_term(x))` in place of `pars(x, terms = TRUE)` and
   `pars(x)` in place of `pars(x, terms = FALSE)`.
 

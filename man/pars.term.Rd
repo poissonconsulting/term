@@ -11,8 +11,8 @@
 
 \item{scalar}{A flag specifying whether to by default return all parameters (NULL), or only scalar parameters (TRUE) or only non-scalar parameters (FALSE).}
 
-\item{terms}{A flag specifying whether to return the parameter name
-for each term element.}
+\item{terms}{\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#defunct}{\figure{lifecycle-defunct.svg}{options: alt='[Defunct]'}}}{\strong{[Defunct]}} A flag specifying whether to
+return the parameter name for each term element. Use \code{\link[=pars_terms]{pars_terms()}} instead.}
 
 \item{...}{Other arguments passed to methods.}
 }
@@ -21,6 +21,10 @@ A character vector of the names of the parameters.
 }
 \description{
 Gets the parameter names.
+}
+\details{
+The \code{terms} argument is \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#defunct}{\figure{lifecycle-defunct.svg}{options: alt='[Defunct]'}}}{\strong{[Defunct]}}.
+Use \code{\link[=pars_terms]{pars_terms()}} to get the parameter name for each term element.
 }
 \examples{
 term <- term(

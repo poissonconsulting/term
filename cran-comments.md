@@ -31,4 +31,4 @@ This is a minor release that makes previously deprecated functions and
 arguments defunct.  `parameters()`, `parameters<-()`, `set_parameters()`,
 `is.term()`, `is.incomplete_terms()`, `is.inconsistent_terms()` and `tdims()`
 have warned since 0.1.0 (2020-01-15) and the `terms` argument of `pars()` has
-warned since 0.2.1.  They now error via `lifecycle::deprecate_stop()`.
+warned since 0.2.0.  They now error via `lifecycle::deprecate_stop()`.
