@@ -4,7 +4,7 @@
       pars(term("a[1]"), terms = TRUE)
     Condition
       Error:
-      ! The `terms` argument of `pars()` was deprecated in term 0.2.1 and is now defunct.
+      ! The `terms` argument of `pars()` was deprecated in term 0.2.0 and is now defunct.
 
 ---
 
@@ -12,5 +12,5 @@
       pars(term("a[1]"), terms = FALSE)
     Condition
       Error:
-      ! The `terms` argument of `pars()` was deprecated in term 0.2.1 and is now defunct.
+      ! The `terms` argument of `pars()` was deprecated in term 0.2.0 and is now defunct.
 

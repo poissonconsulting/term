@@ -11,6 +11,9 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+# keep error messages free of source references, which depend on how the
+# package was loaded and change whenever line numbers move
+options(rlang_call_format_srcrefs = FALSE)
 ```
 # term <img src="man/figures/logo.png" align="right" />
 

@@ -1,12 +1,33 @@
-term 0.3.7
+term 0.4.0
 
 ## Cran Repository Policy
 
-- [x] Reviewed CRP last edited 2024-08-27.
+- [x] Reviewed CRP last edited 2026-07-27.
 
-Fixed failed test on R devel v 4.6
+## Test environments
 
-     Expected `summary(term("a[1]"))` to be identical to `summary("a[1]")`.
-     Differences:
-     `actual`:   "1" "1" "0" "1" "1"
-     `expected`: "1" "1" "0" "4" "4"
+- local macOS 26.5.1, R 4.6.1
+- GitHub Actions: macOS (release), Windows (release), Ubuntu (devel, release, oldrel-1)
+- win-builder (devel)
+
+## R CMD check results
+
+0 errors | 0 warnings | 0 notes
+
+## Reverse dependencies
+
+`revdepcheck::revdep_check()` was run against both reverse dependencies as
+published on CRAN, nlist 0.5.0 and mcmcr 0.7.0: 0 new problems, 0 packages
+failed to check.
+
+The previous CRAN version, mcmcr 0.6.2, tested `term::parameters()`, which
+this release makes defunct.  Those tests were removed in mcmcr 0.7.0, which
+is now on CRAN, so no reverse dependency is broken by this release.
+
+## Notes
+
+This is a minor release that makes previously deprecated functions and
+arguments defunct.  `parameters()`, `parameters<-()`, `set_parameters()`,
+`is.term()`, `is.incomplete_terms()`, `is.inconsistent_terms()` and `tdims()`
+have warned since 0.1.0 (2020-01-15) and the `terms` argument of `pars()` has
+warned since 0.2.0.  They now error via `lifecycle::deprecate_stop()`.

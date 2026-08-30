@@ -9,7 +9,7 @@ deprecated <- function(...) NULL
 
 #' @describeIn deprecated Is Term
 #'
-#' `r lifecycle::badge("deprecated")`
+#' `r lifecycle::badge("defunct")`
 #'
 #' Replace by [is_term()]
 #' @export
@@ -19,7 +19,7 @@ is.term <- function(x) {
 
 #' @describeIn deprecated Is Incomplete Terms
 #'
-#' `r lifecycle::badge("deprecated")`
+#' `r lifecycle::badge("defunct")`
 #'
 #' Replace by [is_incomplete_terms()]
 #' @export
@@ -33,7 +33,7 @@ is.incomplete_terms <- function(x) {
 
 #' @describeIn deprecated Is Inconsistent Terms
 #'
-#' `r lifecycle::badge("deprecated")`
+#' `r lifecycle::badge("defunct")`
 #'
 #' Replace by [is_inconsistent_terms()]
 #' @export
@@ -47,7 +47,7 @@ is.inconsistent_terms <- function(x) {
 
 #' @describeIn deprecated Get Parameters
 #'
-#' `r lifecycle::badge("deprecated")`
+#' `r lifecycle::badge("defunct")`
 #'
 #' Replace by [pars()]
 #' @export
@@ -58,7 +58,7 @@ parameters <- function(x, ...) {
 
 #' @describeIn deprecated Setting Parameters
 #'
-#' `r lifecycle::badge("deprecated")`
+#' `r lifecycle::badge("defunct")`
 #'
 #' Replace by pars<-
 #' @export
@@ -68,7 +68,7 @@ parameters <- function(x, ...) {
 
 #' @describeIn deprecated Set Parameters
 #'
-#' `r lifecycle::badge("deprecated")`
+#' `r lifecycle::badge("defunct")`
 #'
 #' Replace by [set_pars()]
 #' @export
@@ -82,7 +82,7 @@ set_parameters <- function(x, pars) {
 
 #' @describeIn deprecated Term Index
 #'
-#' `r lifecycle::badge("deprecated")`
+#' `r lifecycle::badge("defunct")`
 #'
 #' Replace by [tindex()]
 #' @export

@@ -1,6 +1,6 @@
 Package: term
 Title: Create, Manipulate and Query Parameter Terms
-Version: 0.3.7.9019
+Version: 0.4.0
 Authors@R: c(
     person("Joe", "Thorley", , "joe@poissonconsulting.ca", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7683-4592")),
@@ -36,7 +36,7 @@ Suggests:
 RdMacros: 
     lifecycle
 Config/Needs/website: poissonconsulting/poissontemplate
-Config/roxygen2/version: 8.0.0.9000
+Config/roxygen2/version: 8.1.0
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
