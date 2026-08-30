@@ -16,15 +16,14 @@ term 0.4.0
 
 ## Reverse dependencies
 
-`revdepcheck::revdep_check()` was run against both reverse dependencies on
-CRAN: nlist 0.4.0 and mcmcr 0.6.2.
+`revdepcheck::revdep_check()` was re-run on 2026-08-30 against both reverse
+dependencies, nlist 0.5.0 and mcmcr 0.7.0: 0 new problems, 0 packages failed
+to check.
 
-- nlist 0.4.0: OK
-- mcmcr 0.6.2: 1 newly broken
-
-mcmcr 0.6.2 tests `term::parameters()`, which this release makes defunct.
-Those tests have been removed upstream and mcmcr will be submitted to CRAN
-before this release.
+mcmcr 0.6.2, the version previously on CRAN, tested `term::parameters()`,
+which this release makes defunct.  Those tests were removed in mcmcr 0.7.0,
+which was submitted to CRAN on 2026-08-30.  This release is submitted only
+after mcmcr 0.7.0 is accepted, so no reverse dependency is broken.
 
 ## Notes
 

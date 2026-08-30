@@ -10,7 +10,7 @@
 |collate  |en_US.UTF-8                           |
 |ctype    |en_US.UTF-8                           |
 |tz       |Europe/London                         |
-|date     |2026-08-27                            |
+|date     |2026-08-30                            |
 |pandoc   |3.9.0.2 @ /opt/homebrew/bin/pandoc    |
 |quarto   |1.7.32 @ /Users/joe/.local/bin/quarto |
 
@@ -21,10 +21,4 @@
 |term    |0.3.7 |0.4.0 |*  |
 
 # Revdeps
-
-## New problems (1)
-
-|package |version |error  |warning |note |
-|:-------|:-------|:------|:-------|:----|
-|[mcmcr](problems.md#mcmcr)|0.6.2   |__+1__ |        |     |
 
