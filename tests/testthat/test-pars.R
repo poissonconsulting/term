@@ -28,6 +28,17 @@ test_that("pars.term deprecated terms", {
   expect_snapshot(error = TRUE, pars(term("a[1]"), terms = FALSE))
 })
 
+test_that("pars defunct terms reports the same for every input type", {
+  expect_snapshot(error = TRUE, pars(c("a[1]"), terms = TRUE))
+  expect_snapshot(error = TRUE, pars(as_term_rcrd(term("a[1]")), terms = TRUE))
+  expect_snapshot(error = TRUE, pars(matrix(1:4, nrow = 2), terms = TRUE))
+})
+
+test_that("pars still rejects other unused arguments", {
+  expect_snapshot(error = TRUE, pars(c("a[1]"), nope = TRUE))
+  expect_snapshot(error = TRUE, pars(as_term_rcrd(term("a[1]")), nope = TRUE))
+})
+
 test_that("pars.term", {
   expect_identical(pars(new_term("b")), "b")
   expect_identical(pars(new_term("b"), scalar = TRUE), "b")
