@@ -1,168 +1,81 @@
 # Changelog
 
-## term 0.3.7.9019
-
-- feat: add
-  [`set_pars.term_rcrd()`](https://poissonconsulting.github.io/term/dev/reference/set_pars.term_rcrd.md)
-  and `summary.term_rcrd()` methods
-- fix: escape embedded backticks when formatting terms
-- chore: resolve remaining FIXMEs
-  ([\#90](https://github.com/poissonconsulting/term/issues/90))
-- Remove `levels.term()` and `levels.term_rcrd()` workarounds now that
-- Remove the `pars(scalar = NA)` compatibility hack for nlist
-  0.1.0/0.1.1.
-- Import `as_list()` from extras instead of a local copy; move
-- Run
-  [`complete_terms()`](https://poissonconsulting.github.io/term/dev/reference/complete_terms.md)
-  term_rcrd examples (no longer ).
-- Lock in that zero-length dims yield no terms in
-  [`term()`](https://poissonconsulting.github.io/term/dev/reference/term.md).
-
-## term 0.3.7.9018
-
-- Same as previous version.
-
-## term 0.3.7.9017
-
-- Same as previous version.
-
-## term 0.3.7.9016
-
-- Same as previous version.
-
-## term 0.3.7.9015
-
-- Add fledge-bump workflow
-- Add fledge-tag-on-merge workflow
-
-## term 0.3.7.9014
-
-- Merge pull request
-  [\#96](https://github.com/poissonconsulting/term/issues/96) from
-  poissonconsulting/codeowners-joethorley.
-
-  Add CODEOWNERS assigning [@joethorley](https://github.com/joethorley)
-
-## term 0.3.7.9013
-
-### Continuous integration
-
-- Update ccache-action reference.
-
-- Bump action version.
-
-## term 0.3.7.9012
-
-### Continuous integration
-
-- Tweaks ([\#86](https://github.com/poissonconsulting/term/issues/86)).
-
-## term 0.3.7.9011
-
-### Chore
-
-- Add ccache to `.gitignore` and `.Rbuildignore`.
-
-### Continuous integration
-
-- Create snapshot update PR against correct branch.
-
-- Add reference to `/apply-patch` workflow in commit message.
-
-- Clarify rationale for not deploying on schedule.
-
-## term 0.3.7.9010
-
-### Continuous integration
-
-- Only run fledge on pushes to main.
-
-## term 0.3.7.9009
-
-### Continuous integration
-
-- Tweak fledge workflow and ccache action.
-
-## term 0.3.7.9008
-
-### Continuous integration
-
-- Cosmetics.
-
-- Bump action versions.
-
-- Install clang-format-21.
-
-- Align fledge workflow.
-
-- Harmonize.
-
-## term 0.3.7.9007
-
-### Chore
-
-- Auto-update from GitHub Actions.
-
-  Run:
-  <https://github.com/poissonconsulting/term/actions/runs/25267008732>
-
-## term 0.3.7.9006
-
-### Chore
-
-- Auto-update from GitHub Actions.
-
-  Run:
-  <https://github.com/poissonconsulting/term/actions/runs/23325550228>
-
-## term 0.3.7.9005
-
-### Chore
-
-- Auto-update from GitHub Actions.
-
-  Run:
-  <https://github.com/poissonconsulting/term/actions/runs/23225145713>
-
-## term 0.3.7.9004
-
-### Chore
-
-- Auto-update from GitHub Actions.
-
-  Run:
-  <https://github.com/poissonconsulting/term/actions/runs/22932661022>
-
-## term 0.3.7.9003
-
-### Chore
-
-- Auto-update from GitHub Actions.
-
-  Run:
-  <https://github.com/poissonconsulting/term/actions/runs/22883214878>
-
-## term 0.3.7.9002
-
-### Chore
-
-- Auto-update from GitHub Actions.
-
-  Run:
-  <https://github.com/poissonconsulting/term/actions/runs/22789272614>
-
-## term 0.3.7.9001
-
-### Chore
-
-- Auto-update from GitHub Actions.
-
-  Run:
-  <https://github.com/poissonconsulting/term/actions/runs/22745237609>
-
-## term 0.3.7.9000
+## term 0.4.0.9000
 
 - Switching to development version.
+
+## term 0.4.0
+
+### Breaking changes
+
+- The following functions, deprecated since 0.1.0, are now defunct and
+  error when called
+  ([\#103](https://github.com/poissonconsulting/term/issues/103)).
+
+  - [`is.term()`](https://poissonconsulting.github.io/term/dev/reference/deprecated.md),
+    replaced by
+    [`is_term()`](https://poissonconsulting.github.io/term/dev/reference/is_term.md).
+  - [`is.incomplete_terms()`](https://poissonconsulting.github.io/term/dev/reference/deprecated.md),
+    replaced by
+    [`is_incomplete_terms()`](https://poissonconsulting.github.io/term/dev/reference/is_incomplete_terms.md).
+  - [`is.inconsistent_terms()`](https://poissonconsulting.github.io/term/dev/reference/deprecated.md),
+    replaced by
+    [`is_inconsistent_terms()`](https://poissonconsulting.github.io/term/dev/reference/is_inconsistent_terms.md).
+  - [`parameters()`](https://poissonconsulting.github.io/term/dev/reference/deprecated.md)
+    and
+    [`` `parameters<-`() ``](https://poissonconsulting.github.io/term/dev/reference/deprecated.md),
+    replaced by
+    [`pars()`](https://poissonconsulting.github.io/universals/reference/pars.html)
+    and `` `pars<-`() ``.
+  - [`set_parameters()`](https://poissonconsulting.github.io/term/dev/reference/deprecated.md),
+    replaced by
+    [`set_pars()`](https://poissonconsulting.github.io/universals/reference/set_pars.html).
+  - [`tdims()`](https://poissonconsulting.github.io/term/dev/reference/deprecated.md),
+    replaced by
+    [`tindex()`](https://poissonconsulting.github.io/term/dev/reference/tindex.md).
+
+- The `terms` argument of
+  [`pars()`](https://poissonconsulting.github.io/universals/reference/pars.html),
+  deprecated since 0.2.0, is now defunct
+  ([\#106](https://github.com/poissonconsulting/term/issues/106)). Use
+  `pars_terms(as_term(x))` in place of `pars(x, terms = TRUE)` and
+  `pars(x)` in place of `pars(x, terms = FALSE)`.
+
+### New features
+
+- [`set_pars()`](https://poissonconsulting.github.io/universals/reference/set_pars.html)
+  and [`summary()`](https://rdrr.io/r/base/summary.html) gain
+  `term_rcrd` methods
+  ([\#90](https://github.com/poissonconsulting/term/issues/90)).
+
+### Bug fixes
+
+- [`format()`](https://rdrr.io/r/base/format.html) now escapes backticks
+  embedded in term names so that printed terms are unambiguous
+  ([\#90](https://github.com/poissonconsulting/term/issues/90)).
+
+### Minor improvements
+
+- vctrs (\>= 0.4.0) is now the declared minimum, as
+  [`levels()`](https://rdrr.io/r/base/levels.html) is implemented for
+  vctrs vectors and the `levels.term()` and `levels.term_rcrd()`
+  workarounds are no longer required
+  ([\#90](https://github.com/poissonconsulting/term/issues/90)).
+
+- The purrr dependency is dropped
+  ([\#103](https://github.com/poissonconsulting/term/issues/103)).
+
+- The `pars(scalar = NA)` compatibility hack for nlist 0.1.0 and 0.1.1
+  is removed
+  ([\#90](https://github.com/poissonconsulting/term/issues/90)).
+
+- `as_list()` is imported from extras instead of being copied locally
+  ([\#90](https://github.com/poissonconsulting/term/issues/90)).
+
+- The
+  [`complete_terms()`](https://poissonconsulting.github.io/term/dev/reference/complete_terms.md)
+  examples for `term_rcrd` objects now run
+  ([\#90](https://github.com/poissonconsulting/term/issues/90)).
 
 ## term 0.3.7
 
