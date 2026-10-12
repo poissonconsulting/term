@@ -10,6 +10,8 @@
 
 ## term 0.4.0
 
+CRAN release: 2026-08-30
+
 ### Breaking changes
 
 - The following functions, deprecated since 0.1.0, are now defunct and
