@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# term 0.4.0.9002
+
+- Same as previous version.
+
+
 # term 0.4.0.9001
 
 - Internal changes only.
